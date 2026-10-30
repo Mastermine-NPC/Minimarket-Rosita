@@ -11,6 +11,15 @@ cd /home/hisok/Desktop/extension-cor/PROYECTO-PROTOTIPO
 nvm use
 npm run dev
 ```
+Correr el proyecto en otra pc
+````sh
+git clone https://github.com/Mastermine-NPC/Minimarket-Rosita.git
+cd Minimarket-Rosita
+nvm install
+nvm use
+npx --yes npm@11.21.1 ci
+npm run dev
+```
 
 Abre el puerto mostrado por Vite (normalmente [localhost:5173](http://localhost:5173/)). La vista previa compilada final de esta sesión está en **[127.0.0.1:4176](http://127.0.0.1:4176/)**. `npm run check` ejecuta tipos, ESLint, 26 contrastes y build. `npm run test:operations` permite repetir deliberadamente pruebas de lógica en datos aislados; requiere red para el segundo destino vial. `npm run preview` sirve la compilación local; no publica. Reinstalación exacta: `npx --yes npm@11.21.1 ci`.
 
