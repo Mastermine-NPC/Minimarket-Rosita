@@ -1,0 +1,39 @@
+{
+  "tool": "imageio-ffmpeg0.7.0 / FFmpeg7.0.2 externo a frontend",
+  "assets": [
+    {
+      "source": "public/images/video/video-intro.mp4",
+      "originalBytes": 7163048,
+      "web": "public/images/video/web/video-intro.mp4",
+      "webBytes": 1476521,
+      "reductionPercent": 79.4,
+      "dimensions": "960x540",
+      "video": "H.264/yuv420p",
+      "audio": "removed in web derivative",
+      "durationSeconds": 23.8,
+      "originalDimensions": "1280x720",
+      "fps": 25,
+      "originalAudio": "none",
+      "content": "Persona elige productos en supermercado; ambientación, no local Rosita",
+      "placement": "Hero en marco 16:9 separado de títulos, sin loop"
+    },
+    {
+      "source": "public/images/video/video-entrega-Delivery.mp4",
+      "originalBytes": 19423533,
+      "web": "public/images/video/web/video-entrega-Delivery.mp4",
+      "webBytes": 8233666,
+      "reductionPercent": 57.6,
+      "dimensions": "960x540",
+      "video": "H.264/yuv420p",
+      "audio": "removed in web derivative",
+      "durationSeconds": 127.59,
+      "originalDimensions": "1280x720",
+      "fps": 23.98,
+      "originalAudio": "AAC 48 kHz 5.1",
+      "content": "Escena de comedia: personaje maltrata paquete, créditos y diálogo; no servicio Rosita",
+      "placement": "Sección secundaria de entrega, referencia opt-in de ficción; sin autoplay ni loop"
+    }
+  ],
+  "originalsPreserved": true,
+  "zoneIdentifierRequested": false
+}

@@ -1,5 +1,11 @@
 export const deliveryZones = [
   {
+    id: "pickup",
+    name: "Recojo en Minimarket Rosita",
+    feeCents: 0,
+    estimate: "Preparación y recojo de demostración, sin reparto",
+  },
+  {
     id: "demo-a",
     name: "Zona A · demostración",
     feeCents: 400,
@@ -13,6 +19,7 @@ export const deliveryZones = [
   },
 ] as const;
 export const paymentLabels = {
+  "card-demo": "Tarjeta de crédito/débito — simulación",
   cash: "Efectivo contra entrega (simulado)",
   "yape-demo": "Yape de demostración",
   "plin-demo": "Plin de demostración",
@@ -22,4 +29,20 @@ export const orderStages = [
   "En preparación",
   "En camino",
   "Entregado",
+] as const;
+
+export const pickupStages = [
+  "Pedido recibido",
+  "En preparación",
+  "Listo para recoger",
+  "Recogido",
+] as const;
+export const stagesFor = (delivery: { mode?: string }) =>
+  delivery.mode === "pickup" ? pickupStages : orderStages;
+
+export const combinedOrderStages = [
+  "Pedido recibido",
+  "En preparación",
+  "En camino / Listo para recoger",
+  "Entregado / Recogido",
 ] as const;

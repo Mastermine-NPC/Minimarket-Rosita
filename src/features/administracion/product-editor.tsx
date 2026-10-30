@@ -21,6 +21,7 @@ import { useRosita } from "@/hooks/use-rosita";
 import { useOperation } from "@/hooks/use-operation";
 import type { CatalogRecord, ProductInput } from "@/types/catalog";
 interface Values {
+  barcode: string;
   id: string;
   name: string;
   brand: string;
@@ -76,6 +77,12 @@ export function ProductEditor({
     >
       <DialogTrigger asChild>{trigger}</DialogTrigger>
       <DialogContent className="admin-editor">
+        {product?.code && (
+          <p className="hint">
+            Código comercial: <strong>{product.code}</strong> · ID interno
+            estable: {product.id}
+          </p>
+        )}
         <DialogHeader>
           <DialogTitle>
             {product ? "Editar producto" : "Crear producto"}
@@ -146,6 +153,7 @@ function ProductForm({
       formState: { errors },
     } = useForm<Values>({
       defaultValues: {
+        barcode: product?.barcode || "",
         id:
           product?.id || "ROS-" + crypto.randomUUID().slice(0, 8).toUpperCase(),
         name: product?.name || "",
@@ -202,7 +210,10 @@ function ProductForm({
       });
       return;
     }
-    if (!product && state.products.some((p) => p.id === v.id)) {
+    if (
+      !product &&
+      state.products.some((p) => p.id === v.id || (p.code || p.id) === v.id)
+    ) {
       setError(
         "id",
         { message: "Ese identificador ya existe." },
@@ -252,9 +263,10 @@ function ProductForm({
       onSubmit={handleSubmit(submit)}
     >
       <div className="admin-form-grid">
-        {field("id", "Identificador", { disabled: !!product })}
+        {field("id", "Identificador interno", { disabled: !!product })}
         {field("name", "Nombre")}
         {field("brand", "Marca")}
+        {field("barcode", "Código de barras (texto, opcional)")}
         <div className="field">
           <Label htmlFor="product-category">Categoría</Label>
           <select

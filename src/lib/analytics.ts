@@ -1,11 +1,29 @@
+import { paymentName } from "@/data/operation-labels";
+import { operationsReport, operationRows } from "./operations-analytics";
+import { stagesFor, combinedOrderStages } from "@/data/delivery";
 import type { RositaState } from "@/types/state";
 import { currentProducts } from "./catalog-state";
 export interface ReportFilters {
-  type: "inventory" | "low" | "orders" | "digital" | "cash" | "top";
+  type:
+    | "inventory"
+    | "low"
+    | "orders"
+    | "digital"
+    | "cash"
+    | "top"
+    | "channels"
+    | "agents"
+    | "payments"
+    | "shifts"
+    | "movements";
   from: string;
   to: string;
   status: string;
   category: string;
+  channel: string;
+  agent: string;
+  shift: string;
+  payment: string;
 }
 export const defaultReportFilters: ReportFilters = {
   type: "inventory",
@@ -13,6 +31,10 @@ export const defaultReportFilters: ReportFilters = {
   to: "",
   status: "",
   category: "",
+  channel: "",
+  agent: "",
+  shift: "",
+  payment: "",
 };
 export function peruDay(iso: string) {
   return new Intl.DateTimeFormat("sv-SE", { timeZone: "America/Lima" }).format(
@@ -95,7 +117,19 @@ export function buildReport(
     rows: (string | number)[][],
     total: string;
   const money = (c: number) => (c / 100).toFixed(2);
-  if (f.type === "inventory" || f.type === "low") {
+  if (
+    [
+      "cash",
+      "top",
+      "channels",
+      "agents",
+      "payments",
+      "shifts",
+      "movements",
+    ].includes(f.type)
+  ) {
+    ({ title, headers, rows, total } = operationsReport(state, f));
+  } else if (f.type === "inventory" || f.type === "low") {
     title =
       f.type === "low"
         ? "Inventario: agotados y stock bajo"
@@ -116,10 +150,14 @@ export function buildReport(
           (f.type !== "low" || p.stock <= (p.lowStockThreshold || 0)),
       )
       .map((p) => [
-        p.id,
+        p.code || p.id,
         p.name,
         state.categories.find((c) => c.id === p.category)?.name || p.category,
-        p.active ? "Activo" : "Inactivo",
+        p.archived
+          ? "Eliminado del catálogo"
+          : p.active
+            ? "Activo"
+            : "Inactivo",
         p.stock,
         p.lowStockThreshold || 0,
         money(state.inventory[p.id].priceCents),
@@ -143,19 +181,20 @@ export function buildReport(
       "Total S/",
       "Pago seleccionado",
     ];
-    rows = a.orders.map((o) => [
+    const selected = operationRows(state, f).orders;
+    rows = selected.map((o) => [
       o.id,
       peruDay(o.createdAt),
-      ["Recibido", "En preparación", "En camino", "Entregado"][o.status],
+      stagesFor(o.delivery)[o.status],
       money(o.subtotalCents),
       money(o.shippingCents),
       money(o.totalCents),
-      o.payment,
+      paymentName(o.payment),
     ]);
     total =
-      a.orders.length +
+      selected.length +
       " pedidos · S/ " +
-      money(a.totalCents) +
+      money(selected.reduce((n, o) => n + o.totalCents, 0)) +
       " de importe confirmado (no cobrado)";
   } else if (f.type === "top") {
     title = "Productos más vendidos · pedidos digitales";
@@ -175,12 +214,24 @@ export function buildReport(
     title = "Ventas presenciales";
     headers = ["Canal", "Observación"];
     rows = [];
-    total = "Caja no implementada: no se atribuyen ventas presenciales.";
+    total = "Sin registros para los filtros elegidos.";
   }
   const filters = dateRelevant
-    ? `Fechas Perú: ${f.from || "sin límite"} a ${f.to || "sin límite"}; estado: ${f.status ? ["Recibido", "En preparación", "En camino", "Entregado"][Number(f.status)] : "todos"}`
+    ? `Fechas Perú: ${f.from || "sin límite"} a ${f.to || "sin límite"}; estado: ${f.status ? combinedOrderStages[Number(f.status)] : "todos"}`
     : `Categoría: ${state.categories.find((c) => c.id === f.category)?.name || "todas"}; stock actual`;
-  return { title, headers, rows, total, generatedAt, filters, error };
+  return {
+    title,
+    headers,
+    rows: error ? [] : rows,
+    total: error ? "Corrige el rango de fechas." : total,
+    generatedAt,
+    filters:
+      filters +
+      (dateRelevant
+        ? `; canal: ${f.channel || "todos"}; agente: ${f.agent || "todos"}; turno: ${f.shift || "todos"}; pago: ${f.payment ? paymentName(f.payment) : "todos"}`
+        : ""),
+    error,
+  };
 }
 export function csvCell(value: unknown) {
   let s = String(value ?? "");

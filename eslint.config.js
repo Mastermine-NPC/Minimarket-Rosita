@@ -33,6 +33,8 @@ export default tseslint.config(
       "docs/zoom-verification/**/*.mjs",
       "docs/subcategory-verification/**/*.mjs",
       "docs/module-verification/**/*.mjs",
+      "docs/polish-verification/**/*.mjs",
+      "docs/catalog-verification/**/*.mjs",
     ],
     languageOptions: { globals: { ...globals.node, ...globals.browser } },
   },

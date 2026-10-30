@@ -14,7 +14,7 @@ import { useCatalog } from "@/hooks/use-catalog";
 import { dashboardMetrics } from "@/lib/admin-selectors";
 import { money } from "@/lib/currency";
 import { orderDate } from "@/lib/order-date";
-import { orderStages } from "@/data/delivery";
+import { combinedOrderStages as orderStages, stagesFor } from "@/data/delivery";
 import {
   AdminHeading,
   AdminEmpty,
@@ -123,7 +123,9 @@ export function AdminDashboardPage() {
                     <span>{orderDate(o.createdAt)}</span>
                   </div>
                   <div>
-                    <span className="status-chip">{orderStages[o.status]}</span>
+                    <span className="status-chip">
+                      {stagesFor(o.delivery)[o.status]}
+                    </span>
                     <strong>{money(o.totalCents)}</strong>
                   </div>
                 </li>
@@ -195,6 +197,27 @@ export function AdminDashboardPage() {
         </section>
       </div>
       <AnalyticsPanel />
+      <section className="cash-panel">
+        <h2>Caja presencial y canales</h2>
+        <p>
+          {state.sales.length} ventas presenciales · Total simulado{" "}
+          {money(state.sales.reduce((n, s) => n + s.totalCents, 0))}
+        </p>
+        <p>
+          {state.orders.filter((o) => o.delivery.mode === "pickup").length}{" "}
+          pedidos digitales con recojo ·{" "}
+          {state.orders.filter((o) => o.delivery.mode !== "pickup").length} con
+          delivery
+        </p>
+        <p>
+          {state.shifts.filter((s) => s.closedAt === null).length} turnos
+          abiertos. Los pedidos digitales no cuentan como efectivo cobrado en
+          caja.
+        </p>
+        <Link className="text-link" to="/admin/reportes">
+          Consultar reportes por canal, agente y turno
+        </Link>
+      </section>
     </div>
   );
 }

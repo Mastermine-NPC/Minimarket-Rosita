@@ -1,14 +1,22 @@
+import { storeAddress } from "@/data/geography";
 import { money } from "@/lib/currency";
-import type { Quote, Delivery, PaymentMethod } from "@/types/commerce";
+import type {
+  Quote,
+  Delivery,
+  PaymentMethod,
+  CardReceipt,
+} from "@/types/commerce";
 import { paymentLabels } from "@/data/delivery";
 export function OrderSummary({
   quote,
   delivery,
   payment,
+  cardReceipt,
 }: {
   quote: Omit<Quote, "fingerprint">;
   delivery?: Delivery;
   payment?: PaymentMethod;
+  cardReceipt?: CardReceipt;
 }) {
   return (
     <div className="order-summary">
@@ -42,15 +50,26 @@ export function OrderSummary({
       </dl>
       {delivery && (
         <div className="order-info">
-          <h3>Entrega de demostración</h3>
+          <h3>
+            {delivery.mode === "pickup"
+              ? "Recojo en tienda"
+              : "Entrega de demostración"}
+          </h3>
           <p>
             <strong>{delivery.recipient}</strong>
             <br />
             {delivery.phone}
             <br />
-            {delivery.address}
+            {delivery.mode === "pickup" ? storeAddress : delivery.address}
             <br />
             {quote.zoneLabel}
+            {delivery.point && (
+              <>
+                <br />
+                Punto confirmado: {delivery.point.lat.toFixed(6)},{" "}
+                {delivery.point.lng.toFixed(6)}
+              </>
+            )}
             {delivery.reference && (
               <>
                 <br />
@@ -68,6 +87,13 @@ export function OrderSummary({
         <div className="order-info">
           <h3>Pago</h3>
           <p>{paymentLabels[payment]}</p>
+          {cardReceipt && (
+            <p>
+              Demo · terminada en {cardReceipt.last4}
+              <br />
+              Referencia ficticia: {cardReceipt.reference}
+            </p>
+          )}
           {quote.cashTenderCents !== null && (
             <p>
               Efectivo previsto: {money(quote.cashTenderCents)} · Vuelto

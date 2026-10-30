@@ -1,3 +1,49 @@
+# Recursos añadidos · operaciones 1.0.0
+
+Leaflet 1.9.4 y tipos 1.9.21, sin nueva biblioteca de estado, cámara o rutas. Teselas estándar OpenStreetMap cargadas bajo demanda con atribución; no se descargó un paquete de mapas. Geometría vial verificada OSRM/FOSSGIS de 358 puntos en `src/data/verified-route.json`; procedencia y límites en [Operaciones](OPERACIONES-1.0.0.md). El origen exacto procede del usuario; la UTP del sitio oficial, con llegada vial diferenciada de puerta peatonal. No hay clave secreta ni servicio de pago. Iconos de mapa son SVG locales, independientes de las fuentes de emoji; logo, fuentes, fotos y videos existentes intactos.
+
+Códigos de barras generados son identificadores ficticios de prueba con ceros iniciales, no una copia de códigos comerciales reales. Capturas/PDF en operations-verification son evidencia de navegador con datos ficticios; no sustituyen interfaces. No se añadieron imágenes de producto ni se reescribieron sus recursos en esta etapa.
+
+Lo que sigue documenta recursos previos y se conserva por trazabilidad.
+
+# Recursos de catálogo 0.9
+
+39 fotografías aportadas en public/images/productos, identificadas por inspección visual y contenido, sin descargar ni crear fotos nuevas.30 movidas desde carpetas antiguas a tecnologia/educacion/ferreteria/jugueteria/cuidado-personal; 9 de consumibles ya correctas se dejaron intactas. Cambios de nombre necesarios usan ROS; no se sobrescribió ningún destino. Hashes SHA256 antes/después iguales. [Mapa de 39 archivos](catalog-verification/images.json) y mosaico de inspección en esa carpeta.
+
+HDMI se vincula a ROS-043 aunque el nombre original decía 042; mouse Logitech a ROS-062 aunque decía 043. UNO es ROS-044. Powerade foto 600 ml vs registro 500 ml, Meli 135 g vs 100 g y modelo Barbie no verificable se explican en detalle. Marcas Mikas/Kingstone se guardan tal como se solicitaron, sin corregir silenciosamente a la grafía visible en las fotos. Se preservaron formatos, dimensiones y calidad; no se reoptimizaron ni reemplazaron recursos del usuario.
+
+18 fotos del atlas anterior y seis ilustraciones previas siguen identificadas y funcionando. Recursos de inicio/video, tipografías/licencias y logotipo no se alteraron. El mosaico es material de auditoría, no una imagen que sustituya una vista o recurso nuevo de producto. No se afirma licencia/autoría externa no proporcionada. No hubo imágenes sin identificar.
+
+[Comparación e integración](CATALOGO-0.9.0.md). Todo el registro siguiente corresponde a etapas anteriores y se conserva por trazabilidad; prevalece esta actualización para el catálogo.
+
+# Recursos · actualización 0.8.0
+
+Los dos MP4 fueron agregados por el usuario; se inspeccionaron metadatos y mosaicos de fotogramas distribuidos por su duración, no solo sus nombres. Se preservaron originales, fotografías/logos modificados previamente y archivos ajenos a este alcance. El JPEG actual del negocio mide **1024×598**; se corrigieron sus atributos de proporción sin cambiar su contenido. Las dimensiones históricas1025×260 de documentos anteriores corresponden al recurso previo.
+
+## Videos locales
+
+| Recurso original           | Inspección                                                                                                                    | Uso elegido                                                                                                       |
+| -------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| video-intro.mp4            | 23.80s,1280×720 horizontal,H.264 Main,25fps, sin audio; persona elige productos en supermercado                               | Ambientación de hero en marco 16:9 al lado del texto; no afirma que sea el local Rosita                           |
+| video-entrega-Delivery.mp4 | 127.59s,1280×720 horizontal,H.264 Main,23.98fps,AAC 48 kHz 5.1; escena de comedia con maltrato de paquete, créditos y diálogo | Referencia de ficción opcional en sección secundaria de entrega; no autoplay ni presentación como servicio Rosita |
+
+Derivados ejecutados mediante **imageio-ffmpeg 0.7.0/FFmpeg 7.0.2** en `/tmp`, sin dependencia frontend: H.264/yuv420p, 960×540, audio retirado, faststart, CRF29/30. No se agrandó ni generó contenido. PostersJPEG de los fotogramas1s/18s. El clip secundario se usa como material visual suplementario sin audio y con descripción textual de su naturaleza; ninguna información necesaria depende de él. No loop.
+
+| Archivo    | Original (bytes) | Web (bytes) | Reducción |
+| ---------- | ---------------- | ----------- | --------- |
+| Intro      | 7163048          | 1476521     | 79.4%     |
+| Referencia | 19423533         | 8233666     | 57.6%     |
+
+Medición reproducible en [video-inspection.json](../docs/video-inspection.json). Archivos web/posters en `public/images/video/web`; originales intactos en su carpeta superior. `:Zone.Identifier` es metadata Windows: ignorada en Git y nunca referenciada/reproducida por la aplicación. No se afirma medición de CoreWebVitals ni bytes de transferencia exactos en todas las redes; se midieron tamaños y se verificó ausencia de solicitud del segundo MP4 antes de acción voluntaria.
+
+Documentación técnica consultada: [MDN video](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/video) y [guía autoplay](https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Autoplay). Se usan poster/preload=none/muted/playsInline y manejo de rechazo de play(); no se asume que autoplay esté permitido. Compatibilidad decodificada en Chromium; Safari/Firefox y dispositivos físicos no probados.
+
+Se conservan fuentes locales/OFL, atlas e ilustraciones existentes y atribuciones de ambientación previas. No se descargaron imágenes nuevas ni se inventaron datos del negocio. El contenido documental verificado en la etapa anterior se reutiliza; no se afirma nueva lectura de PDF en este pulido. No se atribuye autor/licencia comercial de los MP4 sin información del usuario. Datos/recibos de tarjeta son exclusivamente ficticios; no se recopila información financiera real.
+
+## Registro histórico de recursos hasta 0.7.0
+
+Las restricciones/dimensiones siguientes describen sus etapas; prevalece la actualización anterior para archivos actuales y video.
+
 # Recursos y referencias · actualización 0.7.0
 
 ## Recursos utilizados en esta etapa
@@ -59,18 +105,17 @@ No se obtuvieron fotografías nuevas con presentación/licencia verificadas. Se 
 
 No se añadieron fuentes o bibliotecas. Manrope/DM Sans y sus licencias locales permanecen. Framer/Figma no se modificaron; trabajo exclusivo en código local. Los datos de prueba de administración y credenciales ficticias no representan personal o métricas reales.
 
-
 ## Inicio 0.5.0 · recursos nuevos
 
 Se descargaron cinco fotografías ambientales de Pexels. [Pexels License](https://www.pexels.com/license/) permite uso y modificación en sitios web, sin implicar aval del autor o de personas/marcas. Se guardan derivadas WebP locales a 480×538 y 960×1075 (recorte sin deformación), calidad 82. `public/images/home/SOURCES.json` registra URL de página, descarga, autor, licencia y archivos. Son **ambientación de categorías**, no productos ofertados ni instalaciones de Rosita. No se importaron personas, vehículos, vídeos o identidad de las referencias.
 
-| Categoría | Autor | Página de origen |
-| --- | --- | --- |
-| Ferretería | Maria Mileta | [Close-up of Tools](https://www.pexels.com/photo/close-up-of-tools-5357150/) |
-| Tecnología | Noemí Jiménez | [Office Desk with Headphones and Keyboard](https://www.pexels.com/photo/office-desk-with-headphones-and-keyboard-30345430/) |
-| Juguetería | Tara Winstead | [Colorful Wooden Blocks](https://www.pexels.com/photo/colorful-wooden-blocks-on-a-wooden-surface-6693303/) |
-| Educación y oficina | olia danilevich | [Back to School Flatlay](https://www.pexels.com/photo/back-to-school-flatlay-5088008/) |
-| Cuidado personal | mearlywan | [Bottles with Cosmetic Products](https://www.pexels.com/photo/bottles-with-cosmetic-products-15569180/) |
+| Categoría           | Autor           | Página de origen                                                                                                            |
+| ------------------- | --------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| Ferretería          | Maria Mileta    | [Close-up of Tools](https://www.pexels.com/photo/close-up-of-tools-5357150/)                                                |
+| Tecnología          | Noemí Jiménez   | [Office Desk with Headphones and Keyboard](https://www.pexels.com/photo/office-desk-with-headphones-and-keyboard-30345430/) |
+| Juguetería          | Tara Winstead   | [Colorful Wooden Blocks](https://www.pexels.com/photo/colorful-wooden-blocks-on-a-wooden-surface-6693303/)                  |
+| Educación y oficina | olia danilevich | [Back to School Flatlay](https://www.pexels.com/photo/back-to-school-flatlay-5088008/)                                      |
+| Cuidado personal    | mearlywan       | [Bottles with Cosmetic Products](https://www.pexels.com/photo/bottles-with-cosmetic-products-15569180/)                     |
 
 Consumibles, destacados y promoción usan productos del catálogo. No se consiguió fotografía exacta/licenciada para los seis artículos pendientes: se conservan ilustraciones identificadas; no se reemplazan por otros artículos. La foto real del negocio mantiene la procedencia aportada por el usuario: derivadas WebP a 640 y 1025 px, calidad 88, misma proporción. La fuente original 1025×260 limita la nitidez del encuadre grande; no se inventa resolución adicional. Imágenes ambientales diferidas, srcset/sizes y dimensiones declaradas; solo foto principal con prioridad alta. Total de imágenes nuevas usadas, aproximadamente 600 KB en disco para ambas variantes; cada dispositivo solicita la variante correspondiente.
 
@@ -83,7 +128,6 @@ Consumibles, destacados y promoción usan productos del catálogo. No se consigu
 Capturas y auditoría de referencias en `home-verification/references`. No son recursos de la aplicación.
 
 Documentación oficial consultada: [Motion useScroll](https://motion.dev/docs/react-use-scroll), [useSpring](https://motion.dev/docs/react-use-spring), [useAnimate](https://motion.dev/docs/react-use-animate). Se conserva Motion existente, sin añadir GSAP/Lenis/Embla. Para optimizar recursos se usó Pillow 13.0.0 en `/tmp`, exclusivamente herramienta de preparación, sin dependencia de la aplicación ni peticiones externas durante su uso.
-
 
 ## Visor de producto 0.5.1
 

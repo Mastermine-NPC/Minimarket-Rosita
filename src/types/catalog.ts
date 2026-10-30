@@ -7,6 +7,10 @@ export interface Category {
   tone: string;
 }
 export interface Product {
+  barcode?: string;
+  code?: string;
+  archived?: boolean;
+  imageNote?: string;
   id: string;
   name: string;
   brand: string;
@@ -28,6 +32,10 @@ export interface Product {
 export type Cart = Record<string, number>;
 
 export interface CatalogRecord {
+  barcode?: string;
+  code?: string;
+  archived?: boolean;
+  imageNote?: string;
   id: string;
   name: string;
   brand: string;
@@ -45,6 +53,7 @@ export interface CatalogRecord {
   updatedAt: string | null;
 }
 export interface ProductInput {
+  barcode?: string;
   id: string;
   name: string;
   brand: string;

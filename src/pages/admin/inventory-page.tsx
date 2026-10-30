@@ -1,3 +1,4 @@
+import { movementNames as kindLabels } from "@/data/operation-labels";
 import { useTaxonomy } from "@/hooks/use-taxonomy";
 import { stockLabel } from "@/lib/stock-label";
 import { useState } from "react";
@@ -15,12 +16,7 @@ import {
 import { AdminTable, Pagination } from "@/features/administracion/admin-table";
 import { StockAdjustment } from "@/features/administracion/stock-adjustment";
 import { orderDate } from "@/lib/order-date";
-const kindLabels = {
-  entry: "Entrada",
-  "manual-out": "Salida manual",
-  count: "Corrección de conteo",
-  "order-out": "Salida por pedido",
-};
+
 export function AdminInventoryPage() {
   const { categories } = useTaxonomy();
   const { state } = useRosita(),
@@ -33,11 +29,13 @@ export function AdminInventoryPage() {
     [limit, Limit] = useState(10),
     list = products.filter(
       (p) =>
-        normalizeText(p.name + " " + p.id + " " + p.brand).includes(
+        (status === "eliminado" ? !!p.archived : !p.archived) &&
+        normalizeText(p.name + " " + (p.code || p.id) + " " + p.brand).includes(
           normalizeText(q),
         ) &&
         (!category || p.category === category) &&
         (!status ||
+          status === "eliminado" ||
           (status === "agotado"
             ? p.stock === 0
             : status === "bajo"
@@ -103,6 +101,7 @@ export function AdminInventoryPage() {
             }}
           >
             <option value="">Todas</option>
+            <option value="eliminado">Eliminados · historial conservado</option>
             <option value="agotado">Agotados</option>
             <option value="bajo">Stock bajo</option>
             <option value="alertas">Todas las alertas</option>
@@ -127,7 +126,7 @@ export function AdminInventoryPage() {
                     <div>
                       <strong>{p.name}</strong>
                       <small>
-                        {p.id} · {p.active ? "Activo" : "Desactivado"}
+                        {p.code || p.id} · {p.active ? "Activo" : "Desactivado"}
                       </small>
                     </div>
                   ),
@@ -150,10 +149,21 @@ export function AdminInventoryPage() {
                   render: (p) => (
                     <span
                       className={
-                        "status-chip " + (p.stock === 0 ? "status-warning" : "")
+                        "status-chip inventory-state " +
+                        (!p.active
+                          ? "inventory-inactive"
+                          : p.stock === 0
+                            ? "inventory-empty"
+                            : p.stock <= (p.lowStockThreshold || 0)
+                              ? "inventory-low"
+                              : "inventory-available")
                       }
                     >
-                      {stockLabel(p.stock, p.lowStockThreshold || 0)}
+                      {p.archived
+                        ? "Eliminado"
+                        : !p.active
+                          ? "Desactivado"
+                          : stockLabel(p.stock, p.lowStockThreshold || 0)}
                     </span>
                   ),
                 },

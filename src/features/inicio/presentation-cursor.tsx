@@ -28,7 +28,7 @@ function FineCursor() {
       if (
         !(target instanceof Element) ||
         target.closest(
-          'input,textarea,select,label,[contenteditable],.native-selection,[data-slot="sheet-content"],[data-slot="dialog-content"],[data-slot="sheet-overlay"],[data-slot="dialog-overlay"]',
+          '[data-no-cursor],input,textarea,select,label,[contenteditable],.native-selection,[data-slot="sheet-content"],[data-slot="dialog-content"],[data-slot="sheet-overlay"],[data-slot="dialog-overlay"]',
         ) ||
         window.getSelection()?.toString()
       ) {

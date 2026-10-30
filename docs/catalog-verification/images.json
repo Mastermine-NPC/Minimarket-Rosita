@@ -1,0 +1,275 @@
+[
+  {
+    "code": "ROS-052",
+    "from": "public/images/productos/Educacion y Oficina/ROS-052-Caja-de-colores-Faber-Castell.jpg",
+    "to": "public/images/productos/educacion/ROS-052.jpg",
+    "moved": true,
+    "sha256": "4d9bafb2142d540ae20ba3d604970343e03e9af06ac91ca09cf782a6171565a0"
+  },
+  {
+    "code": "ROS-053",
+    "from": "public/images/productos/Educacion y Oficina/ROS-053-Folder-Manila.jpg",
+    "to": "public/images/productos/educacion/ROS-053.jpg",
+    "moved": true,
+    "sha256": "85ee25775483e7c5543cfce811ed7fa523814e7d58a6aafc2b03abbaba51d151"
+  },
+  {
+    "code": "ROS-054",
+    "from": "public/images/productos/Educacion y Oficina/ROS-054-Posits-Faber-Castell.jpg",
+    "to": "public/images/productos/educacion/ROS-054.jpg",
+    "moved": true,
+    "sha256": "6613e691a9820e92b68f0cf1aa3c4775ed4a96e7bb3fcb2c0458d72ec4ec8bad"
+  },
+  {
+    "code": "ROS-055",
+    "from": "public/images/productos/Educacion y Oficina/ROS-055-Porta-Minas-Faber-Castell.jpg",
+    "to": "public/images/productos/educacion/ROS-055.jpg",
+    "moved": true,
+    "sha256": "519ec8cbbbda8459d0e2f5836349e6fdefd436d5f0b8322b611ef4e1c6be233e"
+  },
+  {
+    "code": "ROS-050",
+    "from": "public/images/productos/Educacion y Oficina/ROS-050-Borradores-Artesco.jpg",
+    "to": "public/images/productos/educacion/ROS-050.jpg",
+    "moved": true,
+    "sha256": "f00b41600d0ee4328c6eb247591d23ef73fa443dac1f6a0e153236116c833799"
+  },
+  {
+    "code": "ROS-051",
+    "from": "public/images/productos/Educacion y Oficina/ROS-051-Tajador-Faber-Castell.jpg",
+    "to": "public/images/productos/educacion/ROS-051.jpg",
+    "moved": true,
+    "sha256": "1348b05fa0fd5ff12450731f28b0e8082a1c1b50785d2e062b9b6d6a8d706b3e"
+  },
+  {
+    "code": "ROS-033",
+    "from": "public/images/productos/Ferreteria/ROS-033-Martillo-Armatec.jpg",
+    "to": "public/images/productos/ferreteria/ROS-033.jpg",
+    "moved": true,
+    "sha256": "1813fa8f0380bb141531f7566c3dff5345032d7c692c4dcb44db8d9fb1e67340"
+  },
+  {
+    "code": "ROS-034",
+    "from": "public/images/productos/Ferreteria/ROS-034-Serrucho-CAT.jpg",
+    "to": "public/images/productos/ferreteria/ROS-034.jpg",
+    "moved": true,
+    "sha256": "cdb647f38592ec45b8b6c8eb9023f348c8298310e8a77b950a574d191ef6ec81"
+  },
+  {
+    "code": "ROS-035",
+    "from": "public/images/productos/Ferreteria/ROS-035-Extension-Paramic.jpg",
+    "to": "public/images/productos/ferreteria/ROS-035.jpg",
+    "moved": true,
+    "sha256": "7041962d367856a9203e1ec447c8c3eece6bf5c9abf5625071eb0e0c30815763"
+  },
+  {
+    "code": "ROS-036",
+    "from": "public/images/productos/Ferreteria/ROS-036-Pela-Cables-Acsetron.jpg",
+    "to": "public/images/productos/ferreteria/ROS-036.jpg",
+    "moved": true,
+    "sha256": "ed427031046d85d78f5d5d40a6b37cdc0a122e9dac3d2dc6f7f1b6e249b6b6e6"
+  },
+  {
+    "code": "ROS-037",
+    "from": "public/images/productos/Ferreteria/ROS-037-Tornillos.jpg",
+    "to": "public/images/productos/ferreteria/ROS-037.jpg",
+    "moved": true,
+    "sha256": "9d617525372044910e3b16facda3f114111580bd647633d5298ad5878870bb9d"
+  },
+  {
+    "code": "ROS-038",
+    "from": "public/images/productos/Ferreteria/ROS-038-Cinta-Aislante.jpg",
+    "to": "public/images/productos/ferreteria/ROS-038.jpg",
+    "moved": true,
+    "sha256": "e301fc0a4c860ca05ccd69efc938a0ff54b14c94368e898ef803a5d5ed8195a9"
+  },
+  {
+    "code": "ROS-044",
+    "from": "public/images/productos/Jugueteria/ROS-044-Cartas-UNO.jpg",
+    "to": "public/images/productos/jugueteria/ROS-044.jpg",
+    "moved": true,
+    "sha256": "5a5270041fcd2787630a906029f240e6795c49ae1217774b558b237a22129840"
+  },
+  {
+    "code": "ROS-045",
+    "from": "public/images/productos/Jugueteria/ROS-045-Pelota-de-futbol-Walon.jpg",
+    "to": "public/images/productos/jugueteria/ROS-045.jpg",
+    "moved": true,
+    "sha256": "1f54146c8b6fc592cd4f72bbb1639d7748276f5d818846e7e3d203300ad9a282"
+  },
+  {
+    "code": "ROS-046",
+    "from": "public/images/productos/Jugueteria/ROS-046-Pelota-de-voley-MIKASA.jpg",
+    "to": "public/images/productos/jugueteria/ROS-046.jpg",
+    "moved": true,
+    "sha256": "a7333f9ab9c5c79e2d544a06a096dca7decd927d1b89d54887fa484510b8e5e0"
+  },
+  {
+    "code": "ROS-047",
+    "from": "public/images/productos/Jugueteria/ROS-047-Osito-de-peluche.jpg",
+    "to": "public/images/productos/jugueteria/ROS-047.jpg",
+    "moved": true,
+    "sha256": "9379de79055704140c46cb61ad9d82543d94d3166b369c4c7427d98730365245"
+  },
+  {
+    "code": "ROS-048",
+    "from": "public/images/productos/Jugueteria/ROS-048-Arma-de-juguete-con-balas-de-hidrogel.jpg",
+    "to": "public/images/productos/jugueteria/ROS-048.jpg",
+    "moved": true,
+    "sha256": "9b75ceebeeed607836efcb2cca4d9a29516e2027d7da4268ae8b2c58bd6448d9"
+  },
+  {
+    "code": "ROS-049",
+    "from": "public/images/productos/Jugueteria/ROS-049-Muñeca-Barbie.jpg",
+    "to": "public/images/productos/jugueteria/ROS-049.jpg",
+    "moved": true,
+    "sha256": "9ef0771aedc529bb5c85f1a44734733d8ec51026c0364606a118dc8c1e3cb094"
+  },
+  {
+    "code": "ROS-039",
+    "from": "public/images/productos/Tecnologia/ROS-039-Auriculares-Sony.jpg",
+    "to": "public/images/productos/tecnologia/ROS-039.jpg",
+    "moved": true,
+    "sha256": "8a7993baf1ff1024025f7fc548d4262078db960b0bc6282194aa32c14a3515ca"
+  },
+  {
+    "code": "ROS-040",
+    "from": "public/images/productos/Tecnologia/ROS-040-Proyector-Mac-Cubic.jpg",
+    "to": "public/images/productos/tecnologia/ROS-040.jpg",
+    "moved": true,
+    "sha256": "8b1f7ae08567644a6a80b1dc86d8867cac9e11c74ca75bc1c43421e9d7bb73d5"
+  },
+  {
+    "code": "ROS-041",
+    "from": "public/images/productos/Tecnologia/ROS-041-USB-Kigstone.jpg",
+    "to": "public/images/productos/tecnologia/ROS-041.jpg",
+    "moved": true,
+    "sha256": "970a94fbcea170514942ec6bbec04ef014da3dc14e082ff28ed7f43996dcb52f"
+  },
+  {
+    "code": "ROS-042",
+    "from": "public/images/productos/Tecnologia/ROS-042-Auricular-Toshiba.jpg",
+    "to": "public/images/productos/tecnologia/ROS-042.jpg",
+    "moved": true,
+    "sha256": "b819d819f1b11ebbb0facd37b23e353d090d774ab0f81f17b78d51573471386d"
+  },
+  {
+    "code": "ROS-043",
+    "from": "public/images/productos/Tecnologia/ROS-042-Cable-HDMI.jpg",
+    "to": "public/images/productos/tecnologia/ROS-043.jpg",
+    "moved": true,
+    "sha256": "d64cab4f980f99939c60642ee2b24bf84d8ebe904a053f258b01f04dd5d2f0fe"
+  },
+  {
+    "code": "ROS-062",
+    "from": "public/images/productos/Tecnologia/ROS-043-Mouse-Logi.jpg",
+    "to": "public/images/productos/tecnologia/ROS-062.jpg",
+    "moved": true,
+    "sha256": "9d366818e412ac641a8b1f4b760caa10efeb3ce4a17d44250ba4dcfb0cc7e03c"
+  },
+  {
+    "code": "ROS-024",
+    "from": "public/images/productos/consumibles/ROS-024-powerade.jpg",
+    "to": "public/images/productos/consumibles/ROS-024-powerade.jpg",
+    "moved": false,
+    "sha256": "fd49bf6812465ec795939c3b8b7407df1e85a290d0c0ec98f6fd5fd79f17ec84"
+  },
+  {
+    "code": "ROS-025",
+    "from": "public/images/productos/consumibles/ROS-025-Pepsi.jpg",
+    "to": "public/images/productos/consumibles/ROS-025-Pepsi.jpg",
+    "moved": false,
+    "sha256": "c791ed886921c86bb3c88fdce9142505fb4474940fdfdd1b1d3a6dc122e89a73"
+  },
+  {
+    "code": "ROS-026",
+    "from": "public/images/productos/consumibles/ROS-026-Fanta.jpg",
+    "to": "public/images/productos/consumibles/ROS-026-Fanta.jpg",
+    "moved": false,
+    "sha256": "6fdbd6cbe3e12613083d1db40a5c0ba4114385281928da598b10ac6cd67454af"
+  },
+  {
+    "code": "ROS-027",
+    "from": "public/images/productos/consumibles/ROS-027-Sprite.jpg",
+    "to": "public/images/productos/consumibles/ROS-027-Sprite.jpg",
+    "moved": false,
+    "sha256": "7366476f602ed6015a183474d3aaeb69470659a9e5041d8dc6afb487536eb324"
+  },
+  {
+    "code": "ROS-028",
+    "from": "public/images/productos/consumibles/ROS-028-Tentacion.jpg",
+    "to": "public/images/productos/consumibles/ROS-028-Tentacion.jpg",
+    "moved": false,
+    "sha256": "e309c2c7aeeea6f560b62948925b63c2ad10573215d5970f97e2cf597edaafc9"
+  },
+  {
+    "code": "ROS-029",
+    "from": "public/images/productos/consumibles/ROS-029-Cheese-Tris.jpg",
+    "to": "public/images/productos/consumibles/ROS-029-Cheese-Tris.jpg",
+    "moved": false,
+    "sha256": "646d2b53c2478c64c9605a3d2ef0fd63554b71832a99d708f707a6f9a9ac0ab9"
+  },
+  {
+    "code": "ROS-030",
+    "from": "public/images/productos/consumibles/ROS-030-Vizzio.jpg",
+    "to": "public/images/productos/consumibles/ROS-030-Vizzio.jpg",
+    "moved": false,
+    "sha256": "74097803b349b0762007d95ce0491908e1574e068a6a03522f2c7b9065438d5c"
+  },
+  {
+    "code": "ROS-031",
+    "from": "public/images/productos/consumibles/ROS-031-MAX.jpg",
+    "to": "public/images/productos/consumibles/ROS-031-MAX.jpg",
+    "moved": false,
+    "sha256": "39bb12d673c98528a4c52ba67052d280060e6674bdd35a963bf1a1f1b94120c5"
+  },
+  {
+    "code": "ROS-032",
+    "from": "public/images/productos/consumibles/ROS-032-MELI.jpg",
+    "to": "public/images/productos/consumibles/ROS-032-MELI.jpg",
+    "moved": false,
+    "sha256": "ff866e4e154875ffc11b7924d2124da0228bc1e557a5030bc5ab21b1d3647400"
+  },
+  {
+    "code": "ROS-056",
+    "from": "public/images/productos/Cuidado Personal/ROS-056-Desodorante-Old-Spice.jpg",
+    "to": "public/images/productos/cuidado-personal/ROS-056.jpg",
+    "moved": true,
+    "sha256": "9e70099809587bc07e96aa6041bafb759bd4e3838825dfbf47c13d1545fba8f8"
+  },
+  {
+    "code": "ROS-057",
+    "from": "public/images/productos/Cuidado Personal/ROS-057-Crema-Ponds.jpg",
+    "to": "public/images/productos/cuidado-personal/ROS-057.jpg",
+    "moved": true,
+    "sha256": "b4f0c66b43f41054d8e8f0ef0e597f2c9d4983b5dee52519d4efcd748bcd3461"
+  },
+  {
+    "code": "ROS-058",
+    "from": "public/images/productos/Cuidado Personal/ROS-058-Shampoo-Head&Shoulders.jpg",
+    "to": "public/images/productos/cuidado-personal/ROS-058.jpg",
+    "moved": true,
+    "sha256": "13727d0e36ec3ae771b6dd62f6f62b568cabc1c511cc7cc14a6e7b2916d1b147"
+  },
+  {
+    "code": "ROS-059",
+    "from": "public/images/productos/Cuidado Personal/ROS-059-Jabon-Dove.jpg",
+    "to": "public/images/productos/cuidado-personal/ROS-059.jpg",
+    "moved": true,
+    "sha256": "2acdc0ad0f6285bd43a29218899fb5a0af2adb0ac3d30f491397d8ba25cff18e"
+  },
+  {
+    "code": "ROS-060",
+    "from": "public/images/productos/Cuidado Personal/ROS-060-Desodorante-Rexona.jpg",
+    "to": "public/images/productos/cuidado-personal/ROS-060.jpg",
+    "moved": true,
+    "sha256": "685689991bd739d4d6eb2b457a872822303a0f304df7986d6116615569f4c200"
+  },
+  {
+    "code": "ROS-061",
+    "from": "public/images/productos/Cuidado Personal/ROS-061-Toallas-Nosotras.jpg",
+    "to": "public/images/productos/cuidado-personal/ROS-061.jpg",
+    "moved": true,
+    "sha256": "6368e4c0af6bee472a2e4dd928707c123d4f944b86629bbfa162397e222f977e"
+  }
+]

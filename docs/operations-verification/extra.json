@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-30",
+  "passed": [
+    "Agentes: creación/reset PBKDF2, correo único, sin edición de admin/cliente; cajero no administra ni crea agentes; cuenta inactiva no inicia sesión.",
+    "Fixture histórica real v7→9: pedidos y movimientos idénticos, nombres/imágenes, productos propios, precios/stock y assets locales preservados.",
+    "Revalidación de precio, desactivación, agotado, fracciones/exceso y turno abierto; snapshots de venta no cambian con catálogo.",
+    "Otro destino vial real, rechazo de cobertura/punto no confirmado/ruta incompatible y cancelación explícita de petición.",
+    "Restablecimiento exclusivo de Rosita conserva claves ajenas."
+  ],
+  "secondRoute": {
+    "destination": {
+      "lat": -16.4,
+      "lng": -71.55,
+      "label": "Otro punto de prueba",
+      "source": "Coordenadas de prueba dentro de cobertura"
+    },
+    "distance": 10048.1,
+    "duration": 1052.1,
+    "coordinates": 281
+  }
+}

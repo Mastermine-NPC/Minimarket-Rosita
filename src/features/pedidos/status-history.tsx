@@ -1,6 +1,6 @@
 import type { Order } from "@/types/commerce";
 import { orderDate } from "@/lib/order-date";
-import { orderStages } from "@/data/delivery";
+import { stagesFor } from "@/data/delivery";
 export function StatusHistory({ order }: { order: Order }) {
   return (
     <section className="status-history">
@@ -16,8 +16,10 @@ export function StatusHistory({ order }: { order: Order }) {
           {order.statusHistory.map((e) => (
             <li key={e.id}>
               <strong>
-                {e.from === null ? "Confirmación" : orderStages[e.from] + " →"}{" "}
-                {orderStages[e.to]}
+                {e.from === null
+                  ? "Confirmación"
+                  : stagesFor(order.delivery)[e.from] + " →"}{" "}
+                {stagesFor(order.delivery)[e.to]}
               </strong>
               <span>
                 {orderDate(e.at)} · {e.actorLabel}

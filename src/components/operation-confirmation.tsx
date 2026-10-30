@@ -28,7 +28,10 @@ export function ConfirmAction({
   build: (
     id: string,
     at: string,
-  ) => Extract<RositaAction, { type: `admin/${string}` | "order/advance" }>;
+  ) => Extract<
+    RositaAction,
+    { type: `admin/${string}` | "order/advance" | "cash/cart" | "shift/close" }
+  >;
 }) {
   const [open, Open] = useState(false),
     { run, error, pending } = useOperation(() => Open(false), success);

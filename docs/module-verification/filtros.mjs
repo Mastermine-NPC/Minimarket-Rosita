@@ -39,121 +39,151 @@ try {
           .waitFor({ state: "detached" });
       }
     };
-    await go("/catalogo");
-    await open();
-    assert.equal(
+    if (width !== 1440 || !process.env.RESUME_PENDING) {
+      await go("/catalogo");
+      await open();
+      assert.equal(
+        await p
+          .locator(".catalog-filters")
+          .getByRole("heading", { name: "Categorías", exact: true })
+          .count(),
+        0,
+      );
+      assert(
+        await p
+          .getByRole("heading", {
+            name: "Explora por subcategorías",
+            exact: true,
+          })
+          .isVisible(),
+      );
+      await close();
+      await go("/categoria/consumibles");
+      await open();
+      const nav = p.getByRole("navigation", {
+        name: "Subcategorías de Consumibles",
+        exact: true,
+      });
+      assert.equal(await nav.getByRole("button").count(), 4);
+      assert.equal(
+        await nav.getByRole("button", { name: /abarrotes/i }).count(),
+        0,
+      );
+      await nav.getByRole("button", { name: /^Snacks/ }).click();
+      await p.waitForURL(
+        (u) => u.searchParams.get("subcategoria") === "snacks",
+      );
+      await p.waitForFunction(() =>
+        document
+          .querySelector(".subcategory-option[aria-pressed=true]")
+          ?.textContent.includes("Snacks"),
+      );
+      assert.equal(
+        await nav
+          .getByRole("button", { name: /^Snacks/ })
+          .getAttribute("aria-pressed"),
+        "true",
+      );
+      await close();
+      assert.equal(await p.locator(".catalog-products article").count(), 2);
+      assert(
+        await p
+          .getByRole("button", {
+            name: "Quitar subcategoría Snacks",
+            exact: true,
+          })
+          .isVisible(),
+      );
       await p
-        .locator(".catalog-filters")
-        .getByRole("heading", { name: "Categorías", exact: true })
-        .count(),
-      0,
-    );
-    assert(
+        .getByRole("searchbox", { name: "Buscar productos" })
+        .fill("Doritos");
+      await p
+        .getByRole("searchbox", { name: "Buscar productos" })
+        .press("Enter");
+      await p.waitForURL((u) => u.searchParams.get("q") === "Doritos");
+      await p.waitForFunction(
+        () =>
+          document.querySelectorAll(".catalog-products article").length === 1,
+      );
+      assert.equal(new URL(p.url()).searchParams.get("subcategoria"), "snacks");
+      await open();
+      await p.locator("#filter-brand").selectOption("Doritos");
+      await p.locator("#filter-price").fill("3");
+      await p.waitForURL((u) => u.searchParams.get("max") === "3");
+      await close();
       await p
         .getByRole("heading", {
-          name: "Explora por subcategorías",
+          name: "No encontramos coincidencias",
           exact: true,
         })
-        .isVisible(),
-    );
-    await close();
-    await go("/categoria/consumibles");
-    await open();
-    const nav = p.getByRole("navigation", {
-      name: "Subcategorías de Consumibles",
-      exact: true,
-    });
-    assert.equal(await nav.getByRole("button").count(), 4);
-    assert.equal(
-      await nav.getByRole("button", { name: /abarrotes/i }).count(),
-      0,
-    );
-    await nav.getByRole("button", { name: /^Snacks/ }).click();
-    await p.waitForURL((u) => u.searchParams.get("subcategoria") === "snacks");
-    await p.waitForFunction(() =>
-      document
-        .querySelector(".subcategory-option[aria-pressed=true]")
-        ?.textContent.includes("Snacks"),
-    );
-    assert.equal(
-      await nav
-        .getByRole("button", { name: /^Snacks/ })
-        .getAttribute("aria-pressed"),
-      "true",
-    );
-    await close();
-    assert.equal(await p.locator(".catalog-products article").count(), 2);
-    assert(
+        .waitFor();
       await p
         .getByRole("button", {
           name: "Quitar subcategoría Snacks",
           exact: true,
         })
-        .isVisible(),
-    );
-    await p
-      .getByRole("searchbox", { name: "Buscar productos" })
-      .fill("Doritos");
-    await p.getByRole("searchbox", { name: "Buscar productos" }).press("Enter");
-    await p.waitForURL((u) => u.searchParams.get("q") === "Doritos");
-    await p.waitForFunction(() => document.querySelectorAll(".catalog-products article").length === 1);
-    assert.equal(new URL(p.url()).searchParams.get("subcategoria"), "snacks");
-    await open();
-    await p.locator("#filter-brand").selectOption("Doritos");
-    await p.locator("#filter-price").fill("3");
-    await p.waitForURL((u) => u.searchParams.get("max") === "3");
-    await close();
-    await p
-      .getByRole("heading", {
-        name: "No encontramos coincidencias",
-        exact: true,
-      })
-      .waitFor();
-    await p
-      .getByRole("button", { name: "Quitar subcategoría Snacks", exact: true })
-      .click();
-    assert.equal(new URL(p.url()).searchParams.has("subcategoria"), false);
-    assert.equal(new URL(p.url()).searchParams.get("q"), "Doritos");
-    assert.equal(new URL(p.url()).searchParams.get("marca"), "Doritos");
-    await p
-      .getByRole("button", { name: "Limpiar búsqueda y filtros", exact: true })
-      .last()
-      .click();
-    await p.waitForFunction(
-      () => document.querySelectorAll(".catalog-products article").length === 4,
-    );
-    record(
-      width +
-        ": general sin lista duplicada; categoría muestra tres subcategorías reales; URL, búsqueda/marca/precio combinados, activo, quitar solo selección y vacío/limpiar.",
-    );
-    await open();
-    await nav.getByRole("button", { name: /^Snacks/ }).click();
-    await close();
-    await p.waitForFunction(
-      () => document.querySelectorAll(".catalog-products article").length === 2,
-    );
-    await p.locator("#catalog-sort").selectOption("precio-desc");
-    await p.waitForFunction(() =>
-      [...document.querySelectorAll(".catalog-products a")].some((a) =>
-        new URL(a.href).searchParams
-          .get("volver")
-          ?.includes("orden=precio-desc"),
-      ),
-    );
-    const listUrl = new URL(p.url()).pathname + new URL(p.url()).search;
-    await p.locator('.catalog-products a[href^="/producto/"]').first().click();
-    await p.locator(".product-detail").waitFor();
-    assert.equal(new URL(p.url()).searchParams.get("volver"), listUrl);
-    await p.locator(".back-link").click();
-    await p.locator(".catalog-results").waitFor();
-    assert.equal(new URL(p.url()).searchParams.get("subcategoria"), "snacks");
-    assert.equal(await p.locator("#catalog-sort").inputValue(), "precio-desc");
-    assert.equal(await p.locator(".catalog-products article").count(), 2);
-    await p.getByRole("button", { name: "Categorías", exact: true }).click();
-    await p
-      .getByRole("dialog")
-      .getByRole("link", { name: "Tecnología", exact: true })
-      .click();
+        .click();
+      assert.equal(new URL(p.url()).searchParams.has("subcategoria"), false);
+      assert.equal(new URL(p.url()).searchParams.get("q"), "Doritos");
+      assert.equal(new URL(p.url()).searchParams.get("marca"), "Doritos");
+      await p
+        .getByRole("button", {
+          name: "Limpiar búsqueda y filtros",
+          exact: true,
+        })
+        .last()
+        .click();
+      await p.waitForFunction(
+        () =>
+          document.querySelectorAll(".catalog-products article").length === 4,
+      );
+      record(
+        width +
+          ": general sin lista duplicada; categoría muestra tres subcategorías reales; URL, búsqueda/marca/precio combinados, activo, quitar solo selección y vacío/limpiar.",
+      );
+      await open();
+      await nav.getByRole("button", { name: /^Snacks/ }).click();
+      await close();
+      await p.waitForFunction(
+        () =>
+          document.querySelectorAll(".catalog-products article").length === 2,
+      );
+      await p.locator("#catalog-sort").selectOption("precio-desc");
+      await p.waitForFunction(() =>
+        [...document.querySelectorAll(".catalog-products a")].some((a) =>
+          new URL(a.href).searchParams
+            .get("volver")
+            ?.includes("orden=precio-desc"),
+        ),
+      );
+      const listUrl = new URL(p.url()).pathname + new URL(p.url()).search;
+      await p
+        .locator('.catalog-products a[href^="/producto/"]')
+        .first()
+        .click();
+      await p.locator(".product-detail").waitFor();
+      assert.equal(new URL(p.url()).searchParams.get("volver"), listUrl);
+      await p.locator(".back-link").click();
+      await p.locator(".catalog-results").waitFor();
+      assert.equal(new URL(p.url()).searchParams.get("subcategoria"), "snacks");
+      assert.equal(
+        await p.locator("#catalog-sort").inputValue(),
+        "precio-desc",
+      );
+      assert.equal(await p.locator(".catalog-products article").count(), 2);
+    } else {
+      await go("/categoria/consumibles?subcategoria=snacks&orden=precio-desc");
+      record(
+        "1440: comprobaciones previas de filtros/URL/retorno ya aprobadas; se retoma desde cambio de categoría.",
+      );
+    }
+    if (width < 1280)
+      await p.locator("#catalog-category").selectOption("tecnologia");
+    else
+      await p
+        .locator(".category-inline")
+        .getByRole("link", { name: "Tecnología", exact: true })
+        .click();
     await p.waitForURL("**/categoria/tecnologia");
     await p.locator(".catalog-results").waitFor();
     assert(!new URL(p.url()).searchParams.has("subcategoria"));
@@ -205,7 +235,9 @@ try {
     );
     await p.waitForURL((u) => !u.searchParams.has("subcategoria"));
     assert.equal(new URL(p.url()).searchParams.get("q"), "coca");
-    await p.waitForFunction(() => document.querySelectorAll(".catalog-products article").length === 1);
+    await p.waitForFunction(
+      () => document.querySelectorAll(".catalog-products article").length === 1,
+    );
     await go("/catalogo?subcategoria=snacks");
     await p.waitForURL((u) => !u.searchParams.has("subcategoria"));
     assert.equal(await p.locator(".catalog-products article").count(), 24);

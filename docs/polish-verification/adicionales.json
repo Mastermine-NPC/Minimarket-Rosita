@@ -1,0 +1,9 @@
+{
+  "passed": [
+    "Movimiento del hero observado en navegador: transformación de foto/video cambia con scroll, conservando controles.",
+    "Carrito: mínimo1 y eliminación/vaciado destructivos. Cambiar cantidad y restaurarla en el panel invalida revisión/aprobación, bloquea confirmar y conserva carrito sin pedido.",
+    "Espaciado final de párrafos y lectura de Nosotros comprobado a1440/390 tras ajuste visual."
+  ],
+  "errors": [],
+  "browser": "156.0.8078.4"
+}

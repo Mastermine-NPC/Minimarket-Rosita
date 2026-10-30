@@ -78,11 +78,13 @@ export function AuthForm({
     const user = state.users.find((u) => u.id === state.sessionUserId);
     if (user)
       navigate(
-        user.role === "admin"
-          ? "/admin"
-          : returnTo === "/admin"
-            ? "/cuenta"
-            : returnTo,
+        user.role === "cashier"
+          ? "/caja"
+          : user.role === "admin"
+            ? "/admin"
+            : returnTo === "/admin"
+              ? "/cuenta"
+              : returnTo,
         { replace: true },
       );
   }, [state.sessionUserId, state.users, navigate, returnTo]);
@@ -115,7 +117,11 @@ export function AuthForm({
             "Tu carrito se conserva. No se enviaron datos a un servidor.",
         });
       } else {
-        if (!existing || !(await verifyPassword(values.password, existing))) {
+        if (
+          !existing ||
+          existing.active === false ||
+          !(await verifyPassword(values.password, existing))
+        ) {
           setError("root", {
             message: "El correo o la contraseña de demostración no coinciden.",
           });
@@ -145,25 +151,35 @@ export function AuthForm({
           <h2>Accesos de demostración</h2>
           <p>
             Completa datos ficticios para la exposición y pulsa Iniciar sesión.
-            El cliente compra; el administrador gestiona. No hay caja ni perfil
-            de cajero implementados.
+            El cliente compra; el administrador gestiona y el agente de caja
+            registra ventas presenciales.
           </p>
           {[
             state.users.find((u) => u.role === "customer" && u.demoAccess),
             state.users.find((u) => u.role === "admin"),
+            state.users.find(
+              (u) =>
+                u.role === "cashier" && u.cashierDemo && u.active !== false,
+            ),
           ]
             .filter((u) => !!u)
             .map((user) => (
               <div key={user.id}>
                 <strong>
-                  {user.role === "admin" ? "Administrador" : "Cliente"}
+                  {user.role === "cashier"
+                    ? "Agente de caja"
+                    : user.role === "admin"
+                      ? "Administrador"
+                      : "Cliente"}
                 </strong>
                 <span>{user.email}</span>
                 <span>
                   Contraseña ficticia:{" "}
-                  {user.role === "admin"
-                    ? "RositaDemo!2026"
-                    : "ClienteDemo!2026"}
+                  {user.role === "cashier"
+                    ? "CajaDemo!2026"
+                    : user.role === "admin"
+                      ? "RositaDemo!2026"
+                      : "ClienteDemo!2026"}
                 </span>
                 <Button
                   type="button"
@@ -173,14 +189,20 @@ export function AuthForm({
                     setValue("email", user.email);
                     setValue(
                       "password",
-                      user.role === "admin"
-                        ? "RositaDemo!2026"
-                        : "ClienteDemo!2026",
+                      user.role === "cashier"
+                        ? "CajaDemo!2026"
+                        : user.role === "admin"
+                          ? "RositaDemo!2026"
+                          : "ClienteDemo!2026",
                     );
                   }}
                 >
                   Completar acceso de{" "}
-                  {user.role === "admin" ? "administrador" : "cliente"}
+                  {user.role === "cashier"
+                    ? "caja"
+                    : user.role === "admin"
+                      ? "administrador"
+                      : "cliente"}
                 </Button>
               </div>
             ))}

@@ -35,6 +35,9 @@ const sections = [
   },
   { path: "/admin/inventario", label: "Inventario", icon: Boxes },
   { path: "/admin/pedidos", label: "Pedidos", icon: ClipboardList },
+  { path: "/caja", label: "Caja", icon: Boxes },
+  { path: "/admin/agentes", label: "Agentes de caja", icon: ShieldCheck },
+  { path: "/admin/ubicacion", label: "Origen de tienda", icon: Tags },
   { path: "/admin/reportes", label: "Reportes", icon: FileDown },
 ];
 export function AdminLayout() {
@@ -103,7 +106,7 @@ export function AdminLayout() {
         <span className="admin-sidebar-label">TU NEGOCIO, EN ORDEN</span>
         {nav}
         <div className="admin-sidebar-bottom">
-          <span>Prototipo local · 0.7.0</span>
+          <span>Prototipo local · 1.0.0</span>
           <p>
             Datos ficticios.
             <br />

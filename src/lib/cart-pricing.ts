@@ -19,7 +19,7 @@ export function priceCart(state: RositaState) {
       !p ||
       !item ||
       !Number.isSafeInteger(item.priceCents) ||
-      item.priceCents < 0 ||
+      item.priceCents <= 0 ||
       !Number.isSafeInteger(item.stock) ||
       item.stock < 0 ||
       !Number.isSafeInteger(quantity) ||
@@ -28,7 +28,7 @@ export function priceCart(state: RositaState) {
       return fail(
         "El carrito contiene una referencia inválida. Revisa los productos.",
       );
-    if (!p.active || !taxonomyEnabled(state, p))
+    if (p.archived || !p.active || !taxonomyEnabled(state, p))
       error =
         "Hay productos desactivados en tu carrito. Elimínalos antes de confirmar.";
     else if (quantity > item.stock)

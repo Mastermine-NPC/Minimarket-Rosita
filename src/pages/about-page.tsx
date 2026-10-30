@@ -35,8 +35,8 @@ export function AboutPage() {
         >
           <img
             src="/images/negocio-rosita.jpg"
-            width={1025}
-            height={260}
+            width={1024}
+            height={598}
             alt="Interior real de Minimarket Rosita, con estantes y productos"
           />
           <figcaption>

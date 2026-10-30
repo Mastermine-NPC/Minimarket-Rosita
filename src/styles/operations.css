@@ -1,0 +1,252 @@
+.route-map-wrap {
+  width: 100%;
+  min-width: 0;
+  position: relative;
+  margin-block: 1rem;
+}
+.route-map {
+  height: 340px;
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  isolation: isolate;
+  z-index: 0;
+  cursor: crosshair;
+}
+.route-map * {
+  cursor: auto;
+}
+.route-map-wrap small {
+  display: block;
+  padding-top: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+}
+.rosita-map-pin {
+  font-size: 26px;
+  background: var(--card);
+  border: 2px solid #145a46;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 2px 8px #17231d30;
+}
+.rosita-map-pin span {
+  display: block;
+}
+.coordinate-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+.location-summary {
+  background: var(--secondary);
+  padding: 1rem;
+  border-radius: 14px;
+  overflow-wrap: anywhere;
+}
+.delivery-tracking {
+  margin-block: 1.5rem;
+  min-width: 0;
+}
+.delivery-tracking progress {
+  width: 100%;
+  accent-color: var(--brand);
+}
+.cash-page {
+  max-width: 1450px;
+  margin: auto;
+  padding: 24px;
+}
+.cash-header,
+.cash-tabs {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+.cash-tabs {
+  justify-content: flex-start;
+}
+.cash-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(350px, 0.85fr);
+  gap: 24px;
+}
+.cash-panel {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 24px;
+  min-width: 0;
+}
+.cash-products {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 16px;
+  max-height: 560px;
+  overflow: auto;
+}
+.cash-product {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px;
+  display: grid;
+  gap: 8px;
+}
+.cash-product small {
+  overflow-wrap: anywhere;
+}
+.cash-table {
+  overflow-x: auto;
+}
+.cash-table table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+.cash-table th,
+.cash-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+.cash-line {
+  display: grid;
+  gap: 12px;
+  border-bottom: 1px solid var(--border);
+  padding-block: 16px;
+}
+.cash-line-controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.cash-line-controls input {
+  width: 80px;
+}
+.cash-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-block: 20px;
+}
+.sale-receipt {
+  max-width: 700px;
+}
+.sale-receipt dl {
+  display: grid;
+  gap: 8px;
+}
+.agent-list {
+  display: grid;
+  gap: 16px;
+}
+.agent-row {
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 14px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.agent-row .customer-actions {
+  grid-column: 1/-1;
+}
+.camera-video {
+  max-width: 100%;
+  border-radius: 12px;
+}
+.cash-page select,
+.customer-form select {
+  min-height: 44px;
+  max-width: 100%;
+}
+@media (max-width: 900px) {
+  .cash-grid {
+    grid-template-columns: 1fr;
+  }
+  .cash-page {
+    padding: 16px;
+  }
+  .route-map {
+    height: 300px;
+  }
+}
+@media (max-width: 480px) {
+  .coordinate-fields,
+  .agent-row {
+    grid-template-columns: 1fr;
+  }
+  .cash-products {
+    grid-template-columns: 1fr;
+  }
+  .cash-panel {
+    padding: 16px;
+  }
+  .route-map {
+    height: 270px;
+  }
+  .cash-header {
+    align-items: flex-start;
+  }
+}
+@media print {
+  body.printing-sale #root {
+    display: none !important;
+  }
+  body.printing-sale [data-slot="dialog-overlay"] {
+    display: none !important;
+  }
+  body.printing-sale [data-slot="dialog-content"] {
+    position: static !important;
+    transform: none !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    max-height: none !important;
+    width: 100% !important;
+    max-width: none !important;
+  }
+  body.printing-sale button,
+  body.printing-sale [data-slot="dialog-close"] {
+    display: none !important;
+  }
+}
+
+.sale-receipt,
+.camera-dialog {
+  max-height: 85dvh;
+  overflow-y: auto;
+  overflow-wrap: anywhere;
+}
+.cash-total,
+.cash-table {
+  font-variant-numeric: tabular-nums;
+}
+@media print {
+  body.printing-sale [data-slot="dialog-content"] {
+    overflow: visible !important;
+  }
+}
+
+.rosita-map-pin {
+  color: var(--brand);
+}
+.rosita-map-pin > span {
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+.rosita-map-pin .rider-direction {
+  position: absolute;
+  top: -17px;
+  left: 5px;
+  width: 14px;
+  height: 14px;
+  transform-origin: center;
+}

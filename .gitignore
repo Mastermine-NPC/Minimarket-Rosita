@@ -1,58 +1,52 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
-
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-.vercel
-
-# Dependencias
+# Dependencias y caché de npm
 node_modules/
-/.pnp
-.pnp.js
+.npm/
 
-# Salida de compilación (build)
-dist/
-dist-ssr/
+# Compilaciones de Vite y cachés de TypeScript/ESLint
+/dist/
+/dist-ssr/
+.vite/
+.cache/
+.eslintcache
+*.tsbuildinfo
+
+# Logs (se conservan scripts, resultados JSON y documentación de pruebas)
+*.log
+logs/
+
+# Temporales y copias automáticas de editores
+/tmp/
+/temp/
+.tmp/
+*.tmp
+*.temp
+*.bak
+*.orig
+*.rej
+*~
+*.swp
+*.swo
+
+# Entornos privados; la plantilla sin secretos sí se versiona
+.env
+.env.*
+!.env.example
 *.local
 
-# Logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Archivos de entorno / secretos
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# Editores y Sistema Operativo
+# Editores y metadatos del sistema
 .vscode/*
 !.vscode/extensions.json
-.idea
+.idea/
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+Thumbs.db
+Desktop.ini
+*.Identifier
+*:Zone.Identifier
+
+# Recuperaciones generadas; conservar instrucciones y hashes útiles
+/docs/recovery/*
+!/docs/recovery/*.md
+!/docs/recovery/SHA256SUMS
+!/docs/recovery/SHA256SUMS.txt
+# Copias locales de recuperación
+/docs/recovery/

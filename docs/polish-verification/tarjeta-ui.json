@@ -1,0 +1,10 @@
+{
+  "passed": [
+    "1440: obligatorios/foco, rechazo/error sin pedido, aprobación con campos limpiados, cambio de envío exige simular de nuevo, doble clic genera un pedido/stock único, sin PAN/vencimiento/CVV persistidos ni POST.",
+    "768: obligatorios/foco, rechazo/error sin pedido, aprobación con campos limpiados, cambio de envío exige simular de nuevo, doble clic genera un pedido/stock único, sin PAN/vencimiento/CVV persistidos ni POST.",
+    "390: obligatorios/foco, rechazo/error sin pedido, aprobación con campos limpiados, cambio de envío exige simular de nuevo, doble clic genera un pedido/stock único, sin PAN/vencimiento/CVV persistidos ni POST.",
+    "Abandonar formulario o cerrar sesión durante procesamiento cancela la simulación; no pedido tardío y carrito conservado."
+  ],
+  "errors": [],
+  "browser": "156.0.8078.4"
+}

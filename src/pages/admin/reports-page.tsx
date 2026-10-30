@@ -1,3 +1,5 @@
+import { paymentName } from "@/data/operation-labels";
+import { combinedOrderStages } from "@/data/delivery";
 import { useMemo, useState, useRef } from "react";
 import { useRosita } from "@/hooks/use-rosita";
 import { useTaxonomy } from "@/hooks/use-taxonomy";
@@ -17,7 +19,20 @@ export function ReportsPage() {
       [state, filters],
     );
   const update = (key: keyof typeof filters, value: string) =>
-    Filters((old) => ({ ...old, [key]: value }));
+    Filters((old) =>
+      key === "type"
+        ? {
+            ...old,
+            type: value as typeof old.type,
+            status: "",
+            category: "",
+            channel: "",
+            agent: "",
+            shift: "",
+            payment: "",
+          }
+        : { ...old, [key]: value },
+    );
   const dates = !["inventory", "low"].includes(filters.type);
   const exportLock = useRef(false);
   async function download() {
@@ -75,8 +90,13 @@ export function ReportsPage() {
               ["low", "Agotados y stock bajo"],
               ["orders", "Pedidos por fecha y estado"],
               ["digital", "Ventas digitales · confirmaciones"],
-              ["cash", "Ventas presenciales · no implementadas"],
+              ["cash", "Ventas presenciales · caja"],
               ["top", "Productos más vendidos"],
+              ["channels", "Fecha y canal"],
+              ["agents", "Ventas por agente"],
+              ["payments", "Medios de pago"],
+              ["shifts", "Turnos y cierres"],
+              ["movements", "Movimientos de inventario"],
             ].map(([id, name]) => (
               <option key={id} value={id}>
                 {name}
@@ -106,23 +126,25 @@ export function ReportsPage() {
                 aria-invalid={!!report.error}
               />
             </div>
-            <div className="field">
-              <Label htmlFor="report-status">Estado del pedido</Label>
-              <select
-                id="report-status"
-                value={filters.status}
-                onChange={(e) => update("status", e.target.value)}
-              >
-                <option value="">Todos</option>
-                {["Recibido", "En preparación", "En camino", "Entregado"].map(
-                  (s, i) => (
+            {["orders", "digital", "channels", "top"].includes(
+              filters.type,
+            ) && (
+              <div className="field">
+                <Label htmlFor="report-status">Estado del pedido</Label>
+                <select
+                  id="report-status"
+                  value={filters.status}
+                  onChange={(e) => update("status", e.target.value)}
+                >
+                  <option value="">Todos</option>
+                  {combinedOrderStages.map((s, i) => (
                     <option key={s} value={i}>
                       {s}
                     </option>
-                  ),
-                )}
-              </select>
-            </div>
+                  ))}
+                </select>
+              </div>
+            )}
           </>
         ) : (
           <div className="field">
@@ -140,6 +162,72 @@ export function ReportsPage() {
               ))}
             </select>
           </div>
+        )}
+        {dates && (
+          <>
+            <label>
+              Canal
+              <select
+                aria-label="Canal"
+                value={filters.channel}
+                onChange={(e) => update("channel", e.target.value)}
+              >
+                <option value="">Todos</option>
+                <option value="delivery">Digital · delivery</option>
+                <option value="pickup">Digital · recojo</option>
+                <option value="cash">Caja presencial</option>
+              </select>
+            </label>
+            <label>
+              Agente
+              <select
+                aria-label="Agente"
+                value={filters.agent}
+                onChange={(e) => update("agent", e.target.value)}
+              >
+                <option value="">Todos</option>
+                {state.users
+                  .filter((u) => u.role !== "customer")
+                  .map((u) => (
+                    <option key={u.id} value={u.id}>
+                      {u.name}
+                    </option>
+                  ))}
+              </select>
+            </label>
+            <label>
+              Turno
+              <select
+                aria-label="Turno"
+                value={filters.shift}
+                onChange={(e) => update("shift", e.target.value)}
+              >
+                <option value="">Todos</option>
+                {state.shifts.map((s) => (
+                  <option key={s.id} value={s.id}>
+                    {s.agentName} · {s.id}
+                  </option>
+                ))}
+              </select>
+            </label>
+            {filters.type !== "shifts" && (
+              <label>
+                Pago
+                <select
+                  aria-label="Pago"
+                  value={filters.payment}
+                  onChange={(e) => update("payment", e.target.value)}
+                >
+                  <option value="">Todos</option>
+                  {["cash", "card-demo", "yape-demo", "plin-demo"].map((p) => (
+                    <option key={p} value={p}>
+                      {paymentName(p)}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            )}
+          </>
         )}
       </section>
       {report.error && (
@@ -211,9 +299,9 @@ export function ReportsPage() {
           <p>No hay registros para este reporte y sus filtros.</p>
         )}
         <p className="hint">
-          Prototipo local. Pedidos confirmados no equivalen a pagos cobrados.
-          Caja no implementada; no se mezclan canales ni se añaden ventas
-          históricas.
+          Prototipo local. Pedidos confirmados no equivalen a pagos cobrados. El
+          efectivo previsto de pedidos digitales no se suma al efectivo de caja.
+          Recoger un pedido no genera otra venta.
         </p>
       </section>
     </div>

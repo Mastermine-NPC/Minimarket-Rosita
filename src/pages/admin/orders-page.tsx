@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router";
 import { useRosita } from "@/hooks/use-rosita";
-import { orderStages } from "@/data/delivery";
+import { stagesFor, combinedOrderStages } from "@/data/delivery";
 import { orderDate } from "@/lib/order-date";
 import { money } from "@/lib/currency";
 import { normalizeText } from "@/features/catalogo/catalog-logic";
@@ -91,7 +91,7 @@ export function AdminOrdersPage() {
             }}
           >
             <option value="">Todos</option>
-            {orderStages.map((s, i) => (
+            {combinedOrderStages.map((s, i) => (
               <option key={s} value={i}>
                 {s}
               </option>
@@ -188,7 +188,9 @@ export function AdminOrdersPage() {
                   key: "status",
                   label: "Estado",
                   render: (o) => (
-                    <span className="status-chip">{orderStages[o.status]}</span>
+                    <span className="status-chip">
+                      {stagesFor(o.delivery)[o.status]}
+                    </span>
                   ),
                 },
                 {

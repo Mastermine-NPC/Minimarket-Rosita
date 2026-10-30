@@ -40,9 +40,9 @@ export function filterProducts(
         (!category || p.category === category) &&
         (!f.subcategory || p.subcategory === f.subcategory) &&
         (!f.query ||
-          normalizeText(p.name + " " + p.brand).includes(
-            normalizeText(f.query),
-          )) &&
+          normalizeText(
+            (p.code || p.id) + " " + p.name + " " + p.brand,
+          ).includes(normalizeText(f.query))) &&
         (!f.brand || p.brand === f.brand) &&
         p.price <= f.max &&
         (!f.inStock || p.stock > 0) &&

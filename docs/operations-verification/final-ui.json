@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-30",
+  "passed": [
+    "Llegada sobre geometría, token de duración y recarga: progreso 100%, pedido sigue En camino, stock intacto; visor 390×700.",
+    "390×700: modal de recibo desplazable, nueva venta devuelve foco al lector y cierre al encabezado; permiso de cámara denegado simulado solo tras acción explícita.",
+    "Origen: valor inicial exacto del usuario y edición por coordenadas conservan todos los pedidos anteriores sin cambios.",
+    "Cambio recojo→delivery suma envío e invalida aprobación de tarjeta: requiere nueva simulación y no crea pedido.",
+    "Build estable: cambiar tipo de reporte limpia filtros incompatibles; inventario no declara canal oculto, caja no ofrece estado de pedido, turnos no ofrece filtro de pago sin aplicación."
+  ],
+  "errors": [],
+  "browser": "156.0.8078.4",
+  "base": "http://127.0.0.1:4176"
+}

@@ -1,3 +1,4 @@
+import { DeliveryTracking } from "@/features/entrega/delivery-tracking";
 import { ConfirmAction } from "@/components/operation-confirmation";
 import { StatusHistory } from "@/features/pedidos/status-history";
 import { Link, useLocation, useParams } from "react-router";
@@ -12,7 +13,7 @@ import {
 import { useRosita } from "@/hooks/use-rosita";
 import { CustomerGate } from "@/features/acceso/customer-gate";
 import { OrderSummary } from "@/features/pedidos/order-summary";
-import { orderStages } from "@/data/delivery";
+import { stagesFor } from "@/data/delivery";
 import { Button } from "@/components/ui/button";
 import { useHeadingFocus } from "@/hooks/use-heading-focus";
 import { orderDate } from "@/lib/order-date";
@@ -88,15 +89,18 @@ export function OrderPage({
             quote={order}
             delivery={order.delivery}
             payment={order.payment}
+            cardReceipt={order.cardReceipt}
           />
         </section>
         <aside className="customer-panel order-next">
           {tracking ? (
             <>
               <span className="eyebrow">ESTADO ACTUAL</span>
-              <h2 aria-live="polite">{orderStages[order.status]}</h2>
+              <h2 aria-live="polite">
+                {stagesFor(order.delivery)[order.status]}
+              </h2>
               <ol className="tracking-steps" aria-label="Etapas del pedido">
-                {orderStages.map((s, i) => (
+                {stagesFor(order.delivery).map((s, i) => (
                   <li
                     key={s}
                     className={
@@ -129,6 +133,7 @@ export function OrderPage({
                 ))}
               </ol>
               <StatusHistory order={order} />
+              <DeliveryTracking key={order.id} order={order} />
               <div className="simulation-controls">
                 <h3>Área de demostración</h3>
                 <p>
@@ -145,9 +150,9 @@ export function OrderPage({
                     }
                     title="¿Avanzar la simulación?"
                     description={
-                      orderStages[order.status] +
+                      stagesFor(order.delivery)[order.status] +
                       " → " +
-                      orderStages[order.status + 1] +
+                      stagesFor(order.delivery)[order.status + 1] +
                       ". No representa un reparto real y no descuenta stock."
                     }
                     label="Confirmar avance de estado"
@@ -174,7 +179,9 @@ export function OrderPage({
             </>
           ) : (
             <>
-              <span className="status-chip">{orderStages[order.status]}</span>
+              <span className="status-chip">
+                {stagesFor(order.delivery)[order.status]}
+              </span>
               <h2>
                 {confirmation
                   ? "Gracias por probar Rosita."

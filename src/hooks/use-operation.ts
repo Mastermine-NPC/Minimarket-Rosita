@@ -4,7 +4,17 @@ import { useRosita } from "./use-rosita";
 import type { RositaAction } from "@/types/state";
 type Command = Extract<
   RositaAction,
-  { type: `admin/${string}` | "order/advance" | "profile/save" }
+  {
+    type:
+      | `admin/${string}`
+      | "order/advance"
+      | "profile/save"
+      | "agent/save"
+      | "store/location"
+      | "shift/open"
+      | "shift/close"
+      | "cash/cart";
+  }
 >;
 export function useOperation(onSuccess: () => void, message: string) {
   const { state, dispatch } = useRosita(),

@@ -1,3 +1,5 @@
+import type { CardApproval } from "@/types/commerce";
+import { prepareQuote } from "@/lib/order-transaction";
 import { useEffect, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router";
 import { motion } from "motion/react";
@@ -21,6 +23,7 @@ export function CheckoutPage() {
     heading = useHeadingFocus(),
     reduced = useMotionPreference(),
     navigate = useNavigate(),
+    [approval, Approval] = useState<CardApproval | null>(null),
     [busy, Busy] = useState(false),
     [request, Request] = useState(""),
     lock = useRef(false),
@@ -49,14 +52,34 @@ export function CheckoutPage() {
   useEffect(() => {
     if (draft.error) errorRef.current?.focus();
   }, [draft.error]);
+  useEffect(() => {
+    return () => {
+      if (timer.current) clearTimeout(timer.current);
+      lock.current = false;
+    };
+  }, [state.sessionUserId]);
+  const cardValid =
+    draft.payment.method !== "card-demo" ||
+    (!!approval &&
+      approval.userId === state.sessionUserId &&
+      approval.token === draft.token &&
+      approval.fingerprint === prepareQuote(state).quote?.fingerprint);
+  if (
+    approval &&
+    (approval.userId !== state.sessionUserId ||
+      approval.token !== draft.token ||
+      approval.fingerprint !== prepareQuote(state).quote?.fingerprint)
+  )
+    Approval(null);
   function confirm() {
-    if (lock.current || !draft.quote) return;
+    if (lock.current || !draft.quote || !cardValid) return;
     lock.current = true;
     Busy(true);
     Request(draft.token);
     const action = {
       type: "order/confirm" as const,
       token: draft.token,
+      cardApproval: approval,
       id: "ROS-" + crypto.randomUUID(),
       createdAt: new Date().toISOString(),
     };
@@ -94,11 +117,20 @@ export function CheckoutPage() {
           Compra con un cliente de demostración.
         </h1>
         <p>
-          El administrador gestiona el negocio. Cierra su sesión para
-          identificarte como cliente; tu carrito se conserva.
+          El personal gestiona el negocio o registra ventas. Cierra su sesión
+          para identificarte como cliente; tu carrito se conserva.
         </p>
         <Button asChild>
-          <Link to="/admin">Volver al panel</Link>
+          <Link
+            to={
+              state.users.find((u) => u.id === state.sessionUserId)?.role ===
+              "cashier"
+                ? "/caja"
+                : "/admin"
+            }
+          >
+            Volver al panel de personal
+          </Link>
         </Button>
       </section>
     );
@@ -172,9 +204,17 @@ export function CheckoutPage() {
             {draft.step === 0 ? (
               <DeliveryForm />
             ) : draft.step === 1 ? (
-              <PaymentForm totalCents={totalCents} />
+              <PaymentForm
+                totalCents={totalCents}
+                approval={approval}
+                onApproval={Approval}
+              />
             ) : (
-              <ReviewStep busy={busy} onConfirm={confirm} />
+              <ReviewStep
+                busy={busy}
+                onConfirm={confirm}
+                cardValid={cardValid}
+              />
             )}
           </motion.div>
         </div>
@@ -215,9 +255,11 @@ export function CheckoutPage() {
 function ReviewStep({
   busy,
   onConfirm,
+  cardValid,
 }: {
   busy: boolean;
   onConfirm: () => void;
+  cardValid: boolean;
 }) {
   const { state, dispatch } = useRosita(),
     heading = useHeadingFocus(),
@@ -268,9 +310,15 @@ function ReviewStep({
           Editar pago
         </Button>
       </div>
+      {!cardValid && (
+        <p role="alert" className="field-error">
+          La tarjeta necesita una nueva simulación. Abre Editar pago; la
+          aprobación no se conserva al salir o recargar.
+        </p>
+      )}
       <Button
         className="full-width"
-        disabled={busy || !draft.quote}
+        disabled={busy || !draft.quote || !cardValid}
         aria-busy={busy}
         aria-describedby="confirm-demo-note"
         onClick={onConfirm}

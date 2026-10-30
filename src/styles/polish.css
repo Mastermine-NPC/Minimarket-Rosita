@@ -1,0 +1,451 @@
+/* DS 2.6: shared rhythm for reading, management and supplemental motion. */
+:root {
+  --space-section: clamp(32px, 5vw, 64px);
+  --motion-payment: 650ms;
+}
+.ambient-video {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+  border-radius: var(--radius-card);
+  background: var(--secondary);
+  width: 100%;
+}
+.ambient-video > img,
+.ambient-video > video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  object-fit: contain;
+  object-position: center;
+  background: var(--secondary);
+}
+.ambient-video > video {
+  opacity: 0;
+  pointer-events: none;
+}
+.ambient-video > video.is-playing {
+  opacity: 1;
+}
+.ambient-video .video-control {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  background: var(--card);
+  color: var(--brand);
+  border: 1px solid var(--input);
+  white-space: normal;
+  min-height: 44px;
+  z-index: 1;
+}
+.video-notice {
+  position: absolute;
+  inset: 12px 12px auto;
+  margin: 0;
+  padding: 8px 12px;
+  background: var(--card);
+  color: var(--foreground);
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 8px;
+}
+.home-shop-image:has(.ambient-video) {
+  height: auto !important;
+  aspect-ratio: 16/9;
+}
+.home-shop-image .ambient-video {
+  height: 100%;
+  border-radius: 0;
+}
+.home-shop-image .ambient-video img {
+  opacity: 1;
+  transform: none;
+  filter: none;
+}
+.home-shop-image .ambient-video video {
+  object-fit: contain;
+}
+.home-delivery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-section);
+  align-items: start;
+  padding-block: var(--space-section);
+}
+.home-delivery h2 {
+  font: 800 clamp(28px, 4vw, 46px)/1.15 var(--font-title);
+  letter-spacing: -0.045em;
+  margin: 16px 0;
+}
+.home-delivery p {
+  line-height: 1.7;
+  color: var(--muted-foreground);
+  max-width: 60ch;
+}
+.delivery-reference {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 24px;
+}
+.delivery-reference summary {
+  cursor: pointer;
+  min-height: 44px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.delivery-reference > p {
+  font-size: 13px;
+}
+.card-simulation {
+  min-width: 0;
+  padding: 24px;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-card);
+  display: grid;
+  gap: 20px;
+  background: var(--background);
+}
+.card-simulation legend {
+  padding-inline: 8px;
+  font-weight: 700;
+}
+.card-simulation p {
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+.card-fixtures {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.card-fixtures button {
+  flex: 1;
+  white-space: normal;
+  min-width: 130px;
+}
+.card-simulation .field {
+  margin: 0;
+}
+.card-simulation:disabled {
+  opacity: 0.75;
+}
+.admin-page {
+  padding-block: clamp(24px, 3vw, 48px);
+}
+.admin-page-heading {
+  gap: 24px;
+  margin-bottom: 32px;
+  align-items: flex-start;
+}
+.admin-page-heading > div {
+  min-width: 0;
+}
+.admin-page-heading h1 {
+  margin: 12px 0 16px;
+  overflow-wrap: anywhere;
+}
+.admin-page-heading p {
+  max-width: 72ch;
+  line-height: 1.65;
+}
+.admin-filters {
+  gap: 20px;
+  margin-block: 24px 32px;
+}
+.admin-filters > div {
+  min-width: 0;
+}
+.admin-filters label {
+  display: block;
+  margin-bottom: 8px;
+}
+.admin-editor {
+  padding: clamp(20px, 3vw, 32px);
+  scrollbar-gutter: stable;
+}
+.admin-editor form {
+  gap: 22px;
+}
+.admin-form-footer {
+  gap: 12px;
+  flex-wrap: wrap;
+  padding-top: 20px;
+}
+.admin-page table td,
+.admin-page table th {
+  padding-block: 18px;
+  overflow-wrap: anywhere;
+}
+.admin-page .analytics-panel {
+  margin-top: 40px;
+  padding-top: 32px;
+}
+.admin-page .analytics-grid {
+  gap: 24px;
+}
+.admin-page .analytics-grid section {
+  padding: 24px;
+}
+.admin-page h2 {
+  line-height: 1.3;
+}
+.inventory-available {
+  background: var(--success-surface);
+  color: var(--success);
+}
+.inventory-low {
+  background: var(--warning-surface);
+  color: var(--warning);
+}
+.inventory-empty {
+  background: var(--error-surface);
+  color: var(--destructive);
+}
+.inventory-inactive {
+  background: var(--muted);
+  color: var(--muted-foreground);
+}
+.inventory-state {
+  font-weight: 700;
+  border: 1px solid currentColor;
+  white-space: normal;
+}
+.info-page {
+  padding-block: var(--space-section);
+}
+.info-heading {
+  margin-bottom: 40px;
+}
+.info-heading p,
+.info-story p {
+  max-width: 68ch;
+}
+.about-intro {
+  gap: clamp(28px, 5vw, 64px);
+  align-items: center;
+}
+.about-intro figure img {
+  height: auto;
+  max-height: none;
+  aspect-ratio: auto;
+  object-fit: contain;
+  background: var(--secondary);
+}
+.about-intro figcaption {
+  font-size: 12px;
+  line-height: 1.6;
+}
+.info-story {
+  margin-block: var(--space-section);
+  max-width: 72ch;
+}
+.info-story h2 {
+  margin: 16px 0 24px;
+}
+.info-values h2 {
+  margin-block: 16px 12px;
+}
+.info-values article {
+  padding: 32px;
+}
+.info-callout {
+  padding: clamp(24px, 4vw, 40px);
+}
+.help-topic-nav {
+  gap: 12px;
+  max-width: 900px;
+}
+.help-topic {
+  margin-block: 40px;
+}
+.help-topic h2 {
+  margin: 0 0 20px;
+  line-height: 1.35;
+}
+.help-topic summary {
+  padding: 20px 24px;
+}
+.help-topic details p {
+  max-width: 75ch;
+  padding-inline: 24px;
+  margin-bottom: 0;
+}
+.contact-grid {
+  gap: 32px;
+  align-items: start;
+}
+.contact-grid > .customer-panel {
+  padding: clamp(24px, 4vw, 40px);
+}
+.contact-grid aside p {
+  line-height: 1.8;
+}
+.contact-grid .customer-form {
+  gap: 24px;
+}
+.contact-grid textarea {
+  min-height: 170px;
+}
+.footer-main {
+  grid-template-columns: 1.2fr 1fr 1fr 1.2fr;
+  gap: clamp(24px, 4vw, 56px);
+  padding-block: 56px;
+}
+.footer-main > div {
+  min-width: 0;
+}
+.footer-main > div:nth-child(3) > p {
+  padding-left: 0;
+}
+.footer-main h2 {
+  font-size: 14px;
+  margin: 0 0 20px;
+}
+.footer-main nav {
+  gap: 10px;
+}
+.footer-main nav a {
+  font-size: 14px;
+  line-height: 1.5;
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+}
+.footer-main > div > p {
+  line-height: 1.7;
+}
+.footer-main > div:nth-child(4) > p {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+.footer-main > div:nth-child(4) > p svg {
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+.footer-note {
+  grid-column: 1/-1;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  border-top: 1px solid var(--inverse-muted);
+  padding-top: 28px;
+}
+.footer-note h2 {
+  font-size: 18px;
+  margin: 0;
+  min-width: 220px;
+}
+.footer-note p {
+  max-width: 58ch;
+}
+.footer-note .footer-pink-dot {
+  display: none;
+}
+.footer-bottom {
+  gap: 24px;
+  padding-block: 24px 32px;
+}
+.footer-bottom nav {
+  flex-wrap: wrap;
+  gap: 12px 24px;
+}
+.footer-bottom a {
+  font-size: 12px;
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+}
+@media (max-width: 1000px) {
+  .footer-main {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .footer-note {
+    flex-wrap: wrap;
+  }
+  .home-delivery {
+    gap: 28px;
+  }
+  .admin-page-heading {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 640px) {
+  .home-delivery {
+    grid-template-columns: 1fr;
+  }
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px 24px;
+  }
+  .footer-brand,
+  .footer-main > div:nth-child(4) {
+    grid-column: 1/-1;
+  }
+  .footer-main .footer-note {
+    display: block;
+  }
+  .footer-note > * {
+    margin-block: 16px;
+  }
+  .footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .about-intro {
+    grid-template-columns: 1fr;
+  }
+  .help-topic summary {
+    padding: 18px;
+  }
+  .help-topic details p {
+    padding-inline: 18px;
+  }
+  .contact-grid {
+    gap: 24px;
+  }
+  .card-simulation {
+    padding: 18px;
+  }
+  .admin-page .analytics-grid section {
+    padding: 20px;
+  }
+  .ambient-video .video-control {
+    bottom: 10px;
+    left: 10px;
+    font-size: 12px;
+  }
+  .home-photo-note {
+    max-width: 90%;
+    line-height: 1.5;
+  }
+}
+@media print {
+  .video-control,
+  .ambient-video,
+  .delivery-reference {
+    display: none;
+  }
+  .admin-page {
+    padding: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ambient-video video {
+    transition: none;
+  }
+  .ambient-video * {
+    animation: none;
+  }
+}
+
+.info-story p + p {
+  margin-top: 16px;
+}
+.about-intro > div > p {
+  margin-block: 24px;
+}

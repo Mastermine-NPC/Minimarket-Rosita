@@ -14,25 +14,29 @@ const schema = z.object({
     .string()
     .trim()
     .min(2, "Escribe tu nombre (mínimo 2 caracteres).")
-    .max(80),
-  email: z.email("Escribe un correo como nombre@ejemplo.com.").max(200),
+    .max(80, "Usa hasta 80 caracteres."),
+  email: z
+    .string()
+    .trim()
+    .pipe(z.email("Escribe un correo como nombre@ejemplo.com.").max(200)),
   subject: z
     .string()
     .trim()
     .min(3, "Indica el asunto (mínimo 3 caracteres).")
-    .max(100),
+    .max(100, "Usa hasta 100 caracteres."),
   message: z
     .string()
     .trim()
     .min(10, "Cuéntanos tu consulta en al menos 10 caracteres.")
-    .max(1500),
+    .max(1500, "Usa hasta 1500 caracteres."),
 });
 export function ContactPage() {
   const heading = useHeadingFocus(),
     [sent, Sent] = useState(false),
     timer = useRef<ReturnType<typeof setTimeout> | null>(null),
     resolveTimer = useRef<(() => void) | null>(null),
-    alive = useRef(true);
+    alive = useRef(true),
+    submitting = useRef(false);
   useEffect(() => {
     alive.current = true;
     return () => {
@@ -87,6 +91,8 @@ export function ContactPage() {
           onChange={() => Sent(false)}
           onSubmit={(event) =>
             void handleSubmit(async () => {
+              if (submitting.current) return;
+              submitting.current = true;
               Sent(false);
               await new Promise<void>((resolve) => {
                 resolveTimer.current = resolve;
@@ -95,6 +101,7 @@ export function ContactPage() {
                   motionTokens.processing * 1000,
                 );
               });
+              submitting.current = false;
               if (!alive.current) return;
               Sent(true);
               toast.success("Consulta simulada completada", {

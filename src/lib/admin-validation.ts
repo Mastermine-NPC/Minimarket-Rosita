@@ -2,6 +2,14 @@ import { z } from "zod";
 
 import { productImages } from "@/data/product-images";
 export const productInputSchema = z.object({
+  barcode: z
+    .string()
+    .trim()
+    .refine(
+      (v) => !v || /^[A-Za-z0-9_-]{4,64}$/.test(v),
+      "Usa 4–64 letras, números, guiones o deja vacío.",
+    )
+    .optional(),
   id: z
     .string()
     .trim()

@@ -1,8 +1,10 @@
 import { useState, useMemo } from "react";
 import { useRosita } from "@/hooks/use-rosita";
+import { operationRows } from "@/lib/operations-analytics";
+import { defaultReportFilters } from "@/lib/analytics";
 import { analytics } from "@/lib/analytics";
 import { money } from "@/lib/currency";
-import { orderStages } from "@/data/delivery";
+import { combinedOrderStages as orderStages } from "@/data/delivery";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 export function AnalyticsPanel() {
@@ -10,12 +12,19 @@ export function AnalyticsPanel() {
     [from, From] = useState(""),
     [to, To] = useState(""),
     a = useMemo(() => analytics(state, from, to), [state, from, to]);
+  const pos = operationRows(state, {
+    ...defaultReportFilters,
+    type: "cash",
+    from,
+    to,
+  }).sales;
   return (
     <section className="analytics-panel">
       <h2>Estadísticas de la demostración</h2>
       <p>
         Pedidos confirmados del canal digital; sus importes no acreditan cobros.
-        Caja presencial no implementada.
+        La caja presencial se presenta por separado para evitar atribuirle
+        efectivo de pedidos pendientes.
       </p>
       <div className="date-filters">
         <div>
@@ -45,13 +54,34 @@ export function AnalyticsPanel() {
         </p>
       )}
       <div className="analytics-summary">
+        <strong>{pos.length} ventas presenciales</strong>
+        <span>
+          Total caja simulado:{" "}
+          {money(pos.reduce((n, s) => n + s.totalCents, 0))}
+        </span>
+        <span>
+          Efectivo:{" "}
+          {money(
+            pos
+              .filter((s) => s.payment === "cash")
+              .reduce((n, s) => n + s.totalCents, 0),
+          )}
+        </span>
+        <span>
+          Tarjetas:{" "}
+          {money(
+            pos
+              .filter((s) => s.payment === "card-demo")
+              .reduce((n, s) => n + s.totalCents, 0),
+          )}
+        </span>
+      </div>
+      <div className="analytics-summary">
         <strong>{a.orders.length} pedidos confirmados</strong>
         <span>Mercadería: {money(a.subtotalCents)}</span>
         <span>Envíos: {money(a.shippingCents)}</span>
         <span>Total confirmado: {money(a.totalCents)}</span>
-        <span>
-          Cobros reales: ninguno · sin registro separado de cobros simulados
-        </span>
+        <span>Cobros reales: ninguno</span>
       </div>
       <table>
         <caption>Importes por canal · periodo seleccionado</caption>

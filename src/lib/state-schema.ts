@@ -1,113 +1,185 @@
 import { z } from "zod";
-import { v4Schema } from "./legacy-v4-schema";
-import { productImages } from "@/data/product-images";
+import { v8Schema } from "./legacy-v8-schema";
+import {
+  geoPointSchema,
+  deliveryExtras,
+  saleSchema,
+  shiftSchema,
+  cashDraftSchema,
+} from "./operations-schema";
 export { legacySchema, v2Schema } from "./legacy-v4-schema";
-const id = z.string().regex(/^[a-z0-9][a-z0-9-]{1,79}$/);
-const slug = z
-  .string()
-  .regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/)
-  .max(80);
-const common = {
-  id,
-  name: z.string().min(2).max(70),
-  slug,
-  aliases: z.array(slug).max(100),
-  description: z.string().max(500),
-  active: z.boolean(),
-  order: z.number().int().min(0).max(9999),
-};
-export const stateSchema = v4Schema
+export const stateSchema = v8Schema
   .safeExtend({
-    categories: z
-      .array(
-        z.object({
-          ...common,
-          imageProductId: z.string(),
-          tone: z.string().max(20),
-          imageKey: z.string(),
-        }),
-      )
-      .min(1)
-      .max(200),
-    subcategories: z
-      .array(
-        z.object({
-          ...common,
-          category: z.string(),
-          pending: z.boolean().optional(),
-        }),
-      )
-      .min(1)
-      .max(2000),
-    media: z.record(
+    operationsRevision: z.string().optional(),
+    storeLocation: geoPointSchema,
+    sales: z.array(saleSchema).max(10000),
+    shifts: z.array(shiftSchema).max(10000),
+    cashDrafts: z.record(z.string(), cashDraftSchema),
+    tracking: z.record(
       z.string(),
       z.object({
-        id: z.string().uuid(),
-        width: z.number().int().min(1).max(1600),
-        height: z.number().int().min(1).max(1600),
-        bytes: z.number().int().min(1).max(1250000),
-        mime: z.enum(["image/webp", "image/jpeg", "image/png"]),
-        createdAt: z.iso.datetime(),
+        progress: z.number().min(0).max(1),
+        speed: z.union([
+          z.literal(1),
+          z.literal(2),
+          z.literal(4),
+          z.literal(8),
+        ]),
       }),
     ),
     users: z
       .array(
-        v4Schema.shape.users.element.extend({
-          demoAccess: z.boolean().optional(),
+        v8Schema.shape.users.element.extend({
+          role: z.enum([
+            "customer",
+            "admin",
+            "cashier",
+          ]) as typeof v8Schema.shape.users.element.shape.role,
+          active: z.boolean().optional(),
+          cashierDemo: z.boolean().optional(),
         }),
       )
       .max(1000),
     products: z
       .array(
-        v4Schema.shape.products.element.extend({
-          category: z.string(),
-          subcategory: z.string(),
-          imageKey: z.string(),
+        v8Schema.shape.products.element.extend({
+          barcode: z
+            .string()
+            .regex(/^[A-Za-z0-9_-]{4,64}$/)
+            .optional(),
         }),
       )
       .min(1)
       .max(10000),
+    orders: z
+      .array(
+        v8Schema.shape.orders.element.safeExtend({
+          delivery:
+            v8Schema.shape.orders.element.shape.delivery.extend(deliveryExtras),
+        }),
+      )
+      .max(10000),
+    checkout: v8Schema.shape.checkout.extend({
+      delivery: v8Schema.shape.checkout.shape.delivery.extend(deliveryExtras),
+    }),
+    movements: z
+      .array(
+        v8Schema.shape.movements.element.safeExtend({
+          kind: z.enum([
+            "entry",
+            "manual-out",
+            "count",
+            "order-out",
+            "sale-out",
+          ]) as typeof v8Schema.shape.movements.element.shape.kind,
+          saleId: z.string().optional(),
+        }),
+      )
+      .max(100000),
   })
   .superRefine((s, ctx) => {
-    const unique = (
-      items: { id: string; slug: string; aliases: string[]; name: string }[],
-    ) =>
-      new Set(items.map((x) => x.id)).size === items.length &&
-      new Set(items.map((x) => x.name.trim().toLocaleLowerCase("es"))).size ===
-        items.length &&
-      new Set(items.flatMap((x) => [...new Set([x.id, x.slug, ...x.aliases])]))
-        .size ===
-        items.reduce(
-          (n, x) => n + new Set([x.id, x.slug, ...x.aliases]).size,
-          0,
-        );
-    const validImage = (key: string) =>
-      productImages.some((i) => i.key === key) ||
-      (key.startsWith("upload:") && !!s.media[key.slice(7)]);
+    const fail = (message: string) => ctx.addIssue({ code: "custom", message });
+    const unique = (a: string[]) => new Set(a).size === a.length;
     if (
-      !unique(s.categories) ||
-      new Set(s.subcategories.map((x) => x.id)).size !==
-        s.subcategories.length ||
-      Object.keys(s.media).length > 1000 ||
-      Object.entries(s.media).some(([id, m]) => id !== m.id) ||
-      s.categories.some((c) => !validImage(c.imageKey)) ||
-      s.subcategories.some(
-        (x) => !s.categories.some((c) => c.id === x.category),
-      ) ||
-      s.categories.some(
-        (c) => !unique(s.subcategories.filter((x) => x.category === c.id)),
-      ) ||
-      s.products.some(
-        (p) =>
-          !s.categories.some((c) => c.id === p.category) ||
-          !s.subcategories.some(
-            (x) => x.id === p.subcategory && x.category === p.category,
-          ) ||
-          !validImage(p.imageKey),
+      !unique(s.products.flatMap((p) => (p.barcode ? [p.barcode] : []))) ||
+      !unique(s.sales.map((x) => x.id)) ||
+      !unique(s.sales.map((x) => x.requestId)) ||
+      !unique(s.shifts.map((x) => x.id))
+    )
+      fail("Identificadores de operaciones duplicados.");
+    if (
+      s.shifts.some(
+        (x) =>
+          !s.users.some((u) => u.id === x.agentId) ||
+          (x.closedAt !== null &&
+            x.expectedCents !==
+              x.initialCents +
+                s.sales
+                  .filter(
+                    (sale) => sale.shiftId === x.id && sale.payment === "cash",
+                  )
+                  .reduce(
+                    (n, sale) =>
+                      n + (sale.cashTenderCents || 0) - sale.changeCents,
+                    0,
+                  )) ||
+          (x.closedAt === null
+            ? x.countedCents !== null ||
+              x.expectedCents !== null ||
+              x.differenceCents !== null
+            : x.countedCents === null ||
+              x.expectedCents === null ||
+              x.differenceCents !== x.countedCents - x.expectedCents),
       )
     )
-      ctx.addIssue({
-        code: "custom",
-        message: "Taxonomía o referencias de imagen inconsistentes.",
-      });
+      fail("Turno inconsistente.");
+    if (
+      !unique(s.shifts.filter((x) => x.closedAt === null).map((x) => x.agentId))
+    )
+      fail("Solo un turno abierto por agente.");
+    for (const sale of s.sales) {
+      if (
+        !s.users.some((u) => u.id === sale.agentId) ||
+        !s.shifts.some(
+          (x) => x.id === sale.shiftId && x.agentId === sale.agentId,
+        ) ||
+        !unique(sale.lines.map((l) => l.productId)) ||
+        sale.totalCents !==
+          sale.lines.reduce((n, l) => n + l.lineTotalCents, 0) ||
+        sale.lines.some(
+          (l) =>
+            !s.products.some((p) => p.id === l.productId) ||
+            l.lineTotalCents !== l.unitPriceCents * l.quantity,
+        ) ||
+        (sale.payment === "cash"
+          ? sale.cashTenderCents === null ||
+            sale.cashTenderCents < sale.totalCents ||
+            sale.changeCents !== sale.cashTenderCents - sale.totalCents
+          : !sale.cardReceipt ||
+            sale.cashTenderCents !== null ||
+            sale.changeCents !== 0)
+      )
+        fail("Venta inconsistente.");
+      for (const l of sale.lines)
+        if (
+          s.movements.filter(
+            (m) =>
+              m.saleId === sale.id &&
+              m.productId === l.productId &&
+              String(m.kind) === "sale-out" &&
+              m.delta === -l.quantity,
+          ).length !== 1
+        )
+          fail("La venta debe tener una salida por producto.");
+    }
+    if (
+      s.movements.some(
+        (m) =>
+          String(m.kind) === "sale-out" &&
+          (!m.saleId ||
+            m.delta >= 0 ||
+            !s.sales.some((x) => x.id === m.saleId)),
+      )
+    )
+      fail("Salida de caja sin venta.");
+    if (
+      Object.entries(s.cashDrafts).some(
+        ([id, d]) =>
+          !s.users.some((u) => u.id === id) ||
+          Object.keys(d.cart).some(
+            (id) => !s.products.some((p) => p.id === id),
+          ),
+      ) ||
+      Object.keys(s.tracking).some((id) => !s.orders.some((o) => o.id === id))
+    )
+      fail("Referencias de borradores o seguimiento inválidas.");
+    const receipts = [
+      ...s.sales.flatMap((x) =>
+        x.cardReceipt ? [x.cardReceipt.reference] : [],
+      ),
+      ...s.orders.flatMap((x) =>
+        x.cardReceipt ? [x.cardReceipt.reference] : [],
+      ),
+    ];
+    if (!unique(receipts)) fail("Aprobación de tarjeta reutilizada.");
   });

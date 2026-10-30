@@ -1,0 +1,8 @@
+{
+  "passed": [
+    "Cantidades/identificadores/precios inválidos y categoría desactivada rechazados; cálculo compartido y stock entero.",
+    "Tarjeta exige aprobación ligada a cliente/token/huella: cambio de importe o salida impiden confirmar; doble solicitud produce un pedido y un movimiento por línea.",
+    "Pedido solo guarda referencia ficticia/marca/últimos cuatro; esquema7 admite recarga; migración6 conserva colecciones existentes."
+  ],
+  "errors": []
+}

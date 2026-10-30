@@ -4,6 +4,7 @@ import { Providers } from "@/app/providers";
 import { AppRouter } from "@/app/router";
 import "@/styles/globals.css";
 import "@/styles/modules.css";
+import "@/styles/polish.css";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <Providers>

@@ -1,55 +1,49 @@
-# Minimarket Rosita · Frontend 0.7.0
+# Minimarket Rosita · Frontend 1.0.0
 
-Prototipo interactivo de tienda y administración, con procesos simulados y persistencia local v6. React + Vite + TypeScript, Context/useReducer, Tailwind/shadcn personalizado, Motion y Router. Sin backend, cobros, autenticación de servidor ni despliegue. No se modificó Framer/Figma.
+Tienda, administración y caja interactivas con procesos ficticios y persistencia local v9. React/Vite/TypeScript, Context/useReducer, Tailwind/shadcn personalizado, Motion y Router. Sin backend, base de datos, cobros reales, GPS ni autenticación de servidor. No publicado ni desplegado; Framer/Figma intactos.
 
-## Abrir en local
+## Abrir y comprobar
 
-Node **20.19.4** (`.nvmrc`); admite ^20.19.0 / ^22.13.0 / >=24. npm **11.21.1**, lock conservado. Node 18 no es compatible. Dependencias instaladas; no se añadieron ni actualizaron en esta etapa.
+Node **20.19.4** (`.nvmrc`), npm **11.21.1**. Se conserva el lock y la tecnología existente. Esta etapa añade solamente Leaflet **1.9.4** y `@types/leaflet` **1.9.21**; las demás versiones no se actualizaron.
 
-```bash
+```sh
 cd /home/hisok/Desktop/extension-cor/PROYECTO-PROTOTIPO
 nvm use
 npm run dev
 ```
 
-Abre **http://localhost:5173/** o el puerto indicado por Vite. `npm run check` ejecuta tipos, ESLint, contraste y compilación. `npm run preview` abre el build local en http://localhost:4173/ después de compilar; no publica. Para reinstalación exacta: `npx --yes npm@11.21.1 ci`.
+Abre el puerto mostrado por Vite (normalmente [localhost:5173](http://localhost:5173/)). La vista previa compilada final de esta sesión está en **[127.0.0.1:4176](http://127.0.0.1:4176/)**. `npm run check` ejecuta tipos, ESLint, 26 contrastes y build. `npm run test:operations` permite repetir deliberadamente pruebas de lógica en datos aislados; requiere red para el segundo destino vial. `npm run preview` sirve la compilación local; no publica. Reinstalación exacta: `npx --yes npm@11.21.1 ci`.
 
 ## Accesos ficticios
 
-En `/login` o `/personal`, «Accesos de demostración» permite completar credenciales sin enviarlas automáticamente.
+En `/login` o `/personal`, pulsa «Completar acceso…» y luego «Iniciar sesión».
 
-| Perfil | Correo inicial | Contraseña ficticia |
-| --- | --- | --- |
-| Cliente | cliente@rosita.test | ClienteDemo!2026 |
-| Administrador | admin@rosita.test | RositaDemo!2026 |
+| Perfil         | Correo inicial      | Contraseña ficticia | Acceso                                     |
+| -------------- | ------------------- | ------------------- | ------------------------------------------ |
+| Cliente        | cliente@rosita.test | ClienteDemo!2026    | Tienda, checkout, sus pedidos              |
+| Administrador  | admin@rosita.test   | RositaDemo!2026     | `/admin`, reportes, agentes, origen y caja |
+| Agente de caja | caja@rosita.test    | CajaDemo!2026       | `/caja`, sus ventas y turno                |
 
-Si un correo ya existía al migrar, se conserva esa cuenta y se busca otro libre (+1, +2…). Usa los botones del login: muestran la cuenta correspondiente. El registro público crea solo clientes. Mi cuenta permite editar nombre y correo, con validación. Contraseñas ficticias con salt/verificador PBKDF2, nunca texto plano persistido. Perfiles y permisos locales **no equivalen a seguridad de servidor**. No había caja presencial implementada: no existe cajero ni se inventan sus ventas.
+Si hay colisión de correo al migrar, se conserva la cuenta anterior y se elige otro libre; los botones muestran el correo efectivo. El registro público crea solo clientes. Nuevos agentes/restablecimientos no semilla usan **AgenteDemo!2026**. Perfiles, contraseñas verificadas localmente y permisos de rutas/reducer **no proporcionan seguridad de servidor**.
 
-## Qué incluye
+## Entrega, recojo y caja
 
-- Menú informativo separado de categorías: Nosotros, ayuda, FAQ, compra, entregas/pagos y contacto simulado.
-- Catálogo, seis categorías iniciales y subcategorías dependientes, filtros combinados/orden y selección en URL. Administración puede ampliar/ordenar/desactivar la taxonomía sin editar código.
-- Productos, detalle y zoom con teclado/táctil, carrito persistente, registro/acceso, checkout, confirmación, historial y seguimiento manual.
-- Panel `/admin`: estadísticas reales del prototipo, productos, categorías/subcategorías, inventario, pedidos y reportes.
-- Archivos JPG/PNG/WebP desde computadora, previsualización, compresión, referencias estables e IndexedDB; recargar conserva la imagen.
-- Reportes de inventario/stock bajo/pedidos/digital/top: filtros, totales, CSV e impresión para guardar como PDF. Presencial se identifica como no implementado.
-- `/sistema-diseno`: fundamentos y ejemplos de componentes/estados reales del DS 2.5.0.
+- Origen confirmado por el usuario: **−16.33112128439101, −71.58692292883559**. Dirección: UPIS Mercado Mayorista, Zona B, Manzana D, Lote 6, Arequipa.
+- En checkout elige delivery, selecciona UTP u otro punto mediante mapa/coordenadas y pulsa **Confirmar punto y calcular ruta**. La cobertura y tarifas son ficticias: hasta 7 km de ruta S/ 4; más de 7 km S/ 6.50. Recojo: envío cero, sin dirección de delivery ni repartidor.
+- Mapa Leaflet/OpenStreetMap y rutas viales OSRM/FOSSGIS son funciones distintas. Fallback exclusivo Rosita→UTP con 358 puntos verificados; otros destinos necesitan servicio disponible. Sin línea recta que aparente ruta.
+- Seguimiento: avanza a «En camino», inicia/pausa/reanuda y cambia velocidad. Recarga en pausa. Llegar al final visual no confirma entrega ni vuelve a descontar stock.
+- Caja: abre turno, agrega por búsqueda o código, revisa cantidades y cobra con efectivo o tarjeta ficticia. Historial, recibo imprimible y cierre. Ejemplo: dos Coca-Cola de S/ 3.50 = S/ 7; recibido S/ 10, vuelto S/ 3. Fondo S/ 100 → efectivo esperado S/ 107. La tarjeta no entra al efectivo físico.
 
-Los importes se calculan en céntimos. Confirmar un pedido descuenta stock una vez; avanzar su estado no vuelve a descontar. Cambiar precio/nombre no reescribe compras históricas. No se insertan pedidos para decorar estadísticas.
+Códigos ficticios (texto, conservan ceros; no son códigos GS1 comerciales): Coca-Cola **0000000000017**, Lay’s **0000000000024**, Doritos **0000000000031**, destornilladores **0000000000048**. Escribe en «Escanear o ingresar código» y pulsa Enter; también hay selector «Simular lectura». No se probó hardware físico. Cámara opcional nativa donde BarcodeDetector esté disponible; alternativa manual y sin nueva dependencia.
 
-## Estructura
+Tarjeta: usa los botones de completar escenarios; CLIENTE DEMO, 12/99, CVV 123, números ficticios 0000 0000 0000 0001/0002/0003 para aprobación/rechazo/error. No introduzcas datos reales. Campos solo en memoria; recibo guarda referencia Demo y últimos cuatro dígitos.
 
-`src/app`: proveedores, navegación y reducer. `components/ui`: controles base; `components/layout`: estructuras. `features`: catálogo/carrito/acceso/pedidos/administración/información/inicio/sistema. `pages`: composiciones. `data`: semillas; `hooks`: lógica compartida; `lib`: operaciones, cálculos y persistencia; `styles`: tokens y estilos; `types`: contratos. `public/images` y `public/fonts`: recursos locales y licencias.
+## Estructura y continuidad
 
-`state.products/categories/subcategories/media` y `inventory` son la fuente compartida. `lib/module-operations.ts` gestiona taxonomía/perfil/metadata; `admin-operations.ts` productos/stock; `order-transaction.ts` confirma pedidos; `analytics.ts` concentra estadísticas/reportes; `image-store.ts` conserva archivos.
+`app`: proveedores, reducer y rutas; `components/ui` y `components/layout`: piezas/estructuras compartidas; `features`: catálogo, acceso, carrito, pedidos, entrega, administración y caja; `pages`: composiciones; `data`: catálogo/taxonomía/semillas/geografía/ruta verificada; `lib`: precios, operaciones, esquemas, rutas y almacenamiento; `hooks`, `types`, `styles`; `public/images`: recursos locales.
 
-## Recuperación y límites
+Se conservan 63 productos iniciales, fotografías, Manrope/DM Sans, verde/rosa, categorías, búsquedas/filtros, zoom, videos, cuenta, carrito, tarjeta y administración. Las existencias pueden cambiar por operaciones locales. ID interno y SKU comercial siguen separados: Powerade ROS-024-IMPORT/código ROS-024; pasta ROS-024/código ROS-063. Borrador de caja independiente del carrito; confirmaciones descuentan exactamente una vez del mismo inventario. No hay descuentos mayoristas automáticos: no existe una regla explícita previa.
 
-Administrador → «Restablecer demostración» → `/estado` → confirmar. Solo elimina claves `minimarket-rosita:` y archivos del almacén propio `minimarket-rosita-assets`; conserva recursos de otras aplicaciones. Restaura catálogo y dos cuentas iniciales. Para formatos futuros se abre sesión temporal sin sobrescribirlos. Datos corruptos se conservan hasta una modificación explícita o reset. Cuota/bloqueo informa sesión temporal; navegar conserva memoria, recargar puede perder cambios.
+[Guiones, coordenadas, proveedores, rutas y límites](docs/OPERACIONES-1.0.0.md) · [Pruebas reales](docs/VERIFICACION.md) · [Persistencia](docs/PERSISTENCIA.md) · [Design System 2.7](docs/DESIGN-SYSTEM.md) · [Checkpoint y recuperación](docs/ESTADO-ACTUAL.md) · [Integración anterior de catálogo](docs/CATALOGO-0.9.0.md).
 
-Uso en un navegador y una pestaña. No hay sincronización, servidor, contacto real, cobros ni reparto en vivo. Caja, cajero y comparación A/B siguen sin implementar. Seis productos iniciales usan ilustraciones identificadas; el atlas original de 300×300 px por foto limita zoom. Las imágenes subidas dependen del archivo aportado y no recuperan detalle inexistente.
-
-[Inventario, resultados y guion A–M](docs/MODULOS-0.7.0.md) · [Verificación](docs/VERIFICACION.md) · [Persistencia](docs/PERSISTENCIA.md) · [DS 2.5.0](docs/DESIGN-SYSTEM.md) · [Recursos](docs/RECURSOS.md). Evidencia en `docs/module-verification`; copias antes/después en `docs/recovery`. Documentación anterior conservada en `docs/history` y carpetas de evidencia previas.
-# Minimarket-Rosita
-# Minimarket-Rosita
-# Minimarket-Rosita
+Usa una pestaña/navegador. No hay sincronización entre dispositivos ni garantía transaccional entre pestañas. Datos corruptos/futuros/bloqueados muestran aviso; restablecimiento exclusivo de Rosita, nunca `localStorage.clear()`.

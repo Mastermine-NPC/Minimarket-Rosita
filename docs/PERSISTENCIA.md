@@ -1,49 +1,39 @@
-# Persistencia · esquema v6 / aplicación 0.7.0
+# Persistencia · esquema v9 / aplicación 1.0.0
 
-## Fuente compartida e invariantes
+`minimarket-rosita:app` contiene `{version:9,data}`. Context/useReducer mantiene un origen común para catálogo, taxonomía, cuentas, inventario, carrito, checkout, pedidos, caja, turnos y seguimiento. Imágenes subidas siguen en IndexedDB, con sus referencias/metadata existentes; esta migración no borra assets.
 
-Una envoltura `{version:6,data}` en `minimarket-rosita:app` concentra catálogo, categorías/subcategorías, metadata de imágenes, precios/stock por ID, cuentas, sesión, carrito, borrador, pedidos, movimientos y operaciones procesadas. No existe otro catálogo administrativo. Importe en céntimos enteros; `currentProducts` proyecta el producto comercial desde inventario y taxonomía activa.
+## Migración preservadora
 
-Context/useReducer aplica transiciones coherentes. Productos nuevos validan ID estable, nombre/marca/presentación, precio positivo, stock/umbral enteros y pareja de categoría/subcategoría. Editar ignora stock inicial inyectado: los ajustes posteriores pasan por Inventario. Entrada/salida/conteo exigen motivo y comprueban stock esperado; nunca negativo. Una operación procesada no se repite.
+`legacy-v8-schema.ts` congela el formato anterior. Las conversiones v1–7 previas se conservan; integración de catálogo v7→8 ocurre antes de v8→9. `initializeOperations` agrega solo campos nuevos, códigos ficticios faltantes y un agente semilla si no existe. Respeta códigos presentes, crea otros únicos, conserva IDs internos/SKU, productos propios, precios/stock, imágenes, categorías, cuentas/sesión, carrito válido, movimientos y pedidos históricos. Lectura v9 valida directamente y no reinyecta semillas ni vuelve a importar existencias. No duplica agentes al recargar.
 
-Confirmar compra revalida identidad de cliente, cantidades, estado comercial heredado, stock, precio, entrega, pago y huella revisada. Pedido + movimientos + descuento + vaciado de carrito/borrador se crean juntos. El requestId impide duplicados. Agregar no reserva. Avanzar Recibido → Preparación → Camino → Entregado registra actor/fecha/origen y no descuenta nuevamente. Cliente solo consulta/avanza manualmente sus pedidos; administrador supervisa todos. No hay cancelación ni devolución.
+Los pedidos anteriores permanecen sin coordenadas/modalidad cuando no las tenían. Se interpretan como delivery heredado, pero no se les inventa ruta u origen. El seguimiento explica su ausencia. La revisión de checkout antigua se invalida al migrar para pedir punto confirmado o recojo; conserva campos útiles del borrador. Las nuevas modalidades tienen los mismos cuatro índices de estado, con etiquetas diferentes según delivery/recojo.
 
-Los pedidos guardan copias históricas de producto/precio/presentación, cantidades, entrega/pago y datos del cliente disponibles al confirmar. Editar producto, perfil o taxonomía no los reescribe. Pedidos antiguos sin auditoría se identifican `legacyHistory`; no se reconstruyen operaciones desconocidas.
+`stateSchema` conserva las invariantes anteriores con safeExtend y añade: códigos de barras únicos cuando existen; perfiles; referencias de venta/agente/turno; sumas por línea y total; efectivo/vuelto; una salida por producto/venta; cierres coherentes con fondo + ventas en efectivo, diferencia correcta; un turno abierto por agente; aprobaciones no reutilizadas; progreso 0–1 y velocidades 1/2/4/8.
 
-## Taxonomía administrable
+## Caja e inventario
 
-ID interno inmutable; slug editable con alias del anterior, orden numérico (empates por nombre), descripción y activo. Nombres únicos dentro del ámbito; identificadores/slugs/alias no colisionan con otros registros del tipo. Categoría/subcategoría compatibles se verifican en UI y operación. No hay eliminación física. La desactivación conserva referencias y oculta comercialmente sus productos, incluso si el producto tiene su interruptor activo. El carrito explica el problema y bloquea confirmación. Reasignar un subgrupo con productos se rechaza: deben editarse explícitamente los productos antes. Tablas muestran afectados.
+`cashDrafts[userId]` contiene token, revisión y cantidades; independiente de `cart`. `priceCashDraft` reutiliza `priceCart` y la disponibilidad comercial de categoría/subcategoría. Cantidades enteras positivas, stock y precio vigente se revalidan al confirmar. No se descuenta al añadir o escanear. Revisar/cambiar cantidades o precios invalida la aprobación anterior, incluso al volver al importe original por la revisión del borrador.
 
-Seis categorías y 17 subgrupos comerciales iniciales más seis técnicos Por clasificar. Los nuevos grupos activos pueden aparecer con cero resultados, sin inventar productos; un vacío ofrece volver al catálogo. Categorías nuevas alimentan inicio, navegación, catálogo y formularios. URL resuelve ID/slug/alias; selección de subgrupo se normaliza a ID. Búsqueda, precio, marca, disponibilidad, orden y subgrupo se combinan y el detalle conserva retorno.
+`cash/confirm` crea snapshot de venta, líneas, pago, agente/turno, movimientos `sale-out`, decremento y limpieza del borrador en una acción. RequestId/id de venta y operación impiden repetición. `order/confirm` mantiene su transacción anterior con `order-out`. Ambos consultan `inventory` común. Recojo/avance de estado/simulación solo actualizan su estado; nunca crean otra venta o descuento. No se alteran snapshots al editar productos o perfil.
 
-## Migraciones
+Turno: fondo fijo al abrir, ventas asociadas al actor/turno y cierre inmutable con contado/esperado/diferencia. Esperado = fondo + recibido − vuelto **solo en efectivo de ventas presenciales**. Tarjetas y efectivo previsto de pedidos digitales quedan fuera. Sin botones ficticios de entrada/retiro manual.
 
-v5 es el esquema realmente instalado al comenzar esta etapa, congelado en `legacy-v5-schema.ts`. v5→v6 conserva productos propios, subcategoría, precios, stock, carrito válido, cuentas/verificadores, sesión, borrador, pedidos, movimientos e historial; incorpora taxonomía inicial, `media:{}` y cliente de exposición sin sobrescribir cuentas. v4 conserva la clasificación conservadora anterior antes de llegar a v6; v1–3 mantienen conversiones previas. No se inventan fechas, movimientos o ventas. Se mantiene la reparación anterior de carrito que excede stock; se informa al usuario.
+## Entrega y rutas
 
-Cuenta demo de cliente: `cliente@rosita.test / ClienteDemo!2026`; administrador: `admin@rosita.test / RositaDemo!2026`. Ante colisión se preserva la cuenta anterior y se busca correo/ID libre. El marcador de cuenta demo evita duplicarla en recargas y después de editar perfil. Registro fuerza cliente y `demoAccess:false`; no permite elevación de rol. Perfil solo edita el propio nombre/correo normalizados y únicos. Verificador PBKDF2 SHA-256/210000 iteraciones, salt único, contraseñas ficticias conocidas. No es autenticación segura ni autorización de servidor.
+`storeLocation` configura el origen de futuros pedidos. Cada pedido nuevo conserva copia independiente de `delivery.origin`, punto confirmado, dirección/referencia y geometría vial `[longitud,latitud]`, distancia/duración, proveedor, fecha y extremos ajustados a calle. Cambiar origen o perfil no modifica pedidos anteriores. Recojo normaliza el payload: dirección de tienda, envío cero, sin destino/ruta de repartidor.
 
-Zod valida estructura y referencias al leer y antes de guardar. Corrupción inicia memoria temporal y conserva el raw hasta una modificación explícita/reset. Formato superior a v6 queda protegido incluso al iniciar sesión. Lectura bloqueada/escritura fallida informan temporalidad; `setItem` fallido no destruye la versión anterior. No hay coordinación entre pestañas: usar una pestaña.
+Ruta solo tras confirmación explícita. Cambiar punto limpia ruta/confirmación; AbortController y generación descartan respuestas tardías. Coordenadas al proveedor, nunca nombre/celular/referencia. Cobertura rectangular y tarifa son ficticias, documentadas en OPERACIONES. Tiles se cargan normalmente, sin descarga masiva ni persistencia propia/offline de mapas. La geometría de demostración se guarda localmente con atribución y proveedor; no se ofrece servicio de navegación real.
 
-## Imágenes: coordinación localStorage / IndexedDB
+`tracking[orderId]`: progreso y velocidad, no bandera de reproducción. Cada montaje inicia pausado. Se guarda cada 5 segundos, al pausar/finalizar, ocultar pestaña o salir; valores idénticos no producen escritura adicional. La posición de cada fotograma vive solo en memoria y se interpola por distancia acumulada de la ruta. Restablecer afecta únicamente progreso visual; no toca pedido o inventario.
 
-Base exclusiva `minimarket-rosita-assets`, versión 1, almacén `images`, clave UUID. Blob + dimensiones/tamaño/MIME/fecha viven en IndexedDB. localStorage solo lleva metadata validada y `imageKey:"upload:<uuid>"`; nunca archivos grandes, base64 ni URLs blob permanentes. Recursos locales anteriores siguen con claves conocidas.
+## Tarjeta y permisos locales
 
-1. Se acepta JPG/PNG/WebP hasta 8 MB; lectura real verifica decodificación y máximo 40 megapíxeles.
-2. Canvas mantiene proporción y reduce el lado mayor hasta 1600 px sin agrandar. WebP calidad .82 (PNG si el navegador no admite esa salida). Máximo preparado 1.25 MB.
-3. Primero se guarda el archivo y se espera **`transaction.complete`**, no solamente éxito del request. Error de cuota/lectura/permisos no registra metadata ni reemplaza selección anterior.
-4. Solo entonces se registra metadata y se selecciona el recurso. Guardar formulario asocia al producto/categoría; subir por sí solo no guarda sus campos.
-5. El hook resuelve archivo, crea URL blob temporal y la revoca al cambiar/desmontar. Archivo ausente muestra reemplazo y desactiva ampliación, conservando compra/texto.
+Un único `CardSimulation` se usa en checkout/caja. Solo en memoria: titular, PAN ficticio completo, vencimiento, CVV y aprobación con huella/token/usuario. Aprobación válida únicamente para esa operación; cambios, sesión distinta o respuesta tardía la invalidan. Persisten solo referencia `DEMO-…`, marca Demo y `last4:0001` en el recibo exitoso. Referencias no reutilizables entre caja y pedidos.
 
-No existe transacción atómica entre ambas APIs. Si el componente se cierra después de guardar el blob, puede quedar un archivo huérfano. Cancelar formulario o quitar/reemplazar una imagen conserva el archivo, porque puede estar compartido. Si falla localStorage, el cambio permanece en memoria con aviso; el archivo puede quedar sin referencia persistida. No se eliminan recursos compartidos automáticamente ni se afirma sincronización. El reset explícito limpia estos recursos propios; el límite es 1000 metadata de imágenes por demostración. Sin exportación/importación de backup del navegador: la copia de código no incluye datos locales de una sesión personal.
+Registro público fuerza customer. Guardas de ruta y reducer requieren perfil activo y rol pertinente. Cajero consulta sus ventas/turno y no administra. Administrador crea/edita/desactiva/restablece agentes (sin promocionar clientes/cajeros a administrador). PBKDF2 local es mecanismo de demostración, no autenticación o seguridad de servidor.
 
-## Restablecimiento
+## Recuperación y límites
 
-Solo administrador en UI y acción. Primero elimina claves cuyo prefijo es `minimarket-rosita:` (nunca `localStorage.clear()`); si eso falla no toca los blobs referenciados. Si funciona, vacía únicamente `images` de la base Rosita, conserva bases ajenas, restaura semillas y cierra sesión. Si falla vaciar imágenes se avisa que quedan archivos y se puede reintentar. No se borran recursos en `public`.
+Versión futura >9 protegida contra sobrescritura incluso tras login temporal. Corrupción conserva raw hasta cambio explícito/reset; arranca memoria inicial y muestra aviso. Almacenamiento bloqueado/cuota: aviso de sesión temporal; no promete persistir. Carrito mayor que stock se ajusta con aviso al leer. Restablecimiento elimina únicamente claves `minimarket-rosita:` y assets propios; no usa clear global.
 
-Recuperación de formato corrupto/futuro: usar acceso administrativo temporal y navegación interna hasta `/estado`, confirmar sin recargar en medio. Formatos futuros no se escriben hasta reset autorizado. En bloqueo permanente se restablece memoria y se informa que no puede guardarse.
-
-Pruebas: `module-verification/core.json`, `almacenamiento.json`, `e2e.json`. Pedidos/datos de pruebas se generaron en contextos de navegador aislados; no se añadieron al catálogo de arranque ni al almacenamiento personal del usuario.
-
-## Límites
-
-Solo navegador/pestaña local, datos ficticios. Sin servidor, concurrencia distribuida, respaldo remoto, pagos, contacto real ni GPS. No había caja, cajero o ventas presenciales: no se creó colección ni historial ficticio. Los reportes digitales son importes confirmados, no acreditación de cobro real o ingreso.
+No coordinación entre pestañas/dispositivos. Compartir navegador comparte datos ficticios. Copia fuente previa `docs/recovery/antes-operaciones-1.0.0.zip`; no exporta el localStorage personal. [Pruebas](VERIFICACION.md), [formato v8 anterior](history/PERSISTENCIA-0.9.0.md).

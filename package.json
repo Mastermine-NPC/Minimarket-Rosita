@@ -1,7 +1,7 @@
 {
   "name": "minimarket-rosita",
   "private": true,
-  "version": "0.7.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,13 +10,15 @@
     "preview": "vite preview",
     "typecheck": "tsc -b --pretty false",
     "check": "npm run typecheck && npm run lint && npm run check:contrast && npm run build",
-    "check:contrast": "node scripts/check-contrast.mjs"
+    "check:contrast": "node scripts/check-contrast.mjs",
+    "test:operations": "node scripts/verify-operations.mjs && node scripts/verify-operations-edges.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^6.0.2",
     "@tailwindcss/vite": "^4.3.3",
     "class-variance-authority": "^0.7.1",
     "cn": "^0.4.0",
+    "leaflet": "1.9.4",
     "lucide-react": "^1.64.0",
     "motion": "^14.7.1",
     "radix-ui": "^1.8.1",
@@ -31,6 +33,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@types/leaflet": "1.9.21",
     "@types/node": "^24.19.2",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",

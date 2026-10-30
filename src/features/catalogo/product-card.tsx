@@ -1,3 +1,4 @@
+import { useTaxonomy } from "@/hooks/use-taxonomy";
 import { Link, useLocation } from "react-router";
 import { Check, Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -13,6 +14,7 @@ export function ProductCard({
   product: Product;
   returnTo?: string;
 }) {
+  const { categoryById } = useTaxonomy();
   const location = useLocation(),
     { cart, add, set } = useCart(),
     quantity = cart[product.id] || 0,
@@ -34,6 +36,9 @@ export function ProductCard({
       </Link>
       <div className="product-card-body">
         <span className="product-brand">{product.brand}</span>
+        <p className="product-catalog-code">
+          {product.code || product.id} · {categoryById(product.category)?.name}
+        </p>
         <h3>
           <Link to={target}>{product.name}</Link>
         </h3>
@@ -42,7 +47,7 @@ export function ProductCard({
         <p className={"stock-label " + (!product.stock ? "stock-empty" : "")}>
           <span aria-hidden="true">{product.stock ? "●" : "—"}</span>{" "}
           {product.stock
-            ? product.stock <= 6
+            ? product.stock <= (product.lowStockThreshold ?? 5)
               ? `Solo ${product.stock} disponibles`
               : "Disponible"
             : "Agotado"}

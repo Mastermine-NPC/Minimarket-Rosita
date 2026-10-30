@@ -1,6 +1,6 @@
 import { Link, useParams } from "react-router";
 import { useRosita } from "@/hooks/use-rosita";
-import { orderStages } from "@/data/delivery";
+import { stagesFor } from "@/data/delivery";
 import { orderDate } from "@/lib/order-date";
 import { Button } from "@/components/ui/button";
 import { OrderSummary } from "@/features/pedidos/order-summary";
@@ -54,6 +54,7 @@ export function AdminOrderDetailPage() {
             quote={order}
             delivery={order.delivery}
             payment={order.payment}
+            cardReceipt={order.cardReceipt}
           />
         </section>
         <aside className="admin-panel">
@@ -67,20 +68,24 @@ export function AdminOrderDetailPage() {
             </p>
           )}
           <div className="admin-order-progress">
-            <span className="status-chip">{orderStages[order.status]}</span>
+            <span className="status-chip">
+              {stagesFor(order.delivery)[order.status]}
+            </span>
             <h3>
               {order.status === 3 ? "Simulación terminada" : "Siguiente acción"}
             </h3>
             {order.status < 3 ? (
               <ConfirmAction
                 trigger={
-                  <Button>Avanzar a {orderStages[order.status + 1]}</Button>
+                  <Button>
+                    Avanzar a {stagesFor(order.delivery)[order.status + 1]}
+                  </Button>
                 }
                 title="¿Avanzar el pedido de demostración?"
                 description={
-                  orderStages[order.status] +
+                  stagesFor(order.delivery)[order.status] +
                   " → " +
-                  orderStages[order.status + 1] +
+                  stagesFor(order.delivery)[order.status + 1] +
                   ". Esta transición se registra; no representa un reparto real ni descuenta stock de nuevo."
                 }
                 label="Confirmar avance de estado"

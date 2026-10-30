@@ -6,6 +6,7 @@ import type {
 } from "./modules";
 import type { Cart, CatalogRecord, ProductInput } from "./catalog";
 import type {
+  CardApproval,
   DemoUser,
   InventoryEntry,
   CheckoutDraft,
@@ -14,7 +15,9 @@ import type {
   Order,
   StockMovement,
 } from "./commerce";
-export interface RositaState {
+import type { OperationsState, OperationsAction } from "./operations";
+export interface RositaState extends OperationsState {
+  catalogRevision?: string;
   categories: ManagedCategory[];
   subcategories: ManagedSubcategory[];
   media: Record<string, ImageAsset>;
@@ -33,6 +36,7 @@ export interface RositaState {
   authError: string;
 }
 export type RositaAction =
+  | OperationsAction
   | ModuleAction
   | { type: "demo/increment" }
   | { type: "demo/decrement" }
@@ -43,6 +47,13 @@ export type RositaAction =
   | { type: "auth/register"; user: Omit<DemoUser, "role"> }
   | { type: "auth/login"; userId: string }
   | { type: "auth/logout" }
+  | {
+      type: "admin/product-archive";
+      id: string;
+      archived: boolean;
+      operationId: string;
+      at: string;
+    }
   | { type: "checkout/start"; token: string }
   | { type: "checkout/draft-delivery"; delivery: Delivery }
   | { type: "checkout/delivery"; delivery: Delivery }
@@ -50,7 +61,13 @@ export type RositaAction =
   | { type: "checkout/payment"; payment: Payment }
   | { type: "checkout/step"; step: number }
   | { type: "checkout/review" }
-  | { type: "order/confirm"; token: string; id: string; createdAt: string }
+  | {
+      type: "order/confirm";
+      token: string;
+      id: string;
+      createdAt: string;
+      cardApproval?: CardApproval | null;
+    }
   | {
       type: "order/advance";
       id: string;

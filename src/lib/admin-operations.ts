@@ -3,12 +3,19 @@ import type { RositaAction, RositaState } from "@/types/state";
 import { productInputSchema, isValidAt } from "./admin-validation";
 export const activeUser = (s: RositaState) =>
   s.users.find((u) => u.id === s.sessionUserId);
-export const isAdmin = (s: RositaState) => activeUser(s)?.role === "admin";
+export const isAdmin = (s: RositaState) =>
+  activeUser(s)?.role === "admin" && activeUser(s)?.active !== false;
 export function adminOperation(
   state: RositaState,
   action: Extract<
     RositaAction,
-    { type: "admin/product-save" | "admin/product-active" | "admin/stock" }
+    {
+      type:
+        | "admin/product-save"
+        | "admin/product-active"
+        | "admin/stock"
+        | "admin/product-archive";
+    }
   >,
 ): RositaState {
   const fail = (error: string) => ({
@@ -31,6 +38,38 @@ export function adminOperation(
       ],
       adminResult: { operationId: action.operationId, ok: true, error: "" },
     });
+  if (action.type === "admin/product-archive") {
+    const p = state.products.find((p) => p.id === action.id);
+    if (!p) return fail("No encontramos ese producto.");
+    if (
+      !action.archived &&
+      state.products.some(
+        (other) =>
+          !other.archived &&
+          other.id !== p.id &&
+          other.name === p.name &&
+          other.brand === p.brand &&
+          other.presentation === p.presentation,
+      )
+    )
+      return fail(
+        "Ya existe un artículo equivalente. Revisa el registro conservado antes de restaurar.",
+      );
+    return ok({
+      ...state,
+      products: state.products.map((p) =>
+        p.id === action.id
+          ? {
+              ...p,
+              archived: action.archived,
+              active: false,
+              updatedAt: action.at,
+            }
+          : p,
+      ),
+      checkout: { ...state.checkout, quote: null },
+    });
+  }
   if (action.type === "admin/stock") {
     const p = state.products.find((p) => p.id === action.id),
       item = state.inventory[action.id];
@@ -89,6 +128,8 @@ export function adminOperation(
   }
   if (action.type === "admin/product-active") {
     const p = state.products.find((p) => p.id === action.id);
+    if (p?.archived)
+      return fail("Restaura el producto antes de cambiar su estado.");
     if (!p) return fail("No encontramos el producto.");
     if (p.updatedAt !== action.expectedUpdatedAt)
       return fail("El producto cambió. Vuelve a abrirlo antes de guardar.");
@@ -116,6 +157,11 @@ export function adminOperation(
     p = state.products.find((p) => p.id === v.id);
   if (action.editing && !p)
     return fail("No encontramos el producto que editabas.");
+  if (
+    !action.editing &&
+    state.products.some((other) => (other.code || other.id) === v.id)
+  )
+    return fail("Ese código comercial ya está asignado.");
   if (!action.editing && p)
     return fail("Ese identificador ya existe. Elige otro código.");
   if (p && p.updatedAt !== action.expectedUpdatedAt)
@@ -125,6 +171,7 @@ export function adminOperation(
   if (
     state.products.some(
       (other) =>
+        !other.archived &&
         other.id !== v.id &&
         other.name.trim().toLocaleLowerCase("es") ===
           v.name.toLocaleLowerCase("es") &&
@@ -137,8 +184,19 @@ export function adminOperation(
     return fail(
       "Ya existe un producto con el mismo nombre, marca y presentación.",
     );
+  if (
+    v.barcode &&
+    state.products.some(
+      (other) => other.id !== v.id && other.barcode === v.barcode,
+    )
+  )
+    return fail("Ese código de barras ya está asignado.");
   const product = {
+    barcode: v.barcode || undefined,
     id: v.id,
+    code: p?.code || v.id,
+    archived: p?.archived,
+    imageNote: p?.imageKey === v.imageKey ? p?.imageNote : undefined,
     name: v.name,
     brand: v.brand,
     category: v.category as RositaState["products"][number]["category"],
@@ -200,7 +258,13 @@ export function advanceOrder(
     ...state,
     adminResult: { operationId: action.operationId || "", ok: false, error },
   });
-  if (!actor || !order || (!isAdmin(state) && actor.id !== order.userId))
+  if (
+    !actor ||
+    actor.active === false ||
+    !order ||
+    (!isAdmin(state) &&
+      (actor.role !== "customer" || actor.id !== order.userId))
+  )
     return fail("Tu perfil no puede modificar este pedido.");
   if (state.processedAdminOperations.includes(action.operationId)) return state;
   if (

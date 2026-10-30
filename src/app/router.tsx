@@ -86,6 +86,17 @@ const AdminOrderDetailPage = lazy(() =>
     default: m.AdminOrderDetailPage,
   })),
 );
+const CashPage = lazy(() =>
+  import("@/pages/cash-page").then((m) => ({ default: m.CashPage })),
+);
+const AgentsPage = lazy(() =>
+  import("@/pages/admin/agents-page").then((m) => ({ default: m.AgentsPage })),
+);
+const StoreLocationPage = lazy(() =>
+  import("@/pages/admin/store-location-page").then((m) => ({
+    default: m.StoreLocationPage,
+  })),
+);
 function Page({ children }: { children: ReactNode }) {
   return (
     <Suspense
@@ -107,7 +118,31 @@ function Page({ children }: { children: ReactNode }) {
 export function AppRouter() {
   return (
     <Routes>
+      <Route
+        path="caja"
+        element={
+          <Page>
+            <CashPage />
+          </Page>
+        }
+      />
       <Route path="admin" element={<AdminLayout />}>
+        <Route
+          path="agentes"
+          element={
+            <Page>
+              <AgentsPage />
+            </Page>
+          }
+        />
+        <Route
+          path="ubicacion"
+          element={
+            <Page>
+              <StoreLocationPage />
+            </Page>
+          }
+        />
         <Route
           path="categorias"
           element={

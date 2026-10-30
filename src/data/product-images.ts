@@ -1,3 +1,4 @@
+import { catalogAdditions } from "./catalog-additions";
 import { products } from "./catalog";
 export const productImages = [
   {
@@ -7,6 +8,13 @@ export const productImages = [
     index: undefined as number | undefined,
     illustration: false,
   },
+  ...catalogAdditions.map((p) => ({
+    key: "catalog-" + p.code,
+    label: p.code + " · " + p.name,
+    src: p.imageSrc,
+    index: undefined as number | undefined,
+    illustration: false,
+  })),
   ...products
     .filter((p) => p.imageIndex !== undefined)
     .map((p) => ({

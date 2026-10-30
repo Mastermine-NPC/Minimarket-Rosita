@@ -33,11 +33,14 @@ export function AdminProductsPage() {
   const result = all
       .filter(
         (p) =>
-          normalizeText(p.id + " " + p.name + " " + p.brand).includes(
-            normalizeText(q),
-          ) &&
+          (status === "eliminado" ? !!p.archived : !p.archived) &&
+          normalizeText(
+            (p.code || p.id) + " " + p.name + " " + p.brand,
+          ).includes(normalizeText(q)) &&
           (!category || p.category === category) &&
-          (!status || (status === "activo" ? p.active : !p.active)),
+          (!status ||
+            status === "eliminado" ||
+            (status === "activo" ? p.active : !p.active)),
       )
       .sort((a, b) =>
         sort === "precio-asc"
@@ -113,9 +116,10 @@ export function AdminProductsPage() {
               Page(1);
             }}
           >
-            <option value="">Todos</option>
+            <option value="">Todos los no eliminados</option>
             <option value="activo">Activo</option>
             <option value="inactivo">Desactivado</option>
+            <option value="eliminado">Eliminados · recuperar</option>
           </select>
         </div>
         <div>
@@ -151,7 +155,7 @@ export function AdminProductsPage() {
                       <div>
                         <strong>{p.name}</strong>
                         <small>
-                          {p.id} · {p.brand}
+                          {p.code || p.id} · {p.brand}
                         </small>
                         <span>{p.presentation}</span>
                       </div>
@@ -186,7 +190,13 @@ export function AdminProductsPage() {
                   key: "stock",
                   label: "Stock",
                   render: (p) => (
-                    <Link to={"/admin/inventario?q=" + p.id}>
+                    <Link
+                      to={
+                        "/admin/inventario?q=" +
+                        (p.code || p.id) +
+                        (p.archived ? "&estado=eliminado" : "")
+                      }
+                    >
                       {p.stock} unidades
                     </Link>
                   ),
@@ -200,7 +210,11 @@ export function AdminProductsPage() {
                         "status-chip " + (!p.active ? "status-muted" : "")
                       }
                     >
-                      {p.active ? "Activo" : "Desactivado"}
+                      {p.archived
+                        ? "Eliminado"
+                        : p.active
+                          ? "Activo"
+                          : "Desactivado"}
                       {p.active && !p.commercialVisibility && (
                         <small>
                           Oculto por categoría o subcategoría inactiva
@@ -221,7 +235,8 @@ export function AdminProductsPage() {
                           trigger={
                             <Button
                               variant="outline"
-                              aria-label={"Editar " + p.id}
+                              disabled={!!p.archived}
+                              aria-label={"Editar " + (p.code || p.id)}
                             >
                               <Pencil size={15} aria-hidden="true" />
                               Editar
@@ -232,6 +247,7 @@ export function AdminProductsPage() {
                           trigger={
                             <Button
                               variant="ghost"
+                              disabled={!!p.archived}
                               aria-label={
                                 (p.active ? "Desactivar " : "Activar ") + p.id
                               }
@@ -262,6 +278,42 @@ export function AdminProductsPage() {
                             id: p.id,
                             active: !p.active,
                             expectedUpdatedAt: record.updatedAt,
+                          })}
+                        />
+                        <ConfirmAction
+                          trigger={
+                            <Button
+                              variant={p.archived ? "outline" : "destructive"}
+                              aria-label={
+                                (p.archived ? "Restaurar " : "Eliminar ") +
+                                (p.code || p.id)
+                              }
+                            >
+                              {p.archived ? "Restaurar" : "Eliminar"}
+                            </Button>
+                          }
+                          title={
+                            p.archived
+                              ? "¿Restaurar este producto?"
+                              : "¿Eliminar este producto del catálogo?"
+                          }
+                          description={
+                            p.archived
+                              ? "Se recuperará como desactivado. Puedes revisar sus datos y activarlo después."
+                              : "Se retirará de la tienda y de la lista habitual. Se conservan inventario, pedidos y movimientos históricos. Puedes recuperarlo en Eliminados."
+                          }
+                          label={
+                            p.archived
+                              ? "Confirmar restauración"
+                              : "Confirmar eliminación"
+                          }
+                          success="Catálogo actualizado"
+                          build={(operationId, at) => ({
+                            type: "admin/product-archive",
+                            id: p.id,
+                            archived: !p.archived,
+                            operationId,
+                            at,
                           })}
                         />
                       </div>

@@ -1,3 +1,6 @@
+import { initializeOperations } from "@/lib/operations-init";
+import { storeOrigin } from "./geography";
+import { integrateCatalog } from "@/lib/catalog-update";
 import { seedCategories, seedSubcategories } from "./taxonomy-seed";
 import { withDemoClient } from "./client-seed";
 import { withDemoAdmin } from "./admin-seed";
@@ -8,12 +11,24 @@ export const demoProduct = { ...products[0], unit: products[0].presentation };
 export const emptyCheckout = (): RositaState["checkout"] => ({
   token: "",
   step: 0,
-  delivery: { recipient: "", phone: "", address: "", zone: "", reference: "" },
+  delivery: {
+    mode: "delivery",
+    recipient: "",
+    phone: "",
+    address: "",
+    zone: "",
+    reference: "",
+  },
   payment: { method: "cash", cashAmount: "" },
   quote: null,
   error: "",
 });
-export const initialState: RositaState = {
+const baseState: RositaState = {
+  storeLocation: storeOrigin,
+  cashDrafts: {},
+  sales: [],
+  shifts: [],
+  tracking: {},
   categories: seedCategories,
   subcategories: seedSubcategories,
   media: {},
@@ -52,4 +67,7 @@ export const initialState: RositaState = {
   checkout: emptyCheckout(),
   authError: "",
 };
+export const initialState: RositaState = initializeOperations(
+  integrateCatalog(baseState),
+);
 export const categories = catalogCategories.map((category) => category.name);

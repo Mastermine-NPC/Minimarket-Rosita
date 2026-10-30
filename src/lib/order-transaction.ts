@@ -7,7 +7,7 @@ import {
   solesToCents,
 } from "./checkout-validation";
 import type { RositaState } from "@/types/state";
-import type { Quote } from "@/types/commerce";
+import type { CardApproval, Quote } from "@/types/commerce";
 export function prepareQuote(state: RositaState): {
   quote: Quote | null;
   error: string;
@@ -67,7 +67,12 @@ export function prepareQuote(state: RositaState): {
 }
 export function confirmOrder(
   state: RositaState,
-  request: { token: string; id: string; createdAt: string },
+  request: {
+    token: string;
+    id: string;
+    createdAt: string;
+    cardApproval?: CardApproval | null;
+  },
 ): RositaState {
   if (
     state.orders.some(
@@ -82,7 +87,10 @@ export function confirmOrder(
   if (
     !state.sessionUserId ||
     !state.users.some(
-      (u) => u.id === state.sessionUserId && u.role === "customer",
+      (u) =>
+        u.id === state.sessionUserId &&
+        u.role === "customer" &&
+        u.active !== false,
     )
   )
     return fail(
@@ -107,6 +115,26 @@ export function confirmOrder(
   if (current.quote.fingerprint !== state.checkout.quote.fingerprint)
     return fail(
       "Los productos, precios, stock o datos de entrega cambiaron. Actualiza y revisa el resumen antes de volver a confirmar.",
+    );
+  const approval = request.cardApproval;
+  if (
+    state.checkout.payment.method === "card-demo" &&
+    (!approval ||
+      approval.fingerprint !== current.quote.fingerprint ||
+      approval.token !== request.token ||
+      approval.userId !== state.sessionUserId ||
+      approval.brand !== "Demo" ||
+      approval.last4 !== "0001" ||
+      state.orders.some(
+        (o) => o.cardReceipt?.reference === approval.reference,
+      ) ||
+      state.sales.some(
+        (s) => s.cardReceipt?.reference === approval.reference,
+      ) ||
+      !/^DEMO-[a-f0-9-]{36}$/.test(approval.reference))
+  )
+    return fail(
+      "La aprobación de tarjeta ya no corresponde a esta compra. Vuelve al pago y simula de nuevo.",
     );
   const { fingerprint: _fingerprint, ...snapshot } = current.quote;
   void _fingerprint;
@@ -146,8 +174,19 @@ export function confirmOrder(
         requestId: request.token,
         userId: state.sessionUserId,
         createdAt: request.createdAt,
-        delivery: { ...state.checkout.delivery },
+        delivery: structuredClone(
+          deliverySchema.parse(state.checkout.delivery),
+        ),
         payment: state.checkout.payment.method,
+        ...(state.checkout.payment.method === "card-demo" && approval
+          ? {
+              cardReceipt: {
+                reference: approval.reference,
+                brand: approval.brand,
+                last4: approval.last4,
+              },
+            }
+          : {}),
         status: 0,
         legacyHistory: false,
         customerName: state.users.find((u) => u.id === state.sessionUserId)!

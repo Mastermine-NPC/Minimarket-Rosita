@@ -56,7 +56,7 @@ export function SystemPage() {
     <div className="container system-page">
       <div className="system-header">
         <span className="eyebrow">
-          <Palette size={15} aria-hidden="true" /> ROSITA / DESIGN SYSTEM 2.5.0
+          <Palette size={15} aria-hidden="true" /> ROSITA / DESIGN SYSTEM 2.7.0
         </span>
         <h1 ref={heading} tabIndex={-1}>
           Una identidad.
@@ -67,7 +67,7 @@ export function SystemPage() {
           Biblioteca interna del prototipo. Estos son los mismos tokens y
           componentes que usa la tienda, no imágenes de una propuesta.
         </p>
-        <Badge variant="secondary">Aplicación 0.7.0 · Frontend local</Badge>
+        <Badge variant="secondary">Aplicación 1.0.0 · Frontend local</Badge>
       </div>
       <Tabs defaultValue="fundamentos">
         <TabsList>
@@ -171,6 +171,23 @@ export function SystemPage() {
         </TabsContent>
         <TabsContent value="componentes">
           <ModulePatterns />
+          <section className="customer-panel">
+            <h3>Entrega, seguimiento y caja · 2.7</h3>
+            <p>
+              RouteMap separa mapa y servicio vial. DeliveryTracking separa
+              animación y estado de entrega. Caja comparte Button, Input, Dialog
+              y CardSimulation con checkout; sus importes usan el inventario
+              común.
+            </p>
+            <p>
+              La ruta se calcula tras confirmar un punto. Procesamiento bloquea
+              duplicados; error y éxito tienen texto, no solo color. Movimiento
+              reducido utiliza avances manuales del repartidor.
+            </p>
+            <Link className="text-link" to="/caja">
+              Abrir plantilla de caja (requiere personal)
+            </Link>
+          </section>
           <section className="system-section">
             <h2>Navegación comercial · 2.4.0.</h2>
             <p>

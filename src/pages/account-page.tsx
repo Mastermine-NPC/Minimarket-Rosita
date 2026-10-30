@@ -24,6 +24,11 @@ export function AccountPage() {
           <UserRound aria-hidden="true" />
           <h2>Tus datos locales</h2>
           <ProfileForm key={user.id} user={user} />
+          {user.role === "cashier" && (
+            <Button asChild>
+              <Link to="/caja">Abrir caja</Link>
+            </Button>
+          )}
           {user.role === "admin" && (
             <Button asChild>
               <Link to="/admin">Abrir panel administrativo</Link>
@@ -53,9 +58,19 @@ export function AccountPage() {
           </p>
           <Button asChild>
             <Link
-              to={user.role === "admin" ? "/admin/pedidos" : "/mis-pedidos"}
+              to={
+                user.role === "cashier"
+                  ? "/caja"
+                  : user.role === "admin"
+                    ? "/admin/pedidos"
+                    : "/mis-pedidos"
+              }
             >
-              {user.role === "admin" ? "Supervisar pedidos" : "Ver mis pedidos"}{" "}
+              {user.role === "cashier"
+                ? "Abrir caja"
+                : user.role === "admin"
+                  ? "Supervisar pedidos"
+                  : "Ver mis pedidos"}{" "}
               <ArrowRight aria-hidden="true" />
             </Link>
           </Button>

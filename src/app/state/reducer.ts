@@ -1,3 +1,6 @@
+import { operationsOperation } from "@/lib/operations";
+import type { OperationsAction } from "@/types/operations";
+import { priceCart } from "@/lib/cart-pricing";
 import { moduleOperation } from "@/lib/module-operations";
 import { adminOperation, advanceOrder, isAdmin } from "@/lib/admin-operations";
 import { initialState, demoProduct, emptyCheckout } from "@/data/demo";
@@ -9,11 +12,34 @@ export function rositaReducer(
   action: RositaAction,
 ): RositaState {
   if (
+    [
+      "agent/save",
+      "store/location",
+      "shift/open",
+      "shift/close",
+      "cash/cart",
+      "cash/confirm",
+      "tracking/save",
+    ].includes(action.type)
+  )
+    return operationsOperation(state, action as OperationsAction);
+  if (
     action.type === "admin/taxonomy-save" ||
     action.type === "admin/media-register" ||
     action.type === "profile/save"
   )
     return moduleOperation(state, action);
+  const changedCart = (cart: RositaState["cart"]): RositaState => ({
+    ...state,
+    cart,
+    checkout: {
+      ...state.checkout,
+      quote: null,
+      error: state.checkout.token
+        ? "Tu carrito cambió. Revisa los importes; la tarjeta requiere una nueva simulación."
+        : "",
+    },
+  });
   switch (action.type) {
     case "demo/increment":
       return {
@@ -51,11 +77,11 @@ export function rositaReducer(
         checkout: emptyCheckout(),
       };
     case "cart/clear":
-      return { ...state, cart: {} };
+      return changedCart({});
     case "cart/remove": {
       const cart = { ...state.cart };
       delete cart[action.id];
-      return { ...state, cart };
+      return changedCart(cart);
     }
     case "cart/add":
     case "cart/set": {
@@ -73,10 +99,17 @@ export function rositaReducer(
         action.type === "cart/add"
           ? (state.cart[action.id] || 0) + action.quantity
           : action.quantity;
-      return {
+      if (state.cart[action.id] === Math.min(stock, wanted)) return state;
+      const candidate = {
         ...state,
         cart: { ...state.cart, [action.id]: Math.min(stock, wanted) },
       };
+      return priceCart({
+        ...candidate,
+        cart: { [action.id]: Math.min(stock, wanted) },
+      }).error
+        ? state
+        : changedCart(candidate.cart);
     }
     case "auth/register": {
       if (
@@ -108,7 +141,9 @@ export function rositaReducer(
       };
     }
     case "auth/login":
-      return state.users.some((u) => u.id === action.userId)
+      return state.users.some(
+        (u) => u.id === action.userId && u.active !== false,
+      )
         ? {
             ...state,
             sessionUserId: action.userId,
@@ -201,9 +236,12 @@ export function rositaReducer(
       return confirmOrder(state, action);
     case "order/advance":
       return advanceOrder(state, action);
+    case "admin/product-archive":
     case "admin/product-save":
     case "admin/product-active":
     case "admin/stock":
       return adminOperation(state, action);
+    default:
+      return state;
   }
 }

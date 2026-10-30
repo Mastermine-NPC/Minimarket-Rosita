@@ -1,0 +1,12 @@
+{
+  "passed": [
+    "1440: seis secciones administrativas sin desbordar, estados stock/umbral y desactivado diferenciados; cambiar umbral recalcula; modal largo conserva foco/Escape y DS actualizado.",
+    "1024: seis secciones administrativas sin desbordar, estados stock/umbral y desactivado diferenciados; cambiar umbral recalcula; modal largo conserva foco/Escape y DS actualizado.",
+    "768: seis secciones administrativas sin desbordar, estados stock/umbral y desactivado diferenciados; cambiar umbral recalcula; modal largo conserva foco/Escape y DS actualizado.",
+    "600: seis secciones administrativas sin desbordar, estados stock/umbral y desactivado diferenciados; cambiar umbral recalcula; modal largo conserva foco/Escape y DS actualizado.",
+    "390: seis secciones administrativas sin desbordar, estados stock/umbral y desactivado diferenciados; cambiar umbral recalcula; modal largo conserva foco/Escape y DS actualizado.",
+    "Contacto: solo espacios rechazados, primer error recibe foco; nombre con tildes/guion/apóstrofe y email con espacios exteriores aceptados; doble envío produce confirmación simulada."
+  ],
+  "errors": [],
+  "browser": "156.0.8078.4"
+}

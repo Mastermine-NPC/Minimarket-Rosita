@@ -5,7 +5,7 @@ import { CustomerGate } from "@/features/acceso/customer-gate";
 import { Button } from "@/components/ui/button";
 import { useHeadingFocus } from "@/hooks/use-heading-focus";
 import { money } from "@/lib/currency";
-import { orderStages } from "@/data/delivery";
+import { stagesFor } from "@/data/delivery";
 import { orderDate } from "@/lib/order-date";
 export function OrdersPage() {
   const { state } = useRosita(),
@@ -36,7 +36,9 @@ export function OrdersPage() {
           {orders.map((o) => (
             <article className="customer-panel order-history-card" key={o.id}>
               <div>
-                <span className="status-chip">{orderStages[o.status]}</span>
+                <span className="status-chip">
+                  {stagesFor(o.delivery)[o.status]}
+                </span>
                 <h2>{o.id}</h2>
                 <time dateTime={o.createdAt}>{orderDate(o.createdAt)}</time>
               </div>

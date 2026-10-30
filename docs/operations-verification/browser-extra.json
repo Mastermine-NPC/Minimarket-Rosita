@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-30",
+  "passed": [
+    "768/390: seguimiento del propietario con mapa real y repartidor visible, sin desbordamiento.",
+    "Movimiento reducido: animación automática deshabilitada, avance manual de 10% y progreso estable.",
+    "390: destino alternativo por teclado calcula una ruta vial; clic y arrastre cambian el punto e invalidan la ruta anterior.",
+    "Error de rutas: otro destino no recibe una recta ni ruta ficticia; UTP conserva únicamente su geometría verificada con aviso de fallback.",
+    "Respuesta tardía simulada: cambiar el destino cancela/invalida la petición anterior; solo persiste el último confirmado.",
+    "390: cámara no compatible/no disponible ofrece alternativa; Escape y retorno de foco en cámara/vaciado, vaciado confirmado. Sin escáner ni cámara físicos probados.",
+    "Fallo de teselas simulado: se muestra aviso; resumen, pedido y controles permanecen disponibles.",
+    "Comprobante: acción de impresión invocada y PDF de Chromium con leyenda de demostración; sin impresión física."
+  ],
+  "errors": [],
+  "browser": "156.0.8078.4"
+}

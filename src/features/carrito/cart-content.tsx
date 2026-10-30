@@ -16,7 +16,7 @@ export function CartContent({ panel = false }: { panel?: boolean }) {
           <ShoppingBag size={36} aria-hidden="true" />
         </span>
         <h2>Tu carrito espera algo bueno.</h2>
-        <p>Explora las seis categorías y encuentra lo que necesitas.</p>
+        <p>Explora las categorías y encuentra lo que necesitas.</p>
         <Button asChild onClick={() => setCartOpen(false)}>
           <Link to="/catalogo">
             Explorar productos <ArrowRight aria-hidden="true" />
@@ -80,7 +80,7 @@ export function CartContent({ panel = false }: { panel?: boolean }) {
                 {formatPEN(lineTotal)}
               </strong>
               <Button
-                variant="ghost"
+                variant="destructive"
                 size="icon"
                 aria-label={"Eliminar " + product.name}
                 onClick={() => remove(product.id)}

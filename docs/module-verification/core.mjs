@@ -290,8 +290,8 @@ try {
   );
   assert.equal(report.rows.length, 2);
   assert(reportCSV(report).includes("Demostración"));
-  assert.equal(csvCell("=SUM(1)"), '\"\'=SUM(1)\"');
-  assert.equal(csvCell('A, "B"'), '\"A, \"\"B\"\"\"');
+  assert.equal(csvCell("=SUM(1)"), '"\'=SUM(1)"');
+  assert.equal(csvCell('A, "B"'), '"A, ""B"""');
   assert.equal(
     buildReport(statsState, { ...defaultReportFilters, type: "cash" }, "fecha")
       .rows.length,

@@ -20,17 +20,23 @@ export function StoreFooter() {
         </div>
         <div>
           <h2>Encuentra lo tuyo</h2>
-          <nav aria-label="Información Rosita">
-            <Link to="/nosotros">Nosotros</Link>
-            <Link to="/ayuda">Centro de ayuda</Link>
-            <Link to="/contacto">Contacto</Link>
-          </nav>
           <nav aria-label="Categorías al pie">
             {categories.map((c) => (
               <Link key={c.id} to={categoryPath(c)}>
                 {c.name}
               </Link>
             ))}
+          </nav>
+        </div>
+        <div>
+          <h2>Rosita y ayuda</h2>
+          <nav aria-label="Información Rosita">
+            <Link to="/nosotros">Nosotros</Link>
+            <Link to="/ayuda">Centro de ayuda</Link>
+            <Link to="/ayuda#preguntas-frecuentes">Preguntas frecuentes</Link>
+            <Link to="/ayuda#entregas-pagos">Entregas y pagos</Link>
+            <Link to="/contacto">Contacto</Link>
+            <Link to="/mis-pedidos">Mis pedidos</Link>
           </nav>
         </div>
         <div>
@@ -57,8 +63,8 @@ export function StoreFooter() {
             Un prototipo por ahora.
           </h2>
           <p>
-            Precios y stock de prueba. Sin cobros ni entregas reales. Acceso y
-            pedidos y administración son simulados. Caja está pendiente.
+            Precios y stock de prueba. Sin cobros ni entregas reales. Acceso,
+            pedidos y administración son simulados.
           </p>
           <Link to="/catalogo">
             Seguir explorando <ArrowUpRight size={16} aria-hidden="true" />
@@ -68,7 +74,6 @@ export function StoreFooter() {
       <div className="footer-bottom">
         <span>Minimarket Rosita · Prototipo académico</span>
         <nav aria-label="Recursos internos">
-          <Link to="/mis-pedidos">Mis pedidos</Link>
           <Link to="/personal">Acceso de personal</Link>
           <Link to="/sistema-diseno">Sistema de diseño</Link>
           <Link to="/comprobacion">Comprobación técnica</Link>

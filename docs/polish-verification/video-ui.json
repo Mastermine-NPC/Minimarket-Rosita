@@ -1,0 +1,61 @@
+{
+  "passed": [
+    "1440: videos reproducen fotogramas, pausa/reanuda, salen de pantalla y visibilidad simulada; secundario opt-in sin descarga inicial, posters y controles; Nosotros/Ayuda/footer sin desbordar y enlaces internos resuelven.",
+    "1200: videos reproducen fotogramas, pausa/reanuda, salen de pantalla y visibilidad simulada; secundario opt-in sin descarga inicial, posters y controles; Nosotros/Ayuda/footer sin desbordar y enlaces internos resuelven.",
+    "1024: videos reproducen fotogramas, pausa/reanuda, salen de pantalla y visibilidad simulada; secundario opt-in sin descarga inicial, posters y controles; Nosotros/Ayuda/footer sin desbordar y enlaces internos resuelven.",
+    "768: videos reproducen fotogramas, pausa/reanuda, salen de pantalla y visibilidad simulada; secundario opt-in sin descarga inicial, posters y controles; Nosotros/Ayuda/footer sin desbordar y enlaces internos resuelven.",
+    "390: videos reproducen fotogramas, pausa/reanuda, salen de pantalla y visibilidad simulada; secundario opt-in sin descarga inicial, posters y controles; Nosotros/Ayuda/footer sin desbordar y enlaces internos resuelven.",
+    "Video reduce: alternativa estática y CTA disponibles; bloqueo permite reintento manual.",
+    "Video blocked: alternativa estática y CTA disponibles; bloqueo permite reintento manual.",
+    "Video failed: alternativa estática y CTA disponibles; bloqueo permite reintento manual."
+  ],
+  "errors": [],
+  "metrics": [
+    {
+      "width": 1440,
+      "requests": [
+        "http://127.0.0.1:4174/images/video/web/video-intro.mp4",
+        "http://127.0.0.1:4174/images/video/web/video-entrega-Delivery.mp4",
+        "http://127.0.0.1:4174/images/video/web/video-intro.mp4"
+      ],
+      "noOverflow": true
+    },
+    {
+      "width": 1200,
+      "requests": [
+        "http://127.0.0.1:4174/images/video/web/video-intro.mp4",
+        "http://127.0.0.1:4174/images/video/web/video-entrega-Delivery.mp4",
+        "http://127.0.0.1:4174/images/video/web/video-intro.mp4"
+      ],
+      "noOverflow": true
+    },
+    {
+      "width": 1024,
+      "requests": [
+        "http://127.0.0.1:4174/images/video/web/video-intro.mp4",
+        "http://127.0.0.1:4174/images/video/web/video-entrega-Delivery.mp4",
+        "http://127.0.0.1:4174/images/video/web/video-intro.mp4"
+      ],
+      "noOverflow": true
+    },
+    {
+      "width": 768,
+      "requests": [
+        "http://127.0.0.1:4174/images/video/web/video-intro.mp4",
+        "http://127.0.0.1:4174/images/video/web/video-entrega-Delivery.mp4",
+        "http://127.0.0.1:4174/images/video/web/video-intro.mp4"
+      ],
+      "noOverflow": true
+    },
+    {
+      "width": 390,
+      "requests": [
+        "http://127.0.0.1:4174/images/video/web/video-intro.mp4",
+        "http://127.0.0.1:4174/images/video/web/video-entrega-Delivery.mp4",
+        "http://127.0.0.1:4174/images/video/web/video-intro.mp4"
+      ],
+      "noOverflow": true
+    }
+  ],
+  "browser": "156.0.8078.4"
+}

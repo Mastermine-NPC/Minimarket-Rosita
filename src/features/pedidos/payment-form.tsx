@@ -1,3 +1,6 @@
+import { CardSimulation } from "./card-simulation";
+import { prepareQuote } from "@/lib/order-transaction";
+import type { CardApproval } from "@/types/commerce";
 import { useForm, useWatch } from "react-hook-form";
 import { ArrowLeft, ArrowRight, Banknote, Smartphone } from "lucide-react";
 import { useRosita } from "@/hooks/use-rosita";
@@ -9,7 +12,15 @@ import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import type { Payment } from "@/types/commerce";
 import { money } from "@/lib/currency";
-export function PaymentForm({ totalCents }: { totalCents: number }) {
+export function PaymentForm({
+  totalCents,
+  approval,
+  onApproval,
+}: {
+  totalCents: number;
+  approval: CardApproval | null;
+  onApproval: (a: CardApproval | null) => void;
+}) {
   const { state, dispatch } = useRosita(),
     heading = useHeadingFocus(),
     {
@@ -29,17 +40,31 @@ export function PaymentForm({ totalCents }: { totalCents: number }) {
         Un pago, solo de prueba.
       </h2>
       <p>
-        No se realiza ningún cobro. No necesitas tarjetas, comprobantes ni
-        transferencias reales.
+        No se realiza ningún cobro. Usa solo datos ficticios; no necesitas
+        comprobantes ni transferencias reales.
       </p>
       <form
         className="customer-form"
         noValidate
-        onChange={() =>
-          dispatch({ type: "checkout/draft-payment", payment: getValues() })
-        }
+        onChange={() => {
+          onApproval(null);
+          dispatch({ type: "checkout/draft-payment", payment: getValues() });
+        }}
         onSubmit={handleSubmit((payment) => {
           const problem = paymentProblem(payment, totalCents);
+          if (
+            payment.method === "card-demo" &&
+            (!approval ||
+              approval.fingerprint !== prepareQuote(state).quote?.fingerprint ||
+              approval.token !== state.checkout.token ||
+              approval.userId !== state.sessionUserId)
+          ) {
+            setError("root", {
+              message:
+                "Simula y aprueba la tarjeta de prueba antes de revisar.",
+            });
+            return;
+          }
           if (problem) {
             setError("cashAmount", { message: problem }, { shouldFocus: true });
             return;
@@ -97,6 +122,18 @@ export function PaymentForm({ totalCents }: { totalCents: number }) {
               </p>
             )}
           </div>
+        )}
+        {method === "card-demo" && (
+          <CardSimulation
+            totalCents={totalCents}
+            onApproval={onApproval}
+            approval={approval}
+          />
+        )}
+        {errors.root && (
+          <p role="alert" className="field-error">
+            ⚠ {errors.root.message}
+          </p>
         )}
         <div className="customer-actions">
           <Button

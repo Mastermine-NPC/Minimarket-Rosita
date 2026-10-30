@@ -1,3 +1,4 @@
+import { AmbientVideo } from "@/features/inicio/ambient-video";
 import { MediaImage } from "@/components/image-picker";
 import { useTaxonomy } from "@/hooks/use-taxonomy";
 import { useEffect, useRef } from "react";
@@ -255,6 +256,36 @@ export function HomePage() {
           Fotografías de ambientación. Consulta los artículos disponibles en
           cada categoría.
         </p>
+      </section>
+      <section
+        className="home-delivery container"
+        aria-labelledby="delivery-title"
+      >
+        <div>
+          <span className="eyebrow">TU PEDIDO, PASO A PASO</span>
+          <h2 id="delivery-title">Todo claro, hasta la entrega.</h2>
+          <p>
+            Elige tu zona de prueba, revisa el envío y consulta el estado de tu
+            pedido. Es una simulación; no se realiza un reparto real.
+          </p>
+          <Button asChild>
+            <Link to="/ayuda#entregas-pagos">Conocer entregas y pagos</Link>
+          </Button>
+        </div>
+        <details className="delivery-reference">
+          <summary>Ver clip de referencia · ficción</summary>
+          <p>
+            Escena de comedia aportada como referencia: un personaje maltrata un
+            paquete. No muestra al personal ni el servicio de Rosita. Video sin
+            audio; la información de entrega está en el texto.
+          </p>
+          <AmbientVideo
+            src="/images/video/web/video-entrega-Delivery.mp4"
+            poster="/images/video/web/video-entrega-Delivery-poster.jpg"
+            label="clip de referencia de ficción"
+            automatic={false}
+          />
+        </details>
       </section>
       <ColorBridge />
       <section

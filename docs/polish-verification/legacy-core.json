@@ -1,0 +1,11 @@
+{
+  "passed": [
+    "Semilla v6 válida y verificador de acceso ficticio del cliente funcional.",
+    "Categoría/subcategoría/producto dinámicos, alias de slug, bloqueo de reasignación con referencias y desactivación comercial coherente.",
+    "Migración v4 hasta v6 conserva pedidos, movimientos, carrito, stock y sesión; añade acceso sin duplicarlo al recargar.",
+    "Cliente no gestiona taxonomía ni modifica perfiles ajenos desde acciones.",
+    "Migración v5→v6 conserva registros y cliente previo con correo coincidente; nuevo acceso usa +1, sin duplicación. Corrupción, formato futuro, lectura bloqueada, cuota y reset exclusivo comprobados en utilidades.",
+    "Cálculos con fixture explícita de dos fechas: filtros por fecha/estado, top, totales y separación de envío; CSV con comillas, comas y neutralización de fórmula; caja sin registros inventados."
+  ],
+  "errors": []
+}

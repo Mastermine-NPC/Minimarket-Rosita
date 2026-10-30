@@ -1,3 +1,4 @@
+import { AmbientVideo } from "@/features/inicio/ambient-video";
 import { useRef, useState } from "react";
 import { Link } from "react-router";
 import { useRosita } from "@/hooks/use-rosita";
@@ -14,7 +15,7 @@ export function ModulePatterns() {
     field = useRef<HTMLInputElement>(null);
   return (
     <section className="system-section">
-      <h2>Patrones de información y gestión · 2.5.0</h2>
+      <h2>Patrones de información y gestión · 2.6.0</h2>
       <p>
         La información corporativa y ayuda usan la misma tipografía y
         superficies. La gestión comparte formularios, estados, foco y tablas;
@@ -95,6 +96,31 @@ export function ModulePatterns() {
           contexto; el movimiento se reduce según preferencia.
         </p>
       </details>
+      <h3>Video suplementario · componente real</h3>
+      <p>
+        Sin carga ni reproducción automática en esta muestra. Pausa al salir de
+        pantalla o al ocultar la pestaña. El contenido y las acciones funcionan
+        con el poster. Movimiento reducido empieza con imagen estática.
+      </p>
+      <AmbientVideo
+        src="/images/video/web/video-intro.mp4"
+        poster="/images/video/web/video-intro-poster.jpg"
+        label="muestra del sistema de diseño"
+        automatic={false}
+      />
+      <h3>Tarjeta simulada y jerarquía de tareas</h3>
+      <p>
+        Compra: acción principal. Cantidades: controles equivalentes.
+        Eliminar/vaciar: destructivo con icono o etiqueta; volver/cancelar:
+        secundario. La tarjeta ofrece validación, procesamiento, rechazo, error
+        y aprobación textual. El permiso de aprobar vive solo en memoria y se
+        invalida al cambiar la compra.
+      </p>
+      <Button asChild variant="outline">
+        <Link to="/ayuda#entregas-pagos">
+          Consultar escenarios ficticios de pago
+        </Link>
+      </Button>
       <h3>Preparación de imagen · componente real</h3>
       {admin ? (
         <>
@@ -114,7 +140,7 @@ export function ModulePatterns() {
       <p>
         El UI Kit contiene piezas y variantes. El Design System define cuándo
         usarlas, sus tokens, permisos, validación, persistencia y reglas de
-        colaboración. Versión 2.5.0: información/ayuda, perfil, taxonomía
+        colaboración. Versión 2.6.0: información/ayuda, perfil, taxonomía
         editable, imágenes locales y reportes compartidos.
       </p>
     </section>

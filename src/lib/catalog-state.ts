@@ -13,7 +13,7 @@ export function currentProducts(
       image = productImages.find((i) => i.key === p.imageKey);
     return {
       ...p,
-      active: p.active && taxonomyEnabled(state, p),
+      active: !p.archived && p.active && taxonomyEnabled(state, p),
       imageAssetId: p.imageKey.startsWith("upload:")
         ? p.imageKey.slice(7)
         : undefined,

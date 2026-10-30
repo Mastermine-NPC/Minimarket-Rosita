@@ -1,0 +1,15 @@
+{
+  "passed": [
+    "39 artículos exactos en nombres/marcas/códigos/precios/stock≥10; 24 conservados sin cambiar precio/stock; 63 códigos e identidades únicos, seis categorías y búsqueda/filtro combinados.",
+    "Migraciones v4 y v7→v8 preservan catálogo propio, stock/precios editados, carrito con ID heredado, cuentas/sesión y copias históricas; recargar no repite importación.",
+    "Ruta heredada v1/v2/v3 preserva cantidades y registros válidos y añade las39 referencias con inventario completo; metadata de subida se conserva al migrar v7.",
+    "Coincidencia exacta con otro ID conserva un único artículo y su stock/precio válido; duplicado verificable queda retirado recuperablemente sin sumar existencias ni borrar referencias.",
+    "Eliminación recuperable persiste, conserva inventario y no reaparece por importación; cliente no puede ejecutarla."
+  ],
+  "errors": [],
+  "initialProducts": 63,
+  "added": 39,
+  "preserved": 24,
+  "duplicateInitial": 0,
+  "categories": 6
+}

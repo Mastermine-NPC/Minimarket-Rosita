@@ -36,6 +36,8 @@ const pairs = [
   ["Secundario", "secondary-foreground", "secondary", 4.5],
   ["Acento", "accent-foreground", "accent", 4.5],
   ["Error", "destructive", "card", 4.5],
+  ["Inventario agotado", "destructive", "error-surface", 4.5],
+  ["Inventario desactivado", "muted-foreground", "muted", 4.5],
   ["Éxito", "success", "success-surface", 4.5],
   ["Aviso", "warning", "warning-surface", 4.5],
   ["Texto secundario", "muted-foreground", "card", 4.5],

@@ -1,0 +1,7 @@
+{
+  "date": "2026-10-30",
+  "passed": [
+    "Movimientos por pago/canal/turno y suma por agente coherentes con registros, sin duplicación.",
+    "Rango inválido produce error sin filas; CSV neutraliza prefijos de fórmula en etiquetas."
+  ]
+}

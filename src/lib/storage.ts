@@ -1,3 +1,9 @@
+import { initializeOperations } from "./operations-init";
+import { v8Schema } from "./legacy-v8-schema";
+import { products as legacyCatalogProducts } from "@/data/catalog";
+import { integrateCatalog } from "./catalog-update";
+import { v7Schema } from "./legacy-v7-schema";
+import { v6Schema } from "./legacy-v6-schema";
 import { v5Schema } from "./legacy-v5-schema";
 import { seedCategories, seedSubcategories } from "@/data/taxonomy-seed";
 import { withDemoClient } from "@/data/client-seed";
@@ -10,7 +16,7 @@ import { legacySchema, v2Schema, stateSchema } from "./state-schema";
 import type { RositaState } from "@/types/state";
 export const STORAGE_PREFIX = "minimarket-rosita:";
 export const STATE_KEY = STORAGE_PREFIX + "app";
-export const STORAGE_VERSION = 6;
+export const STORAGE_VERSION = 9;
 export interface StoredState {
   data: RositaState;
   status:
@@ -77,6 +83,10 @@ export function readRositaState(storage?: Storage): StoredState {
       data = {
         ...empty(),
         ...old,
+        catalogRevision: undefined,
+        products: initialState.products.filter((p) =>
+          legacyCatalogProducts.some((old) => old.id === p.id),
+        ),
         users: withDemoAdmin(
           old.users.map((u) => ({ ...u, role: "customer" })),
         ),
@@ -92,6 +102,7 @@ export function readRositaState(storage?: Storage): StoredState {
     } else if (value.version === 4) {
       const old = v4Schema.parse(value.data);
       data = {
+        ...empty(),
         ...old,
         categories: seedCategories,
         subcategories: seedSubcategories,
@@ -101,21 +112,33 @@ export function readRositaState(storage?: Storage): StoredState {
           subcategory: inferSubcategory(product),
         })),
       };
-      data = stateSchema.parse(data);
+      data = { ...empty(), ...v8Schema.parse(data) };
       migrated = true;
     } else if (value.version === 5) {
       const old = v5Schema.parse(value.data);
       data = {
+        ...empty(),
         ...old,
         categories: seedCategories,
         subcategories: seedSubcategories,
         media: {},
       };
       migrated = true;
-    } else if (value.version === 6) data = stateSchema.parse(value.data);
+    } else if (value.version === 6) {
+      data = { ...empty(), ...v8Schema.parse(v6Schema.parse(value.data)) };
+      migrated = true;
+    } else if (value.version === 7) {
+      data = { ...empty(), ...v7Schema.parse(value.data) };
+      migrated = true;
+    } else if (value.version === 8) {
+      data = { ...empty(), ...v8Schema.parse(value.data) };
+      migrated = true;
+    } else if (value.version === 9) data = stateSchema.parse(value.data);
     else throw new SyntaxError();
-    if (value.version !== 6)
+    if (value.version < 6)
       data = { ...data, users: withDemoClient(data.users) };
+    if (value.version < 8) data = integrateCatalog(data);
+    if (value.version < 9) data = initializeOperations(data);
     data = stateSchema.parse(data);
     const cart = Object.fromEntries(
       Object.entries(data.cart).flatMap(([id, n]) => {
@@ -140,7 +163,7 @@ export function readRositaState(storage?: Storage): StoredState {
       data,
       status: migrated ? "migrated" : repaired ? "repaired" : "loaded",
       notice: migrated
-        ? "Actualizamos a v6: conservamos tus registros e historial. Categorías administrables y acceso de cliente de demostración disponibles."
+        ? "Datos migrados: conservamos catálogo, precios, stock e historial; añadimos entrega, recojo y caja de demostración."
         : repaired
           ? "Ajustamos el carrito al stock disponible. Revisa las cantidades."
           : "",

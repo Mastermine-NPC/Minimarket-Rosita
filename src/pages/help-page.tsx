@@ -40,7 +40,7 @@ const topics = [
     items: [
       [
         "¿Se cobra dinero real?",
-        "No. Yape, Plin y efectivo contra entrega son opciones simuladas. No se piden datos financieros reales. El efectivo permite comprobar importe suficiente y vuelto; no es una venta de caja presencial.",
+        "No. Tarjeta, Yape, Plin y efectivo contra entrega son opciones simuladas. La tarjeta acepta únicamente CLIENTE DEMO, 12/99, CVV 123 y el número 0000 0000 0000 0001 para aprobar, 0002 para rechazar o 0003 para simular error. Usa Completar en el formulario. La aprobación corresponde solo a ese carrito e importe, se pierde al salir/recargar y no guarda número completo, vencimiento o CVV. No se piden datos financieros reales. El efectivo permite comprobar importe suficiente y vuelto; no es una venta de caja presencial.",
       ],
       [
         "¿Las entregas y el mapa son reales?",
@@ -76,7 +76,7 @@ const topics = [
       ],
       [
         "¿La caja está implementada?",
-        "No hay módulo de venta presencial en esta versión. La tienda digital registra pedidos de demostración. Los reportes separan este canal y no inventan ventas de caja. No se ofrece una cuenta de cajero sin una función real.",
+        "Sí. En Acceso de personal usa caja@rosita.test y CajaDemo!2026. Abre un turno, agrega productos manualmente o por código y cobra con efectivo o tarjeta ficticia. El inventario es compartido con la tienda. Los reportes distinguen caja, delivery y recojo.",
       ],
     ],
   },

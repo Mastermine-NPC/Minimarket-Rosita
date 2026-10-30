@@ -1,0 +1,12 @@
+{
+  "passed": [
+    "1440:63 artículos/39 fotos nuevas decodificadas y contain; códigos/nombres/marcas, seis categorías y filtros combinados; ROS-024 Powerade, ROS-063 pasta, UNO044 y mouse062 sin confusión; detalle/zoom y nota de presentación.",
+    "768:63 artículos/39 fotos nuevas decodificadas y contain; códigos/nombres/marcas, seis categorías y filtros combinados; ROS-024 Powerade, ROS-063 pasta, UNO044 y mouse062 sin confusión; detalle/zoom y nota de presentación.",
+    "390:63 artículos/39 fotos nuevas decodificadas y contain; códigos/nombres/marcas, seis categorías y filtros combinados; ROS-024 Powerade, ROS-063 pasta, UNO044 y mouse062 sin confusión; detalle/zoom y nota de presentación.",
+    "1440: administración63, SKU comercial/ID estable, crear/editar/precio/stock persistentes, eliminar sin resurrección y restaurar; compra Powerade7.50 y stock30→29 único sin afectar pasta ni cuentas, seguimiento funcional.",
+    "390: administración63, SKU comercial/ID estable, crear/editar/precio/stock persistentes, eliminar sin resurrección y restaurar; compra Powerade7.50 y stock30→29 único sin afectar pasta ni cuentas, seguimiento funcional.",
+    "Migración real en navegador v7→8 conserva cuenta/sesión, carrito de pasta, pedido histórico, recursos subidos/metadata e inventario propio; recarga idempotente y URLs internas anteriores siguen identificando el artículo correcto."
+  ],
+  "errors": [],
+  "browser": "156.0.8078.4"
+}

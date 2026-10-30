@@ -34,7 +34,7 @@ export function CartPage() {
         {count > 0 && (
           <Dialog>
             <DialogTrigger asChild>
-              <Button variant="outline">Vaciar carrito</Button>
+              <Button variant="destructive">Vaciar carrito</Button>
             </DialogTrigger>
             <DialogContent>
               <DialogHeader>
@@ -49,7 +49,9 @@ export function CartPage() {
                   <Button variant="outline">Conservar productos</Button>
                 </DialogClose>
                 <DialogClose asChild>
-                  <Button onClick={clear}>Sí, vaciar carrito</Button>
+                  <Button variant="destructive" onClick={clear}>
+                    Sí, vaciar carrito
+                  </Button>
                 </DialogClose>
               </DialogFooter>
             </DialogContent>

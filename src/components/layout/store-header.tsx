@@ -62,11 +62,13 @@ export function StoreHeader() {
             <Button variant="ghost" className="account-trigger" asChild>
               <Link
                 to={
-                  user?.role === "admin"
-                    ? "/admin"
-                    : user
-                      ? "/cuenta"
-                      : "/login"
+                  user?.role === "cashier"
+                    ? "/caja"
+                    : user?.role === "admin"
+                      ? "/admin"
+                      : user
+                        ? "/cuenta"
+                        : "/login"
                 }
                 aria-label={
                   user
@@ -80,15 +82,23 @@ export function StoreHeader() {
             </Button>
             <Button variant="ghost" className="orders-trigger" asChild>
               <Link
-                to={user?.role === "admin" ? "/admin/pedidos" : "/mis-pedidos"}
+                to={
+                  user?.role === "cashier"
+                    ? "/caja"
+                    : user?.role === "admin"
+                      ? "/admin/pedidos"
+                      : "/mis-pedidos"
+                }
                 aria-label={
-                  user?.role === "admin"
-                    ? "Pedidos administrativos"
-                    : "Mis pedidos"
+                  user?.role === "cashier"
+                    ? "/caja"
+                    : user?.role === "admin"
+                      ? "Pedidos administrativos"
+                      : "Mis pedidos"
                 }
               >
                 <Package size={22} aria-hidden="true" />
-                <span>Pedidos</span>
+                <span>{user?.role === "cashier" ? "Caja" : "Pedidos"}</span>
               </Link>
             </Button>
             {user && (

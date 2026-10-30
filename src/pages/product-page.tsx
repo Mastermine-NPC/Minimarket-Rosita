@@ -65,7 +65,18 @@ function ProductDetail({ id }: { id: string }) {
           <Link className="eyebrow" to={categoryPath(category)}>
             {category.name}
           </Link>
-          <span className="detail-code">{product.id}</span>
+          {product.archived && (
+            <p role="status" className="field-error">
+              Producto retirado del catálogo. Los pedidos anteriores se
+              conservan.
+            </p>
+          )}
+          {product.imageNote && (
+            <p className="hint" role="note">
+              {product.imageNote}
+            </p>
+          )}
+          <span className="detail-code">{product.code || product.id}</span>
           <h1 ref={heading} tabIndex={-1}>
             {product.name}
           </h1>

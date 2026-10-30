@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-30",
+  "passed": [
+    "1440: acceso caja, turno, código con ceros + Enter sin duplicado, desconocido, cantidades, efectivo insuficiente/vuelto, tarjeta rechazo/error/aprobada, cierre excluye tarjeta, historial.",
+    "1440: delivery UTP, mapa y ruta real/fallback explícito, tarjeta checkout, confirmación, avance a En camino, inicio/pausa, recarga pausada con progreso.",
+    "Recojo completo: sin dirección de delivery, envío cero, sin ruta ni doble descuento; estados sincronizados en los datos.",
+    "Administrador: crea/desactiva agente, reporte canales y CSV descargado; caja no puede entrar en administración.",
+    "768: caja/agentes/reportes/adaptación sin scroll horizontal accidental.",
+    "390: caja/agentes/reportes/adaptación sin scroll horizontal accidental.",
+    "1024: caja/agentes/reportes/adaptación sin scroll horizontal accidental.",
+    "600: caja/agentes/reportes/adaptación sin scroll horizontal accidental."
+  ],
+  "errors": [],
+  "browser": "156.0.8078.4"
+}
