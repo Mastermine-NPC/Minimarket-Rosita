@@ -52,3 +52,4 @@ Uso en un navegador y una pestaña. No hay sincronización, servidor, contacto r
 [Inventario, resultados y guion A–M](docs/MODULOS-0.7.0.md) · [Verificación](docs/VERIFICACION.md) · [Persistencia](docs/PERSISTENCIA.md) · [DS 2.5.0](docs/DESIGN-SYSTEM.md) · [Recursos](docs/RECURSOS.md). Evidencia en `docs/module-verification`; copias antes/después en `docs/recovery`. Documentación anterior conservada en `docs/history` y carpetas de evidencia previas.
 # Minimarket-Rosita
 # Minimarket-Rosita
+# Minimarket-Rosita
