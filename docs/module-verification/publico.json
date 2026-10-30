@@ -1,0 +1,12 @@
+{
+  "passed": [
+    "1440: menú informativo no duplica categorías; teclado/Escape/foco, FAQ/ancla, Nosotros con foto real, selector móvil y contacto validado sin envío real.",
+    "1440: acceso de prueba no automático, perfil editable/persistente, cliente sin panel, credencial actualizada y composición sin desbordamiento con movimiento reducido.",
+    "768: menú informativo no duplica categorías; teclado/Escape/foco, FAQ/ancla, Nosotros con foto real, selector móvil y contacto validado sin envío real.",
+    "768: acceso de prueba no automático, perfil editable/persistente, cliente sin panel, credencial actualizada y composición sin desbordamiento con movimiento reducido.",
+    "390: menú informativo no duplica categorías; teclado/Escape/foco, FAQ/ancla, Nosotros con foto real, selector móvil y contacto validado sin envío real.",
+    "390: acceso de prueba no automático, perfil editable/persistente, cliente sin panel, credencial actualizada y composición sin desbordamiento con movimiento reducido."
+  ],
+  "errors": [],
+  "browser": "156.0.8078.4"
+}

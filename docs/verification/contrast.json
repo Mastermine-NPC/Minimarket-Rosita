@@ -1,0 +1,126 @@
+{
+  "results": [
+    {
+      "name": "Texto/superficie",
+      "foreground": "#111827",
+      "background": "#FFFFFF",
+      "ratio": 17.74,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "name": "Texto/fondo",
+      "foreground": "#111827",
+      "background": "#E0F2FE",
+      "ratio": 15.46,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "name": "Botón principal",
+      "foreground": "#FFFFFF",
+      "background": "#146E6E",
+      "ratio": 6.03,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "name": "Botón hover",
+      "foreground": "#FFFFFF",
+      "background": "#105858",
+      "ratio": 8.21,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "name": "Botón presionado",
+      "foreground": "#FFFFFF",
+      "background": "#0B4747",
+      "ratio": 10.47,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "name": "Secundario",
+      "foreground": "#146E6E",
+      "background": "#E1F3F1",
+      "ratio": 5.25,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "name": "Acento",
+      "foreground": "#FFFFFF",
+      "background": "#2563EB",
+      "ratio": 5.17,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "name": "Error",
+      "foreground": "#B42318",
+      "background": "#FFFFFF",
+      "ratio": 6.57,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "name": "Éxito",
+      "foreground": "#166534",
+      "background": "#E9F5EF",
+      "ratio": 6.37,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "name": "Aviso",
+      "foreground": "#854D0E",
+      "background": "#FFF4DC",
+      "ratio": 6.27,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "name": "Texto secundario",
+      "foreground": "#475569",
+      "background": "#FFFFFF",
+      "ratio": 7.58,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "name": "Texto secundario/fondo",
+      "foreground": "#475569",
+      "background": "#E0F2FE",
+      "ratio": 6.6,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "name": "Foco/superficie",
+      "foreground": "#2563EB",
+      "background": "#FFFFFF",
+      "ratio": 5.17,
+      "minimum": 3,
+      "passed": true
+    },
+    {
+      "name": "Foco/fondo",
+      "foreground": "#2563EB",
+      "background": "#E0F2FE",
+      "ratio": 4.5,
+      "minimum": 3,
+      "passed": true
+    },
+    {
+      "name": "Borde de control",
+      "foreground": "#64748B",
+      "background": "#FFFFFF",
+      "ratio": 4.76,
+      "minimum": 3,
+      "passed": true
+    }
+  ],
+  "brandWhiteRatio": 3.49,
+  "brandRule": "No usar blanco pequeño sobre el turquesa de marca. Usar primary #146E6E."
+}

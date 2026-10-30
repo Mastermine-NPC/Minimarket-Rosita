@@ -1,0 +1,21 @@
+{
+  "passed": [
+    "Arrastre de ratón fuera del visor conserva modal; resize vuelve a acotar posición; clic exterior no cierra; Escape restaura foco.",
+    "Imagen fallida: aviso y ampliación deshabilitada; compra disponible.",
+    "Pinza nativa CDP aumenta visualViewport.scale sin cerrar el visor; no se impide el zoom del navegador."
+  ],
+  "metrics": {
+    "mousePan": "17.0,121.0",
+    "resize": {
+      "pan": "0.0,76.5",
+      "w": 348,
+      "h": 306
+    },
+    "nativePinch": {
+      "before": 1,
+      "after": 5
+    }
+  },
+  "errors": [],
+  "browser": "156.0.8078.4"
+}

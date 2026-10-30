@@ -1,0 +1,19 @@
+{
+  "passed": [
+    "1440: formulario obligatorio/correo, foco de error y confirmación/notificación sin envío",
+    "1440: modal, ciclo de teclado/Escape/restauración, foco visible y aviso Sonner",
+    "1440: dos rutas, enlace profundo, estado compartido/persistente, soles, movimiento reducido y sin desbordamiento",
+    "768: formulario obligatorio/correo, foco de error y confirmación/notificación sin envío",
+    "768: modal, ciclo de teclado/Escape/restauración, foco visible y aviso Sonner",
+    "768: dos rutas, enlace profundo, estado compartido/persistente, soles, movimiento reducido y sin desbordamiento",
+    "390: formulario obligatorio/correo, foco de error y confirmación/notificación sin envío",
+    "390: modal, ciclo de teclado/Escape/restauración, foco visible y aviso Sonner",
+    "390: dos rutas, enlace profundo, estado compartido/persistente, soles, movimiento reducido y sin desbordamiento",
+    "Persistencia: JSON inválido recuperable y reset exclusivo del prefijo Rosita, sin borrar claves ajenas",
+    "Persistencia: versión futura conservada sin sobrescribir hasta restablecimiento explícito",
+    "Reducer: cantidades enteras limitadas al rango 0–24",
+    "Almacenamiento bloqueado: interfaz funcional y error útil, sin excepción no controlada"
+  ],
+  "errors": [],
+  "environment": "Chromium local mediante Vite dev, no publicación"
+}

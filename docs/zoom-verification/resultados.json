@@ -1,0 +1,29 @@
+{
+  "passed": [
+    "1440: hover interno sigue coordenadas 0.25/0.75, excluye márgenes contain y restaura al salir.",
+    "Teclado: Enter abre, foco inicial Cerrar, ciclo contenido, límite 150 %, flechas acotadas, restablecer, Escape y foco devuelto.",
+    "Clic en fotografía abre; cierre visible restaura a fotografía; compra mantiene acción de agregar.",
+    "Cambio de producto selecciona otro recorte; ilustración correcta admite 300 % y Alejar. Sin miniaturas en catálogo actual.",
+    "Movimiento reducido: sin hover automático ni animación modal; controles siguen funcionando.",
+    "1440/768/390: visor y controles visibles de al menos 44 px, sin desbordamiento horizontal.",
+    "Móvil CDP: toque abre, controles amplían, arrastre táctil mueve imagen sin cerrar, límites/restablecer y Cerrar. Pinch-zoom y meta nativa permitidos.",
+    "Sin excepciones JavaScript."
+  ],
+  "errors": [],
+  "metrics": {
+    "hover": {
+      "transform": "matrix(1.5, 0, 0, 1.5, 0, 0)",
+      "origin": "194.25px 288.75px",
+      "point": "0.250,0.750"
+    },
+    "keyboardPan": "0.0,0.0",
+    "bounds": {
+      "w": 956,
+      "h": 538,
+      "p": "0.0,-12.3"
+    },
+    "touchPan": "85.5,72.0"
+  },
+  "base": "http://127.0.0.1:4173",
+  "browser": "156.0.8078.4"
+}

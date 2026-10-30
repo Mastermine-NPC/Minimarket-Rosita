@@ -1,0 +1,11 @@
+{
+  "passed": [
+    "390: cliente y anónimo bloqueados en panel; compra genera un pedido/movimiento; acceso y sesión administrativa persistentes; métricas reales",
+    "390: pedidos buscables/filtrables; avance administrativo y cliente comparten reglas, historial y stock sin nuevo descuento",
+    "390: edición compartida de nombre/precio conserva snapshot; stock solo en inventario; entrada, salida inválida y conteo persistentes e idempotentes",
+    "390: crear/validar/duplicado; imagen local; cambios sin guardar; desactivar conserva carrito e historia y retira nueva compra; activar restaura oferta",
+    "390: navegación directa, menú por teclado/Escape, foco, movimiento reducido y rutas inválidas"
+  ],
+  "errors": [],
+  "browser": "156.0.8078.4"
+}

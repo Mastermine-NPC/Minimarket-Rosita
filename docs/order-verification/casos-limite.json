@@ -1,0 +1,10 @@
+{
+  "passed": [
+    "Cerrar sesión durante procesamiento cancela confirmación, limpia borrador y conserva carrito/stock",
+    "Nombre de 80 caracteres sin espacios no desborda la cuenta móvil",
+    "Plin simulado confirma con snapshot y descuento persistente sin datos financieros",
+    "Stock reducido al recargar avisa, ajusta carrito e impide confirmar sin actualizar revisión",
+    "Checkout vacío y seguimiento directo sin sesión muestran alternativas útiles"
+  ],
+  "errors": []
+}

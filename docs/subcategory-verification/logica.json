@@ -1,0 +1,29 @@
+{
+  "passed": [
+    "24 productos iniciales: 17 subcategorías reales, válidas y con identificadores estables.",
+    "Intersección real de búsqueda, marca, precio, stock y subcategoría; inválida incompatible no elimina productos ajenos.",
+    "Migración v4→v5 y segunda lectura: conserva 25 productos, precios/stock, carrito, clientes/sesión, pedido histórico, movimientos y operaciones; snapshot 567 céntimos no se recalcula a 999.",
+    "Validación/reducer impiden pareja categoría/subcategoría incompatible; edición válida conserva pedidos y precio/stock. Desconocidos no se clasifican por ID.",
+    "Orden descendente dentro de herramientas manuales correcto; migraciones previas v1/v2/v3 siguen generando estado v5 válido y se conserva validación de referencias de inventario."
+  ],
+  "counts": {
+    "bebidas": 1,
+    "snacks": 2,
+    "herramientas-manuales": 3,
+    "herramientas-electricas": 1,
+    "cables-adaptadores": 2,
+    "pilas": 1,
+    "almacenamiento": 1,
+    "juegos-mesa": 3,
+    "geometria": 1,
+    "organizacion": 1,
+    "accesorios-oficina": 1,
+    "jabones": 1,
+    "cuidado-capilar": 2,
+    "galletas": 1,
+    "juegos-deportivos": 1,
+    "cuadernos-papel": 1,
+    "higiene-bucal": 1
+  },
+  "errors": []
+}

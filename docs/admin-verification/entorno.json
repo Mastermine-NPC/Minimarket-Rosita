@@ -1,0 +1,12 @@
+{
+  "application": "0.4.0",
+  "designSystem": "2.2.0",
+  "storageSchema": 4,
+  "nodeTested": "20.19.4",
+  "npmRunner": "11.21.1",
+  "nodeRequirements": "^20.19.0 || ^22.13.0 || >=24.0.0",
+  "dependenciesUnchanged": true,
+  "lockOnlyRootVersionChanged": true,
+  "backend": false,
+  "deployed": false
+}

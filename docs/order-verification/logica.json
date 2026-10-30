@@ -1,0 +1,23 @@
+{
+  "passed": [
+    "Pedido, descuento de dos unidades y vaciado del carrito en una transición",
+    "Reducer puro: no modifica el estado original",
+    "Idempotencia por requestId: doble confirmación/reintento no duplica ni descuenta",
+    "Precio alterado: bloquea y exige nueva revisión",
+    "Revisión explícita actualiza el nuevo precio",
+    "Stock insuficiente no crea pedido, vacía carrito ni descuenta",
+    "Cambio de stock aun suficiente solicita nueva revisión",
+    "Cierre de sesión antes de confirmar impide crear pedido",
+    "Seguimiento llega a Entregado y nunca repite descuento",
+    "Otro cliente no puede avanzar este pedido desde la lógica",
+    "Cantidades inválidas rechazadas",
+    "Pedido e inventario comprometidos cumplen el esquema persistido",
+    "Importes contradictorios persistidos rechazados",
+    "Retornos externos, ambiguos y no permitidos rechazados",
+    "Migración v2 conserva carrito, contador, IDs y stock inicial",
+    "Recarga v3 conserva pedido, stock y sesión",
+    "Reset exclusivo de Rosita",
+    "Corrupción recupera estado sin sobrescribir el original al leer",
+    "Fallo de escritura devuelve resultado de sesión temporal"
+  ]
+}

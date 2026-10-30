@@ -1,0 +1,14 @@
+{
+  "versionBefore": "0.5.1",
+  "versionAfter": "0.6.0",
+  "storageVersionBefore": 4,
+  "storageVersionAfter": 5,
+  "dependenciesUnchanged": true,
+  "lockUnchangedExceptAppVersion": true,
+  "purchaseLogicUnchanged": {
+    "src/lib/order-transaction.ts": true,
+    "src/lib/cart-pricing.ts": true,
+    "src/app/state/reducer.ts": true,
+    "src/types/commerce.ts": true
+  }
+}

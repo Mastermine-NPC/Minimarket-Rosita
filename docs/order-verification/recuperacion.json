@@ -1,0 +1,9 @@
+{
+  "passed": [
+    "UI: migración v2→v3 conserva carrito de dos unidades y contador 7",
+    "UI: corrupción avisa sin sobrescribir al abrir",
+    "UI: formato futuro protegido; reset exclusivo recupera v3",
+    "UI: precio cambiado bloquea confirmación, exige actualización explícita y compra con importe nuevo",
+    "UI: compra completa con localStorage bloqueado y Yape simulado; advertencia persistente y pérdida al recargar explícita"
+  ]
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "name": "mercado-libre",
+    "url": "https://www.mercadolibre.com.pe/",
+    "status": 403,
+    "title": ""
+  },
+  {
+    "name": "spatzek",
+    "url": "https://www.danielspatzek.com/home/",
+    "status": 200,
+    "title": "dnlsptzkIV - Home"
+  }
+]

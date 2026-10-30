@@ -1,0 +1,20 @@
+{
+  "oldVersion": "0.4.0",
+  "newVersion": "0.5.0",
+  "dependenciesUnchanged": true,
+  "devDependenciesUnchanged": true,
+  "newImageBytes": 604206,
+  "businessFiles": {
+    "src/data/catalog.ts": true,
+    "src/types/catalog.ts": true
+  },
+  "lockUnchangedExceptAppVersion": true,
+  "changedExistingSourceFiles": [
+    "src/pages/home-page.tsx",
+    "src/pages/system-page.tsx",
+    "src/styles/globals.css",
+    "src/styles/tokens.css",
+    "src/components/layout/store-footer.tsx",
+    "src/components/layout/app-layout.tsx"
+  ]
+}

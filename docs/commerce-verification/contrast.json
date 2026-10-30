@@ -1,0 +1,150 @@
+{
+  "results": [
+    {
+      "name": "Texto/superficie",
+      "foreground": "#17231d",
+      "background": "#ffffff",
+      "ratio": 16.22,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "name": "Texto/fondo",
+      "foreground": "#17231d",
+      "background": "#f7f8f5",
+      "ratio": 15.22,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "name": "Botón principal",
+      "foreground": "#ffffff",
+      "background": "#145a46",
+      "ratio": 8.14,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "name": "Botón hover",
+      "foreground": "#ffffff",
+      "background": "#104a3a",
+      "ratio": 10.18,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "name": "Botón presionado",
+      "foreground": "#ffffff",
+      "background": "#0c3b2e",
+      "ratio": 12.5,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "name": "Secundario",
+      "foreground": "#145a46",
+      "background": "#e8f1e9",
+      "ratio": 7.05,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "name": "Acento",
+      "foreground": "#17231d",
+      "background": "#f4b8c8",
+      "ratio": 9.68,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "name": "Error",
+      "foreground": "#b42332",
+      "background": "#ffffff",
+      "ratio": 6.51,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "name": "Éxito",
+      "foreground": "#216744",
+      "background": "#e8f3ea",
+      "ratio": 5.97,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "name": "Aviso",
+      "foreground": "#875006",
+      "background": "#fff4db",
+      "ratio": 6.04,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "name": "Texto secundario",
+      "foreground": "#526159",
+      "background": "#ffffff",
+      "ratio": 6.54,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "name": "Texto secundario/fondo",
+      "foreground": "#526159",
+      "background": "#f7f8f5",
+      "ratio": 6.13,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "name": "Foco/superficie",
+      "foreground": "#245ac9",
+      "background": "#ffffff",
+      "ratio": 6.21,
+      "minimum": 3,
+      "passed": true
+    },
+    {
+      "name": "Foco/fondo",
+      "foreground": "#245ac9",
+      "background": "#f7f8f5",
+      "ratio": 5.83,
+      "minimum": 3,
+      "passed": true
+    },
+    {
+      "name": "Borde de control",
+      "foreground": "#718276",
+      "background": "#ffffff",
+      "ratio": 4.07,
+      "minimum": 3,
+      "passed": true
+    },
+    {
+      "name": "Texto sobre rosa",
+      "foreground": "#17231d",
+      "background": "#f4b8c8",
+      "ratio": 9.68,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "name": "Footer secundario",
+      "foreground": "#d1e2d5",
+      "background": "#145a46",
+      "ratio": 6.03,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "name": "Footer cuerpo",
+      "foreground": "#e0ebe2",
+      "background": "#145a46",
+      "ratio": 6.65,
+      "minimum": 4.5,
+      "passed": true
+    }
+  ],
+  "brandWhiteRatio": 8.14,
+  "brandRule": "La marca verde admite texto blanco. Sobre rosa usar texto oscuro; foco, error, éxito y advertencia tienen tokens separados."
+}

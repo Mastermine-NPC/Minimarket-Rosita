@@ -1,0 +1,15 @@
+{
+  "passed": [
+    "1440: general sin lista duplicada; categoría muestra tres subcategorías reales; URL, búsqueda/marca/precio combinados, activo, quitar solo selección y vacío/limpiar.",
+    "1440: orden y selección vuelven desde detalle; cambio de categoría limpia incompatible; agotado real y disponibilidad combinados; panel y layout correctos.",
+    "1440: URL incompatible/general se normaliza sin borrar búsqueda u orden válidos.",
+    "768: general sin lista duplicada; categoría muestra tres subcategorías reales; URL, búsqueda/marca/precio combinados, activo, quitar solo selección y vacío/limpiar.",
+    "768: orden y selección vuelven desde detalle; cambio de categoría limpia incompatible; agotado real y disponibilidad combinados; panel y layout correctos.",
+    "768: URL incompatible/general se normaliza sin borrar búsqueda u orden válidos.",
+    "390: general sin lista duplicada; categoría muestra tres subcategorías reales; URL, búsqueda/marca/precio combinados, activo, quitar solo selección y vacío/limpiar.",
+    "390: orden y selección vuelven desde detalle; cambio de categoría limpia incompatible; agotado real y disponibilidad combinados; panel y layout correctos.",
+    "390: URL incompatible/general se normaliza sin borrar búsqueda u orden válidos."
+  ],
+  "errors": [],
+  "browser": "156.0.8078.4"
+}

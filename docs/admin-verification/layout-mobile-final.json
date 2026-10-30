@@ -1,0 +1,110 @@
+{
+  "results": [
+    {
+      "width": 450,
+      "route": "/admin",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 450,
+      "route": "/admin/productos",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 450,
+      "route": "/admin/inventario",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 450,
+      "route": "/admin/pedidos",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 450,
+      "route": "/admin/pedidos/ROS-layout-001",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 450,
+      "route": "/admin/pedidos/ROS-inexistente",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 450,
+      "route": "/admin/inexistente",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 390,
+      "route": "/admin",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 390,
+      "route": "/admin/productos",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 390,
+      "route": "/admin/inventario",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 390,
+      "route": "/admin/pedidos",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 390,
+      "route": "/admin/pedidos/ROS-layout-001",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 390,
+      "route": "/admin/pedidos/ROS-inexistente",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 390,
+      "route": "/admin/inexistente",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 390,
+      "route": "/admin/productos#formulario",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    }
+  ],
+  "errors": []
+}

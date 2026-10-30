@@ -1,0 +1,5 @@
+{
+  "passed": [
+    "Precio editado por una acción administrativa después de preparar revisión bloquea confirmar; error recibe foco, se exige revisión explícita y se compra al precio nuevo conservando el pedido anterior"
+  ]
+}

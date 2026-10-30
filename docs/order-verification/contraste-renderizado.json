@@ -1,0 +1,124 @@
+{
+  "results": [
+    {
+      "width": 1440,
+      "route": "/checkout",
+      "tested": 46,
+      "fails": [],
+      "tokens": {
+        "error": "#b42332",
+        "primary": "#145a46"
+      }
+    },
+    {
+      "width": 1440,
+      "route": "/mis-pedidos",
+      "tested": 13,
+      "fails": [],
+      "tokens": {
+        "error": "#b42332",
+        "primary": "#145a46"
+      }
+    },
+    {
+      "width": 1440,
+      "route": "/pedido/ROS-demo-001/seguimiento",
+      "tested": 51,
+      "fails": [],
+      "tokens": {
+        "error": "#b42332",
+        "primary": "#145a46"
+      }
+    },
+    {
+      "width": 1440,
+      "route": "/registro",
+      "tested": 25,
+      "fails": [],
+      "tokens": {
+        "error": "#b42332",
+        "primary": "#145a46"
+      }
+    },
+    {
+      "width": 768,
+      "route": "/checkout",
+      "tested": 44,
+      "fails": [],
+      "tokens": {
+        "error": "#b42332",
+        "primary": "#145a46"
+      }
+    },
+    {
+      "width": 768,
+      "route": "/mis-pedidos",
+      "tested": 13,
+      "fails": [],
+      "tokens": {
+        "error": "#b42332",
+        "primary": "#145a46"
+      }
+    },
+    {
+      "width": 768,
+      "route": "/pedido/ROS-demo-001/seguimiento",
+      "tested": 51,
+      "fails": [],
+      "tokens": {
+        "error": "#b42332",
+        "primary": "#145a46"
+      }
+    },
+    {
+      "width": 768,
+      "route": "/registro",
+      "tested": 25,
+      "fails": [],
+      "tokens": {
+        "error": "#b42332",
+        "primary": "#145a46"
+      }
+    },
+    {
+      "width": 390,
+      "route": "/checkout",
+      "tested": 44,
+      "fails": [],
+      "tokens": {
+        "error": "#b42332",
+        "primary": "#145a46"
+      }
+    },
+    {
+      "width": 390,
+      "route": "/mis-pedidos",
+      "tested": 13,
+      "fails": [],
+      "tokens": {
+        "error": "#b42332",
+        "primary": "#145a46"
+      }
+    },
+    {
+      "width": 390,
+      "route": "/pedido/ROS-demo-001/seguimiento",
+      "tested": 51,
+      "fails": [],
+      "tokens": {
+        "error": "#b42332",
+        "primary": "#145a46"
+      }
+    },
+    {
+      "width": 390,
+      "route": "/registro",
+      "tested": 18,
+      "fails": [],
+      "tokens": {
+        "error": "#b42332",
+        "primary": "#145a46"
+      }
+    }
+  ]
+}

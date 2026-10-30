@@ -1,0 +1,13 @@
+{
+  "dark": {
+    "color": "rgb(23, 35, 29)",
+    "background": "rgb(244, 184, 200)",
+    "transition": "width, height"
+  },
+  "light": {
+    "color": "rgb(255, 255, 255)",
+    "background": "rgb(20, 90, 70)",
+    "transition": "width, height"
+  },
+  "passed": true
+}

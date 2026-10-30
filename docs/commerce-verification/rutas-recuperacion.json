@@ -1,0 +1,117 @@
+{
+  "results": [
+    {
+      "href": "/producto/ROS-001?volver=%2Fcatalogo",
+      "result": "verificado"
+    },
+    {
+      "href": "/producto/ROS-002?volver=%2Fcatalogo",
+      "result": "verificado"
+    },
+    {
+      "href": "/producto/ROS-004?volver=%2Fcatalogo",
+      "result": "verificado"
+    },
+    {
+      "href": "/producto/ROS-008?volver=%2Fcatalogo",
+      "result": "verificado"
+    },
+    {
+      "href": "/producto/ROS-010?volver=%2Fcatalogo",
+      "result": "verificado"
+    },
+    {
+      "href": "/producto/ROS-014?volver=%2Fcatalogo",
+      "result": "verificado"
+    },
+    {
+      "href": "/producto/ROS-016?volver=%2Fcatalogo",
+      "result": "verificado"
+    },
+    {
+      "href": "/producto/ROS-017?volver=%2Fcatalogo",
+      "result": "verificado"
+    },
+    {
+      "href": "/producto/ROS-003?volver=%2Fcatalogo",
+      "result": "verificado"
+    },
+    {
+      "href": "/producto/ROS-005?volver=%2Fcatalogo",
+      "result": "verificado"
+    },
+    {
+      "href": "/producto/ROS-006?volver=%2Fcatalogo",
+      "result": "verificado"
+    },
+    {
+      "href": "/producto/ROS-007?volver=%2Fcatalogo",
+      "result": "verificado"
+    },
+    {
+      "href": "/producto/ROS-009?volver=%2Fcatalogo",
+      "result": "verificado"
+    },
+    {
+      "href": "/producto/ROS-011?volver=%2Fcatalogo",
+      "result": "verificado"
+    },
+    {
+      "href": "/producto/ROS-012?volver=%2Fcatalogo",
+      "result": "verificado"
+    },
+    {
+      "href": "/producto/ROS-013?volver=%2Fcatalogo",
+      "result": "verificado"
+    },
+    {
+      "href": "/producto/ROS-015?volver=%2Fcatalogo",
+      "result": "verificado"
+    },
+    {
+      "href": "/producto/ROS-018?volver=%2Fcatalogo",
+      "result": "verificado"
+    },
+    {
+      "href": "/producto/ROS-019?volver=%2Fcatalogo",
+      "result": "verificado"
+    },
+    {
+      "href": "/producto/ROS-020?volver=%2Fcatalogo",
+      "result": "verificado"
+    },
+    {
+      "href": "/producto/ROS-021?volver=%2Fcatalogo",
+      "result": "verificado"
+    },
+    {
+      "href": "/producto/ROS-022?volver=%2Fcatalogo",
+      "result": "verificado"
+    },
+    {
+      "href": "/producto/ROS-023?volver=%2Fcatalogo",
+      "result": "verificado"
+    },
+    {
+      "href": "/producto/ROS-024?volver=%2Fcatalogo",
+      "result": "verificado"
+    },
+    {
+      "href": "/producto/inexistente",
+      "result": "verificado"
+    },
+    {
+      "href": "/categoria/inexistente",
+      "result": "verificado"
+    },
+    {
+      "href": "/ruta-inexistente",
+      "result": "verificado"
+    },
+    {
+      "case": "localStorage bloqueado: sesión temporal y aviso sin romper compra básica",
+      "result": "verificado"
+    }
+  ],
+  "errors": []
+}

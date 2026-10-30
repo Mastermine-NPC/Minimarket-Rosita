@@ -1,0 +1,7 @@
+{
+  "passed": [
+    "Carrito con ocho artículos: rueda desplaza panel y mantiene scroll de página; Escape cierra.",
+    "Filtros 390×600: desplazamiento propio y cuerpo inmóvil; Escape cierra."
+  ],
+  "browser": "156.0.8078.4"
+}

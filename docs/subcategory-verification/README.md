@@ -1,0 +1,5 @@
+# Evidencia de subcategorías 0.6.0
+
+logic.mjs usa Vite SSR y un almacenamiento en memoria, sin modificar el navegador del usuario. logica.json: relaciones, filtrado/orden y migraciones; migration-fixture-v4.json: datos exclusivamente ficticios con pedido generado y precios histórico/actual diferentes. administracion-migracion.json: formularios a dos tamaños y migración efectiva en navegador. interfaz.json: nueve recorridos a tres tamaños. regresion-cliente: compra, acceso, confirmación y seguimiento a tres anchos. vista-*.png y visual.json: panel tras terminar la transición.
+
+Playwright externo, sin dependencia nueva del frontend. Exporta PLAYWRIGHT_MODULE, PLAYWRIGHT_EXPECT_MODULE para cliente.mjs y PLAYWRIGHT_BROWSERS_PATH apuntando a tu instalación. Desde raíz, con preview local abierto: BASE_URL=http://127.0.0.1:4173 node docs/subcategory-verification/interfaz.mjs. Administracion usa :4173. `node docs/subcategory-verification/logic.mjs` usa Vite instalado, no una base de datos. Los contextos de pruebas son aislados; no usan el perfil personal del navegador.

@@ -1,0 +1,12 @@
+{
+  "passed": [
+    "Formato SVG, tamaño >8 MB, PNG corrupto y cuota IndexedDB: error útil; no se agrega metadata ni se cambia la selección previa.",
+    "Referencia con archivo ausente muestra reemplazo y deshabilita ampliación, sin romper detalle ni compra.",
+    "Restablecimiento real por UI devuelve catálogo y dos cuentas iniciales; conserva clave localStorage y registro IndexedDB ajenos.",
+    "Panel y sistema de diseño a 768 px: rutas reales sin desbordamiento de página; componentes nuevos visibles.",
+    "Formato futuro preservado byte por byte tras iniciar sesión temporal por UI; no sobrescritura automática.",
+    "Fallo de escritura localStorage informa sesión temporal y permite seguir usando el carrito en memoria."
+  ],
+  "errors": [],
+  "browser": "156.0.8078.4"
+}

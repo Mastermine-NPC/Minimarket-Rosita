@@ -1,0 +1,67 @@
+[
+  {
+    "name": "tools",
+    "source": "https://www.pexels.com/photo/close-up-of-tools-5357150/",
+    "download": "https://images.pexels.com/photos/5357150/pexels-photo-5357150.jpeg?auto=compress&cs=tinysrgb&w=1400",
+    "author": "Maria Mileta",
+    "license": "Pexels License",
+    "licenseUrl": "https://www.pexels.com/license/",
+    "purpose": "Ambientación de categoría, no fotografía del artículo ofertado",
+    "files": [
+      "tools-480.webp",
+      "tools-960.webp"
+    ]
+  },
+  {
+    "name": "school",
+    "source": "https://www.pexels.com/photo/back-to-school-flatlay-5088008/",
+    "download": "https://images.pexels.com/photos/5088008/pexels-photo-5088008.jpeg?auto=compress&cs=tinysrgb&w=1400",
+    "author": "olia danilevich",
+    "license": "Pexels License",
+    "licenseUrl": "https://www.pexels.com/license/",
+    "purpose": "Ambientación de categoría, no fotografía del artículo ofertado",
+    "files": [
+      "school-480.webp",
+      "school-960.webp"
+    ]
+  },
+  {
+    "name": "technology",
+    "source": "https://www.pexels.com/photo/office-desk-with-headphones-and-keyboard-30345430/",
+    "download": "https://images.pexels.com/photos/30345430/pexels-photo-30345430.jpeg?auto=compress&cs=tinysrgb&w=1400",
+    "author": "Noemí Jiménez",
+    "license": "Pexels License",
+    "licenseUrl": "https://www.pexels.com/license/",
+    "purpose": "Ambientación de categoría, no fotografía del artículo ofertado",
+    "files": [
+      "technology-480.webp",
+      "technology-960.webp"
+    ]
+  },
+  {
+    "name": "play",
+    "source": "https://www.pexels.com/photo/colorful-wooden-blocks-on-a-wooden-surface-6693303/",
+    "download": "https://images.pexels.com/photos/6693303/pexels-photo-6693303.jpeg?auto=compress&cs=tinysrgb&w=1400",
+    "author": "Tara Winstead",
+    "license": "Pexels License",
+    "licenseUrl": "https://www.pexels.com/license/",
+    "purpose": "Ambientación de categoría, no fotografía del artículo ofertado",
+    "files": [
+      "play-480.webp",
+      "play-960.webp"
+    ]
+  },
+  {
+    "name": "care",
+    "source": "https://www.pexels.com/photo/bottles-with-cosmetic-products-15569180/",
+    "download": "https://images.pexels.com/photos/15569180/pexels-photo-15569180.jpeg?auto=compress&cs=tinysrgb&w=1400",
+    "author": "mearlywan",
+    "license": "Pexels License",
+    "licenseUrl": "https://www.pexels.com/license/",
+    "purpose": "Ambientación de categoría, no fotografía del artículo ofertado",
+    "files": [
+      "care-480.webp",
+      "care-960.webp"
+    ]
+  }
+]

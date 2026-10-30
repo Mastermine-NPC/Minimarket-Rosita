@@ -1,0 +1,16 @@
+{
+  "passed": [
+    "1440: accesos de administrador, categoría/subcategoría nuevas y aparición comercial sin tocar código.",
+    "1440: subida PNG → compresión 1600×800 → producto guardado → categoría/subcategoría → detalle/zoom → recarga conserva blob de IndexedDB sin URL/base64 persistida.",
+    "1440: compra de cliente única, permiso de panel denegado al cliente, cambio de precio/nombre y entrada de stock; avance no descuenta otra vez y snapshot histórico permanece.",
+    "1440: estadísticas y reportes concuerdan con un pedido real del prototipo; filtro por estado, CSV escapado con comillas/coma y precios históricos, impresión real invocada y PDF de prueba generado. Canal presencial distinguido sin ventas inventadas.",
+    "1440: alias de slug anterior recupera catálogo; cliente consulta el estado actualizado desde administración.",
+    "390: accesos de administrador, categoría/subcategoría nuevas y aparición comercial sin tocar código.",
+    "390: subida PNG → compresión 1600×800 → producto guardado → categoría/subcategoría → detalle/zoom → recarga conserva blob de IndexedDB sin URL/base64 persistida.",
+    "390: compra de cliente única, permiso de panel denegado al cliente, cambio de precio/nombre y entrada de stock; avance no descuenta otra vez y snapshot histórico permanece.",
+    "390: estadísticas y reportes concuerdan con un pedido real del prototipo; filtro por estado, CSV escapado con comillas/coma y precios históricos, impresión real invocada y PDF de prueba generado. Canal presencial distinguido sin ventas inventadas.",
+    "390: alias de slug anterior recupera catálogo; cliente consulta el estado actualizado desde administración."
+  ],
+  "errors": [],
+  "browser": "156.0.8078.4"
+}

@@ -1,0 +1,425 @@
+{
+  "results": [
+    {
+      "width": 1440,
+      "route": "/",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "/catalogo",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "/producto/ROS-001",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "/carrito",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "/sistema-diseno",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "/comprobacion",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "/estado",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1280,
+      "route": "/",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1280,
+      "route": "/catalogo",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1280,
+      "route": "/producto/ROS-001",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1280,
+      "route": "/carrito",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1280,
+      "route": "/sistema-diseno",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1280,
+      "route": "/comprobacion",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1280,
+      "route": "/estado",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1024,
+      "route": "/",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1024,
+      "route": "/catalogo",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1024,
+      "route": "/producto/ROS-001",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1024,
+      "route": "/carrito",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1024,
+      "route": "/sistema-diseno",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1024,
+      "route": "/comprobacion",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1024,
+      "route": "/estado",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1023,
+      "route": "/",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1023,
+      "route": "/catalogo",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1023,
+      "route": "/producto/ROS-001",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1023,
+      "route": "/carrito",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1023,
+      "route": "/sistema-diseno",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1023,
+      "route": "/comprobacion",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1023,
+      "route": "/estado",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 900,
+      "route": "/",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 900,
+      "route": "/catalogo",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 900,
+      "route": "/producto/ROS-001",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 900,
+      "route": "/carrito",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 900,
+      "route": "/sistema-diseno",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 900,
+      "route": "/comprobacion",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 900,
+      "route": "/estado",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 801,
+      "route": "/",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 801,
+      "route": "/catalogo",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 801,
+      "route": "/producto/ROS-001",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 801,
+      "route": "/carrito",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 801,
+      "route": "/sistema-diseno",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 801,
+      "route": "/comprobacion",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 801,
+      "route": "/estado",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 800,
+      "route": "/",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 800,
+      "route": "/catalogo",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 800,
+      "route": "/producto/ROS-001",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 800,
+      "route": "/carrito",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 800,
+      "route": "/sistema-diseno",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 800,
+      "route": "/comprobacion",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 800,
+      "route": "/estado",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 768,
+      "route": "/",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 768,
+      "route": "/catalogo",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 768,
+      "route": "/producto/ROS-001",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 768,
+      "route": "/carrito",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 768,
+      "route": "/sistema-diseno",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 768,
+      "route": "/comprobacion",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 768,
+      "route": "/estado",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 600,
+      "route": "/",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 600,
+      "route": "/catalogo",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 600,
+      "route": "/producto/ROS-001",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 600,
+      "route": "/carrito",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 600,
+      "route": "/sistema-diseno",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 600,
+      "route": "/comprobacion",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 600,
+      "route": "/estado",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "/",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "/catalogo",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "/producto/ROS-001",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "/carrito",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "/sistema-diseno",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "/comprobacion",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "/estado",
+      "overflow": false,
+      "broken": []
+    }
+  ],
+  "errors": []
+}

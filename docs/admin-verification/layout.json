@@ -1,0 +1,516 @@
+{
+  "results": [
+    {
+      "width": 1440,
+      "route": "/admin",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 1440,
+      "route": "/admin/productos",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 1440,
+      "route": "/admin/inventario",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 1440,
+      "route": "/admin/pedidos",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 1440,
+      "route": "/admin/pedidos/ROS-layout-001",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 1440,
+      "route": "/admin/pedidos/ROS-inexistente",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 1440,
+      "route": "/admin/inexistente",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 1440,
+      "route": "/admin/productos#formulario",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 1280,
+      "route": "/admin",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 1280,
+      "route": "/admin/productos",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 1280,
+      "route": "/admin/inventario",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 1280,
+      "route": "/admin/pedidos",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 1280,
+      "route": "/admin/pedidos/ROS-layout-001",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 1280,
+      "route": "/admin/pedidos/ROS-inexistente",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 1280,
+      "route": "/admin/inexistente",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 1024,
+      "route": "/admin",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 1024,
+      "route": "/admin/productos",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 1024,
+      "route": "/admin/inventario",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 1024,
+      "route": "/admin/pedidos",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 1024,
+      "route": "/admin/pedidos/ROS-layout-001",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 1024,
+      "route": "/admin/pedidos/ROS-inexistente",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 1024,
+      "route": "/admin/inexistente",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 1023,
+      "route": "/admin",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 1023,
+      "route": "/admin/productos",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 1023,
+      "route": "/admin/inventario",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 1023,
+      "route": "/admin/pedidos",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 1023,
+      "route": "/admin/pedidos/ROS-layout-001",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 1023,
+      "route": "/admin/pedidos/ROS-inexistente",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 1023,
+      "route": "/admin/inexistente",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 900,
+      "route": "/admin",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 900,
+      "route": "/admin/productos",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 900,
+      "route": "/admin/inventario",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 900,
+      "route": "/admin/pedidos",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 900,
+      "route": "/admin/pedidos/ROS-layout-001",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 900,
+      "route": "/admin/pedidos/ROS-inexistente",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 900,
+      "route": "/admin/inexistente",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 801,
+      "route": "/admin",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 801,
+      "route": "/admin/productos",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 801,
+      "route": "/admin/inventario",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 801,
+      "route": "/admin/pedidos",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 801,
+      "route": "/admin/pedidos/ROS-layout-001",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 801,
+      "route": "/admin/pedidos/ROS-inexistente",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 801,
+      "route": "/admin/inexistente",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 800,
+      "route": "/admin",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 800,
+      "route": "/admin/productos",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 800,
+      "route": "/admin/inventario",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 800,
+      "route": "/admin/pedidos",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 800,
+      "route": "/admin/pedidos/ROS-layout-001",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 800,
+      "route": "/admin/pedidos/ROS-inexistente",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 800,
+      "route": "/admin/inexistente",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 768,
+      "route": "/admin",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 768,
+      "route": "/admin/productos",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 768,
+      "route": "/admin/inventario",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 768,
+      "route": "/admin/pedidos",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 768,
+      "route": "/admin/pedidos/ROS-layout-001",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 768,
+      "route": "/admin/pedidos/ROS-inexistente",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 768,
+      "route": "/admin/inexistente",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 768,
+      "route": "/admin/productos#formulario",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 600,
+      "route": "/admin",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 600,
+      "route": "/admin/productos",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 600,
+      "route": "/admin/inventario",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 600,
+      "route": "/admin/pedidos",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 600,
+      "route": "/admin/pedidos/ROS-layout-001",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 600,
+      "route": "/admin/pedidos/ROS-inexistente",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 600,
+      "route": "/admin/inexistente",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 390,
+      "route": "/admin",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 390,
+      "route": "/admin/productos",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 390,
+      "route": "/admin/inventario",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 390,
+      "route": "/admin/pedidos",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 390,
+      "route": "/admin/pedidos/ROS-layout-001",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 390,
+      "route": "/admin/pedidos/ROS-inexistente",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 390,
+      "route": "/admin/inexistente",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "width": 390,
+      "route": "/admin/productos#formulario",
+      "overflow": false,
+      "broken": [],
+      "controls": []
+    }
+  ],
+  "errors": []
+}

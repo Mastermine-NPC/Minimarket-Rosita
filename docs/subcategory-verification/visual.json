@@ -1,0 +1,18 @@
+[
+  {
+    "width": 768,
+    "pane": {
+      "opacity": "1",
+      "transform": "none",
+      "width": 380
+    }
+  },
+  {
+    "width": 390,
+    "pane": {
+      "opacity": "1",
+      "transform": "none",
+      "width": 351
+    }
+  }
+]

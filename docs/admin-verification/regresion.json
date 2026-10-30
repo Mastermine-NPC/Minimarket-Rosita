@@ -1,0 +1,23 @@
+{
+  "passed": [
+    "1440: inicio, fuentes locales y seis categorías con cuatro productos, enlaces y recarga",
+    "1440: buscar por nombre/marca sin depender de tildes, vacío y limpiar",
+    "1440: filtros combinados persistidos en URL, limpiar y tres ordenamientos",
+    "1440: detalle, filtro conservado al volver, agregar/modificar/eliminar, subtotal y persistencia; enlace real al checkout",
+    "1440: stock máximo, agotado, vaciar/cancelar y agregar sin descontar inventario",
+    "1440: paneles por teclado, foco/Escape/restauración, menú, movimiento reducido, promoción visible y sistema de diseño",
+    "768: inicio, fuentes locales y seis categorías con cuatro productos, enlaces y recarga",
+    "768: buscar por nombre/marca sin depender de tildes, vacío y limpiar",
+    "768: filtros combinados persistidos en URL, limpiar y tres ordenamientos",
+    "768: detalle, filtro conservado al volver, agregar/modificar/eliminar, subtotal y persistencia; enlace real al checkout",
+    "768: stock máximo, agotado, vaciar/cancelar y agregar sin descontar inventario",
+    "768: paneles por teclado, foco/Escape/restauración, menú, movimiento reducido, promoción visible y sistema de diseño",
+    "390: inicio, fuentes locales y seis categorías con cuatro productos, enlaces y recarga",
+    "390: buscar por nombre/marca sin depender de tildes, vacío y limpiar",
+    "390: filtros combinados persistidos en URL, limpiar y tres ordenamientos",
+    "390: detalle, filtro conservado al volver, agregar/modificar/eliminar, subtotal y persistencia; enlace real al checkout",
+    "390: stock máximo, agotado, vaciar/cancelar y agregar sin descontar inventario",
+    "390: paneles por teclado, foco/Escape/restauración, menú, movimiento reducido, promoción visible y sistema de diseño"
+  ],
+  "errors": []
+}

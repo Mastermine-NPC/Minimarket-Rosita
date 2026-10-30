@@ -1,0 +1,7 @@
+{
+  "passed": [
+    "Migración v3 conserva datos y sesión cliente; añade un administrador; no inventa movimientos/fechas; solo registra transiciones nuevas",
+    "Corrupción conserva original hasta acción; formato futuro protegido incluso al ingresar; reset administrativo exclusivo recupera v4 sin borrar claves ajenas",
+    "Almacenamiento bloqueado: CRUD y tienda continúan en memoria, aviso visible y pérdida al recargar explícita"
+  ]
+}

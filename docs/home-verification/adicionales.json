@@ -1,0 +1,23 @@
+{
+  "passed": [
+    "Parallax comprobado por transformación en scroll; flor ligada a desplazamiento.",
+    "Cursor claro contextual y cursor nativo conservado; arrastrar desde Agregar no modifica carrito.",
+    "Tres salidas/regresos: un cursor, sin cargador repetido; cursor se oculta en panel y al desmontar.",
+    "Marquesina pausada fuera de pantalla.",
+    "Imagen ambiental fallida muestra alternativa y conserva enlace de categoría."
+  ],
+  "metrics": {
+    "parallax": [
+      "none",
+      "matrix(1, 0, 0, 1, 0, 0.427723)"
+    ],
+    "bridge": "matrix(0.906757, 0, 0, 0.906757, 0, 0)",
+    "layoutShiftSample": {
+      "values": [],
+      "sum": 0
+    }
+  },
+  "errors": [],
+  "browser": "156.0.8078.4",
+  "base": "http://127.0.0.1:4173"
+}

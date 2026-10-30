@@ -1,0 +1,195 @@
+[
+  {
+    "name": "animals",
+    "url": "https://lesanimals.digital/equipe/",
+    "status": 200,
+    "text": "En visitant notre site, vous acceptez notre politique de confidentialité concernant les cookies, les statistiques de suivi, etc.\n\nDétails des autorisations\nAutoriser Google Analytics\nAutoriser Matomo\nRefuser tout\nAccepter tout\nEnregistrer\nAgence\nExpertises\nProjets\nÉquipe\nContact\nPrésents à Lyon\net sur internet\nVous serez toujours\nles bienvenus\nAgence Les Animals\n29, rue Ravat\n69002 Lyon\nFrance\nbon",
+    "audit": {
+      "cursor": "auto",
+      "videos": [
+        {
+          "autoplay": true,
+          "muted": true,
+          "paused": true
+        },
+        {
+          "autoplay": true,
+          "muted": true,
+          "paused": true
+        },
+        {
+          "autoplay": true,
+          "muted": true,
+          "paused": true
+        },
+        {
+          "autoplay": true,
+          "muted": true,
+          "paused": true
+        }
+      ],
+      "animated": [
+        {
+          "tag": "HEADER",
+          "cls": "grid",
+          "transform": "matrix(1, 0, 0, 1, 0, 50)"
+        },
+        {
+          "tag": "DIV",
+          "cls": "transition-line",
+          "transform": "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -139.873, -69.937, 1)"
+        },
+        {
+          "tag": "DIV",
+          "cls": "transition-line",
+          "transform": "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -93.2487, -46.6247, 1)"
+        },
+        {
+          "tag": "DIV",
+          "cls": "page_content",
+          "transform": "matrix(1, 0, 0, 1, 0, -699.367)"
+        },
+        {
+          "tag": "DIV",
+          "cls": "page_content-inner",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        {
+          "tag": "DIV",
+          "cls": "transition-line",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        {
+          "tag": "DIV",
+          "cls": "transition-line",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        {
+          "tag": "DIV",
+          "cls": "transition-line",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        {
+          "tag": "DIV",
+          "cls": "transition-line",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        {
+          "tag": "IMG",
+          "cls": "img  team-member_media-img",
+          "transform": "matrix(1, 0, 0, 1, 0, -321.115)"
+        },
+        {
+          "tag": "VIDEO",
+          "cls": "img_lazy",
+          "transform": "matrix(1, 0, 0, 1, 0, -712.141)"
+        },
+        {
+          "tag": "VIDEO",
+          "cls": "img_lazy",
+          "transform": "matrix(1, 0, 0, 1, 0, -712.141)"
+        },
+        {
+          "tag": "IMG",
+          "cls": "img  team-member_media-img",
+          "transform": "matrix(1, 0, 0, 1, 0, -712.141)"
+        },
+        {
+          "tag": "VIDEO",
+          "cls": "img_lazy",
+          "transform": "matrix(1, 0, 0, 1, 0, -712.156)"
+        }
+      ],
+      "scroll": 700
+    }
+  },
+  {
+    "name": "lightship",
+    "url": "https://www.lightshiprv.com/",
+    "status": 200,
+    "text": "Announcement\nBuilt in Colorado. Now Delivering Nationwide.\nSee the AE.1 in person\nAccess to main content\nOpen / Close menu\nAE.1\nTechnology\nSpecs\nHomepage\nExperience\nBuild yours\nBorn for Adventure.\nBorn for Adventure.\nBuilt in America.\nBuilt in America.\nScroll to explore\n\nLightship is a new standard in travel, where automotive-grade engineering meets the soul of American craft. From our Silicon Val",
+    "audit": {
+      "cursor": "auto",
+      "videos": [
+        {
+          "autoplay": false,
+          "muted": true,
+          "paused": false
+        }
+      ],
+      "animated": [
+        {
+          "tag": "DIV",
+          "cls": "c-modal-newsletter_container modal_container",
+          "transform": "matrix(1, 0, 0, 1, 0, 100)"
+        },
+        {
+          "tag": "DIV",
+          "cls": "c-skip-link",
+          "transform": "matrix(1, 0, 0, 1, -97.5, -40)"
+        },
+        {
+          "tag": "DIV",
+          "cls": "c-header_inner",
+          "transform": "matrix(1, 0, 0, 1, 0, 0.471286)"
+        },
+        {
+          "tag": "DIV",
+          "cls": "c-header_left",
+          "transform": "matrix(1, 0, 0, 1, 161.638, 0)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "c-header_menu_icon -open",
+          "transform": "matrix(1, 0, 0, 1, -13.5, -3.5)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "c-header_menu_icon -close",
+          "transform": "matrix(0.707107, 0.707107, -0.707107, 0.707107, -11, -11)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "c-header_menu_line",
+          "transform": "matrix(0, 1, -1, 0, 0, 0)"
+        },
+        {
+          "tag": "DIV",
+          "cls": "c-header_logo_lottie",
+          "transform": "matrix(0.983506, 0, 0, 0.983506, 0, 0)"
+        },
+        {
+          "tag": "svg",
+          "cls": {},
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        {
+          "tag": "g",
+          "cls": {},
+          "transform": "matrix(1, 0, 0, 1, 16.75, 153.769)"
+        },
+        {
+          "tag": "g",
+          "cls": {},
+          "transform": "matrix(1, 0, 0, 1, 33.069, 159.556)"
+        },
+        {
+          "tag": "g",
+          "cls": {},
+          "transform": "matrix(1, 0, 0, 1, 16.75, 153.769)"
+        },
+        {
+          "tag": "g",
+          "cls": {},
+          "transform": "matrix(1, 0, 0, 1, 103.548, 159.551)"
+        },
+        {
+          "tag": "g",
+          "cls": {},
+          "transform": "matrix(1, 0, 0, 1, 16.75, 153.769)"
+        }
+      ],
+      "scroll": 700
+    }
+  }
+]

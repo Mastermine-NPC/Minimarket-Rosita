@@ -1,0 +1,184 @@
+{
+  "results": [
+    {
+      "width": 1440,
+      "route": "/admin",
+      "tested": 64,
+      "fails": [],
+      "tokens": {
+        "error": "#b42332",
+        "primary": "#145a46"
+      }
+    },
+    {
+      "width": 1440,
+      "route": "/admin/productos",
+      "tested": 105,
+      "fails": [],
+      "tokens": {
+        "error": "#b42332",
+        "primary": "#145a46"
+      }
+    },
+    {
+      "width": 1440,
+      "route": "/admin/inventario",
+      "tested": 90,
+      "fails": [],
+      "tokens": {
+        "error": "#b42332",
+        "primary": "#145a46"
+      }
+    },
+    {
+      "width": 1440,
+      "route": "/admin/pedidos",
+      "tested": 42,
+      "fails": [],
+      "tokens": {
+        "error": "#b42332",
+        "primary": "#145a46"
+      }
+    },
+    {
+      "width": 1440,
+      "route": "/admin/pedidos/ROS-layout-001",
+      "tested": 59,
+      "fails": [],
+      "tokens": {
+        "error": "#b42332",
+        "primary": "#145a46"
+      }
+    },
+    {
+      "width": 1440,
+      "route": "formulario-invalido",
+      "tested": 23,
+      "fails": [],
+      "tokens": {
+        "error": "#b42332",
+        "primary": "#145a46"
+      }
+    },
+    {
+      "width": 768,
+      "route": "/admin",
+      "tested": 52,
+      "fails": [],
+      "tokens": {
+        "error": "#b42332",
+        "primary": "#145a46"
+      }
+    },
+    {
+      "width": 768,
+      "route": "/admin/productos",
+      "tested": 93,
+      "fails": [],
+      "tokens": {
+        "error": "#b42332",
+        "primary": "#145a46"
+      }
+    },
+    {
+      "width": 768,
+      "route": "/admin/inventario",
+      "tested": 78,
+      "fails": [],
+      "tokens": {
+        "error": "#b42332",
+        "primary": "#145a46"
+      }
+    },
+    {
+      "width": 768,
+      "route": "/admin/pedidos",
+      "tested": 30,
+      "fails": [],
+      "tokens": {
+        "error": "#b42332",
+        "primary": "#145a46"
+      }
+    },
+    {
+      "width": 768,
+      "route": "/admin/pedidos/ROS-layout-001",
+      "tested": 47,
+      "fails": [],
+      "tokens": {
+        "error": "#b42332",
+        "primary": "#145a46"
+      }
+    },
+    {
+      "width": 768,
+      "route": "formulario-invalido",
+      "tested": 23,
+      "fails": [],
+      "tokens": {
+        "error": "#b42332",
+        "primary": "#145a46"
+      }
+    },
+    {
+      "width": 390,
+      "route": "/admin",
+      "tested": 50,
+      "fails": [],
+      "tokens": {
+        "error": "#b42332",
+        "primary": "#145a46"
+      }
+    },
+    {
+      "width": 390,
+      "route": "/admin/productos",
+      "tested": 91,
+      "fails": [],
+      "tokens": {
+        "error": "#b42332",
+        "primary": "#145a46"
+      }
+    },
+    {
+      "width": 390,
+      "route": "/admin/inventario",
+      "tested": 76,
+      "fails": [],
+      "tokens": {
+        "error": "#b42332",
+        "primary": "#145a46"
+      }
+    },
+    {
+      "width": 390,
+      "route": "/admin/pedidos",
+      "tested": 28,
+      "fails": [],
+      "tokens": {
+        "error": "#b42332",
+        "primary": "#145a46"
+      }
+    },
+    {
+      "width": 390,
+      "route": "/admin/pedidos/ROS-layout-001",
+      "tested": 45,
+      "fails": [],
+      "tokens": {
+        "error": "#b42332",
+        "primary": "#145a46"
+      }
+    },
+    {
+      "width": 390,
+      "route": "formulario-invalido",
+      "tested": 23,
+      "fails": [],
+      "tokens": {
+        "error": "#b42332",
+        "primary": "#145a46"
+      }
+    }
+  ]
+}

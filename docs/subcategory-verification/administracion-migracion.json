@@ -1,0 +1,9 @@
+{
+  "passed": [
+    "1440: creación/edición dependiente, subcategoría obligatoria con foco, cambio limpia incompatible, persistencia y reflejo en tienda sin modificar stock/precio.",
+    "390: creación/edición dependiente, subcategoría obligatoria con foco, cambio limpia incompatible, persistencia y reflejo en tienda sin modificar stock/precio.",
+    "Migración real en navegador v4→v5 persiste al abrir y recargar; catálogo personalizado, carrito, inventario, pedido, movimientos y clave ajena intactos; dos productos Por clasificar visibles."
+  ],
+  "errors": [],
+  "browser": "156.0.8078.4"
+}

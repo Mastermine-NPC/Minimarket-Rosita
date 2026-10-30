@@ -1,0 +1,104 @@
+{
+  "passed": [
+    "Entrada de título y máscara medidas en frames; foto sigue lista después del límite de carga.",
+    "Cursor sobre CTA oscuro, campo y tarjeta: no intercepta; magnetismo mueve solo el contenido del CTA.",
+    "Ancla enfoca categorías bajo encabezado; categoría navega y Atrás restaura posición; cursor retirado fuera del inicio.",
+    "Marquesina se desplaza y su botón detiene la animación.",
+    "Carrusel: flechas y teclado Inicio/Fin funcionan; ocho artículos canónicos.",
+    "Arrastre de ratón mueve tarjetas sin abrir el detalle.",
+    "Agregar desde destacados genera confirmación y detalle abre el producto real.",
+    "1440, 1100, 900, 768, 600, 480 y 390 px: sin desbordamiento horizontal ni imágenes rotas; seis categorías.",
+    "Movimiento reducido: sin cursor, máscara, parallax ni marquesina animada; contenido directo.",
+    "Táctil CDP 390 px: desliza el carrusel sin navegar y no muestra cursor.",
+    "Foto slow: CTA disponible; cargador termina sin bloqueo y acepta carga tardía.",
+    "Foto failed: CTA disponible; cargador termina sin bloqueo, alternativa visible.",
+    "Sin excepciones JavaScript en la sesión principal."
+  ],
+  "errors": [],
+  "metrics": {
+    "entrance": [
+      {
+        "at": 531.3999999985099,
+        "transform": "matrix(1, 0, 0, 1, 0, 112.178)",
+        "clip": "inset(0px 99.588% 0px 0px)"
+      },
+      {
+        "at": 642.7000000029802,
+        "transform": "matrix(1, 0, 0, 1, 0, 55.0583)",
+        "clip": "inset(0px 59.3945% 0px 0px)"
+      },
+      {
+        "at": 833.7000000029802,
+        "transform": "matrix(1, 0, 0, 1, 0, 14.7181)",
+        "clip": "inset(0px 20.1645% 0px 0px)"
+      },
+      {
+        "at": 1244.8999999985099,
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "clip": "inset(0px 0.243112% 0px 0px)"
+      },
+      {
+        "at": 1603.2000000029802,
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "clip": "inset(0px 0% 0px 0px)"
+      }
+    ],
+    "magnet": {
+      "box": {
+        "x": 80,
+        "y": 628.90625,
+        "width": 208,
+        "height": 52,
+        "top": 628.90625,
+        "right": 288,
+        "bottom": 680.90625,
+        "left": 80
+      },
+      "ink": "matrix(1, 0, 0, 1, -4.66347, -1.04465)"
+    },
+    "anchor": {
+      "x": 80,
+      "y": 172.1875,
+      "width": 395.8125,
+      "height": 125.4375
+    },
+    "zoom": "matrix(1.045, 0, 0, 1.045, 0, 0)",
+    "layout1440": {
+      "viewport": 1440,
+      "document": 1440,
+      "bad": []
+    },
+    "layout1100": {
+      "viewport": 1100,
+      "document": 1100,
+      "bad": []
+    },
+    "layout900": {
+      "viewport": 900,
+      "document": 900,
+      "bad": []
+    },
+    "layout768": {
+      "viewport": 768,
+      "document": 768,
+      "bad": []
+    },
+    "layout600": {
+      "viewport": 600,
+      "document": 600,
+      "bad": []
+    },
+    "layout480": {
+      "viewport": 480,
+      "document": 480,
+      "bad": []
+    },
+    "layout390": {
+      "viewport": 390,
+      "document": 390,
+      "bad": []
+    },
+    "touchScroll": 318
+  },
+  "browser": "156.0.8078.4"
+}

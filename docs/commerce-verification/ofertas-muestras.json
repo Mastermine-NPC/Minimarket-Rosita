@@ -1,0 +1,20 @@
+{
+  "results": [
+    {
+      "width": 1440,
+      "offers": 4,
+      "sampleFeedback": true
+    },
+    {
+      "width": 768,
+      "offers": 4,
+      "sampleFeedback": true
+    },
+    {
+      "width": 390,
+      "offers": 4,
+      "sampleFeedback": true
+    }
+  ],
+  "browser": "156.0.8078.4"
+}

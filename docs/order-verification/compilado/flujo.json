@@ -1,0 +1,12 @@
+{
+  "passed": [
+    "390: registro validado, contraseñas distintas/mostrar, correo normalizado, verificador sin texto plano y retorno con carrito",
+    "390: entrega validada, campos al regresar, efectivo insuficiente/vuelto, total en céntimos y pedido único ante doble clic; stock y sesión persistentes",
+    "390: confirmación, historial, detalle, seguimiento manual persistente y stock descontado una sola vez",
+    "390: correo duplicado, acceso incorrecto/correcto, salida conservando carrito, otro cliente aislado desde UI y retorno externo rechazado",
+    "390: teclado, foco visible, movimiento reducido y composición sin desplazamiento horizontal",
+    "Sin errores JavaScript en los recorridos"
+  ],
+  "errors": [],
+  "browser": "156.0.8078.4"
+}
