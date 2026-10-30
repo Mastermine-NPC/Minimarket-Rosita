@@ -12,7 +12,7 @@ nvm use
 npm run dev
 ```
 Correr el proyecto en otra pc
-````sh
+```sh
 git clone https://github.com/Mastermine-NPC/Minimarket-Rosita.git
 cd Minimarket-Rosita
 nvm install
