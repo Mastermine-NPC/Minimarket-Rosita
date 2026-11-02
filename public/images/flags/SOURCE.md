@@ -1,0 +1,1 @@
+Local SVG flags from country-flag-icons 1.6.20, https://github.com/catamphetamine/country-flag-icons. License included. Only countries supported by libphonenumber-js are copied. No runtime CDN requests.

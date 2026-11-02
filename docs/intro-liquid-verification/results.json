@@ -1,0 +1,64 @@
+{
+  "results": {
+    "desktop": {
+      "posterSampled": true,
+      "videoSampled": true,
+      "contexts": 1,
+      "canvasRetained": true,
+      "blankFrames": 0,
+      "seeks": 0,
+      "text": {
+        "before": {
+          "text": "Lo cotidiano.Extraordinario.",
+          "font": "800 82px / 83.64px Manrope, \"DM Sans\", sans-serif",
+          "fontSize": "82px",
+          "color": "rgb(255, 255, 255)",
+          "rotate": "0 0 0 0deg",
+          "translate": "0px",
+          "filter": "none",
+          "x": 60,
+          "y": 417.75,
+          "width": 676.359375,
+          "height": 167.25
+        },
+        "tilted": {
+          "text": "Lo cotidiano.Extraordinario.",
+          "font": "800 82px / 83.64px Manrope, \"DM Sans\", sans-serif",
+          "fontSize": "82px",
+          "color": "rgb(255, 255, 255)",
+          "rotate": "-0.433606 0.68293 0 0.145612deg",
+          "translate": "1.36586px 0.650409px",
+          "filter": "none",
+          "x": 60.97157669067383,
+          "y": 418.39739990234375,
+          "width": 676.7452392578125,
+          "height": 167.3291015625
+        },
+        "neutral": {
+          "text": "Lo cotidiano.Extraordinario.",
+          "font": "800 82px / 83.64px Manrope, \"DM Sans\", sans-serif",
+          "fontSize": "82px",
+          "color": "rgb(255, 255, 255)",
+          "rotate": "-6.73497e-05 0.000106076 0 2.26171e-05deg",
+          "translate": "0.000212152px 0.000101025px",
+          "filter": "none",
+          "x": 60.000152587890625,
+          "y": 417.7500915527344,
+          "width": 676.359375,
+          "height": 167.25003051757812
+        }
+      },
+      "media": {
+        "src": "http://localhost:4190/images/video/web/video-intro.mp4",
+        "time": 1.1502,
+        "paused": false
+      }
+    },
+    "mobile": {
+      "posterOnFailedVideo": true,
+      "overflow": false,
+      "perspectiveDisabled": true
+    }
+  },
+  "errors": []
+}

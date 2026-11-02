@@ -1,6 +1,8 @@
+import { modelCatalogProducts } from "./model-catalog";
 import { catalogAdditions } from "./catalog-additions";
 import { products } from "./catalog";
 export const productImages = [
+  ...modelCatalogProducts.map(product => ({ key: "model-" + product.modelKey, label: product.name + " · render 3D", src: product.imageSrc, index: undefined as number | undefined, illustration: false })),
   {
     key: "none",
     label: "Marcador · fotografía pendiente",

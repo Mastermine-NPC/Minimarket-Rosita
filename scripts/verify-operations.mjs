@@ -29,14 +29,14 @@ try {
     assert(v.success, JSON.stringify(v.error?.issues));
   };
   valid(initialState);
-  assert.equal(initialState.products.length, 63);
-  assert.equal(new Set(initialState.products.map((p) => p.barcode)).size, 63);
+  assert.equal(initialState.products.length, 75);
+  assert.equal(new Set(initialState.products.map((p) => p.barcode)).size, 75);
   const client = initialState.users.find((u) => u.role === "customer"),
     cashier = initialState.users.find((u) => u.role === "cashier"),
     admin = initialState.users.find((u) => u.role === "admin");
   assert(await verifyPassword("CajaDemo!2026", cashier));
   passed.push(
-    "Esquema 9, 63 códigos únicos y credencial ficticia de caja válidos.",
+    "Esquema 9, 75 códigos únicos y credencial ficticia de caja válidos.",
   );
   let n = 0;
   const stamp = () => ({
@@ -120,6 +120,7 @@ try {
   assert.equal(s.orders.length, 1);
   assert.equal(s.inventory["ROS-001"].stock, stock - 3);
   assert.equal(stagesFor(s.orders[0].delivery)[2], "Listo para recoger");
+  s.sessionUserId = admin.id;
   for (let i = 0; i < 3; i++)
     s = r(s, {
       type: "order/advance",

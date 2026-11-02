@@ -1,3 +1,4 @@
+import { Check, RotateCcw, SlidersHorizontal, Layers } from "lucide-react";
 import { useTaxonomy } from "@/hooks/use-taxonomy";
 
 import type { Product } from "@/types/catalog";
@@ -54,7 +55,7 @@ export function CatalogFilters({
           <span className="eyebrow">
             DENTRO DE {currentCategory.name.toLocaleUpperCase("es")}
           </span>
-          <h2>Subcategorías</h2>
+          <h2><Layers size={18} aria-hidden="true" />Subcategorías</h2>
           <nav aria-label={"Subcategorías de " + currentCategory.name}>
             <Button
               type="button"
@@ -63,7 +64,7 @@ export function CatalogFilters({
               aria-pressed={!f.subcategory}
               onClick={() => update("subcategoria", "")}
             >
-              <span>Todos los productos de {currentCategory.name}</span>
+              <Check className="subcategory-check" size={16} aria-hidden="true" /><span>Todos los productos de {currentCategory.name}</span>
               <span className="subcategory-count">{matching.length}</span>
             </Button>
             {groups.map((s) => (
@@ -75,7 +76,7 @@ export function CatalogFilters({
                 aria-pressed={f.subcategory === s.id}
                 onClick={() => update("subcategoria", s.id)}
               >
-                <span>{s.name}</span>
+                <Check className="subcategory-check" size={16} aria-hidden="true" /><span>{s.name}</span>
                 <span className="subcategory-count">
                   {matching.filter((p) => p.subcategory === s.id).length}
                 </span>
@@ -97,7 +98,7 @@ export function CatalogFilters({
         </div>
       )}
       <div className="filter-section">
-        <h2>Filtros de productos</h2>
+        <h2><SlidersHorizontal size={18} aria-hidden="true" />Filtros de productos</h2>
         <label htmlFor="filter-brand">Marca</label>
         <select
           id="filter-brand"
@@ -151,8 +152,8 @@ export function CatalogFilters({
           />
           Ofertas de prueba
         </label>
-        <Button variant="outline" onClick={() => update("*", "")}>
-          Limpiar filtros
+        <Button variant="outline" disabled={!f.subcategory && !f.brand && !params.has("max") && !f.inStock && !f.offers} onClick={() => update("*", "")}>
+          <RotateCcw size={16} aria-hidden="true" />Limpiar filtros
         </Button>
       </div>
       <p className="filter-note">

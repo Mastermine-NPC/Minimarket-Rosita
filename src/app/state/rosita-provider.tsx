@@ -10,25 +10,51 @@ import {
   type ReactNode,
 } from "react";
 import { toast } from "sonner";
-import type { RositaState } from "@/types/state";
+import type { RositaAction, RositaState } from "@/types/state";
 import { RositaContext } from "./context";
 import { rositaReducer } from "./reducer";
+import { receiveOrderUpdates } from "@/lib/order-events";
+import { stateSchema } from "@/lib/state-schema";
+import { STATE_KEY, STORAGE_VERSION } from "@/lib/storage";
+import type { Order } from "@/types/commerce";
 import {
   readRositaState,
   resetRositaStorage,
   writeRositaState,
 } from "@/lib/storage";
+type StoreSnapshot = { data: RositaState; localRevision: number };
+type StoreMessage = { type: "local"; action: RositaAction } | { type: "remote"; orders: Order[] };
+function updateStore(snapshot: StoreSnapshot, message: StoreMessage): StoreSnapshot {
+  const data = message.type === "remote" ? receiveOrderUpdates(snapshot.data, message.orders) : rositaReducer(snapshot.data, message.action);
+  return data === snapshot.data ? snapshot : { data, localRevision: snapshot.localRevision + Number(message.type === "local") };
+}
 export function RositaProvider({ children }: { children: ReactNode }) {
-  const [initial] = useState(readRositaState);
+  const [initial] = useState(() => {
+    const stored = readRositaState();
+    try {
+      const raw = sessionStorage.getItem("minimarket-rosita:tab-session");
+      if (raw !== null) {
+        const id: unknown = JSON.parse(raw);
+        const sessionUserId = typeof id === "string" && stored.data.users.some(u => u.id === id && u.active !== false) ? id : null;
+        return { ...stored, data: { ...stored.data, sessionUserId } };
+      }
+    } catch { /* The shared legacy session remains available if session storage is blocked. */ }
+    return stored;
+  });
   const [notice, setNotice] = useState(initial.notice);
   const [cartOpen, setCartOpen] = useState(false);
-  const [state, dispatch] = useReducer(rositaReducer, initial.data);
+  const [snapshot, send] = useReducer(updateStore, { data: initial.data, localRevision: 0 });
+  const state = snapshot.data;
+  const dispatch = useCallback((action: RositaAction) => send({ type: "local", action }), []);
   const last = useRef<RositaState | null>(
     ["migrated", "repaired"].includes(initial.status) ? null : initial.data,
   );
   const blocked = useRef(initial.status === "future");
+  const savedRevision = useRef(["migrated", "repaired"].includes(initial.status) ? -1 : 0);
   useEffect(() => {
     if (state === last.current || blocked.current) return;
+    if (savedRevision.current === snapshot.localRevision) { last.current = state; return; }
+    savedRevision.current = snapshot.localRevision;
     const result = writeRositaState(state);
     last.current = state;
     if (!result.ok) {
@@ -37,7 +63,23 @@ export function RositaProvider({ children }: { children: ReactNode }) {
       );
       toast.error(result.message, { id: "rosita-storage-unavailable" });
     }
-  }, [state]);
+  }, [state, snapshot.localRevision]);
+  useEffect(() => {
+    try { sessionStorage.setItem("minimarket-rosita:tab-session", JSON.stringify(state.sessionUserId)); } catch { /* Session remains available in memory. */ }
+  }, [state.sessionUserId]);
+  useEffect(() => {
+    const receive = (event: StorageEvent) => {
+      if (event.storageArea !== window.localStorage || event.key !== STATE_KEY || !event.newValue) return;
+      try {
+        const envelope = JSON.parse(event.newValue);
+        if (envelope.version !== STORAGE_VERSION) return;
+        const parsed = stateSchema.safeParse(envelope.data);
+        if (parsed.success) send({ type: "remote", orders: parsed.data.orders });
+      } catch { /* Invalid or incompatible external state never replaces local orders. */ }
+    };
+    window.addEventListener("storage", receive);
+    return () => window.removeEventListener("storage", receive);
+  }, []);
   const reset = useCallback(async () => {
     if (!isAdmin(state)) {
       toast.error("Identifícate como administrador para restablecer Rosita.");
@@ -69,7 +111,7 @@ export function RositaProvider({ children }: { children: ReactNode }) {
           : "El navegador sigue bloqueando el almacenamiento; los cambios no se guardarán.",
       },
     );
-  }, [state]);
+  }, [state, dispatch]);
   const value = useMemo(
     () => ({
       state,
@@ -79,7 +121,7 @@ export function RositaProvider({ children }: { children: ReactNode }) {
       cartOpen,
       setCartOpen,
     }),
-    [state, reset, notice, cartOpen],
+    [state, dispatch, reset, notice, cartOpen],
   );
   return (
     <RositaContext.Provider value={value}>{children}</RositaContext.Provider>

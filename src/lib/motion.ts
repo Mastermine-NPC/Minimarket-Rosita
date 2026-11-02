@@ -1,6 +1,5 @@
 export const motionTokens = {
   control: 0.15,
-  riderSimulationSeconds: 120,
   panel: 0.24,
   heroTitle: 0.28,
   heroPhoto: 0.6,

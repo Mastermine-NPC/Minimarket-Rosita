@@ -1341,8 +1341,8 @@ select {
 }
 .catalog-layout {
   display: grid;
-  grid-template-columns: 210px minmax(0, 1fr);
-  gap: 36px;
+  grid-template-columns: clamp(280px, 20vw, 320px) minmax(0, 1fr);
+  gap: clamp(20px, 2vw, 36px);
   align-items: start;
 }
 .filter-sidebar {
@@ -1473,7 +1473,9 @@ select {
   max-width: 180px;
 }
 .catalog-products {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  /* Tracks are sized from the remaining width after filters, not viewport tiers. */
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
+  gap: clamp(14px, 1.25vw, 24px);
 }
 .active-filters {
   display: flex;
@@ -2064,9 +2066,6 @@ select {
   .catalog-layout {
     grid-template-columns: 1fr;
   }
-  .catalog-products {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
   .home-products {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -2235,7 +2234,6 @@ select {
   .hero-actions .text-link {
     display: none;
   }
-  .catalog-products,
   .home-products {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }

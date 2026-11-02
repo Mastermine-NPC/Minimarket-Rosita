@@ -1,0 +1,1162 @@
+[
+  {
+    "width": 1440,
+    "height": 1000,
+    "stops": [
+      {
+        "name": "start",
+        "y": 990,
+        "box": {
+          "x": 80,
+          "y": 99.890625,
+          "width": 210,
+          "height": 891.546875
+        },
+        "state": {
+          "position": "sticky",
+          "top": 46,
+          "scrollHeight": 892,
+          "clientHeight": 892,
+          "ancestorOverflow": [
+            [
+              "catalog-layout",
+              "visible"
+            ],
+            [
+              "container catalog-page",
+              "visible"
+            ],
+            [
+              "public-page-body",
+              "visible"
+            ],
+            [
+              "public-route-content",
+              "visible"
+            ],
+            [
+              "MAIN",
+              "visible"
+            ],
+            [
+              "store-shell",
+              "visible"
+            ],
+            [
+              "DIV",
+              "visible"
+            ],
+            [
+              "BODY",
+              "visible"
+            ],
+            [
+              "lenis lenis-scrolling",
+              "visible"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "first",
+        "y": 1490,
+        "box": {
+          "x": 80,
+          "y": 46,
+          "width": 210,
+          "height": 891.546875
+        },
+        "state": {
+          "position": "sticky",
+          "top": 46,
+          "scrollHeight": 892,
+          "clientHeight": 892,
+          "ancestorOverflow": [
+            [
+              "catalog-layout",
+              "visible"
+            ],
+            [
+              "container catalog-page",
+              "visible"
+            ],
+            [
+              "public-page-body",
+              "visible"
+            ],
+            [
+              "public-route-content",
+              "visible"
+            ],
+            [
+              "MAIN",
+              "visible"
+            ],
+            [
+              "store-shell",
+              "visible"
+            ],
+            [
+              "DIV",
+              "visible"
+            ],
+            [
+              "BODY",
+              "visible"
+            ],
+            [
+              "lenis lenis-scrolling",
+              "visible"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "middle",
+        "y": 9106,
+        "box": {
+          "x": 80,
+          "y": 46,
+          "width": 210,
+          "height": 891.546875
+        },
+        "state": {
+          "position": "sticky",
+          "top": 46,
+          "scrollHeight": 892,
+          "clientHeight": 892,
+          "ancestorOverflow": [
+            [
+              "catalog-layout",
+              "visible"
+            ],
+            [
+              "container catalog-page",
+              "visible"
+            ],
+            [
+              "public-page-body",
+              "visible"
+            ],
+            [
+              "public-route-content",
+              "visible"
+            ],
+            [
+              "MAIN",
+              "visible"
+            ],
+            [
+              "store-shell",
+              "visible"
+            ],
+            [
+              "DIV",
+              "visible"
+            ],
+            [
+              "BODY",
+              "visible"
+            ],
+            [
+              "lenis lenis-scrolling",
+              "visible"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "end",
+        "y": 16002,
+        "box": {
+          "x": 80,
+          "y": 46,
+          "width": 210,
+          "height": 891.546875
+        },
+        "state": {
+          "position": "sticky",
+          "top": 46,
+          "scrollHeight": 892,
+          "clientHeight": 892,
+          "ancestorOverflow": [
+            [
+              "catalog-layout",
+              "visible"
+            ],
+            [
+              "container catalog-page",
+              "visible"
+            ],
+            [
+              "public-page-body",
+              "visible"
+            ],
+            [
+              "public-route-content",
+              "visible"
+            ],
+            [
+              "MAIN",
+              "visible"
+            ],
+            [
+              "store-shell",
+              "visible"
+            ],
+            [
+              "DIV",
+              "visible"
+            ],
+            [
+              "BODY",
+              "visible"
+            ],
+            [
+              "lenis lenis-scrolling",
+              "visible"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "footer",
+        "y": 16798,
+        "box": {
+          "x": 80,
+          "y": -567.5625,
+          "width": 210,
+          "height": 891.546875
+        },
+        "state": {
+          "position": "sticky",
+          "top": 46,
+          "scrollHeight": 892,
+          "clientHeight": 892,
+          "ancestorOverflow": [
+            [
+              "catalog-layout",
+              "visible"
+            ],
+            [
+              "container catalog-page",
+              "visible"
+            ],
+            [
+              "public-page-body",
+              "visible"
+            ],
+            [
+              "public-route-content",
+              "visible"
+            ],
+            [
+              "MAIN",
+              "visible"
+            ],
+            [
+              "store-shell",
+              "visible"
+            ],
+            [
+              "DIV",
+              "visible"
+            ],
+            [
+              "BODY",
+              "visible"
+            ],
+            [
+              "lenis lenis-scrolling",
+              "visible"
+            ]
+          ]
+        }
+      }
+    ],
+    "headerBottom": 211.59375,
+    "opened": {
+      "x": 80,
+      "y": 228,
+      "width": 210,
+      "height": 756
+    },
+    "closed": {
+      "x": 80,
+      "y": 46,
+      "width": 210,
+      "height": 891.546875
+    },
+    "innerScroll": 136
+  },
+  {
+    "width": 1440,
+    "height": 720,
+    "stops": [
+      {
+        "name": "start",
+        "y": 867,
+        "box": {
+          "x": 80,
+          "y": 99.8125,
+          "width": 210,
+          "height": 664
+        },
+        "state": {
+          "position": "sticky",
+          "top": 40,
+          "scrollHeight": 892,
+          "clientHeight": 664,
+          "ancestorOverflow": [
+            [
+              "catalog-layout",
+              "visible"
+            ],
+            [
+              "container catalog-page",
+              "visible"
+            ],
+            [
+              "public-page-body",
+              "visible"
+            ],
+            [
+              "public-route-content",
+              "visible"
+            ],
+            [
+              "MAIN",
+              "visible"
+            ],
+            [
+              "store-shell",
+              "visible"
+            ],
+            [
+              "DIV",
+              "visible"
+            ],
+            [
+              "BODY",
+              "visible"
+            ],
+            [
+              "lenis lenis-scrolling",
+              "visible"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "first",
+        "y": 1367,
+        "box": {
+          "x": 80,
+          "y": 40,
+          "width": 210,
+          "height": 664
+        },
+        "state": {
+          "position": "sticky",
+          "top": 40,
+          "scrollHeight": 892,
+          "clientHeight": 664,
+          "ancestorOverflow": [
+            [
+              "catalog-layout",
+              "visible"
+            ],
+            [
+              "container catalog-page",
+              "visible"
+            ],
+            [
+              "public-page-body",
+              "visible"
+            ],
+            [
+              "public-route-content",
+              "visible"
+            ],
+            [
+              "MAIN",
+              "visible"
+            ],
+            [
+              "store-shell",
+              "visible"
+            ],
+            [
+              "DIV",
+              "visible"
+            ],
+            [
+              "BODY",
+              "visible"
+            ],
+            [
+              "lenis lenis-scrolling",
+              "visible"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "middle",
+        "y": 8983,
+        "box": {
+          "x": 80,
+          "y": 40,
+          "width": 210,
+          "height": 664
+        },
+        "state": {
+          "position": "sticky",
+          "top": 40,
+          "scrollHeight": 892,
+          "clientHeight": 664,
+          "ancestorOverflow": [
+            [
+              "catalog-layout",
+              "visible"
+            ],
+            [
+              "container catalog-page",
+              "visible"
+            ],
+            [
+              "public-page-body",
+              "visible"
+            ],
+            [
+              "public-route-content",
+              "visible"
+            ],
+            [
+              "MAIN",
+              "visible"
+            ],
+            [
+              "store-shell",
+              "visible"
+            ],
+            [
+              "DIV",
+              "visible"
+            ],
+            [
+              "BODY",
+              "visible"
+            ],
+            [
+              "lenis lenis-scrolling",
+              "visible"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "end",
+        "y": 16159,
+        "box": {
+          "x": 80,
+          "y": 40,
+          "width": 210,
+          "height": 664
+        },
+        "state": {
+          "position": "sticky",
+          "top": 40,
+          "scrollHeight": 892,
+          "clientHeight": 664,
+          "ancestorOverflow": [
+            [
+              "catalog-layout",
+              "visible"
+            ],
+            [
+              "container catalog-page",
+              "visible"
+            ],
+            [
+              "public-page-body",
+              "visible"
+            ],
+            [
+              "public-route-content",
+              "visible"
+            ],
+            [
+              "MAIN",
+              "visible"
+            ],
+            [
+              "store-shell",
+              "visible"
+            ],
+            [
+              "DIV",
+              "visible"
+            ],
+            [
+              "BODY",
+              "visible"
+            ],
+            [
+              "lenis lenis-scrolling",
+              "visible"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "footer",
+        "y": 16899,
+        "box": {
+          "x": 80,
+          "y": -564.09375,
+          "width": 210,
+          "height": 664
+        },
+        "state": {
+          "position": "sticky",
+          "top": 40,
+          "scrollHeight": 892,
+          "clientHeight": 664,
+          "ancestorOverflow": [
+            [
+              "catalog-layout",
+              "visible"
+            ],
+            [
+              "container catalog-page",
+              "visible"
+            ],
+            [
+              "public-page-body",
+              "visible"
+            ],
+            [
+              "public-route-content",
+              "visible"
+            ],
+            [
+              "MAIN",
+              "visible"
+            ],
+            [
+              "store-shell",
+              "visible"
+            ],
+            [
+              "DIV",
+              "visible"
+            ],
+            [
+              "BODY",
+              "visible"
+            ],
+            [
+              "lenis lenis-scrolling",
+              "visible"
+            ]
+          ]
+        }
+      }
+    ],
+    "headerBottom": 205.59375,
+    "opened": {
+      "x": 80,
+      "y": 222,
+      "width": 210,
+      "height": 482
+    },
+    "closed": {
+      "x": 80,
+      "y": 40,
+      "width": 210,
+      "height": 664
+    },
+    "innerScroll": 410
+  },
+  {
+    "width": 1440,
+    "height": 480,
+    "stops": [
+      {
+        "name": "start",
+        "y": 867,
+        "box": {
+          "x": 80,
+          "y": 99.8125,
+          "width": 210,
+          "height": 424
+        },
+        "state": {
+          "position": "sticky",
+          "top": 40,
+          "scrollHeight": 892,
+          "clientHeight": 424,
+          "ancestorOverflow": [
+            [
+              "catalog-layout",
+              "visible"
+            ],
+            [
+              "container catalog-page",
+              "visible"
+            ],
+            [
+              "public-page-body",
+              "visible"
+            ],
+            [
+              "public-route-content",
+              "visible"
+            ],
+            [
+              "MAIN",
+              "visible"
+            ],
+            [
+              "store-shell",
+              "visible"
+            ],
+            [
+              "DIV",
+              "visible"
+            ],
+            [
+              "BODY",
+              "visible"
+            ],
+            [
+              "lenis lenis-scrolling",
+              "visible"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "first",
+        "y": 1367,
+        "box": {
+          "x": 80,
+          "y": 40,
+          "width": 210,
+          "height": 424
+        },
+        "state": {
+          "position": "sticky",
+          "top": 40,
+          "scrollHeight": 892,
+          "clientHeight": 424,
+          "ancestorOverflow": [
+            [
+              "catalog-layout",
+              "visible"
+            ],
+            [
+              "container catalog-page",
+              "visible"
+            ],
+            [
+              "public-page-body",
+              "visible"
+            ],
+            [
+              "public-route-content",
+              "visible"
+            ],
+            [
+              "MAIN",
+              "visible"
+            ],
+            [
+              "store-shell",
+              "visible"
+            ],
+            [
+              "DIV",
+              "visible"
+            ],
+            [
+              "BODY",
+              "visible"
+            ],
+            [
+              "lenis lenis-scrolling",
+              "visible"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "middle",
+        "y": 8983,
+        "box": {
+          "x": 80,
+          "y": 40,
+          "width": 210,
+          "height": 424
+        },
+        "state": {
+          "position": "sticky",
+          "top": 40,
+          "scrollHeight": 892,
+          "clientHeight": 424,
+          "ancestorOverflow": [
+            [
+              "catalog-layout",
+              "visible"
+            ],
+            [
+              "container catalog-page",
+              "visible"
+            ],
+            [
+              "public-page-body",
+              "visible"
+            ],
+            [
+              "public-route-content",
+              "visible"
+            ],
+            [
+              "MAIN",
+              "visible"
+            ],
+            [
+              "store-shell",
+              "visible"
+            ],
+            [
+              "DIV",
+              "visible"
+            ],
+            [
+              "BODY",
+              "visible"
+            ],
+            [
+              "lenis lenis-scrolling",
+              "visible"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "end",
+        "y": 16399,
+        "box": {
+          "x": 80,
+          "y": 40,
+          "width": 210,
+          "height": 424
+        },
+        "state": {
+          "position": "sticky",
+          "top": 40,
+          "scrollHeight": 892,
+          "clientHeight": 424,
+          "ancestorOverflow": [
+            [
+              "catalog-layout",
+              "visible"
+            ],
+            [
+              "container catalog-page",
+              "visible"
+            ],
+            [
+              "public-page-body",
+              "visible"
+            ],
+            [
+              "public-route-content",
+              "visible"
+            ],
+            [
+              "MAIN",
+              "visible"
+            ],
+            [
+              "store-shell",
+              "visible"
+            ],
+            [
+              "DIV",
+              "visible"
+            ],
+            [
+              "BODY",
+              "visible"
+            ],
+            [
+              "lenis lenis-scrolling",
+              "visible"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "footer",
+        "y": 16899,
+        "box": {
+          "x": 80,
+          "y": -324.09375,
+          "width": 210,
+          "height": 424
+        },
+        "state": {
+          "position": "sticky",
+          "top": 40,
+          "scrollHeight": 892,
+          "clientHeight": 424,
+          "ancestorOverflow": [
+            [
+              "catalog-layout",
+              "visible"
+            ],
+            [
+              "container catalog-page",
+              "visible"
+            ],
+            [
+              "public-page-body",
+              "visible"
+            ],
+            [
+              "public-route-content",
+              "visible"
+            ],
+            [
+              "MAIN",
+              "visible"
+            ],
+            [
+              "store-shell",
+              "visible"
+            ],
+            [
+              "DIV",
+              "visible"
+            ],
+            [
+              "BODY",
+              "visible"
+            ],
+            [
+              "lenis lenis-scrolling",
+              "visible"
+            ]
+          ]
+        }
+      }
+    ],
+    "headerBottom": 205.59375,
+    "opened": {
+      "x": 80,
+      "y": 222,
+      "width": 210,
+      "height": 242
+    },
+    "closed": {
+      "x": 80,
+      "y": 40,
+      "width": 210,
+      "height": 424
+    },
+    "innerScroll": 650
+  },
+  {
+    "width": 1024,
+    "height": 640,
+    "stops": [
+      {
+        "name": "start",
+        "y": 774,
+        "box": {
+          "x": 40,
+          "y": 99.625,
+          "width": 210,
+          "height": 584
+        },
+        "state": {
+          "position": "sticky",
+          "top": 40,
+          "scrollHeight": 892,
+          "clientHeight": 584,
+          "ancestorOverflow": [
+            [
+              "catalog-layout",
+              "visible"
+            ],
+            [
+              "container catalog-page",
+              "visible"
+            ],
+            [
+              "public-page-body",
+              "visible"
+            ],
+            [
+              "public-route-content",
+              "visible"
+            ],
+            [
+              "MAIN",
+              "visible"
+            ],
+            [
+              "store-shell",
+              "visible"
+            ],
+            [
+              "DIV",
+              "visible"
+            ],
+            [
+              "BODY",
+              "visible"
+            ],
+            [
+              "lenis lenis-scrolling",
+              "visible"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "first",
+        "y": 1274,
+        "box": {
+          "x": 40,
+          "y": 40,
+          "width": 210,
+          "height": 584
+        },
+        "state": {
+          "position": "sticky",
+          "top": 40,
+          "scrollHeight": 892,
+          "clientHeight": 584,
+          "ancestorOverflow": [
+            [
+              "catalog-layout",
+              "visible"
+            ],
+            [
+              "container catalog-page",
+              "visible"
+            ],
+            [
+              "public-page-body",
+              "visible"
+            ],
+            [
+              "public-route-content",
+              "visible"
+            ],
+            [
+              "MAIN",
+              "visible"
+            ],
+            [
+              "store-shell",
+              "visible"
+            ],
+            [
+              "DIV",
+              "visible"
+            ],
+            [
+              "BODY",
+              "visible"
+            ],
+            [
+              "lenis lenis-scrolling",
+              "visible"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "middle",
+        "y": 8843,
+        "box": {
+          "x": 40,
+          "y": 40,
+          "width": 210,
+          "height": 584
+        },
+        "state": {
+          "position": "sticky",
+          "top": 40,
+          "scrollHeight": 892,
+          "clientHeight": 584,
+          "ancestorOverflow": [
+            [
+              "catalog-layout",
+              "visible"
+            ],
+            [
+              "container catalog-page",
+              "visible"
+            ],
+            [
+              "public-page-body",
+              "visible"
+            ],
+            [
+              "public-route-content",
+              "visible"
+            ],
+            [
+              "MAIN",
+              "visible"
+            ],
+            [
+              "store-shell",
+              "visible"
+            ],
+            [
+              "DIV",
+              "visible"
+            ],
+            [
+              "BODY",
+              "visible"
+            ],
+            [
+              "lenis lenis-scrolling",
+              "visible"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "end",
+        "y": 16052,
+        "box": {
+          "x": 40,
+          "y": 40,
+          "width": 210,
+          "height": 584
+        },
+        "state": {
+          "position": "sticky",
+          "top": 40,
+          "scrollHeight": 892,
+          "clientHeight": 584,
+          "ancestorOverflow": [
+            [
+              "catalog-layout",
+              "visible"
+            ],
+            [
+              "container catalog-page",
+              "visible"
+            ],
+            [
+              "public-page-body",
+              "visible"
+            ],
+            [
+              "public-route-content",
+              "visible"
+            ],
+            [
+              "MAIN",
+              "visible"
+            ],
+            [
+              "store-shell",
+              "visible"
+            ],
+            [
+              "DIV",
+              "visible"
+            ],
+            [
+              "BODY",
+              "visible"
+            ],
+            [
+              "lenis lenis-scrolling",
+              "visible"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "footer",
+        "y": 16712,
+        "box": {
+          "x": 40,
+          "y": -483.8125,
+          "width": 210,
+          "height": 584
+        },
+        "state": {
+          "position": "sticky",
+          "top": 40,
+          "scrollHeight": 892,
+          "clientHeight": 584,
+          "ancestorOverflow": [
+            [
+              "catalog-layout",
+              "visible"
+            ],
+            [
+              "container catalog-page",
+              "visible"
+            ],
+            [
+              "public-page-body",
+              "visible"
+            ],
+            [
+              "public-route-content",
+              "visible"
+            ],
+            [
+              "MAIN",
+              "visible"
+            ],
+            [
+              "store-shell",
+              "visible"
+            ],
+            [
+              "DIV",
+              "visible"
+            ],
+            [
+              "BODY",
+              "visible"
+            ],
+            [
+              "lenis lenis-scrolling",
+              "visible"
+            ]
+          ]
+        }
+      }
+    ],
+    "headerBottom": 205.59375,
+    "opened": {
+      "x": 40,
+      "y": 222,
+      "width": 210,
+      "height": 402
+    },
+    "closed": {
+      "x": 40,
+      "y": 40,
+      "width": 210,
+      "height": 584
+    },
+    "innerScroll": 490
+  }
+]

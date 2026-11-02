@@ -1,0 +1,16 @@
+{
+  "passed": [
+    "filter and sort preserve scroll without reload",
+    "white glass and original text palette",
+    "category sidebar can scroll to its controls",
+    "mobile drawer opens, filters, and closes at 320px",
+    "search results retain card proportions"
+  ],
+  "palette": {
+    "surface": "rgba(255, 255, 255, 0.94)",
+    "title": "rgb(23, 35, 29)",
+    "price": "rgb(23, 35, 29)",
+    "blur": "blur(10px)"
+  },
+  "errors": []
+}

@@ -1,0 +1,87 @@
+{
+  "orderId": "ROS-483cc392-e932-4acf-adbc-95632e407255",
+  "timingMs": 10015.10000000149,
+  "demoToasts": [
+    "Demostración · Pedido recibido",
+    "Demostración · En preparación",
+    "Demostración · En camino",
+    "Demostración · Recorrido completado",
+    "Demostración · Entregado"
+  ],
+  "customerToasts": [
+    "Pedido recibido",
+    "En preparación",
+    "En camino",
+    "Entregado"
+  ],
+  "browserNotices": [
+    {
+      "title": "En preparación",
+      "options": {
+        "body": "Estamos preparando tus productos.\nROS-483cc392-e932-4acf-adbc-95632e407255",
+        "tag": "rosita:ROS-483cc392-e932-4acf-adbc-95632e407255:a78f02a9-8fe3-4750-aa03-9a14d9030a94"
+      }
+    },
+    {
+      "title": "En camino",
+      "options": {
+        "body": "¡Tu pedido está en camino!\nROS-483cc392-e932-4acf-adbc-95632e407255",
+        "tag": "rosita:ROS-483cc392-e932-4acf-adbc-95632e407255:67f6b814-685c-408b-9484-1f0eff8f264e"
+      }
+    },
+    {
+      "title": "Entregado",
+      "options": {
+        "body": "Tu pedido ha sido entregado.\nROS-483cc392-e932-4acf-adbc-95632e407255",
+        "tag": "rosita:ROS-483cc392-e932-4acf-adbc-95632e407255:a9e78761-9676-4238-8835-c40673721aef"
+      }
+    }
+  ],
+  "history": [
+    {
+      "id": "a9d5b5a7-0a98-4cba-abd8-f3398ef749a9:created",
+      "from": null,
+      "to": 0,
+      "at": "2026-11-02T01:51:14.657Z",
+      "actorId": "rosita-cliente-demo",
+      "actorLabel": "Cliente Rosita",
+      "origin": "order-created"
+    },
+    {
+      "id": "a78f02a9-8fe3-4750-aa03-9a14d9030a94",
+      "from": 0,
+      "to": 1,
+      "at": "2026-11-02T01:51:40.733Z",
+      "actorId": "rosita-admin-demo",
+      "actorLabel": "Administración Rosita",
+      "origin": "admin-demo"
+    },
+    {
+      "id": "67f6b814-685c-408b-9484-1f0eff8f264e",
+      "from": 1,
+      "to": 2,
+      "at": "2026-11-02T01:51:41.759Z",
+      "actorId": "rosita-admin-demo",
+      "actorLabel": "Administración Rosita",
+      "origin": "admin-demo"
+    },
+    {
+      "id": "a9e78761-9676-4238-8835-c40673721aef",
+      "from": 2,
+      "to": 3,
+      "at": "2026-11-02T01:51:58.784Z",
+      "actorId": "rosita-admin-demo",
+      "actorLabel": "Administración Rosita",
+      "origin": "admin-demo"
+    }
+  ],
+  "states": 3,
+  "ordersUnchangedByDemo": true,
+  "inventoryUnchanged": true,
+  "paymentAndAddressUnchanged": true,
+  "reloadPreservesCustomerSession": true,
+  "persistedNotices": 4,
+  "readStatePersists": true,
+  "deniedAndUnsupportedPermissionsHandled": true,
+  "errors": []
+}

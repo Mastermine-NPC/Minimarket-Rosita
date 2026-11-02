@@ -1,0 +1,35 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+const { chromium } = await import(process.env.PLAYWRIGHT_MODULE || 'playwright');
+const { expect } = await import(process.env.PLAYWRIGHT_EXPECT_MODULE || 'playwright/test');
+const browser = await chromium.launch({executablePath: process.env.CHROME_PATH});
+const base=process.env.BASE_URL||'http://localhost:4174',out=process.env.VERIFICATION_OUT||'docs/global-cinema-verification';
+await fs.mkdir(out,{recursive:true});const results=[],errors=[];
+for(const width of [1440,768,390]){
+ const page=await browser.newPage({viewport:{width,height:1000}});page.on('pageerror',e=>errors.push(e.message));
+ await page.goto(base+'/producto/ROS-004');await page.getByRole('button',{name:'Agregar al carrito',exact:true}).click();
+ await page.goto(base+'/registro?volver=%2Fcheckout');
+ await page.locator('#auth-name').fill('Cliente Cine');await page.locator('#auth-email').fill(`cine-${width}@rosita.test`);
+ await page.locator('#auth-password').fill('Demo123!');await page.locator('#auth-confirm').fill('Demo123!');
+ await page.getByRole('button',{name:'Crear cuenta de demostración',exact:true}).click();
+ await page.waitForURL(/\/checkout$/);await page.locator('#delivery-mode').selectOption('pickup');
+ await page.locator('#delivery-recipient').fill('Cliente Cine');await page.locator('#delivery-phone').fill('999123456');
+ await page.getByRole('button',{name:'Continuar al pago simulado',exact:true}).click();
+ await page.locator('#cash-amount').fill('100');await page.getByRole('button',{name:'Revisar pedido',exact:true}).click();
+ await page.screenshot({path:`${out}/checkout-${width}.png`,fullPage:true});
+ await page.getByRole('button',{name:'Confirmar pedido de demostración',exact:true}).click();
+ await page.waitForURL(/\/pedido\/.+\/confirmacion$/);await page.locator('.order-code').waitFor();
+ const stored=await page.evaluate(()=>JSON.parse(localStorage.getItem('minimarket-rosita:app')).data);
+ assert.equal(stored.orders.length,1);assert.equal(stored.orders[0].lines[0].quantity,1);assert.deepEqual(stored.cart,{});
+ await page.screenshot({path:`${out}/confirmacion-${width}.png`,fullPage:true});
+ await page.getByRole('link',{name:'Seguir pedido',exact:true}).click();await page.waitForURL(/\/seguimiento$/);
+ await page.waitForTimeout(1200);await expect(page.locator('.order-next')).toBeVisible();
+ await page.screenshot({path:`${out}/seguimiento-${width}.png`,fullPage:true});
+ await page.reload();await page.locator('.order-code').waitFor();
+ await page.goto(base+'/contacto');await page.getByRole('heading',{name:'Contacto',exact:true}).waitFor();await page.locator('.contact-grid form').scrollIntoViewIfNeeded();
+ await page.locator('.contact-grid form button[type=submit]').click();await expect(page.locator('[role=alert]').first()).toBeVisible();
+ await page.screenshot({path:`${out}/contact-form-${width}.png`,fullPage:true});
+ results.push(`${width}: product → cart → registration → pickup → cash → review → confirmation → tracking → reload; contact validation`);
+ await page.close();
+}
+assert.deepEqual(errors,[]);await fs.writeFile(`${out}/purchase-results.json`,JSON.stringify({results,errors},null,2));console.log(results);await browser.close();

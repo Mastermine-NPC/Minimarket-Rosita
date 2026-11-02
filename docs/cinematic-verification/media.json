@@ -1,0 +1,56 @@
+[
+  {
+    "source": "/images/video/Arequipa-backgraound.mp4",
+    "web": "/images/video/cinematic/Arequipa-backgraound.mp4",
+    "sourceBytes": 21030232,
+    "webBytes": 1830907
+  },
+  {
+    "source": "/images/video/artesco-video-cinematografic.mp4",
+    "web": "/images/video/cinematic/artesco-video-cinematografic.mp4",
+    "sourceBytes": 4017712,
+    "webBytes": 1386954
+  },
+  {
+    "source": "/images/video/coca-cola-video-cinematografic.mp4",
+    "web": "/images/video/cinematic/coca-cola-video-cinematografic.mp4",
+    "sourceBytes": 6722741,
+    "webBytes": 1597983
+  },
+  {
+    "source": "/images/video/faber-castell-video-cinematografic.mp4",
+    "web": "/images/video/cinematic/faber-castell-video-cinematografic.mp4",
+    "sourceBytes": 17568149,
+    "webBytes": 1999369
+  },
+  {
+    "source": "/images/video/inka-cola-video-cinematografic.mp4",
+    "web": "/images/video/cinematic/inka-cola-video-cinematografic.mp4",
+    "sourceBytes": 3188370,
+    "webBytes": 824719
+  },
+  {
+    "source": "/images/video/lays-video-cinematografic.mp4",
+    "web": "/images/video/cinematic/lays-video-cinematografic.mp4",
+    "sourceBytes": 2290030,
+    "webBytes": 515701
+  },
+  {
+    "source": "/images/video/nivea-video-cinematografic.mp4",
+    "web": "/images/video/cinematic/nivea-video-cinematografic.mp4",
+    "sourceBytes": 3713743,
+    "webBytes": 1455003
+  },
+  {
+    "source": "/images/video/oreo-video-cinematografic.mp4",
+    "web": "/images/video/cinematic/oreo-video-cinematografic.mp4",
+    "sourceBytes": 5852421,
+    "webBytes": 2451727
+  },
+  {
+    "source": "/images/video/tornillos-video-cinematografic.mp4",
+    "web": "/images/video/cinematic/tornillos-video-cinematografic.mp4",
+    "sourceBytes": 55106840,
+    "webBytes": 1466503
+  }
+]

@@ -50,3 +50,7 @@ Desktop.ini
 !/docs/recovery/SHA256SUMS.txt
 # Copias locales de recuperación
 /docs/recovery/
+
+# Videos originales pesados (conservar localmente)
+/public/images/video/Arequipa-backgraound-02.mp4
+/public/images/video/tornillos-video-cinematografic.mp4

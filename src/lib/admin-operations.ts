@@ -192,6 +192,8 @@ export function adminOperation(
   )
     return fail("Ese código de barras ya está asignado.");
   const product = {
+    modelKey: p?.modelKey,
+    demoCommercialData: p?.demoCommercialData,
     barcode: v.barcode || undefined,
     id: v.id,
     code: p?.code || v.id,
@@ -262,8 +264,7 @@ export function advanceOrder(
     !actor ||
     actor.active === false ||
     !order ||
-    (!isAdmin(state) &&
-      (actor.role !== "customer" || actor.id !== order.userId))
+    !isAdmin(state)
   )
     return fail("Tu perfil no puede modificar este pedido.");
   if (state.processedAdminOperations.includes(action.operationId)) return state;
@@ -292,7 +293,7 @@ export function advanceOrder(
                 at: action.at,
                 actorId: actor.id,
                 actorLabel: actor.name,
-                origin: actor.role === "admin" ? "admin-demo" : "client-demo",
+                origin: "admin-demo",
               },
             ],
           }

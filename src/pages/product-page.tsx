@@ -1,3 +1,5 @@
+import { ProductPresentation } from "@/features/product-3d/product-presentation";
+import { productModelFor } from "@/features/product-3d/product-models";
 import { useTaxonomy } from "@/hooks/use-taxonomy";
 import { useCatalog } from "@/hooks/use-catalog";
 import { useState } from "react";
@@ -17,10 +19,10 @@ export function ProductPage() {
   const { id } = useParams();
   return <ProductDetail key={id} id={id || ""} />;
 }
-function ProductDetail({ id }: { id: string }) {
+function ProductDetail({ id: routeId }: { id: string }) {
   const { categoryById, categoryPath } = useTaxonomy();
   const products = useCatalog();
-  const product = products.find((p) => p.id === id),
+  const product = products.find((p) => p.id === routeId) || products.find((p) => p.code === routeId),
     [params] = useSearchParams(),
     back = safeReturnPath(params.get("volver")),
     [n, N] = useState(1),
@@ -39,6 +41,8 @@ function ProductDetail({ id }: { id: string }) {
         </Button>
       </div>
     );
+  const id = product.id;
+  const modelConfig = productModelFor(product);
   const category = categoryById(product.category)!,
     remaining = Math.max(0, product.stock - (cart[id] || 0)),
     quantity = Math.min(n, remaining),
@@ -49,19 +53,13 @@ function ProductDetail({ id }: { id: string }) {
       )
       .slice(0, 4);
   return (
-    <div className="container product-page">
+    <div className={"container product-page" + (modelConfig ? " product-page--immersive" : "")}>
       <Link className="back-link" to={back}>
         <ArrowLeft size={17} aria-hidden="true" />
         Volver al catálogo
       </Link>
       <section className="product-detail">
-        <div className={"detail-photo tone-" + category.tone}>
-          <ProductImageZoom
-            key={product.imageSrc || String(product.imageIndex)}
-            product={product}
-          />
-        </div>
-        <div className="detail-info">
+        <div className="detail-info detail-heading">
           <Link className="eyebrow" to={categoryPath(category)}>
             {category.name}
           </Link>
@@ -83,6 +81,17 @@ function ProductDetail({ id }: { id: string }) {
           <p className="detail-presentation">
             {product.presentation} · {product.brand}
           </p>
+        </div>
+
+        {modelConfig ? <ProductPresentation config={modelConfig} brand={product.brand} presentation={product.presentation} fallback={<ProductImageZoom product={product} />} /> : (
+        <div className={"detail-photo tone-" + category.tone}>
+          <ProductImageZoom
+            key={product.imageSrc || String(product.imageIndex)}
+            product={product}
+          />
+        </div>
+        )}
+        <div className="detail-info detail-commerce">
           <ProductPrice
             price={product.price}
             previous={product.previousPrice}

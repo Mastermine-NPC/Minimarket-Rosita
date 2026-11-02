@@ -1,0 +1,158 @@
+[
+  {
+    "width": 1440,
+    "name": "home",
+    "overflow": false,
+    "canvas": 0
+  },
+  {
+    "width": 1440,
+    "name": "catalog",
+    "overflow": false,
+    "canvas": 0
+  },
+  {
+    "width": 1440,
+    "name": "category",
+    "overflow": false,
+    "canvas": 0
+  },
+  {
+    "width": 1440,
+    "name": "lays",
+    "overflow": false,
+    "canvas": 1
+  },
+  {
+    "width": 1440,
+    "name": "ball",
+    "overflow": false,
+    "canvas": 1
+  },
+  {
+    "width": 1440,
+    "name": "coke",
+    "overflow": false,
+    "canvas": 0
+  },
+  {
+    "width": 1440,
+    "name": "cart",
+    "overflow": false,
+    "canvas": 0
+  },
+  {
+    "width": 1440,
+    "name": "login",
+    "overflow": false,
+    "canvas": 0
+  },
+  {
+    "width": 1440,
+    "errors": []
+  },
+  {
+    "width": 768,
+    "name": "home",
+    "overflow": false,
+    "canvas": 0
+  },
+  {
+    "width": 768,
+    "name": "catalog",
+    "overflow": false,
+    "canvas": 0
+  },
+  {
+    "width": 768,
+    "name": "category",
+    "overflow": false,
+    "canvas": 0
+  },
+  {
+    "width": 768,
+    "name": "lays",
+    "overflow": false,
+    "canvas": 1
+  },
+  {
+    "width": 768,
+    "name": "ball",
+    "overflow": false,
+    "canvas": 1
+  },
+  {
+    "width": 768,
+    "name": "coke",
+    "overflow": false,
+    "canvas": 0
+  },
+  {
+    "width": 768,
+    "name": "cart",
+    "overflow": false,
+    "canvas": 0
+  },
+  {
+    "width": 768,
+    "name": "login",
+    "overflow": false,
+    "canvas": 0
+  },
+  {
+    "width": 768,
+    "errors": []
+  },
+  {
+    "width": 390,
+    "name": "home",
+    "overflow": false,
+    "canvas": 0
+  },
+  {
+    "width": 390,
+    "name": "catalog",
+    "overflow": false,
+    "canvas": 0
+  },
+  {
+    "width": 390,
+    "name": "category",
+    "overflow": false,
+    "canvas": 0
+  },
+  {
+    "width": 390,
+    "name": "lays",
+    "overflow": false,
+    "canvas": 1
+  },
+  {
+    "width": 390,
+    "name": "ball",
+    "overflow": false,
+    "canvas": 1
+  },
+  {
+    "width": 390,
+    "name": "coke",
+    "overflow": false,
+    "canvas": 0
+  },
+  {
+    "width": 390,
+    "name": "cart",
+    "overflow": false,
+    "canvas": 0
+  },
+  {
+    "width": 390,
+    "name": "login",
+    "overflow": false,
+    "canvas": 0
+  },
+  {
+    "width": 390,
+    "errors": []
+  }
+]

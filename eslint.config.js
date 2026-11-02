@@ -4,7 +4,7 @@ import tseslint from "typescript-eslint";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
 export default tseslint.config(
-  { ignores: ["dist/**", "node_modules/**"] },
+  { ignores: ["dist/**", "node_modules/**", ".agents/**", ".taste-skill/**"] },
   js.configs.recommended,
   ...tseslint.configs.recommended,
   {
@@ -26,6 +26,25 @@ export default tseslint.config(
   {
     files: [
       "docs/verification/*.mjs",
+      "docs/editorial-verification/*.mjs",
+      "docs/models-integration-verification/*.mjs",
+      "docs/normal-catalog-verification/*.mjs",
+      "docs/ux-card-verification/*.mjs",
+      "docs/sticky-filter-verification/*.mjs",
+      "docs/navigation-panel-verification/*.mjs",
+      "docs/catalog-responsive-verification/*.mjs",
+      "docs/tracking-experience-verification/*.mjs",
+      "docs/dark-night-map-verification/*.mjs",
+      "docs/order-flow-verification/*.mjs",
+      "docs/liquid-video-verification/*.mjs",
+      "docs/global-liquid-verification/*.mjs",
+      "docs/intro-liquid-verification/*.mjs",
+      "docs/category-tilt-verification/*.mjs",
+      "docs/category-liquid-glass-verification/*.mjs",
+      "docs/catalog-checkout-verification/*.mjs",
+      "docs/cinematic-verification/*.mjs",
+      "docs/global-cinema-verification/*.mjs",
+      "docs/product-3d-verification/*.mjs",
       "docs/commerce-verification/*.mjs",
       "docs/order-verification/*.mjs",
       "docs/admin-verification/*.mjs",

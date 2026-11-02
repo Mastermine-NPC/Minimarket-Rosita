@@ -1,3 +1,4 @@
+import { productModelFor } from "@/features/product-3d/product-models";
 import { useTaxonomy } from "@/hooks/use-taxonomy";
 import { Link, useLocation } from "react-router";
 import { Check, Plus } from "lucide-react";
@@ -20,7 +21,7 @@ export function ProductCard({
     quantity = cart[product.id] || 0,
     back = returnTo || location.pathname + location.search;
   const target =
-      "/producto/" + product.id + "?volver=" + encodeURIComponent(back),
+      "/producto/" + (product.publicId || product.id) + "?volver=" + encodeURIComponent(back),
     full = quantity >= product.stock;
   return (
     <article className="product-card" data-product-id={product.id}>
@@ -30,6 +31,8 @@ export function ProductCard({
         aria-label={"Ver " + product.name}
       >
         <ProductImage product={product} />
+        {productModelFor(product)?.modelUrl && <span className="product-3d-badge">Explorar en 3D ↗</span>}
+        {product.demoCommercialData && <span className="product-render-label">Render 3D</span>}
         {product.previousPrice && (
           <span className="product-tag">Precio especial</span>
         )}
@@ -42,6 +45,7 @@ export function ProductCard({
         <h3>
           <Link to={target}>{product.name}</Link>
         </h3>
+        {product.demoCommercialData && <p className="demo-product-notice">Precio y stock de prueba</p>}
         <p className="product-presentation">{product.presentation}</p>
         <ProductPrice price={product.price} previous={product.previousPrice} />
         <p className={"stock-label " + (!product.stock ? "stock-empty" : "")}>

@@ -1,0 +1,35 @@
+{
+  "results": [
+    {
+      "width": 1440,
+      "header": "hidden at load and both scroll directions; proximity/touch/focus/exit work",
+      "glass": {
+        "background": "rgba(10, 25, 39, 0.91)",
+        "blur": "blur(12px)",
+        "color": "rgb(239, 248, 252)"
+      },
+      "filters": "brand, stock, price, sort, search and category preserve scroll and DOM"
+    },
+    {
+      "width": 768,
+      "header": "hidden at load and both scroll directions; proximity/touch/focus/exit work",
+      "glass": {
+        "background": "rgba(10, 25, 39, 0.91)",
+        "blur": "blur(6px)",
+        "color": "rgb(239, 248, 252)"
+      },
+      "filters": "brand, stock, price, sort, search and category preserve scroll and DOM"
+    },
+    {
+      "width": 390,
+      "header": "hidden at load and both scroll directions; proximity/touch/focus/exit work",
+      "glass": {
+        "background": "rgba(10, 25, 39, 0.91)",
+        "blur": "blur(6px)",
+        "color": "rgb(239, 248, 252)"
+      },
+      "filters": "brand, stock, price, sort, search and category preserve scroll and DOM"
+    }
+  ],
+  "errors": []
+}

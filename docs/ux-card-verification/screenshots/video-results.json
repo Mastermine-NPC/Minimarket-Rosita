@@ -1,0 +1,24 @@
+[
+  {
+    "width": 1440,
+    "initial": 1.4261,
+    "paused": 1.4418,
+    "resumed": 1.4485,
+    "loadOrEmptyEvents": 0,
+    "sameNode": true,
+    "rapidScrollRecovery": true,
+    "externalPauseRecovery": true,
+    "selectedFilmRetentionTested": false
+  },
+  {
+    "width": 390,
+    "initial": 1.43,
+    "paused": 1.4397,
+    "resumed": 1.5463,
+    "loadOrEmptyEvents": 0,
+    "sameNode": true,
+    "rapidScrollRecovery": true,
+    "externalPauseRecovery": true,
+    "selectedFilmRetentionTested": true
+  }
+]

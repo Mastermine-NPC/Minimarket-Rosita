@@ -1,3 +1,6 @@
+import { useNavigationKey } from "@/hooks/use-navigation-key";
+import { useHeaderClearance } from "./use-header-clearance";
+import { useSmartHeader } from "./use-smart-header";
 import { HelpMenuLinks } from "@/features/informacion/help-links";
 import { useTaxonomy } from "@/hooks/use-taxonomy";
 import { useRosita } from "@/hooks/use-rosita";
@@ -6,7 +9,7 @@ import { Package, LogOut } from "lucide-react";
 import { motionTokens } from "@/lib/motion";
 import { motion } from "motion/react";
 import { useMotionPreference } from "@/hooks/use-motion-preference";
-import { useState, useRef } from "react";
+import { useCallback, useState, useRef } from "react";
 import { Link, NavLink } from "react-router";
 import { ShoppingBag, UserRound, Menu, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -26,13 +29,21 @@ export function StoreHeader() {
   const menuTrigger = useRef<HTMLButtonElement>(null),
     menuOrigin = useRef("");
   const reduced = useMotionPreference();
-  const { count, open } = useCart(),
-    [menu, MenuOpen] = useState(false),
-    navigate = useNavigate();
-  const { state, dispatch } = useRosita();
+  const { count, open } = useCart();
+  const navigate = useNavigate();
+  const navigationKey = useNavigationKey();
+  const [menuFor, setMenuFor] = useState<string | null>(null);
+  const menu = menuFor === navigationKey;
+  const MenuOpen = (value: boolean) => setMenuFor(value ? navigationKey : null);
+  const dismissMenu = useCallback(() => setMenuFor(null), []);
+  const { state, dispatch, cartOpen } = useRosita();
+  const { rootRef, open: headerOpen, hold, hide, toggle, close } = useSmartHeader(menu || cartOpen, dismissMenu);
+  useHeaderClearance(rootRef, headerOpen);
   const user = state.users.find((u) => u.id === state.sessionUserId);
   return (
-    <>
+    <div ref={rootRef} className={"smart-navigation" + (headerOpen ? " is-open" : "")} onPointerEnter={hold} onPointerLeave={event => { if (event.pointerType === "mouse") hide(); }} onFocusCapture={hold} onBlurCapture={hide} onKeyDown={e => { if (e.key === "Escape") { close(); rootRef.current?.querySelector<HTMLButtonElement>(".navigation-discover")?.focus({ preventScroll: true }); } }}>
+      <button className="navigation-discover" aria-label={headerOpen ? "Cerrar navegación de tienda" : "Abrir navegación de tienda"} aria-expanded={headerOpen} aria-controls="store-navigation-panel" onClick={toggle}><span className="navigation-indicator" aria-hidden="true" /></button>
+      <div id="store-navigation-panel" className="smart-navigation-panel" inert={!headerOpen}>
       <div className="store-topbar">
         <div>
           <span>Tu minimarket de siempre, más cerca.</span>
@@ -108,6 +119,7 @@ export function StoreHeader() {
                 className="logout-trigger"
                 aria-label="Cerrar sesión"
                 onClick={() => {
+                  close(); dismissMenu();
                   dispatch({ type: "auth/logout" });
                   navigate("/login");
                 }}
@@ -173,7 +185,7 @@ export function StoreHeader() {
                 onCloseAutoFocus={(event) => {
                   event.preventDefault();
                   if (
-                    menuOrigin.current ===
+                    headerOpen && menuOrigin.current ===
                     window.location.pathname + window.location.hash
                   )
                     menuTrigger.current?.focus({ preventScroll: true });
@@ -189,6 +201,8 @@ export function StoreHeader() {
                     Conoce el negocio y encuentra orientación para tu compra.
                   </SheetDescription>
                 </SheetHeader>
+                <nav className="menu-category-links" aria-label="Explorar categorías"><h2>Categorías</h2>{categories.map(category => <Link key={category.id} to={categoryPath(category)} onClick={() => MenuOpen(false)}>{category.name}</Link>)}</nav>
+                <p className="menu-store-location"><MapPin size={16} aria-hidden="true" />Tu tienda cercana</p>
                 <HelpMenuLinks />
               </SheetContent>
             </Sheet>
@@ -219,6 +233,7 @@ export function StoreHeader() {
           </div>
         </div>
       </header>
-    </>
+      </div>
+    </div>
   );
 }

@@ -1,0 +1,16 @@
+[
+  {
+    "width": 1440,
+    "cart": "card and 3D detail share stock and cart",
+    "header": "external cart does not open header; header-originated cart keeps it open",
+    "excluded": "modal, login, viewer and administration have no glass",
+    "featured": "same shared glass card"
+  },
+  {
+    "width": 390,
+    "cart": "card and 3D detail share stock and cart",
+    "header": "external cart does not open header; header-originated cart keeps it open",
+    "excluded": "modal, login, viewer and administration have no glass",
+    "featured": "same shared glass card"
+  }
+]

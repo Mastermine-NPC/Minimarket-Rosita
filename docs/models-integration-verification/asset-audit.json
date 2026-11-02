@@ -1,0 +1,247 @@
+[
+  {
+    "file": "public/models/lays/classic.glb",
+    "source": "lays_bags__10_different_flavours__gameready.glb",
+    "selectedMeshes": [
+      0
+    ],
+    "meshes": 1,
+    "triangles": 68,
+    "materials": 1,
+    "textures": 2,
+    "bytes": 2175888,
+    "attribution": {
+      "author": "NKaap (https://sketchfab.com/nkaap)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/lays-bags-10-different-flavours-gameready-3b3a1f7654a5447eb25c9845152cfc89",
+      "title": "Lays Bags | 10 Different Flavours!! | GAMEREADY",
+      "modification": "Selected authored object(s) isolated; original geometry, UVs and material maps preserved."
+    }
+  },
+  {
+    "file": "public/models/lays/sweet-bbq.glb",
+    "source": "lays_bags__10_different_flavours__gameready.glb",
+    "selectedMeshes": [
+      1
+    ],
+    "meshes": 1,
+    "triangles": 68,
+    "materials": 1,
+    "textures": 2,
+    "bytes": 2368200,
+    "attribution": {
+      "author": "NKaap (https://sketchfab.com/nkaap)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/lays-bags-10-different-flavours-gameready-3b3a1f7654a5447eb25c9845152cfc89",
+      "title": "Lays Bags | 10 Different Flavours!! | GAMEREADY",
+      "modification": "Selected authored object(s) isolated; original geometry, UVs and material maps preserved."
+    }
+  },
+  {
+    "file": "public/models/lays/cheddar.glb",
+    "source": "lays_bags__10_different_flavours__gameready.glb",
+    "selectedMeshes": [
+      2
+    ],
+    "meshes": 1,
+    "triangles": 68,
+    "materials": 1,
+    "textures": 2,
+    "bytes": 2535492,
+    "attribution": {
+      "author": "NKaap (https://sketchfab.com/nkaap)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/lays-bags-10-different-flavours-gameready-3b3a1f7654a5447eb25c9845152cfc89",
+      "title": "Lays Bags | 10 Different Flavours!! | GAMEREADY",
+      "modification": "Selected authored object(s) isolated; original geometry, UVs and material maps preserved."
+    }
+  },
+  {
+    "file": "public/models/lays/chile-limon.glb",
+    "source": "lays_bags__10_different_flavours__gameready.glb",
+    "selectedMeshes": [
+      3
+    ],
+    "meshes": 1,
+    "triangles": 68,
+    "materials": 1,
+    "textures": 2,
+    "bytes": 2646028,
+    "attribution": {
+      "author": "NKaap (https://sketchfab.com/nkaap)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/lays-bags-10-different-flavours-gameready-3b3a1f7654a5447eb25c9845152cfc89",
+      "title": "Lays Bags | 10 Different Flavours!! | GAMEREADY",
+      "modification": "Selected authored object(s) isolated; original geometry, UVs and material maps preserved."
+    }
+  },
+  {
+    "file": "public/models/lays/flaming-hot.glb",
+    "source": "lays_bags__10_different_flavours__gameready.glb",
+    "selectedMeshes": [
+      4
+    ],
+    "meshes": 1,
+    "triangles": 68,
+    "materials": 1,
+    "textures": 2,
+    "bytes": 2585252,
+    "attribution": {
+      "author": "NKaap (https://sketchfab.com/nkaap)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/lays-bags-10-different-flavours-gameready-3b3a1f7654a5447eb25c9845152cfc89",
+      "title": "Lays Bags | 10 Different Flavours!! | GAMEREADY",
+      "modification": "Selected authored object(s) isolated; original geometry, UVs and material maps preserved."
+    }
+  },
+  {
+    "file": "public/models/lays/honey-bbq.glb",
+    "source": "lays_bags__10_different_flavours__gameready.glb",
+    "selectedMeshes": [
+      5
+    ],
+    "meshes": 1,
+    "triangles": 68,
+    "materials": 1,
+    "textures": 2,
+    "bytes": 2633788,
+    "attribution": {
+      "author": "NKaap (https://sketchfab.com/nkaap)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/lays-bags-10-different-flavours-gameready-3b3a1f7654a5447eb25c9845152cfc89",
+      "title": "Lays Bags | 10 Different Flavours!! | GAMEREADY",
+      "modification": "Selected authored object(s) isolated; original geometry, UVs and material maps preserved."
+    }
+  },
+  {
+    "file": "public/models/lays/classic-less-salt.glb",
+    "source": "lays_bags__10_different_flavours__gameready.glb",
+    "selectedMeshes": [
+      6
+    ],
+    "meshes": 1,
+    "triangles": 68,
+    "materials": 1,
+    "textures": 2,
+    "bytes": 2351852,
+    "attribution": {
+      "author": "NKaap (https://sketchfab.com/nkaap)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/lays-bags-10-different-flavours-gameready-3b3a1f7654a5447eb25c9845152cfc89",
+      "title": "Lays Bags | 10 Different Flavours!! | GAMEREADY",
+      "modification": "Selected authored object(s) isolated; original geometry, UVs and material maps preserved."
+    }
+  },
+  {
+    "file": "public/models/lays/dill-pickle.glb",
+    "source": "lays_bags__10_different_flavours__gameready.glb",
+    "selectedMeshes": [
+      7
+    ],
+    "meshes": 1,
+    "triangles": 68,
+    "materials": 1,
+    "textures": 2,
+    "bytes": 2475896,
+    "attribution": {
+      "author": "NKaap (https://sketchfab.com/nkaap)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/lays-bags-10-different-flavours-gameready-3b3a1f7654a5447eb25c9845152cfc89",
+      "title": "Lays Bags | 10 Different Flavours!! | GAMEREADY",
+      "modification": "Selected authored object(s) isolated; original geometry, UVs and material maps preserved."
+    }
+  },
+  {
+    "file": "public/models/lays/ranch-wavy.glb",
+    "source": "lays_bags__10_different_flavours__gameready.glb",
+    "selectedMeshes": [
+      8
+    ],
+    "meshes": 1,
+    "triangles": 68,
+    "materials": 1,
+    "textures": 2,
+    "bytes": 2555328,
+    "attribution": {
+      "author": "NKaap (https://sketchfab.com/nkaap)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/lays-bags-10-different-flavours-gameready-3b3a1f7654a5447eb25c9845152cfc89",
+      "title": "Lays Bags | 10 Different Flavours!! | GAMEREADY",
+      "modification": "Selected authored object(s) isolated; original geometry, UVs and material maps preserved."
+    }
+  },
+  {
+    "file": "public/models/lays/bbq-wavy.glb",
+    "source": "lays_bags__10_different_flavours__gameready.glb",
+    "selectedMeshes": [
+      9
+    ],
+    "meshes": 1,
+    "triangles": 68,
+    "materials": 1,
+    "textures": 2,
+    "bytes": 2533068,
+    "attribution": {
+      "author": "NKaap (https://sketchfab.com/nkaap)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/lays-bags-10-different-flavours-gameready-3b3a1f7654a5447eb25c9845152cfc89",
+      "title": "Lays Bags | 10 Different Flavours!! | GAMEREADY",
+      "modification": "Selected authored object(s) isolated; original geometry, UVs and material maps preserved."
+    }
+  },
+  {
+    "file": "public/models/coca-cola/can.glb",
+    "source": "coca_cola_cans.glb",
+    "selectedMeshes": [
+      2
+    ],
+    "meshes": 1,
+    "triangles": 22317,
+    "materials": 1,
+    "textures": 3,
+    "bytes": 5108500,
+    "attribution": {
+      "author": "Safat_Rules (https://sketchfab.com/Safat_Rules)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/coca-cola-cans-fe5ba57722a74dba8d19f513e4672e1c",
+      "title": "Coca cola cans",
+      "modification": "Selected authored object(s) isolated; original geometry, UVs and material maps preserved."
+    }
+  },
+  {
+    "file": "public/models/sunsilk/bottle.glb",
+    "source": "sunsilk_shampoo_bottle.glb",
+    "selectedMeshes": [
+      0,
+      1,
+      2
+    ],
+    "meshes": 3,
+    "triangles": 28240,
+    "materials": 3,
+    "textures": 2,
+    "bytes": 2062544,
+    "attribution": {
+      "author": "Samer_Arab_S5 (https://sketchfab.com/Samer_Arab_S5)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/sunsilk-shampoo-bottle-405fbff6a52f4958b19702200561901b",
+      "title": "Sunsilk shampoo bottle",
+      "modification": "Selected authored object(s) isolated; original geometry, UVs and material maps preserved."
+    }
+  },
+  {
+    "file": "public/images/video/archivos-glb/nivea_aftershave.glb",
+    "source": "nivea_aftershave.glb",
+    "meshes": 3,
+    "triangles": 190492,
+    "bytes": 9366148,
+    "textures": 1,
+    "attribution": {
+      "author": "Qlone (https://sketchfab.com/Qlone)",
+      "license": "CC-BY-ND-4.0 (http://creativecommons.org/licenses/by-nd/4.0/)",
+      "source": "https://sketchfab.com/3d-models/nivea-aftershave-7b3a3b4287264351ab9dcbe5cbb203e2",
+      "title": "Nivea Aftershave"
+    },
+    "note": "Original file untouched, including KHR_materials_unlit and scanned texture."
+  }
+]

@@ -1,12 +1,8 @@
-import { DeliveryTracking } from "@/features/entrega/delivery-tracking";
-import { ConfirmAction } from "@/components/operation-confirmation";
-import { StatusHistory } from "@/features/pedidos/status-history";
+import { OrderTrackingPage } from "@/features/entrega/order-tracking-page";
 import { Link, useLocation, useParams } from "react-router";
 import {
-  Check,
   CheckCircle2,
   Package,
-  Truck,
   ArrowRight,
   ArrowLeft,
 } from "lucide-react";
@@ -48,6 +44,7 @@ export function OrderPage({
     );
   const tracking = mode === "seguimiento",
     confirmation = mode === "confirmacion";
+  if (tracking) return <OrderTrackingPage order={order} />;
   return (
     <div className="container customer-page order-page">
       <Link className="back-link" to="/mis-pedidos">
@@ -59,24 +56,18 @@ export function OrderPage({
       >
         {confirmation ? (
           <CheckCircle2 size={42} aria-hidden="true" />
-        ) : tracking ? (
-          <Truck size={38} aria-hidden="true" />
         ) : (
           <Package size={38} aria-hidden="true" />
         )}
         <span className="eyebrow">
           {confirmation
             ? "CONFIRMACIÓN DE DEMOSTRACIÓN"
-            : tracking
-              ? "SEGUIMIENTO SIMULADO"
-              : "DETALLE DEL PEDIDO"}
+            : "DETALLE DEL PEDIDO"}
         </span>
         <h1 ref={heading} tabIndex={-1}>
           {confirmation
             ? "¡Tu pedido de prueba está listo!"
-            : tracking
-              ? "Así va tu pedido."
-              : "Todo lo que elegiste."}
+            : "Todo lo que elegiste."}
         </h1>
         <p className="order-code">{order.id}</p>
         <time dateTime={order.createdAt}>{orderDate(order.createdAt)}</time>
@@ -93,92 +84,6 @@ export function OrderPage({
           />
         </section>
         <aside className="customer-panel order-next">
-          {tracking ? (
-            <>
-              <span className="eyebrow">ESTADO ACTUAL</span>
-              <h2 aria-live="polite">
-                {stagesFor(order.delivery)[order.status]}
-              </h2>
-              <ol className="tracking-steps" aria-label="Etapas del pedido">
-                {stagesFor(order.delivery).map((s, i) => (
-                  <li
-                    key={s}
-                    className={
-                      i < order.status
-                        ? "complete"
-                        : i === order.status
-                          ? "current"
-                          : ""
-                    }
-                    aria-current={i === order.status ? "step" : undefined}
-                  >
-                    <span>
-                      {i < order.status ? (
-                        <Check size={16} aria-hidden="true" />
-                      ) : (
-                        i + 1
-                      )}
-                    </span>
-                    <div>
-                      <strong>{s}</strong>
-                      <small>
-                        {i < order.status
-                          ? "Completado en la simulación"
-                          : i === order.status
-                            ? "Estado actual"
-                            : "Próxima etapa"}
-                      </small>
-                    </div>
-                  </li>
-                ))}
-              </ol>
-              <StatusHistory order={order} />
-              <DeliveryTracking key={order.id} order={order} />
-              <div className="simulation-controls">
-                <h3>Área de demostración</h3>
-                <p>
-                  {order.status === 3
-                    ? "Terminó la simulación. No representa una entrega real."
-                    : "Avanza manualmente para probar el seguimiento. No hay ubicación ni reparto en vivo."}
-                </p>
-                {order.status < 3 ? (
-                  <ConfirmAction
-                    trigger={
-                      <Button aria-describedby="tracking-help">
-                        Simular siguiente estado
-                      </Button>
-                    }
-                    title="¿Avanzar la simulación?"
-                    description={
-                      stagesFor(order.delivery)[order.status] +
-                      " → " +
-                      stagesFor(order.delivery)[order.status + 1] +
-                      ". No representa un reparto real y no descuenta stock."
-                    }
-                    label="Confirmar avance de estado"
-                    success="Estado del pedido actualizado"
-                    build={(operationId, at) => ({
-                      type: "order/advance",
-                      operationId,
-                      at,
-                      id: order.id,
-                      expectedStatus: order.status,
-                    })}
-                  />
-                ) : (
-                  <Button disabled aria-describedby="tracking-help">
-                    Simular siguiente estado
-                  </Button>
-                )}
-                <p className="hint" id="tracking-help">
-                  {order.status === 3
-                    ? "El pedido ya está en la última etapa."
-                    : "Consultar o avanzar no vuelve a descontar inventario."}
-                </p>
-              </div>
-            </>
-          ) : (
-            <>
               <span className="status-chip">
                 {stagesFor(order.delivery)[order.status]}
               </span>
@@ -196,8 +101,6 @@ export function OrderPage({
               <Button asChild variant="outline">
                 <Link to="/mis-pedidos">Ver historial</Link>
               </Button>
-            </>
-          )}
           <Link className="text-link" to="/catalogo">
             Continuar comprando <ArrowRight size={16} aria-hidden="true" />
           </Link>

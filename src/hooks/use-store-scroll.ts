@@ -11,7 +11,8 @@ export function useStoreScroll() {
     const key = location.key;
     let last = positions.get(key) || 0,
       frame = 0;
-    const keep = type === "REPLACE" && previous.current === location.pathname;
+    const preserveCatalog = !!location.state?.preserveCatalogScroll;
+    const keep = preserveCatalog || (previous.current === location.pathname && !location.hash);
     previous.current = location.pathname;
     const restore = () => {
       if (
@@ -30,6 +31,7 @@ export function useStoreScroll() {
         return false;
       if (type === "POP" && positions.has(key))
         window.scrollTo({ top: positions.get(key)!, behavior: "instant" });
+      else if (preserveCatalog) window.scrollTo({ top: location.state.catalogScrollY, behavior: "instant" });
       else if (target) {
         target.focus({ preventScroll: true });
         target.scrollIntoView({
@@ -66,5 +68,5 @@ export function useStoreScroll() {
       document.removeEventListener("click", update, true);
       if (positions.size > 50) positions.delete(positions.keys().next().value!);
     };
-  }, [location.key, location.pathname, location.hash, type, reduced]);
+  }, [location.key, location.pathname, location.hash, location.state, type, reduced]);
 }

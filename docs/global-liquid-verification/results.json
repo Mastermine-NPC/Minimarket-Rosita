@@ -1,0 +1,36 @@
+{
+  "results": [
+    {
+      "chapter": "bebidas",
+      "films": [
+        "Coca-Cola",
+        "Inka Kola"
+      ]
+    },
+    {
+      "chapter": "snacks",
+      "films": [
+        "Oreo",
+        "Lay’s"
+      ]
+    },
+    {
+      "chapter": "cuidado",
+      "films": []
+    },
+    {
+      "chapter": "ideas",
+      "films": [
+        "Faber-Castell",
+        "Artesco"
+      ]
+    },
+    {
+      "chapter": "ferreteria",
+      "films": []
+    }
+  ],
+  "errors": [],
+  "contexts": 1,
+  "stableVideoNodes": 10
+}

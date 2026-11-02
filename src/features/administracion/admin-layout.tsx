@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import { Link, NavLink, Outlet, useLocation, useNavigate } from "react-router";
 import {
   LayoutDashboard,
@@ -36,6 +36,7 @@ const sections = [
   { path: "/admin/inventario", label: "Inventario", icon: Boxes },
   { path: "/admin/pedidos", label: "Pedidos", icon: ClipboardList },
   { path: "/caja", label: "Caja", icon: Boxes },
+  { path: "/admin/clientes", label: "Clientes", icon: ShieldCheck },
   { path: "/admin/agentes", label: "Agentes de caja", icon: ShieldCheck },
   { path: "/admin/ubicacion", label: "Origen de tienda", icon: Tags },
   { path: "/admin/reportes", label: "Reportes", icon: FileDown },
@@ -48,6 +49,7 @@ export function AdminLayout() {
     [menu, MenuOpen] = useState(false),
     origin = useRef(""),
     user = activeUser(state);
+  useLayoutEffect(() => { window.scrollTo({ top: 0, behavior: "instant" }); }, [location.pathname]);
   if (!isAdmin(state))
     return (
       <main className="container customer-empty">

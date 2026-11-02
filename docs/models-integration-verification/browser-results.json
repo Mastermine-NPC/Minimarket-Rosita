@@ -1,0 +1,48 @@
+{
+  "results": [
+    {
+      "width": 1440,
+      "products": [
+        "ROS-3D-COLA",
+        "ROS-002",
+        "ROS-3D-NIVEA",
+        "ROS-3D-SUNSILK"
+      ],
+      "controls": "rotation/zoom/touch",
+      "catalog": "search, ten Lay’s variants, brand and availability filters",
+      "purchase": "5 units, 4 products, S/50.80, one stock deduction",
+      "restart": "75 products; order and inventory preserved",
+      "bottle": "ROS-001 photo, no engine or GLB requested"
+    },
+    {
+      "width": 768,
+      "products": [
+        "ROS-3D-COLA",
+        "ROS-002",
+        "ROS-3D-NIVEA",
+        "ROS-3D-SUNSILK"
+      ],
+      "controls": "rotation/zoom/touch",
+      "catalog": "search, ten Lay’s variants, brand and availability filters",
+      "purchase": "5 units, 4 products, S/50.80, one stock deduction",
+      "restart": "75 products; order and inventory preserved",
+      "bottle": "ROS-001 photo, no engine or GLB requested"
+    },
+    {
+      "width": 390,
+      "products": [
+        "ROS-3D-COLA",
+        "ROS-002",
+        "ROS-3D-NIVEA",
+        "ROS-3D-SUNSILK"
+      ],
+      "controls": "rotation/zoom/touch",
+      "catalog": "search, ten Lay’s variants, brand and availability filters",
+      "purchase": "5 units, 4 products, S/50.80, one stock deduction",
+      "restart": "75 products; order and inventory preserved",
+      "bottle": "ROS-001 photo, no engine or GLB requested"
+    }
+  ],
+  "errors": [],
+  "brokenResources": []
+}

@@ -1,3 +1,4 @@
+import { OrderNotificationCenter } from "@/features/pedidos/order-notification-center";
 import { Link } from "react-router";
 import { Package, ArrowUpRight } from "lucide-react";
 import { useRosita } from "@/hooks/use-rosita";
@@ -22,6 +23,7 @@ export function OrdersPage() {
         Solo los pedidos de tu cliente activo. Son simulaciones, sin cobros ni
         entregas reales.
       </p>
+      <OrderNotificationCenter />
       {!orders.length ? (
         <section className="customer-panel history-empty">
           <Package size={40} aria-hidden="true" />

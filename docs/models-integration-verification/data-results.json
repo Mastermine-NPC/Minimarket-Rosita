@@ -1,0 +1,72 @@
+{
+  "passed": [
+    "75 real catalog records, 12 additive model products",
+    "Validated schema, unique IDs/codes/barcodes",
+    "Version 9 storage migration and repeated restart are idempotent",
+    "Existing prices, stock, cart, orders, movements and checkout retained",
+    "ID collision preserves existing product and model association",
+    "Administration price edit keeps model key and is never re-seeded"
+  ],
+  "newProducts": [
+    {
+      "id": "ROS-064",
+      "name": "Coca-Cola en lata",
+      "modelKey": "coca-cola-can"
+    },
+    {
+      "id": "ROS-065",
+      "name": "Nivea Aftershave",
+      "modelKey": "nivea-aftershave"
+    },
+    {
+      "id": "ROS-066",
+      "name": "Champú Sunsilk",
+      "modelKey": "sunsilk-shampoo"
+    },
+    {
+      "id": "ROS-067",
+      "name": "Papas Lay’s Sweet BBQ",
+      "modelKey": "lays-sweet-bbq"
+    },
+    {
+      "id": "ROS-068",
+      "name": "Papas Lay’s Cheddar",
+      "modelKey": "lays-cheddar"
+    },
+    {
+      "id": "ROS-069",
+      "name": "Papas Lay’s Chile Limón",
+      "modelKey": "lays-chile-limon"
+    },
+    {
+      "id": "ROS-070",
+      "name": "Papas Lay’s Flaming Hot",
+      "modelKey": "lays-flaming-hot"
+    },
+    {
+      "id": "ROS-071",
+      "name": "Papas Lay’s Honey BBQ",
+      "modelKey": "lays-honey-bbq"
+    },
+    {
+      "id": "ROS-072",
+      "name": "Papas Lay’s Classic Less Salt",
+      "modelKey": "lays-classic-less-salt"
+    },
+    {
+      "id": "ROS-073",
+      "name": "Papas Lay’s Dill Pickle",
+      "modelKey": "lays-dill-pickle"
+    },
+    {
+      "id": "ROS-074",
+      "name": "Papas Lay’s Ranch Wavy",
+      "modelKey": "lays-ranch-wavy"
+    },
+    {
+      "id": "ROS-075",
+      "name": "Papas Lay’s BBQ Wavy",
+      "modelKey": "lays-bbq-wavy"
+    }
+  ]
+}

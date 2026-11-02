@@ -1,0 +1,87 @@
+{
+  "reports": [
+    {
+      "width": 1440,
+      "url": "http://localhost:4190/catalogo",
+      "products": 75,
+      "first12": [
+        "ROS-066",
+        "ROS-064",
+        "ROS-001",
+        "ROS-016",
+        "ROS-010",
+        "ROS-065",
+        "ROS-002",
+        "ROS-008",
+        "ROS-004",
+        "ROS-017",
+        "ROS-014",
+        "ROS-007"
+      ],
+      "passed": [
+        "all four among ordinary featured products",
+        "name search and ten Lay’s flavours",
+        "existing category, brand, availability and price sorting",
+        "same product cards and detail routes, GLBs, quantity and cart",
+        "legacy search unnecessary and no longer matches public product codes",
+        "reload without duplicates"
+      ]
+    },
+    {
+      "width": 768,
+      "url": "http://localhost:4190/catalogo",
+      "products": 75,
+      "first12": [
+        "ROS-066",
+        "ROS-064",
+        "ROS-001",
+        "ROS-016",
+        "ROS-010",
+        "ROS-065",
+        "ROS-002",
+        "ROS-008",
+        "ROS-004",
+        "ROS-017",
+        "ROS-014",
+        "ROS-007"
+      ],
+      "passed": [
+        "all four among ordinary featured products",
+        "name search and ten Lay’s flavours",
+        "existing category, brand, availability and price sorting",
+        "same product cards and detail routes, GLBs, quantity and cart",
+        "legacy search unnecessary and no longer matches public product codes",
+        "reload without duplicates"
+      ]
+    },
+    {
+      "width": 390,
+      "url": "http://localhost:4190/catalogo",
+      "products": 75,
+      "first12": [
+        "ROS-066",
+        "ROS-064",
+        "ROS-001",
+        "ROS-016",
+        "ROS-010",
+        "ROS-065",
+        "ROS-002",
+        "ROS-008",
+        "ROS-004",
+        "ROS-017",
+        "ROS-014",
+        "ROS-007"
+      ],
+      "passed": [
+        "all four among ordinary featured products",
+        "name search and ten Lay’s flavours",
+        "existing category, brand, availability and price sorting",
+        "same product cards and detail routes, GLBs, quantity and cart",
+        "legacy search unnecessary and no longer matches public product codes",
+        "reload without duplicates"
+      ]
+    }
+  ],
+  "legacyMigration": "numeric public codes and routes; historical keys, edited price, inventory and cart preserved",
+  "errors": []
+}

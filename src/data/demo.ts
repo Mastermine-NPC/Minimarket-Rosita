@@ -1,3 +1,4 @@
+import { integrateModelCatalog } from "@/lib/model-catalog-update";
 import { initializeOperations } from "@/lib/operations-init";
 import { storeOrigin } from "./geography";
 import { integrateCatalog } from "@/lib/catalog-update";
@@ -68,6 +69,6 @@ const baseState: RositaState = {
   authError: "",
 };
 export const initialState: RositaState = initializeOperations(
-  integrateCatalog(baseState),
+  integrateModelCatalog(integrateCatalog(baseState)),
 );
 export const categories = catalogCategories.map((category) => category.name);

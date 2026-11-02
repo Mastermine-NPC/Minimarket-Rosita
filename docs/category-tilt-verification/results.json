@@ -1,0 +1,70 @@
+{
+  "results": [
+    {
+      "width": 1440,
+      "height": 1000,
+      "names": [
+        "Consumibles",
+        "Ferretería",
+        "Tecnología",
+        "Juguetería",
+        "Educación y oficina",
+        "Cuidado personal"
+      ],
+      "keyboard": true,
+      "layoutUnchanged": true,
+      "overflow": false,
+      "noExtraCanvas": true
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "names": [
+        "Consumibles",
+        "Ferretería",
+        "Tecnología",
+        "Juguetería",
+        "Educación y oficina",
+        "Cuidado personal"
+      ],
+      "keyboard": true,
+      "layoutUnchanged": true,
+      "overflow": false,
+      "noExtraCanvas": true
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "touch": true,
+      "names": [
+        "Consumibles",
+        "Ferretería",
+        "Tecnología",
+        "Juguetería",
+        "Educación y oficina",
+        "Cuidado personal"
+      ],
+      "pressResets": true,
+      "tapNavigation": true,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "touch": true,
+      "names": [
+        "Consumibles",
+        "Ferretería",
+        "Tecnología",
+        "Juguetería",
+        "Educación y oficina",
+        "Cuidado personal"
+      ],
+      "pressResets": true,
+      "tapNavigation": true,
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "reduced": true
+}

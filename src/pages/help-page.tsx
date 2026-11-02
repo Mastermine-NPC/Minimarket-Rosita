@@ -58,7 +58,7 @@ const topics = [
       ],
       [
         "¿Cómo avanza el pedido?",
-        "Administración puede avanzar una etapa con confirmación. El control manual del cliente está identificado como simulación. Cambiar estado no vuelve a descontar stock.",
+        "Administración puede avanzar una etapa con confirmación. El cliente consulta el estado y puede probar un flujo local que no cambia el pedido. Cambiar estado no vuelve a descontar stock.",
       ],
     ],
   },

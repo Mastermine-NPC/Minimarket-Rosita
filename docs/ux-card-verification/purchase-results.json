@@ -1,0 +1,8 @@
+{
+  "results": [
+    "1440: product → cart → registration → pickup → cash → review → confirmation → tracking → reload; contact validation",
+    "768: product → cart → registration → pickup → cash → review → confirmation → tracking → reload; contact validation",
+    "390: product → cart → registration → pickup → cash → review → confirmation → tracking → reload; contact validation"
+  ],
+  "errors": []
+}

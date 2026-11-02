@@ -54,7 +54,7 @@ export function AccountPage() {
           <Package size={32} aria-hidden="true" />
           <h2>Cada compra, a mano.</h2>
           <p>
-            Consulta tus pedidos de prueba y avanza su seguimiento manualmente.
+            Consulta los estados de tus pedidos y prueba el recorrido sin modificar su entrega.
           </p>
           <Button asChild>
             <Link

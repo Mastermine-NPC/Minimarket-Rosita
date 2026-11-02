@@ -1,3 +1,4 @@
+import { integrateModelCatalog } from "./model-catalog-update";
 import { initializeOperations } from "./operations-init";
 import { v8Schema } from "./legacy-v8-schema";
 import { products as legacyCatalogProducts } from "@/data/catalog";
@@ -139,6 +140,8 @@ export function readRositaState(storage?: Storage): StoredState {
       data = { ...data, users: withDemoClient(data.users) };
     if (value.version < 8) data = integrateCatalog(data);
     if (value.version < 9) data = initializeOperations(data);
+    const enriched = integrateModelCatalog(data);
+    if (enriched !== data) { data = enriched; migrated = true; }
     data = stateSchema.parse(data);
     const cart = Object.fromEntries(
       Object.entries(data.cart).flatMap(([id, n]) => {
@@ -162,7 +165,9 @@ export function readRositaState(storage?: Storage): StoredState {
     return {
       data,
       status: migrated ? "migrated" : repaired ? "repaired" : "loaded",
-      notice: migrated
+      notice: migrated && value.version === 9
+        ? "Añadimos productos 3D de demostración; conservamos precios, existencias y pedidos anteriores."
+        : migrated
         ? "Datos migrados: conservamos catálogo, precios, stock e historial; añadimos entrega, recojo y caja de demostración."
         : repaired
           ? "Ajustamos el carrito al stock disponible. Revisa las cantidades."

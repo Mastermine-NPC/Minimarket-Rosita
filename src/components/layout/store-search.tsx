@@ -1,3 +1,4 @@
+import { catalogNavigationOptions } from "@/lib/catalog-navigation";
 import { motionTokens } from "@/lib/motion";
 import { useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate, useSearchParams } from "react-router";
@@ -48,7 +49,7 @@ function SearchForm({ initialQuery }: { initialQuery: string }) {
               pathname: catalog ? current.pathname : "/catalogo",
               search: params.toString(),
             },
-            { state: { focusSearchResult: true } },
+            catalog ? catalogNavigationOptions() : { state: { focusSearchResult: true } },
           );
         }, motionTokens.search * 1000);
       }}

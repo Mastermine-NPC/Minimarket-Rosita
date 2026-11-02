@@ -1,0 +1,1578 @@
+{
+ "url": "http://localhost:4190/catalogo?q=Nivea",
+ "at": "2026-11-01T23:18:07.348Z",
+ "allow": [
+  "glass",
+  "shadow",
+  "gradient",
+  "hairline",
+  "outlined-box",
+  "small-text",
+  "eyebrow",
+  "covered-text",
+  "body-size",
+  "few-pictures",
+  "button-fx"
+ ],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 3,
+   "filled": [
+    0.97,
+    0.74,
+    0.97
+   ],
+   "motion": {
+    "elements": 16,
+    "css": 2,
+    "transitions": 0,
+    "scripted": 14,
+    "videos": 1,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 2586,
+     "screens": 2.9,
+     "words": 296,
+     "img": 3,
+     "video": 1,
+     "canvas": 1,
+     "svg": 12,
+     "sections": 3,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 3,
+     "videoCount": 1,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "oreo-coca-cola-video-cinematografic.jpg",
+      "nivea-aftershave.png"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Rosita.",
+     "words": 1,
+     "chars": 7,
+     "lines": 1,
+     "size": 259.2,
+     "vw": 18,
+     "font": "Manrope",
+     "weight": 800,
+     "tracking": -0.07,
+     "leading": 1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 1,
+     "top": 0,
+     "tag": "div",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Resultados para “Nivea”",
+     "words": 3,
+     "lines": 1,
+     "size": 86,
+     "font": "Manrope"
+    },
+    "headings": [
+     {
+      "text": "Rosita.",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 259.2,
+      "vw": 18,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.07,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 1,
+      "top": 0,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Un mundo por elegir. Unmundoporelegir.",
+      "words": 5,
+      "chars": 38,
+      "lines": 2,
+      "size": 144,
+      "vw": 10,
+      "font": "Manrope",
+      "weight": 500,
+      "tracking": -0.075,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.67,
+      "top": 175,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Resultados para “Nivea”",
+      "words": 3,
+      "chars": 23,
+      "lines": 1,
+      "size": 86,
+      "vw": 6,
+      "font": "Manrope",
+      "weight": 600,
+      "tracking": -0.065,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.59,
+      "top": 831,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Rosita.",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 46,
+      "vw": 3.2,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.054,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.1,
+      "top": 2021,
+      "tag": "strong",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 4,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 1,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "DM Sans",
+       "share": 0.85,
+       "mono": false
+      },
+      {
+       "family": "Manrope",
+       "share": 0.15,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      8,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      18,
+      22,
+      25,
+      46,
+      86,
+      144,
+      259
+     ],
+     "sizeCount": 15,
+     "notLoaded": [],
+     "body": {
+      "font": "DM Sans",
+      "size": 13,
+      "leading": 1.6,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 5.4
+     },
+     "measureChars": 18,
+     "max": {
+      "size": 259.2,
+      "vw": 18,
+      "font": "Manrope",
+      "text": "Rosita."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 1,
+     "microLabelShare": 0.015,
+     "microSamples": [
+      "TODO EN UN SOLO LUGAR"
+     ],
+     "upperShare": 0.02,
+     "centerShare": 0.05,
+     "smallText": 21
+    },
+    "eyebrows": [
+     {
+      "text": "TODO EN UN SOLO LUGAR",
+      "above": "Resultados para “Nivea”",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 11,
+      "top": 803
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#f7f8f5",
+     "bodyBgHsl": {
+      "h": 80,
+      "s": 0.18,
+      "l": 0.97
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#f1f2e9",
+       "top": 0,
+       "hsl": {
+        "h": 67,
+        "s": 0.26,
+        "l": 0.93
+       }
+      },
+      {
+       "color": "#10251e",
+       "top": 44,
+       "hsl": {
+        "h": 160,
+        "s": 0.4,
+        "l": 0.1
+       }
+      },
+      {
+       "color": "#132f25",
+       "top": 1965,
+       "hsl": {
+        "h": 159,
+        "s": 0.42,
+        "l": 0.13
+       }
+      },
+      {
+       "color": "#123d30",
+       "top": 0,
+       "hsl": {
+        "h": 162,
+        "s": 0.54,
+        "l": 0.15
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#fff7eb",
+       "share": 0.26
+      },
+      {
+       "color": "#526159",
+       "share": 0.23
+      },
+      {
+       "color": "#e0ebe2",
+       "share": 0.12
+      },
+      {
+       "color": "#17231d",
+       "share": 0.1
+      },
+      {
+       "color": "#d1e2d5",
+       "share": 0.07
+      }
+     ],
+     "button": {
+      "bg": "#ffffff",
+      "hsl": {
+       "h": 0,
+       "s": 0,
+       "l": 1
+      },
+      "fg": "#145a46"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 10,
+     "inHero": 7,
+     "radius": 10,
+     "height": 46,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Saltar al contenido",
+      "Seguir explorando"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 1,
+     "shadowOverlay": 0,
+     "shadowSamples": [
+      "article.product-card → rgba(232, 251, 255, 0.16) 0px 1px 0px 0px inset, rgba(5, 22, 31, 0.12) 0px 8px 2"
+     ],
+     "gradients": 0,
+     "scrims": 1,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 4,
+     "hairlineSamples": [
+      "div.catalog-heading 1280px",
+      "div.catalog-toolbar 1022px",
+      "div.footer-note 1280px",
+      "div.footer-bottom 1280px"
+     ],
+     "outlinedBoxes": 1,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 1,
+     "boxRadius": 20,
+     "squareMedia": 3,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "canvas",
+      "ratio": 1
+     },
+     {
+      "type": "img",
+      "ratio": 0.78
+     },
+     {
+      "type": "video",
+      "ratio": 0.78
+     }
+    ],
+    "nav": {
+     "links": 11,
+     "fixed": true,
+     "height": 27,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "dm sans",
+     "manrope"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 2586,
+    "margins": {
+     "left": 80,
+     "right": 80
+    },
+    "sections": [
+     {
+      "sel": "main#contenido",
+      "tag": "main",
+      "top": 44,
+      "height": 1921,
+      "words": 131,
+      "media": 1,
+      "middle": 217,
+      "heading": {
+       "text": "Un",
+       "size": 144,
+       "tag": "span"
+      },
+      "left": 80,
+      "right": 80,
+      "textLeft": 80,
+      "textRight": 80,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.store-footer",
+      "tag": "footer",
+      "top": 1965,
+      "height": 620,
+      "words": 99,
+      "media": 0,
+      "middle": 51,
+      "heading": {
+       "text": "Rosita",
+       "size": 46,
+       "tag": "strong"
+      },
+      "left": 80,
+      "right": 80,
+      "textLeft": 80,
+      "textRight": 80,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Resultados para “Nivea”",
+      "size": 86,
+      "top": 831,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 128,
+      "n": 2
+     },
+     {
+      "x": 80,
+      "n": 1
+     },
+     {
+      "x": 363,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 4,
+    "bodySize": 13,
+    "stage": true,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 3,
+   "filled": [
+    0.99,
+    0.72,
+    1
+   ],
+   "motion": {
+    "elements": 16,
+    "css": 2,
+    "transitions": 0,
+    "scripted": 14,
+    "videos": 1,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 2842,
+     "screens": 2.8,
+     "words": 198,
+     "img": 3,
+     "video": 1,
+     "canvas": 1,
+     "svg": 13,
+     "sections": 3,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 3,
+     "videoCount": 1,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "oreo-coca-cola-video-cinematografic.jpg",
+      "nivea-aftershave.png"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Rosita.",
+     "words": 1,
+     "chars": 7,
+     "lines": 1,
+     "size": 138.2,
+     "vw": 18,
+     "font": "Manrope",
+     "weight": 800,
+     "tracking": -0.07,
+     "leading": 1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 1,
+     "top": 0,
+     "tag": "div",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Resultados para “Nivea”",
+     "words": 3,
+     "lines": 1,
+     "size": 46.1,
+     "font": "Manrope"
+    },
+    "headings": [
+     {
+      "text": "Rosita.",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 138.2,
+      "vw": 18,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.07,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 1,
+      "top": 0,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Un mundo por elegir. Unmundoporelegir.",
+      "words": 5,
+      "chars": 38,
+      "lines": 1,
+      "size": 76.8,
+      "vw": 10,
+      "font": "Manrope",
+      "weight": 500,
+      "tracking": -0.075,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.87,
+      "top": 490,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Resultados para “Nivea”",
+      "words": 3,
+      "chars": 23,
+      "lines": 1,
+      "size": 46.1,
+      "vw": 6,
+      "font": "Manrope",
+      "weight": 600,
+      "tracking": -0.065,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.59,
+      "top": 920,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Rosita.",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 46,
+      "vw": 6,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.054,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.19,
+      "top": 1922,
+      "tag": "strong",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 4,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 1,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "DM Sans",
+       "share": 0.84,
+       "mono": false
+      },
+      {
+       "family": "Manrope",
+       "share": 0.16,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      8,
+      10,
+      11,
+      12,
+      13,
+      14,
+      16,
+      18,
+      22,
+      25,
+      46,
+      77,
+      138
+     ],
+     "sizeCount": 13,
+     "notLoaded": [],
+     "body": {
+      "font": "DM Sans",
+      "size": 12,
+      "leading": 1.8,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 11.7
+     },
+     "measureChars": 79,
+     "max": {
+      "size": 138.2,
+      "vw": 18,
+      "font": "Manrope",
+      "text": "Rosita."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 1,
+     "microLabelShare": 0.02,
+     "microSamples": [
+      "TODO EN UN SOLO LUGAR"
+     ],
+     "upperShare": 0.02,
+     "centerShare": 0.06,
+     "smallText": 15
+    },
+    "eyebrows": [
+     {
+      "text": "TODO EN UN SOLO LUGAR",
+      "above": "Resultados para “Nivea”",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 11,
+      "top": 892
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#f7f8f5",
+     "bodyBgHsl": {
+      "h": 80,
+      "s": 0.18,
+      "l": 0.97
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#f1f2e9",
+       "top": 0,
+       "hsl": {
+        "h": 67,
+        "s": 0.26,
+        "l": 0.93
+       }
+      },
+      {
+       "color": "#10251e",
+       "top": 44,
+       "hsl": {
+        "h": 160,
+        "s": 0.4,
+        "l": 0.1
+       }
+      },
+      {
+       "color": "#132f25",
+       "top": 1866,
+       "hsl": {
+        "h": 159,
+        "s": 0.42,
+        "l": 0.13
+       }
+      },
+      {
+       "color": "#123d30",
+       "top": 0,
+       "hsl": {
+        "h": 162,
+        "s": 0.54,
+        "l": 0.15
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#fff7eb",
+       "share": 0.34
+      },
+      {
+       "color": "#e0ebe2",
+       "share": 0.15
+      },
+      {
+       "color": "#d1e2d5",
+       "share": 0.09
+      },
+      {
+       "color": "#526159",
+       "share": 0.08
+      },
+      {
+       "color": "#145a46",
+       "share": 0.07
+      }
+     ],
+     "button": {
+      "bg": "#ffffff",
+      "hsl": {
+       "h": 0,
+       "s": 0,
+       "l": 1
+      },
+      "fg": "#145a46"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 9,
+     "inHero": 6,
+     "radius": 10,
+     "height": 46,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Saltar al contenido",
+      "Seguir explorando"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 1,
+     "shadowOverlay": 0,
+     "shadowSamples": [
+      "article.product-card → rgba(232, 251, 255, 0.125) 0px 1px 0px 0px inset, rgba(5, 22, 31, 0.08) 0px 4px "
+     ],
+     "gradients": 0,
+     "scrims": 1,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 4,
+     "hairlineSamples": [
+      "div.catalog-heading 736px",
+      "div.catalog-toolbar 736px",
+      "div.footer-note 736px",
+      "div.footer-bottom 736px"
+     ],
+     "outlinedBoxes": 1,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 1,
+     "boxRadius": 20,
+     "squareMedia": 3,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "canvas",
+      "ratio": 1
+     },
+     {
+      "type": "img",
+      "ratio": 0.77
+     },
+     {
+      "type": "video",
+      "ratio": 0.77
+     }
+    ],
+    "nav": {
+     "links": 5,
+     "fixed": true,
+     "height": 31,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "dm sans",
+     "manrope"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 2842,
+    "margins": {
+     "left": 16,
+     "right": 16
+    },
+    "sections": [
+     {
+      "sel": "main#contenido",
+      "tag": "main",
+      "top": 44,
+      "height": 1822,
+      "words": 72,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Un",
+       "size": 77,
+       "tag": "span"
+      },
+      "left": 16,
+      "right": 16,
+      "textLeft": 16,
+      "textRight": 93,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.store-footer",
+      "tag": "footer",
+      "top": 1866,
+      "height": 976,
+      "words": 99,
+      "media": 0,
+      "middle": 51,
+      "heading": {
+       "text": "Rosita",
+       "size": 46,
+       "tag": "strong"
+      },
+      "left": 16,
+      "right": 16,
+      "textLeft": 16,
+      "textRight": 16,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Resultados para “Nivea”",
+      "size": 46,
+      "top": 920,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 16,
+      "n": 1
+     },
+     {
+      "x": 33,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 2,
+    "bodySize": 12,
+    "stage": true,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 4,
+   "filled": [
+    0.96,
+    0.61,
+    1,
+    1
+   ],
+   "motion": {
+    "elements": 16,
+    "css": 2,
+    "transitions": 0,
+    "scripted": 14,
+    "videos": 1,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 2958,
+     "screens": 3.5,
+     "words": 198,
+     "img": 3,
+     "video": 1,
+     "canvas": 1,
+     "svg": 13,
+     "sections": 3,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 2,
+     "videoCount": 1,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "oreo-coca-cola-video-cinematografic.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Rosita.",
+     "words": 1,
+     "chars": 7,
+     "lines": 1,
+     "size": 70.2,
+     "vw": 18,
+     "font": "Manrope",
+     "weight": 800,
+     "tracking": -0.07,
+     "leading": 1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 1,
+     "top": 0,
+     "tag": "div",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Resultados para “Nivea”",
+     "words": 3,
+     "lines": 2,
+     "size": 44,
+     "font": "Manrope"
+    },
+    "headings": [
+     {
+      "text": "Rosita.",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 70.2,
+      "vw": 18,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.07,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 1,
+      "top": 0,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Un mundo por elegir. Unmundoporelegir.",
+      "words": 5,
+      "chars": 38,
+      "lines": 2,
+      "size": 50.7,
+      "vw": 13,
+      "font": "Manrope",
+      "weight": 500,
+      "tracking": -0.075,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 356,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Resultados para “Nivea”",
+      "words": 3,
+      "chars": 23,
+      "lines": 2,
+      "size": 44,
+      "vw": 11.3,
+      "font": "Manrope",
+      "weight": 600,
+      "tracking": -0.065,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 757,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 24.90",
+      "words": 2,
+      "chars": 8,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.036,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.36,
+      "top": 1572,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Rosita.",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 40,
+      "vw": 10.3,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.062,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.31,
+      "top": 1836,
+      "tag": "strong",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 5,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 1,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "DM Sans",
+       "share": 0.84,
+       "mono": false
+      },
+      {
+       "family": "Manrope",
+       "share": 0.16,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      16,
+      17,
+      18,
+      19,
+      22,
+      40,
+      44,
+      51,
+      70
+     ],
+     "sizeCount": 16,
+     "notLoaded": [],
+     "body": {
+      "font": "DM Sans",
+      "size": 12,
+      "leading": 1.8,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 11.7
+     },
+     "measureChars": 60,
+     "max": {
+      "size": 70.2,
+      "vw": 18,
+      "font": "Manrope",
+      "text": "Rosita."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 1,
+     "microLabelShare": 0.02,
+     "microSamples": [
+      "TODO EN UN SOLO LUGAR"
+     ],
+     "upperShare": 0.02,
+     "centerShare": 0.06,
+     "smallText": 16
+    },
+    "eyebrows": [
+     {
+      "text": "TODO EN UN SOLO LUGAR",
+      "above": "Resultados para “Nivea”",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 11,
+      "top": 729
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#f7f8f5",
+     "bodyBgHsl": {
+      "h": 80,
+      "s": 0.18,
+      "l": 0.97
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#f1f2e9",
+       "top": 0,
+       "hsl": {
+        "h": 67,
+        "s": 0.26,
+        "l": 0.93
+       }
+      },
+      {
+       "color": "#10251e",
+       "top": 44,
+       "hsl": {
+        "h": 160,
+        "s": 0.4,
+        "l": 0.1
+       }
+      },
+      {
+       "color": "#132f25",
+       "top": 1780,
+       "hsl": {
+        "h": 159,
+        "s": 0.42,
+        "l": 0.13
+       }
+      },
+      {
+       "color": "#123d30",
+       "top": 0,
+       "hsl": {
+        "h": 162,
+        "s": 0.54,
+        "l": 0.15
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#fff7eb",
+       "share": 0.34
+      },
+      {
+       "color": "#e0ebe2",
+       "share": 0.15
+      },
+      {
+       "color": "#d1e2d5",
+       "share": 0.09
+      },
+      {
+       "color": "#526159",
+       "share": 0.08
+      },
+      {
+       "color": "#145a46",
+       "share": 0.07
+      }
+     ],
+     "button": {
+      "bg": "#ffffff",
+      "hsl": {
+       "h": 0,
+       "s": 0,
+       "l": 1
+      },
+      "fg": "#145a46"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 8,
+     "inHero": 5,
+     "radius": 10,
+     "height": 46,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Saltar al contenido",
+      "Seguir explorando"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 1,
+     "shadowOverlay": 0,
+     "shadowSamples": [
+      "article.product-card → rgba(232, 251, 255, 0.125) 0px 1px 0px 0px inset, rgba(5, 22, 31, 0.08) 0px 4px "
+     ],
+     "gradients": 0,
+     "scrims": 1,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 4,
+     "hairlineSamples": [
+      "div.catalog-heading 358px",
+      "div.catalog-toolbar 358px",
+      "div.footer-note 358px",
+      "div.footer-bottom 358px"
+     ],
+     "outlinedBoxes": 1,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 1,
+     "boxRadius": 20,
+     "squareMedia": 3,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "canvas",
+      "ratio": 1
+     },
+     {
+      "type": "img",
+      "ratio": 0.78
+     },
+     {
+      "type": "video",
+      "ratio": 0.78
+     }
+    ],
+    "nav": {
+     "links": 5,
+     "fixed": true,
+     "height": 44,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "dm sans",
+     "manrope"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 2958,
+    "margins": {
+     "left": 16,
+     "right": 16
+    },
+    "sections": [
+     {
+      "sel": "main#contenido",
+      "tag": "main",
+      "top": 44,
+      "height": 1736,
+      "words": 72,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Un",
+       "size": 51,
+       "tag": "span"
+      },
+      "left": 16,
+      "right": 16,
+      "textLeft": 16,
+      "textRight": 41,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.store-footer",
+      "tag": "footer",
+      "top": 1780,
+      "height": 1178,
+      "words": 99,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Rosita",
+       "size": 40,
+       "tag": "strong"
+      },
+      "left": 16,
+      "right": 44,
+      "textLeft": 16,
+      "textRight": 44,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Resultados para “Nivea”",
+      "size": 44,
+      "top": 757,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 16,
+      "n": 1
+     },
+     {
+      "x": 33,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 2,
+    "bodySize": 12,
+    "stage": true,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "micro-label",
+   "width": 1440,
+   "message": "1 tiny uppercase letter-spaced label(s): \"TODO EN UN SOLO LUGAR\"",
+   "fix": "Prefer sentence case at body size.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "palette-cream",
+   "width": 1440,
+   "message": "Yellow-cream background (text #fff7eb).",
+   "fix": "Use the drawn palette. If you want warmth, take a low-chroma stone or bone, not a yellow cream.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "size-count",
+   "width": 1440,
+   "message": "15 different font sizes (8, 10, 11, 12, 13, 14, 15, 16, 18, 22, 25, 46, 86, 144, 259).",
+   "fix": "A page needs about five: display, heading, lead, body, small.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "grey-body",
+   "width": 1440,
+   "message": "The running text is a soft grey on its ground (5.4:1).",
+   "fix": "Set body copy in the full ink (7:1 or more). Keep the muted ink for secondary notes; pages read thin and unfinished when everything is grey."
+  },
+  {
+   "level": "WARN",
+   "id": "pinned-over-picture",
+   "width": 1440,
+   "message": "Pinned large text slides across pictures while the page scrolls: \"Rosita.\" (screen 3, 100% over a picture)",
+   "fix": "Jurors read a pinned title crossing drawings or photographs as a collision. Keep the pictures in the column the title does not occupy, or unpin it.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "name-only-title",
+   "width": 390,
+   "message": "The h1 is a bare name (\"Resultados para “Nivea”\") and nothing else on the first screen says what this is.",
+   "fix": "Keep the name if it leads, and give the line under it (18px or more) the plain words: what it is, for whom, where or when. In the study of 97 Sites of the Day, first screens that named nothing lost usability and content points."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "C:\\Users\\hisok\\.codex\\visualizations\\2026\\11\\01\\01a19847-a13f-73f2-ae5d-85946fe1277b\\ux-inspect\\desktop-fold.jpg",
+   "pages": [
+    "C:\\Users\\hisok\\.codex\\visualizations\\2026\\11\\01\\01a19847-a13f-73f2-ae5d-85946fe1277b\\ux-inspect\\desktop-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "C:\\Users\\hisok\\.codex\\visualizations\\2026\\11\\01\\01a19847-a13f-73f2-ae5d-85946fe1277b\\ux-inspect\\tablet-fold.jpg",
+   "pages": [
+    "C:\\Users\\hisok\\.codex\\visualizations\\2026\\11\\01\\01a19847-a13f-73f2-ae5d-85946fe1277b\\ux-inspect\\tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "C:\\Users\\hisok\\.codex\\visualizations\\2026\\11\\01\\01a19847-a13f-73f2-ae5d-85946fe1277b\\ux-inspect\\mobile-fold.jpg",
+   "pages": [
+    "C:\\Users\\hisok\\.codex\\visualizations\\2026\\11\\01\\01a19847-a13f-73f2-ae5d-85946fe1277b\\ux-inspect\\mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

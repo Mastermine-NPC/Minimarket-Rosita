@@ -7,6 +7,7 @@ export const sortOptions = [
 ] as const;
 export function normalizeText(value: string) {
   return value
+    .replace(/[’']/g, "")
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
     .toLocaleLowerCase("es-PE");
@@ -55,7 +56,7 @@ export function filterProducts(
           ? b.price - a.price
           : f.sort === "nombre"
             ? a.name.localeCompare(b.name, "es")
-            : Number(!!b.featured) - Number(!!a.featured),
+            : Number(!!b.featured) - Number(!!a.featured) || a.name.localeCompare(b.name, "es"),
     );
 }
 export function safeReturnPath(raw: string | null) {

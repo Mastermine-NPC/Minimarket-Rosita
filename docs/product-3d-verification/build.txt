@@ -1,0 +1,86 @@
+> minimarket-rosita@1.0.0 build
+> tsc -b && vite build
+
+vite v8.3.5 building client environment for production...
+transforming...
+✓ 3387 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                     1.88 kB │ gzip:   0.67 kB
+dist/assets/catalog-page-D6v6X3vQ.css               1.27 kB │ gzip:   0.51 kB
+dist/assets/product-page-CzjlZeUQ.css               5.54 kB │ gzip:   1.65 kB
+dist/assets/route-map-vh-t_kPv.css                 15.09 kB │ gzip:   6.36 kB
+dist/assets/home-page-BHRiGQBq.css                 17.65 kB │ gzip:   4.23 kB
+dist/assets/index-ayjaoayM.css                    148.74 kB │ gzip:  27.36 kB
+dist/assets/order-date-CMmjGd5t.js                  0.11 kB │ gzip:   0.12 kB
+dist/assets/check-BKOfrfio.js                       0.16 kB │ gzip:   0.16 kB
+dist/assets/arrow-left-CMOoQ6aj.js                  0.20 kB │ gzip:   0.18 kB
+dist/assets/rotate-ccw-BJzzcF0G.js                  0.24 kB │ gzip:   0.21 kB
+dist/assets/use-rosita-CZFHvM8B.js                  0.26 kB │ gzip:   0.20 kB
+dist/assets/use-media-query-CSMbrZe7.js             0.38 kB │ gzip:   0.25 kB
+dist/assets/catalog-state-BaR0-HB3.js               0.49 kB │ gzip:   0.31 kB
+dist/assets/not-found-page-C2bSs1Hc.js              0.53 kB │ gzip:   0.36 kB
+dist/assets/rolldown-runtime-XKyaHtl9.js            0.72 kB │ gzip:   0.42 kB
+dist/assets/geography-4E3-ZB49.js                   0.75 kB │ gzip:   0.43 kB
+dist/assets/use-operation-B8wRUcMJ.js               0.75 kB │ gzip:   0.42 kB
+dist/assets/label-BXBJfk9F.js                       0.82 kB │ gzip:   0.50 kB
+dist/assets/demo-auth-BEePhvm7.js                   0.85 kB │ gzip:   0.52 kB
+dist/assets/operation-confirmation-Diis74OW.js      0.90 kB │ gzip:   0.51 kB
+dist/assets/admin-table-BrhNXpu1.js                 0.96 kB │ gzip:   0.47 kB
+dist/assets/status-history-D_RUTmEa.js              1.01 kB │ gzip:   0.54 kB
+dist/assets/customer-gate-B4v8a7Rx.js               1.07 kB │ gzip:   0.56 kB
+dist/assets/admin-common-Efcw3h-Y.js                1.12 kB │ gzip:   0.59 kB
+dist/assets/catalog-logic-DDoMKsoZ.js               1.18 kB │ gzip:   0.63 kB
+dist/assets/table-WD76mzhy.js                       1.26 kB │ gzip:   0.51 kB
+dist/assets/cart-page-DcxGf0HC.js                   1.49 kB │ gzip:   0.65 kB
+dist/assets/store-location-page-CK31RKZL.js         2.14 kB │ gzip:   1.01 kB
+dist/assets/orders-page-Cr9RcYr8.js                 2.17 kB │ gzip:   0.96 kB
+dist/assets/order-summary-VJjGr3ix.js               2.28 kB │ gzip:   0.85 kB
+dist/assets/product-card-BpdEgC9L.js                2.45 kB │ gzip:   1.08 kB
+dist/assets/dialog-DQGfP8um.js                      2.49 kB │ gzip:   0.95 kB
+dist/assets/agents-page-CRhmoNsV.js                 2.83 kB │ gzip:   1.31 kB
+dist/assets/demo-counter-nCB-zTFE.js                2.88 kB │ gzip:   1.11 kB
+dist/assets/order-detail-page-CGhY50c7.js           2.99 kB │ gzip:   1.32 kB
+dist/assets/createLucideIcon-N1ZoToJe.js            3.13 kB │ gzip:   1.50 kB
+dist/assets/about-page-D_91U3uA.js                  3.14 kB │ gzip:   1.49 kB
+dist/assets/zod-C2_8OEJP.js                         3.34 kB │ gzip:   1.26 kB
+dist/assets/account-page-BPhD1GdE.js                3.62 kB │ gzip:   1.62 kB
+dist/assets/state-page-hMbZQAXQ.js                  3.64 kB │ gzip:   1.41 kB
+dist/assets/contact-page-rPpKeQru.js                3.79 kB │ gzip:   1.70 kB
+dist/assets/validation-form-CQQkAZNv.js             3.89 kB │ gzip:   1.73 kB
+dist/assets/react-dom-CZydG_mq.js                   3.91 kB │ gzip:   1.42 kB
+dist/assets/card-simulation-ConhWi_l.js             4.24 kB │ gzip:   2.05 kB
+dist/assets/image-picker-BK0NRmHr.js                4.40 kB │ gzip:   2.11 kB
+dist/assets/orders-page-CxxM4wjN.js                 4.60 kB │ gzip:   1.74 kB
+dist/assets/check-page-M36vrmqY.js                  4.74 kB │ gzip:   1.87 kB
+dist/assets/help-page-Ces_fm1o.js                   4.95 kB │ gzip:   2.22 kB
+dist/assets/reports-page-dUfk6bTE.js                6.70 kB │ gzip:   2.41 kB
+dist/assets/taxonomy-page-Ci33LHl8.js               7.62 kB │ gzip:   3.01 kB
+dist/assets/analytics-IoDh3bHd.js                   8.59 kB │ gzip:   3.35 kB
+dist/assets/order-page-DbyRP4cg.js                  8.78 kB │ gzip:   3.42 kB
+dist/assets/inventory-page-9P_HRDxF.js              9.18 kB │ gzip:   3.32 kB
+dist/assets/auth-page-DDnhbhRU.js                   9.95 kB │ gzip:   3.83 kB
+dist/assets/dashboard-page-DxyZ_BIC.js             12.30 kB │ gzip:   3.76 kB
+dist/assets/products-page-BMhLcYkq.js              13.81 kB │ gzip:   4.86 kB
+dist/assets/product-page-B-uKsyTg.js               14.64 kB │ gzip:   5.51 kB
+dist/assets/catalog-page-Xc3Yuv0P.js               15.87 kB │ gzip:   5.64 kB
+dist/assets/home-page-Ckg8Pt3w.js                  17.18 kB │ gzip:   5.86 kB
+dist/assets/checkout-page-DivpaP8k.js              18.59 kB │ gzip:   6.59 kB
+dist/assets/cash-page-C9LDeHSg.js                  22.98 kB │ gzip:   7.14 kB
+dist/assets/dist-DphF1aTh.js                       29.08 kB │ gzip:  12.04 kB
+dist/assets/index.esm-BOzPtpu0.js                  34.89 kB │ gzip:  12.44 kB
+dist/assets/system-page-A6VY2KOZ.js                38.68 kB │ gzip:  13.26 kB
+dist/assets/state-model-KsY8jz0C.js                61.41 kB │ gzip:  17.81 kB
+dist/assets/validation-CizmKmh1.js                 93.20 kB │ gzip:  26.35 kB
+dist/assets/cinema-runtime-Dz7_rVG_.js            119.90 kB │ gzip:  47.23 kB
+dist/assets/motion-runtime-TYvHkKKc.js            150.44 kB │ gzip:  50.61 kB
+dist/assets/route-map-D5oMaNer.js                 152.87 kB │ gzip:  45.32 kB
+dist/assets/index-CIouJyHr.js                     424.63 kB │ gzip: 132.98 kB
+dist/assets/product-model-canvas-C6321dak.js    1,047.05 kB │ gzip: 283.64 kB
+
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 1.47s

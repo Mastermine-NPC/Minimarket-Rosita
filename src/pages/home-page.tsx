@@ -1,3 +1,7 @@
+import { CategoryLiquidSurface } from "@/features/inicio/category-liquid-surface";
+import { useCategoryTilt } from "@/features/inicio/use-category-tilt";
+import { useLiquidHome } from "@/features/inicio/use-liquid-home";
+import { LiquidVideos } from "@/features/inicio/liquid-videos";
 import { AmbientVideo } from "@/features/inicio/ambient-video";
 import { MediaImage } from "@/components/image-picker";
 import { useTaxonomy } from "@/hooks/use-taxonomy";
@@ -7,33 +11,23 @@ import {
   ArrowDown,
   ArrowRight,
   ArrowUpRight,
-  ShoppingBag,
-  Sparkles,
 } from "lucide-react";
 import { useCatalog } from "@/hooks/use-catalog";
 
 import { useHeadingFocus } from "@/hooks/use-heading-focus";
 import { ProductImage } from "@/features/catalogo/product-image";
 import { Button } from "@/components/ui/button";
-import { HeroPhoto } from "@/features/inicio/hero-photo";
+import { motion, useScroll, useTransform } from "motion/react";
+import { useMotionPreference } from "@/hooks/use-motion-preference";
+import { CinematicStory } from "@/features/inicio/cinematic-story";
+
 import { MagneticLink } from "@/features/inicio/magnetic-link";
-import { PresentationCursor } from "@/features/inicio/presentation-cursor";
-import { BrandMarquee } from "@/features/inicio/brand-marquee";
+
+
 import { ProductCarousel } from "@/features/inicio/product-carousel";
-import { ColorBridge } from "@/features/inicio/color-bridge";
+
 import { useHomeReveals } from "@/features/inicio/use-home-reveals";
 import "@/styles/home.css";
-const categoryArt: Record<string, { photo: string; line: string }> = {
-  consumibles: { photo: "", line: "Para tus pausas de cada día." },
-  ferreteria: { photo: "tools", line: "Ideas que toman forma." },
-  tecnologia: { photo: "technology", line: "Pequeñas conexiones." },
-  jugueteria: { photo: "play", line: "Un rato para imaginar." },
-  "educacion-oficina": {
-    photo: "school",
-    line: "Que no se te escape una idea.",
-  },
-  "cuidado-personal": { photo: "care", line: "Un momento para ti." },
-};
 export function HomePage() {
   const { activeCategories: categories, categoryPath } = useTaxonomy();
   const products = useCatalog(),
@@ -43,9 +37,16 @@ export function HomePage() {
     featured = [...active]
       .sort((a, b) => Number(!!b.featured) - Number(!!a.featured))
       .slice(0, 8);
+  const hero = useRef<HTMLElement>(null);
+  const reduced = useMotionPreference();
+  const { scrollYProgress } = useScroll({ target: hero, offset: ["start start", "end start"] });
+  const heroScale = useTransform(scrollYProgress, [0, 1], [1, 1.16]);
+  const heroY = useTransform(scrollYProgress, [0, 1], [0, 100]);
   useHomeReveals(root);
+  useLiquidHome(root);
+  useCategoryTilt(root, categories.map(category => category.id).join(","));
   useEffect(() => {
-    const header = document.querySelector(".store-header"),
+    const header = document.querySelector(".navigation-discover"),
       html = document.documentElement,
       previous = html.style.scrollPaddingTop;
     if (!header) return;
@@ -64,68 +65,44 @@ export function HomePage() {
   }, []);
   return (
     <div className="home-experience" ref={root}>
-      <PresentationCursor />
-      <section
-        className="home-hero"
-        data-cursor-theme="dark"
-        aria-labelledby="home-title"
-      >
+      <LiquidVideos>
+      <section ref={hero} className="home-hero cinema-hero" data-cursor-theme="dark" aria-labelledby="home-title">
+        <motion.div className="cinema-hero-media" style={reduced ? undefined : { scale: heroScale, y: heroY }}>
+          <AmbientVideo src="/images/video/cinematic/Arequipa-backgraound-02.mp4" poster="/images/video/cinematic/Arequipa-backgraound-02.jpg" label="Background 2 · Plaza de Armas de Arequipa" loop priority keepPlaying />
+        </motion.div>
+        <div className="cinema-hero-scrim" />
         <div className="home-hero-inner">
           <div className="home-hero-copy">
-            <span className="home-kicker">
-              <i />
-              MINIMARKET ROSITA · DE AQUÍ, PARA TI
-            </span>
             <h1 ref={heading} tabIndex={-1} id="home-title">
-              <span className="sr-only">Tu día. Tu Rosita.</span>
-              <span className="home-title-line" aria-hidden="true">
-                <span>Tu día.</span>
-              </span>
-              <span
-                className="home-title-line home-title-rose"
-                aria-hidden="true"
-              >
-                <span>
-                  Tu <em>Rosita.</em>
-                </span>
-              </span>
+              <span className="home-title-line"><span>Tu día.</span></span>
+              <span className="home-title-line"><span>Tu Rosita.</span></span>
             </h1>
-            <p>
-              Lo de todos los días.
-              <br />Y eso que hace tus planes un poquito mejores.
-            </p>
+            <p>Tu minimarket, de aquí y para ti.<br />Todo lo que acompaña tus pequeños grandes planes.</p>
             <div className="home-hero-actions">
-              <MagneticLink to="/catalogo">
-                Explorar productos <ArrowUpRight size={18} aria-hidden="true" />
-              </MagneticLink>
-              <MagneticLink to="#categorias" secondary>
-                Ver categorías <ArrowDown size={18} aria-hidden="true" />
-              </MagneticLink>
-            </div>
-            <div className="home-hero-footnote">
-              <ShoppingBag size={16} aria-hidden="true" />
-              <span>Tu tienda cercana. Compras de demostración.</span>
+              <MagneticLink to="/catalogo">Explorar productos <ArrowUpRight size={20} aria-hidden="true" /></MagneticLink>
+              <MagneticLink to="#momentos" secondary>Descubrir Rosita <ArrowDown size={20} aria-hidden="true" /></MagneticLink>
             </div>
           </div>
-          <HeroPhoto products={active} />
+          <div className="cinema-place"><span>Arequipa, Perú</span><span>Cerca de lo que importa.</span></div>
         </div>
-        <div className="home-scroll-cue">
-          <span>UN POCO MÁS ABAJO, MUCHO POR ELEGIR</span>
-          <ArrowDown size={16} aria-hidden="true" />
-        </div>
+        <a href="#momentos" className="home-scroll-cue"><span>Hay un Rosita para cada momento</span><ArrowDown size={20} aria-hidden="true" /></a>
       </section>
-      <BrandMarquee />
+      <section className="cinema-intro" id="momentos" aria-labelledby="momentos-title">
+        <AmbientVideo src="/images/video/web/video-intro.mp4" poster="/images/video/web/video-intro-poster.jpg" label="Un día en Rosita" loop keepPlaying />
+        <h2 id="momentos-title" data-home-reveal>Lo cotidiano.<br />Extraordinario.</h2>
+        <div data-home-reveal><p>Un antojo, una idea, un nuevo proyecto. En Minimarket Rosita, los pequeños planes tienen mucho por descubrir.</p><a className="home-editorial-link" href="#bebidas">Encuentra tu momento <ArrowDown size={20} aria-hidden="true" /></a></div>
+      </section>
+      </LiquidVideos>
+      <CinematicStory />
       <section
         className="home-featured-section"
         aria-labelledby="featured-heading"
       >
         <div className="home-section-heading" data-home-reveal>
           <div>
-            <span className="eyebrow">01 / SELECCIÓN ROSITA</span>
+
             <h2 id="featured-heading">
-              Pequeñas cosas.
-              <br />
-              <em>Buenos planes.</em>
+              Tus próximos favoritos.
             </h2>
           </div>
           <div>
@@ -161,11 +138,9 @@ export function HomePage() {
       >
         <div className="home-section-heading" data-home-reveal>
           <div>
-            <span className="eyebrow">02 / UN POCO DE TODO</span>
+
             <h2 id="categorias" tabIndex={-1}>
-              Muchas maneras de
-              <br />
-              <em>hacer tu día.</em>
+              Todo tu Rosita.
             </h2>
           </div>
           <p>
@@ -176,10 +151,6 @@ export function HomePage() {
         </div>
         <div className="home-category-grid">
           {categories.map((category, i) => {
-            const art = categoryArt[category.id] || {
-              photo: "",
-              line: category.description,
-            };
             return (
               <Link
                 className={
@@ -193,37 +164,16 @@ export function HomePage() {
                 style={
                   {
                     "--home-stagger": `${(i % 3) * 65}ms`,
+                    "--category-glass-clip": `url(#home-category-glass-${category.id})`,
                   } as React.CSSProperties
                 }
               >
+                <CategoryLiquidSurface id={`home-category-glass-${category.id}`} />
                 <div className="home-category-media">
                   {category.imageKey !== "none" ? (
                     <MediaImage
                       imageKey={category.imageKey}
                       alt={category.name}
-                    />
-                  ) : art.photo ? (
-                    <img
-                      src={"/images/home/" + art.photo + "-480.webp"}
-                      srcSet={
-                        "/images/home/" +
-                        art.photo +
-                        "-480.webp 480w, /images/home/" +
-                        art.photo +
-                        "-960.webp 960w"
-                      }
-                      sizes="(max-width:600px) 92vw, (max-width:1000px) 44vw, 30vw"
-                      width={480}
-                      height={538}
-                      loading="lazy"
-                      decoding="async"
-                      alt=""
-                      onError={(event) => {
-                        event.currentTarget.style.visibility = "hidden";
-                        event.currentTarget.parentElement?.classList.add(
-                          "home-image-unavailable",
-                        );
-                      }}
                     />
                   ) : (
                     <div className="home-category-products" aria-hidden="true">
@@ -235,14 +185,11 @@ export function HomePage() {
                         ))}
                     </div>
                   )}
-                  <span className="home-category-number" aria-hidden="true">
-                    0{i + 1}
-                  </span>
                 </div>
                 <div className="home-category-caption">
                   <div>
                     <h3>{category.name}</h3>
-                    <p>{art.line}</p>
+                    <p>{category.description}</p>
                   </div>
                   <span className="home-category-arrow">
                     <ArrowUpRight size={22} aria-hidden="true" />
@@ -252,18 +199,14 @@ export function HomePage() {
             );
           })}
         </div>
-        <p className="home-category-note">
-          Fotografías de ambientación. Consulta los artículos disponibles en
-          cada categoría.
-        </p>
       </section>
       <section
         className="home-delivery container"
         aria-labelledby="delivery-title"
       >
         <div>
-          <span className="eyebrow">TU PEDIDO, PASO A PASO</span>
-          <h2 id="delivery-title">Todo claro, hasta la entrega.</h2>
+
+          <h2 id="delivery-title">Tu pedido, paso a paso.</h2>
           <p>
             Elige tu zona de prueba, revisa el envío y consulta el estado de tu
             pedido. Es una simulación; no se realiza un reparto real.
@@ -272,71 +215,11 @@ export function HomePage() {
             <Link to="/ayuda#entregas-pagos">Conocer entregas y pagos</Link>
           </Button>
         </div>
-        <details className="delivery-reference">
-          <summary>Ver clip de referencia · ficción</summary>
-          <p>
-            Escena de comedia aportada como referencia: un personaje maltrata un
-            paquete. No muestra al personal ni el servicio de Rosita. Video sin
-            audio; la información de entrega está en el texto.
-          </p>
-          <AmbientVideo
-            src="/images/video/web/video-entrega-Delivery.mp4"
-            poster="/images/video/web/video-entrega-Delivery-poster.jpg"
-            label="clip de referencia de ficción"
-            automatic={false}
-          />
-        </details>
-      </section>
-      <ColorBridge />
-      <section
-        className="home-promo home-editorial-promo"
-        aria-label="Promoción de demostración"
-      >
-        <div data-home-reveal>
-          <span className="eyebrow">
-            <Sparkles size={14} aria-hidden="true" />
-            PRECIOS ESPECIALES DE DEMOSTRACIÓN
-          </span>
-          <h2>
-            Una pausa
-            <br />
-            <em>que provoca.</em>
-          </h2>
-          <p>Encuentra tus snacks, bebidas y pequeños favoritos.</p>
-          <Link
-            className="home-editorial-link"
-            to="/catalogo?ofertas=1"
-            data-cursor="Ver"
-          >
-            Ver precios especiales <ArrowUpRight size={18} aria-hidden="true" />
-          </Link>
-        </div>
-        <div
-          className="home-promo-composition"
-          aria-hidden="true"
-          data-home-reveal
-        >
-          {active
-            .filter((p) => p.category === "consumibles")
-            .slice(0, 2)
-            .map((p) => (
-              <div key={p.id}>
-                <ProductImage product={p} />
-              </div>
-            ))}
-          <span>
-            Haz una
-            <br />
-            pausa.
-          </span>
-        </div>
       </section>
       <section className="home-last-word">
-        <span className="eyebrow">MINIMARKET ROSITA</span>
+
         <h2 data-home-reveal>
-          Lo esencial,
-          <br />
-          <em>más cerca.</em>
+          Rosita, más cerca.
         </h2>
         <p>
           La cercanía de tu minimarket peruano.

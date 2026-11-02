@@ -77,18 +77,10 @@ export function AdminDashboardPage() {
     <div className="admin-page">
       <AdminHeading
         eyebrow="UNA MIRADA A ROSITA"
-        title="Todo bajo control."
-        description="Un resumen de los datos actuales de esta demostración, sin cifras inventadas."
+        title="Resumen de tienda"
+        description="Pedidos, catálogo y existencias actuales de Rosita."
       />
-      <section className="admin-welcome">
-        <div>
-          <span>PROTOTIPO, CON DATOS CONECTADOS</span>
-          <h2>
-            Tu tienda de siempre.
-            <br />
-            Una gestión más clara.
-          </h2>
-        </div>
+      <section className="admin-provenance" aria-label="Origen de los datos">
         <p>
           {m.seed} productos del catálogo inicial · {m.created} creados durante
           la demostración.

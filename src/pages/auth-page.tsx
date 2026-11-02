@@ -1,3 +1,4 @@
+import { AmbientVideo } from "@/features/inicio/ambient-video";
 import { useRosita } from "@/hooks/use-rosita";
 import { Link, useSearchParams } from "react-router";
 import { ArrowLeft, ShoppingBag, Leaf } from "lucide-react";
@@ -29,10 +30,7 @@ export function AuthPage({
           Prepara tu compra y prueba el recorrido completo, con la cercanía de
           Rosita.
         </p>
-        <img
-          src="/images/negocio-rosita.jpg"
-          alt="Interior del negocio Minimarket Rosita"
-        />
+        <AmbientVideo src="/images/video/web/video-intro.mp4" poster="/images/video/web/video-intro-poster.jpg" label="La experiencia Rosita" loop />
         <div className="auth-story-footer">
           <Leaf aria-hidden="true" />
           <span>

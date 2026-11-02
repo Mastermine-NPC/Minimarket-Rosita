@@ -1,3 +1,4 @@
+import { catalogNavigationOptions } from "@/lib/catalog-navigation";
 import { useTaxonomy } from "@/hooks/use-taxonomy";
 import { useCatalog } from "@/hooks/use-catalog";
 import { useEffect, useRef, useState } from "react";
@@ -8,9 +9,10 @@ import {
   useSearchParams,
   useNavigate,
 } from "react-router";
-import { SlidersHorizontal, SearchX, ArrowRight } from "lucide-react";
+import { SlidersHorizontal, SearchX, ArrowRight, X, RotateCcw, ArrowDownWideNarrow, Check } from "lucide-react";
 
 import "@/styles/subcategories.css";
+import "@/styles/catalog-controls.css";
 
 import { ProductCard } from "@/features/catalogo/product-card";
 import { CatalogFilters } from "@/features/catalogo/catalog-filters";
@@ -48,7 +50,7 @@ export function CatalogPage() {
     location = useLocation(),
     heading = useRef<HTMLHeadingElement>(null);
   useEffect(() => {
-    if (location.state?.focusSearchResult) heading.current?.focus();
+    if (location.state?.focusSearchResult && !location.state?.preserveCatalogScroll) heading.current?.focus({ preventScroll: true });
   }, [location.key, location.state]);
   useEffect(() => {
     if (
@@ -57,7 +59,7 @@ export function CatalogPage() {
     ) {
       const next = new URLSearchParams(params);
       next.delete("subcategoria");
-      SetParams(next, { replace: true });
+      SetParams(next, { ...catalogNavigationOptions(), replace: true });
     }
   }, [category, params, SetParams, f.subcategory, validSubcategory]);
   useEffect(() => {
@@ -69,7 +71,7 @@ export function CatalogPage() {
     ) {
       const next = new URLSearchParams(params);
       next.set("subcategoria", selected.id);
-      SetParams(next, { replace: true });
+      SetParams(next, { ...catalogNavigationOptions(), replace: true });
     }
   }, [category, subcategoryById, f.subcategory, params, SetParams]);
   const selectedSubcategory =
@@ -104,7 +106,7 @@ export function CatalogPage() {
       next.delete("ofertas");
     } else if (value) next.set(key, value);
     else next.delete(key);
-    SetParams(next, { replace: true });
+    SetParams(next, { ...catalogNavigationOptions(), replace: true });
   }
   const filters = (
     <CatalogFilters
@@ -164,15 +166,11 @@ export function CatalogPage() {
           <select
             id="catalog-category"
             value={category?.id || ""}
-            onChange={(e) =>
-              navigate(
-                e.target.value
-                  ? categoryPath(
-                      activeCategories.find((c) => c.id === e.target.value)!,
-                    )
-                  : "/catalogo",
-              )
-            }
+            onChange={(e) => {
+              const next = new URLSearchParams(params);
+              next.delete("subcategoria");
+              navigate({ pathname: e.target.value ? categoryPath(activeCategories.find(c => c.id === e.target.value)!) : "/catalogo", search: next.toString() }, catalogNavigationOptions());
+            }}
           >
             <option value="">Todo el catálogo</option>
             {activeCategories.map((c) => (
@@ -185,7 +183,7 @@ export function CatalogPage() {
       )}
       <div className="catalog-layout">
         {desktop && (
-          <aside className="filter-sidebar" aria-label="Filtros de productos">
+          <aside className="filter-sidebar" data-lenis-prevent aria-label="Filtros de productos">
             {filters}
           </aside>
         )}
@@ -204,13 +202,13 @@ export function CatalogPage() {
             </p>
             <div className="catalog-controls">
               {!desktop && (
-                <Button variant="outline" onClick={() => Open(true)}>
+                <Button className="catalog-filter-trigger" variant="outline" onClick={() => Open(true)}>
                   <SlidersHorizontal size={16} aria-hidden="true" />
                   Filtros{active ? " (" + active + ")" : ""}
                 </Button>
               )}
               <label htmlFor="catalog-sort">
-                Ordenar por{" "}
+                <ArrowDownWideNarrow size={17} aria-hidden="true" />Ordenar por{" "}
                 <select
                   id="catalog-sort"
                   value={f.sort}
@@ -244,17 +242,19 @@ export function CatalogPage() {
                       "Quitar subcategoría " + selectedSubcategory.name
                     }
                   >
-                    Quitar selección ×
+                    Quitar selección <X size={15} aria-hidden="true" />
                   </Button>
                 </div>
               )}
-              {f.query && <span>“{f.query}”</span>}
-              {f.brand && <span>{f.brand}</span>}
-              {params.has("max") && <span>Hasta S/ {f.max}</span>}
-              {f.inStock && <span>Disponibles</span>}
-              {f.offers && <span>Ofertas de prueba</span>}
-              <Button variant="link" onClick={() => SetParams({})}>
-                Limpiar búsqueda y filtros
+              {[
+                f.query ? { key: "q", label: `“${f.query}”` } : null,
+                f.brand ? { key: "marca", label: f.brand } : null,
+                params.has("max") ? { key: "max", label: `Hasta S/ ${f.max}` } : null,
+                f.inStock ? { key: "disponibles", label: "Disponibles" } : null,
+                f.offers ? { key: "ofertas", label: "Ofertas de prueba" } : null,
+              ].filter(item => item !== null).map(item => <button className="catalog-filter-chip" type="button" key={item.key} onClick={() => update(item.key, "")} aria-label={`Quitar filtro ${item.label}`}><span>{item.label}</span><X size={14} aria-hidden="true" /></button>)}
+              <Button variant="link" onClick={() => SetParams({}, catalogNavigationOptions())}>
+                <RotateCcw size={15} aria-hidden="true" />Limpiar búsqueda y filtros
               </Button>
             </div>
           )}
@@ -282,7 +282,7 @@ export function CatalogPage() {
                   </Link>
                 </Button>
               ) : (
-                <Button onClick={() => SetParams({})}>
+                <Button onClick={() => SetParams({}, catalogNavigationOptions())}>
                   Limpiar búsqueda y filtros <ArrowRight aria-hidden="true" />
                 </Button>
               )}
@@ -301,7 +301,7 @@ export function CatalogPage() {
           <div className="filter-sheet-scroll">{!desktop && filters}</div>
           <div className="filter-sheet-footer">
             <Button className="full-width" onClick={() => Open(false)}>
-              Ver {list.length} {list.length === 1 ? "producto" : "productos"}
+              <Check size={17} aria-hidden="true" />Ver {list.length} {list.length === 1 ? "producto" : "productos"}
             </Button>
           </div>
         </SheetContent>

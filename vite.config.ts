@@ -9,6 +9,7 @@ export default defineConfig({
       output: {
         codeSplitting: {
           groups: [
+            { name: "cinema-runtime", test: /node_modules[\\/]gsap[\\/]/ },
             { name: "validation", test: /node_modules[\\/]zod[\\/]/ },
             {
               name: "motion-runtime",

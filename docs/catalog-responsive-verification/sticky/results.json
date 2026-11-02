@@ -1,0 +1,1162 @@
+[
+  {
+    "width": 1440,
+    "height": 1000,
+    "stops": [
+      {
+        "name": "start",
+        "y": 990,
+        "box": {
+          "x": 28.796875,
+          "y": 99.890625,
+          "width": 288,
+          "height": 688.53125
+        },
+        "state": {
+          "position": "sticky",
+          "top": 46,
+          "scrollHeight": 689,
+          "clientHeight": 689,
+          "ancestorOverflow": [
+            [
+              "catalog-layout",
+              "visible"
+            ],
+            [
+              "container catalog-page",
+              "visible"
+            ],
+            [
+              "public-page-body",
+              "visible"
+            ],
+            [
+              "public-route-content",
+              "visible"
+            ],
+            [
+              "MAIN",
+              "visible"
+            ],
+            [
+              "store-shell",
+              "visible"
+            ],
+            [
+              "DIV",
+              "visible"
+            ],
+            [
+              "BODY",
+              "visible"
+            ],
+            [
+              "lenis lenis-scrolling",
+              "visible"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "first",
+        "y": 1490,
+        "box": {
+          "x": 28.796875,
+          "y": 46,
+          "width": 288,
+          "height": 688.53125
+        },
+        "state": {
+          "position": "sticky",
+          "top": 46,
+          "scrollHeight": 689,
+          "clientHeight": 689,
+          "ancestorOverflow": [
+            [
+              "catalog-layout",
+              "visible"
+            ],
+            [
+              "container catalog-page",
+              "visible"
+            ],
+            [
+              "public-page-body",
+              "visible"
+            ],
+            [
+              "public-route-content",
+              "visible"
+            ],
+            [
+              "MAIN",
+              "visible"
+            ],
+            [
+              "store-shell",
+              "visible"
+            ],
+            [
+              "DIV",
+              "visible"
+            ],
+            [
+              "BODY",
+              "visible"
+            ],
+            [
+              "lenis lenis-scrolling",
+              "visible"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "middle",
+        "y": 6955,
+        "box": {
+          "x": 28.796875,
+          "y": 46,
+          "width": 288,
+          "height": 688.53125
+        },
+        "state": {
+          "position": "sticky",
+          "top": 46,
+          "scrollHeight": 689,
+          "clientHeight": 689,
+          "ancestorOverflow": [
+            [
+              "catalog-layout",
+              "visible"
+            ],
+            [
+              "container catalog-page",
+              "visible"
+            ],
+            [
+              "public-page-body",
+              "visible"
+            ],
+            [
+              "public-route-content",
+              "visible"
+            ],
+            [
+              "MAIN",
+              "visible"
+            ],
+            [
+              "store-shell",
+              "visible"
+            ],
+            [
+              "DIV",
+              "visible"
+            ],
+            [
+              "BODY",
+              "visible"
+            ],
+            [
+              "lenis lenis-scrolling",
+              "visible"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "end",
+        "y": 11700,
+        "box": {
+          "x": 28.796875,
+          "y": 46,
+          "width": 288,
+          "height": 688.53125
+        },
+        "state": {
+          "position": "sticky",
+          "top": 46,
+          "scrollHeight": 689,
+          "clientHeight": 689,
+          "ancestorOverflow": [
+            [
+              "catalog-layout",
+              "visible"
+            ],
+            [
+              "container catalog-page",
+              "visible"
+            ],
+            [
+              "public-page-body",
+              "visible"
+            ],
+            [
+              "public-route-content",
+              "visible"
+            ],
+            [
+              "MAIN",
+              "visible"
+            ],
+            [
+              "store-shell",
+              "visible"
+            ],
+            [
+              "DIV",
+              "visible"
+            ],
+            [
+              "BODY",
+              "visible"
+            ],
+            [
+              "lenis lenis-scrolling",
+              "visible"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "footer",
+        "y": 12496,
+        "box": {
+          "x": 28.796875,
+          "y": -364.9375,
+          "width": 288,
+          "height": 688.53125
+        },
+        "state": {
+          "position": "sticky",
+          "top": 46,
+          "scrollHeight": 689,
+          "clientHeight": 689,
+          "ancestorOverflow": [
+            [
+              "catalog-layout",
+              "visible"
+            ],
+            [
+              "container catalog-page",
+              "visible"
+            ],
+            [
+              "public-page-body",
+              "visible"
+            ],
+            [
+              "public-route-content",
+              "visible"
+            ],
+            [
+              "MAIN",
+              "visible"
+            ],
+            [
+              "store-shell",
+              "visible"
+            ],
+            [
+              "DIV",
+              "visible"
+            ],
+            [
+              "BODY",
+              "visible"
+            ],
+            [
+              "lenis lenis-scrolling",
+              "visible"
+            ]
+          ]
+        }
+      }
+    ],
+    "headerBottom": 211.59375,
+    "opened": {
+      "x": 28.796875,
+      "y": 228,
+      "width": 288,
+      "height": 688.53125
+    },
+    "closed": {
+      "x": 28.796875,
+      "y": 46,
+      "width": 288,
+      "height": 688.53125
+    },
+    "innerScroll": 0
+  },
+  {
+    "width": 1440,
+    "height": 720,
+    "stops": [
+      {
+        "name": "start",
+        "y": 867,
+        "box": {
+          "x": 28.796875,
+          "y": 99.8125,
+          "width": 288,
+          "height": 664
+        },
+        "state": {
+          "position": "sticky",
+          "top": 40,
+          "scrollHeight": 689,
+          "clientHeight": 664,
+          "ancestorOverflow": [
+            [
+              "catalog-layout",
+              "visible"
+            ],
+            [
+              "container catalog-page",
+              "visible"
+            ],
+            [
+              "public-page-body",
+              "visible"
+            ],
+            [
+              "public-route-content",
+              "visible"
+            ],
+            [
+              "MAIN",
+              "visible"
+            ],
+            [
+              "store-shell",
+              "visible"
+            ],
+            [
+              "DIV",
+              "visible"
+            ],
+            [
+              "BODY",
+              "visible"
+            ],
+            [
+              "lenis lenis-scrolling",
+              "visible"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "first",
+        "y": 1367,
+        "box": {
+          "x": 28.796875,
+          "y": 40,
+          "width": 288,
+          "height": 664
+        },
+        "state": {
+          "position": "sticky",
+          "top": 40,
+          "scrollHeight": 689,
+          "clientHeight": 664,
+          "ancestorOverflow": [
+            [
+              "catalog-layout",
+              "visible"
+            ],
+            [
+              "container catalog-page",
+              "visible"
+            ],
+            [
+              "public-page-body",
+              "visible"
+            ],
+            [
+              "public-route-content",
+              "visible"
+            ],
+            [
+              "MAIN",
+              "visible"
+            ],
+            [
+              "store-shell",
+              "visible"
+            ],
+            [
+              "DIV",
+              "visible"
+            ],
+            [
+              "BODY",
+              "visible"
+            ],
+            [
+              "lenis lenis-scrolling",
+              "visible"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "middle",
+        "y": 6832,
+        "box": {
+          "x": 28.796875,
+          "y": 40,
+          "width": 288,
+          "height": 664
+        },
+        "state": {
+          "position": "sticky",
+          "top": 40,
+          "scrollHeight": 689,
+          "clientHeight": 664,
+          "ancestorOverflow": [
+            [
+              "catalog-layout",
+              "visible"
+            ],
+            [
+              "container catalog-page",
+              "visible"
+            ],
+            [
+              "public-page-body",
+              "visible"
+            ],
+            [
+              "public-route-content",
+              "visible"
+            ],
+            [
+              "MAIN",
+              "visible"
+            ],
+            [
+              "store-shell",
+              "visible"
+            ],
+            [
+              "DIV",
+              "visible"
+            ],
+            [
+              "BODY",
+              "visible"
+            ],
+            [
+              "lenis lenis-scrolling",
+              "visible"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "end",
+        "y": 11857,
+        "box": {
+          "x": 28.796875,
+          "y": 40,
+          "width": 288,
+          "height": 664
+        },
+        "state": {
+          "position": "sticky",
+          "top": 40,
+          "scrollHeight": 689,
+          "clientHeight": 664,
+          "ancestorOverflow": [
+            [
+              "catalog-layout",
+              "visible"
+            ],
+            [
+              "container catalog-page",
+              "visible"
+            ],
+            [
+              "public-page-body",
+              "visible"
+            ],
+            [
+              "public-route-content",
+              "visible"
+            ],
+            [
+              "MAIN",
+              "visible"
+            ],
+            [
+              "store-shell",
+              "visible"
+            ],
+            [
+              "DIV",
+              "visible"
+            ],
+            [
+              "BODY",
+              "visible"
+            ],
+            [
+              "lenis lenis-scrolling",
+              "visible"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "footer",
+        "y": 12597,
+        "box": {
+          "x": 28.796875,
+          "y": -564.484375,
+          "width": 288,
+          "height": 664
+        },
+        "state": {
+          "position": "sticky",
+          "top": 40,
+          "scrollHeight": 689,
+          "clientHeight": 664,
+          "ancestorOverflow": [
+            [
+              "catalog-layout",
+              "visible"
+            ],
+            [
+              "container catalog-page",
+              "visible"
+            ],
+            [
+              "public-page-body",
+              "visible"
+            ],
+            [
+              "public-route-content",
+              "visible"
+            ],
+            [
+              "MAIN",
+              "visible"
+            ],
+            [
+              "store-shell",
+              "visible"
+            ],
+            [
+              "DIV",
+              "visible"
+            ],
+            [
+              "BODY",
+              "visible"
+            ],
+            [
+              "lenis lenis-scrolling",
+              "visible"
+            ]
+          ]
+        }
+      }
+    ],
+    "headerBottom": 205.59375,
+    "opened": {
+      "x": 28.796875,
+      "y": 222,
+      "width": 288,
+      "height": 482
+    },
+    "closed": {
+      "x": 28.796875,
+      "y": 40,
+      "width": 288,
+      "height": 664
+    },
+    "innerScroll": 207
+  },
+  {
+    "width": 1440,
+    "height": 480,
+    "stops": [
+      {
+        "name": "start",
+        "y": 867,
+        "box": {
+          "x": 28.796875,
+          "y": 99.8125,
+          "width": 288,
+          "height": 424
+        },
+        "state": {
+          "position": "sticky",
+          "top": 40,
+          "scrollHeight": 689,
+          "clientHeight": 424,
+          "ancestorOverflow": [
+            [
+              "catalog-layout",
+              "visible"
+            ],
+            [
+              "container catalog-page",
+              "visible"
+            ],
+            [
+              "public-page-body",
+              "visible"
+            ],
+            [
+              "public-route-content",
+              "visible"
+            ],
+            [
+              "MAIN",
+              "visible"
+            ],
+            [
+              "store-shell",
+              "visible"
+            ],
+            [
+              "DIV",
+              "visible"
+            ],
+            [
+              "BODY",
+              "visible"
+            ],
+            [
+              "lenis lenis-scrolling",
+              "visible"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "first",
+        "y": 1367,
+        "box": {
+          "x": 28.796875,
+          "y": 40,
+          "width": 288,
+          "height": 424
+        },
+        "state": {
+          "position": "sticky",
+          "top": 40,
+          "scrollHeight": 689,
+          "clientHeight": 424,
+          "ancestorOverflow": [
+            [
+              "catalog-layout",
+              "visible"
+            ],
+            [
+              "container catalog-page",
+              "visible"
+            ],
+            [
+              "public-page-body",
+              "visible"
+            ],
+            [
+              "public-route-content",
+              "visible"
+            ],
+            [
+              "MAIN",
+              "visible"
+            ],
+            [
+              "store-shell",
+              "visible"
+            ],
+            [
+              "DIV",
+              "visible"
+            ],
+            [
+              "BODY",
+              "visible"
+            ],
+            [
+              "lenis lenis-scrolling",
+              "visible"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "middle",
+        "y": 6832,
+        "box": {
+          "x": 28.796875,
+          "y": 40,
+          "width": 288,
+          "height": 424
+        },
+        "state": {
+          "position": "sticky",
+          "top": 40,
+          "scrollHeight": 689,
+          "clientHeight": 424,
+          "ancestorOverflow": [
+            [
+              "catalog-layout",
+              "visible"
+            ],
+            [
+              "container catalog-page",
+              "visible"
+            ],
+            [
+              "public-page-body",
+              "visible"
+            ],
+            [
+              "public-route-content",
+              "visible"
+            ],
+            [
+              "MAIN",
+              "visible"
+            ],
+            [
+              "store-shell",
+              "visible"
+            ],
+            [
+              "DIV",
+              "visible"
+            ],
+            [
+              "BODY",
+              "visible"
+            ],
+            [
+              "lenis lenis-scrolling",
+              "visible"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "end",
+        "y": 12097,
+        "box": {
+          "x": 28.796875,
+          "y": 40,
+          "width": 288,
+          "height": 424
+        },
+        "state": {
+          "position": "sticky",
+          "top": 40,
+          "scrollHeight": 689,
+          "clientHeight": 424,
+          "ancestorOverflow": [
+            [
+              "catalog-layout",
+              "visible"
+            ],
+            [
+              "container catalog-page",
+              "visible"
+            ],
+            [
+              "public-page-body",
+              "visible"
+            ],
+            [
+              "public-route-content",
+              "visible"
+            ],
+            [
+              "MAIN",
+              "visible"
+            ],
+            [
+              "store-shell",
+              "visible"
+            ],
+            [
+              "DIV",
+              "visible"
+            ],
+            [
+              "BODY",
+              "visible"
+            ],
+            [
+              "lenis lenis-scrolling",
+              "visible"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "footer",
+        "y": 12597,
+        "box": {
+          "x": 28.796875,
+          "y": -324.484375,
+          "width": 288,
+          "height": 424
+        },
+        "state": {
+          "position": "sticky",
+          "top": 40,
+          "scrollHeight": 689,
+          "clientHeight": 424,
+          "ancestorOverflow": [
+            [
+              "catalog-layout",
+              "visible"
+            ],
+            [
+              "container catalog-page",
+              "visible"
+            ],
+            [
+              "public-page-body",
+              "visible"
+            ],
+            [
+              "public-route-content",
+              "visible"
+            ],
+            [
+              "MAIN",
+              "visible"
+            ],
+            [
+              "store-shell",
+              "visible"
+            ],
+            [
+              "DIV",
+              "visible"
+            ],
+            [
+              "BODY",
+              "visible"
+            ],
+            [
+              "lenis lenis-scrolling",
+              "visible"
+            ]
+          ]
+        }
+      }
+    ],
+    "headerBottom": 205.59375,
+    "opened": {
+      "x": 28.796875,
+      "y": 222,
+      "width": 288,
+      "height": 242
+    },
+    "closed": {
+      "x": 28.796875,
+      "y": 40,
+      "width": 288,
+      "height": 424
+    },
+    "innerScroll": 447
+  },
+  {
+    "width": 1024,
+    "height": 640,
+    "stops": [
+      {
+        "name": "start",
+        "y": 774,
+        "box": {
+          "x": 20.484375,
+          "y": 99.625,
+          "width": 280,
+          "height": 584
+        },
+        "state": {
+          "position": "sticky",
+          "top": 40,
+          "scrollHeight": 689,
+          "clientHeight": 584,
+          "ancestorOverflow": [
+            [
+              "catalog-layout",
+              "visible"
+            ],
+            [
+              "container catalog-page",
+              "visible"
+            ],
+            [
+              "public-page-body",
+              "visible"
+            ],
+            [
+              "public-route-content",
+              "visible"
+            ],
+            [
+              "MAIN",
+              "visible"
+            ],
+            [
+              "store-shell",
+              "visible"
+            ],
+            [
+              "DIV",
+              "visible"
+            ],
+            [
+              "BODY",
+              "visible"
+            ],
+            [
+              "lenis lenis-scrolling",
+              "visible"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "first",
+        "y": 1274,
+        "box": {
+          "x": 20.484375,
+          "y": 40,
+          "width": 280,
+          "height": 584
+        },
+        "state": {
+          "position": "sticky",
+          "top": 40,
+          "scrollHeight": 689,
+          "clientHeight": 584,
+          "ancestorOverflow": [
+            [
+              "catalog-layout",
+              "visible"
+            ],
+            [
+              "container catalog-page",
+              "visible"
+            ],
+            [
+              "public-page-body",
+              "visible"
+            ],
+            [
+              "public-route-content",
+              "visible"
+            ],
+            [
+              "MAIN",
+              "visible"
+            ],
+            [
+              "store-shell",
+              "visible"
+            ],
+            [
+              "DIV",
+              "visible"
+            ],
+            [
+              "BODY",
+              "visible"
+            ],
+            [
+              "lenis lenis-scrolling",
+              "visible"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "middle",
+        "y": 12249,
+        "box": {
+          "x": 20.484375,
+          "y": 40,
+          "width": 280,
+          "height": 584
+        },
+        "state": {
+          "position": "sticky",
+          "top": 40,
+          "scrollHeight": 689,
+          "clientHeight": 584,
+          "ancestorOverflow": [
+            [
+              "catalog-layout",
+              "visible"
+            ],
+            [
+              "container catalog-page",
+              "visible"
+            ],
+            [
+              "public-page-body",
+              "visible"
+            ],
+            [
+              "public-route-content",
+              "visible"
+            ],
+            [
+              "MAIN",
+              "visible"
+            ],
+            [
+              "store-shell",
+              "visible"
+            ],
+            [
+              "DIV",
+              "visible"
+            ],
+            [
+              "BODY",
+              "visible"
+            ],
+            [
+              "lenis lenis-scrolling",
+              "visible"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "end",
+        "y": 22865,
+        "box": {
+          "x": 20.484375,
+          "y": 40,
+          "width": 280,
+          "height": 584
+        },
+        "state": {
+          "position": "sticky",
+          "top": 40,
+          "scrollHeight": 689,
+          "clientHeight": 584,
+          "ancestorOverflow": [
+            [
+              "catalog-layout",
+              "visible"
+            ],
+            [
+              "container catalog-page",
+              "visible"
+            ],
+            [
+              "public-page-body",
+              "visible"
+            ],
+            [
+              "public-route-content",
+              "visible"
+            ],
+            [
+              "MAIN",
+              "visible"
+            ],
+            [
+              "store-shell",
+              "visible"
+            ],
+            [
+              "DIV",
+              "visible"
+            ],
+            [
+              "BODY",
+              "visible"
+            ],
+            [
+              "lenis lenis-scrolling",
+              "visible"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "footer",
+        "y": 23525,
+        "box": {
+          "x": 20.484375,
+          "y": -483.703125,
+          "width": 280,
+          "height": 584
+        },
+        "state": {
+          "position": "sticky",
+          "top": 40,
+          "scrollHeight": 689,
+          "clientHeight": 584,
+          "ancestorOverflow": [
+            [
+              "catalog-layout",
+              "visible"
+            ],
+            [
+              "container catalog-page",
+              "visible"
+            ],
+            [
+              "public-page-body",
+              "visible"
+            ],
+            [
+              "public-route-content",
+              "visible"
+            ],
+            [
+              "MAIN",
+              "visible"
+            ],
+            [
+              "store-shell",
+              "visible"
+            ],
+            [
+              "DIV",
+              "visible"
+            ],
+            [
+              "BODY",
+              "visible"
+            ],
+            [
+              "lenis lenis-scrolling",
+              "visible"
+            ]
+          ]
+        }
+      }
+    ],
+    "headerBottom": 205.59375,
+    "opened": {
+      "x": 20.484375,
+      "y": 222,
+      "width": 280,
+      "height": 402
+    },
+    "closed": {
+      "x": 20.484375,
+      "y": 40,
+      "width": 280,
+      "height": 584
+    },
+    "innerScroll": 287
+  }
+]

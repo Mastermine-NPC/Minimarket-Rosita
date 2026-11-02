@@ -24,6 +24,8 @@ export interface Delivery {
   route?: RoadRoute;
   recipient: string;
   phone: string;
+  phoneCountry?: string;
+  phoneType?: "mobile" | "fixed" | "other";
   address: string;
   zone: string;
   reference: string;

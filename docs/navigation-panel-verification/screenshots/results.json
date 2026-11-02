@@ -1,0 +1,54 @@
+{
+  "results": [
+    {
+      "width": 1440,
+      "visits": [
+        "ferreteria",
+        "consumibles",
+        "tecnologia",
+        "cuidado-personal",
+        "educacion-oficina",
+        "jugueteria",
+        "ferreteria",
+        "consumibles"
+      ],
+      "passed": [
+        "initial entry and reload closed",
+        "top activation \u2192 panel crossing stays open",
+        "exit delay / touch toggle",
+        "navigation closes at click and stays closed after cinematic route load",
+        "all categories repeatedly including consumibles",
+        "Home and About via navigation",
+        "focus and former panel area do not reopen it",
+        "scroll does not open it",
+        "reload with pointer on activation strip stays closed",
+        "Back requires a fresh activation entry"
+      ]
+    },
+    {
+      "width": 390,
+      "visits": [
+        "ferreteria",
+        "consumibles",
+        "tecnologia",
+        "cuidado-personal",
+        "educacion-oficina",
+        "jugueteria",
+        "ferreteria",
+        "consumibles"
+      ],
+      "passed": [
+        "initial entry and reload closed",
+        "top activation \u2192 panel crossing stays open",
+        "exit delay / touch toggle",
+        "navigation closes at click and stays closed after cinematic route load",
+        "all categories repeatedly including consumibles",
+        "Home and About via navigation",
+        "focus and former panel area do not reopen it",
+        "scroll does not open it",
+        "reload with pointer on activation strip stays closed"
+      ]
+    }
+  ],
+  "errors": []
+}

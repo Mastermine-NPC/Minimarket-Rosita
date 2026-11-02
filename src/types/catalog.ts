@@ -7,6 +7,10 @@ export interface Category {
   tone: string;
 }
 export interface Product {
+  /** Public route identifier, computed from ordinary commercial codes. */
+  publicId?: string;
+  modelKey?: string;
+  demoCommercialData?: boolean;
   barcode?: string;
   code?: string;
   archived?: boolean;
@@ -32,6 +36,8 @@ export interface Product {
 export type Cart = Record<string, number>;
 
 export interface CatalogRecord {
+  modelKey?: string;
+  demoCommercialData?: boolean;
   barcode?: string;
   code?: string;
   archived?: boolean;

@@ -22,6 +22,8 @@ export const roadRouteSchema = z.object({
   fallback: z.boolean().optional(),
 });
 export const deliveryExtras = {
+  phoneCountry: z.string().regex(/^[A-Z]{2}$/).optional(),
+  phoneType: z.enum(["mobile", "fixed", "other"]).optional(),
   mode: z.enum(["delivery", "pickup"]).optional(),
   origin: geoPointSchema.optional(),
   point: geoPointSchema.optional(),

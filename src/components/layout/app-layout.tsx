@@ -1,3 +1,10 @@
+
+import { useSmoothScroll } from "@/features/cinema/use-smooth-scroll";
+import { PublicScene } from "@/features/cinema/public-scene";
+import { usePublicMotion } from "@/features/cinema/use-public-motion";
+import "@/styles/cinema-global.css";
+import "@/styles/rosita-editorial.css";
+import { EditorialAtmosphere } from "@/features/cinema/editorial-atmosphere";
 import { useLocation } from "react-router";
 import { useStoreScroll } from "@/hooks/use-store-scroll";
 import { Outlet } from "react-router";
@@ -10,6 +17,8 @@ export function AppLayout() {
   const { initialNotice } = useRosita();
   const location = useLocation();
   useStoreScroll();
+  useSmoothScroll(location.pathname);
+  usePublicMotion(location.pathname);
   return (
     <div
       className={
@@ -21,6 +30,7 @@ export function AppLayout() {
       <a className="skip-link" href="#contenido">
         Saltar al contenido
       </a>
+      <EditorialAtmosphere background={location.pathname !== "/"} />
       <StoreHeader />
       <main id="contenido" tabIndex={-1}>
         {initialNotice && (
@@ -31,7 +41,10 @@ export function AppLayout() {
             </Alert>
           </div>
         )}
-        <Outlet />
+        <div className="public-route-content" data-route-path={location.pathname} key={/^\/(catalogo|categoria)(\/|$)/.test(location.pathname) ? "catalog" : location.pathname}>
+          <PublicScene pathname={location.pathname} />
+          <div className="public-page-body"><Outlet /></div>
+        </div>
       </main>
       <StoreFooter />
       <CartSheet />

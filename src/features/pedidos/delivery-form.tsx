@@ -1,5 +1,10 @@
+import { InternationalPhone } from "./international-phone";
+import { phoneCountry } from "@/lib/phone";
+import { DestinationSearch } from "@/features/entrega/destination-search";
+import "@/styles/order-tracking.css";
+import "@/styles/checkout-controls.css";
 import { useEffect, useRef, useState } from "react";
-import { useForm, useWatch } from "react-hook-form";
+import { useForm, useWatch, useController } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { deliverySchema } from "@/lib/checkout-validation";
 import { useRosita } from "@/hooks/use-rosita";
@@ -31,8 +36,9 @@ export function DeliveryForm() {
     formState: { errors },
   } = useForm<Delivery>({
     resolver: zodResolver(deliverySchema),
-    defaultValues: { ...state.checkout.delivery, origin },
+    defaultValues: { ...state.checkout.delivery, phoneCountry: state.checkout.delivery.phoneCountry || phoneCountry(state.checkout.delivery.phone), phoneType: state.checkout.delivery.phoneType || "other", origin },
   });
+  const { field: phoneField } = useController({ control, name: "phone" });
   const values = useWatch({ control }) as Delivery,
     pickup = values.mode === "pickup",
     point = values.point,
@@ -122,6 +128,8 @@ export function DeliveryForm() {
                 mode: "pickup",
                 recipient: v.recipient,
                 phone: v.phone,
+                phoneCountry: v.phoneCountry,
+                phoneType: v.phoneType,
                 address: storeAddress,
                 reference: "",
                 zone: "pickup",
@@ -154,30 +162,17 @@ export function DeliveryForm() {
             {origin.lat}, {origin.lng} · Punto confirmado por el usuario.
           </small>
         </div>
-        {(["recipient", "phone"] as const).map((key) => (
-          <div className="field" key={key}>
-            <Label htmlFor={"delivery-" + key}>
-              {key === "recipient"
-                ? pickup
-                  ? "Nombre de quien recoge"
-                  : "Nombre de quien recibe"
-                : "Celular peruano"}
-            </Label>
-            <Input
-              id={"delivery-" + key}
-              {...register(key)}
-              autoComplete="off"
-              type={key === "phone" ? "tel" : "text"}
-              aria-invalid={!!errors[key]}
-              aria-describedby={errors[key] ? key + "-error" : undefined}
-            />
-            {errors[key] && (
-              <p id={key + "-error"} className="field-error" role="alert">
-                ⚠ {errors[key]?.message}
-              </p>
-            )}
-          </div>
-        ))}
+        <div className="field">
+          <Label htmlFor="delivery-recipient">{pickup ? "Nombre de quien recoge" : "Nombre de quien recibe"}</Label>
+          <Input id="delivery-recipient" {...register("recipient")} autoComplete="name" aria-invalid={!!errors.recipient} aria-describedby={errors.recipient ? "recipient-error" : undefined} />
+          {errors.recipient && <p id="recipient-error" className="field-error" role="alert">{errors.recipient.message}</p>}
+        </div>
+        <InternationalPhone inputRef={phoneField.ref} value={phoneField.value || ""} country={values.phoneCountry} kind={values.phoneType} error={errors.phone?.message} onChange={(phone, country, kind) => {
+          setValue("phoneCountry", country, { shouldDirty: true });
+          setValue("phoneType", kind, { shouldDirty: true });
+          setValue("phone", phone, { shouldDirty: true, shouldValidate: !!errors.phone });
+          sync();
+        }} onBlur={() => { phoneField.onBlur(); sync(); }} />
         {!pickup && (
           <>
             <Button
@@ -195,7 +190,12 @@ export function DeliveryForm() {
               acceso peatonal exacto no está verificado. Puedes elegir otro
               destino.
             </p>
+            <DestinationSearch embedded origin={origin} onSelect={selected => {
+              if (!withinCoverage(selected)) { Message("La dirección está fuera del área de demostración de Arequipa. Elige otra ubicación."); return; }
+              setValue("address", selected.label.slice(0, 180)); pick(selected);
+            }} />
             <RouteMap
+              theme="dark-night"
               origin={origin}
               destination={point}
               route={values.route}
@@ -320,7 +320,7 @@ export function DeliveryForm() {
         )}
         {pickup && (
           <>
-            <RouteMap origin={origin} />
+            <RouteMap theme="dark-night" origin={origin} />
             <p>
               Envío cero. Estados de preparación y recojo; sin repartidor ni
               ruta.

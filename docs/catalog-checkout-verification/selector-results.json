@@ -1,0 +1,20 @@
+{
+  "priceAndStockPositive": 35,
+  "rangeKeyboard": true,
+  "pasteInternational": true,
+  "countryChangePreservesNational": true,
+  "dialog": {
+    "opacity": "1",
+    "background": "rgb(255, 255, 255)",
+    "rect": {
+      "x": 16,
+      "y": 297.0546875,
+      "width": 358,
+      "height": 249.890625,
+      "top": 297.0546875,
+      "right": 374,
+      "bottom": 546.9453125,
+      "left": 16
+    }
+  }
+}

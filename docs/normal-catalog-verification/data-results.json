@@ -1,0 +1,72 @@
+{
+  "passed": [
+    "One shared 75-product catalog without query parameters",
+    "Four ordinary featured references within the first 12 cards",
+    "Normal name search; legacy code search unnecessary and no longer matches public codes",
+    "Legacy IDs kept as canonical foreign keys; inventory, cart, checkout, orders and cash drafts unchanged",
+    "Normal public numeric codes and idempotent persisted migration",
+    "Occupied commercial codes preserve the prior record"
+  ],
+  "first12": [
+    {
+      "id": "ROS-3D-SUNSILK",
+      "code": "ROS-066",
+      "name": "Champú Sunsilk"
+    },
+    {
+      "id": "ROS-3D-COLA",
+      "code": "ROS-064",
+      "name": "Coca-Cola en lata"
+    },
+    {
+      "id": "ROS-001",
+      "code": "ROS-001",
+      "name": "Gaseosa Coca-Cola"
+    },
+    {
+      "id": "ROS-016",
+      "code": "ROS-016",
+      "name": "Jabón Protex avena"
+    },
+    {
+      "id": "ROS-010",
+      "code": "ROS-010",
+      "name": "Monopoly clásico"
+    },
+    {
+      "id": "ROS-3D-NIVEA",
+      "code": "ROS-065",
+      "name": "Nivea Aftershave"
+    },
+    {
+      "id": "ROS-002",
+      "code": "ROS-002",
+      "name": "Papas Lay’s clásicas"
+    },
+    {
+      "id": "ROS-008",
+      "code": "ROS-008",
+      "name": "Pilas Duracell AA"
+    },
+    {
+      "id": "ROS-004",
+      "code": "ROS-004",
+      "name": "Set de destornilladores"
+    },
+    {
+      "id": "ROS-017",
+      "code": "ROS-017",
+      "name": "Shampoo Sedal"
+    },
+    {
+      "id": "ROS-014",
+      "code": "ROS-014",
+      "name": "Sobres manila Grafi"
+    },
+    {
+      "id": "ROS-007",
+      "code": "ROS-007",
+      "name": "Adaptador de enchufe"
+    }
+  ]
+}

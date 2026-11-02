@@ -1,0 +1,11 @@
+{
+  "results": [
+    "1440: no overflow; five chapters; deferred sources; at most one active video; film selection; product and catalogue routes; add to cart",
+    "768: no overflow; five chapters; deferred sources; at most one active video; film selection; product and catalogue routes; add to cart",
+    "390: no overflow; five chapters; deferred sources; at most one active video; film selection; product and catalogue routes; add to cart",
+    "Reduced motion: posters, no automatic sources or parallax",
+    "Save-Data: no automatic source; explicit playback available",
+    "Failed video: visible poster, text, CTA and status"
+  ],
+  "errors": []
+}

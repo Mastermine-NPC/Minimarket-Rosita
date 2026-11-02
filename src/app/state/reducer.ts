@@ -175,19 +175,21 @@ export function rositaReducer(
           error: "",
         },
       };
-    case "checkout/delivery":
-      return deliverySchema.safeParse(action.delivery).success
+    case "checkout/delivery": {
+      const delivery = deliverySchema.safeParse(action.delivery);
+      return delivery.success
         ? {
             ...state,
             checkout: {
               ...state.checkout,
-              delivery: action.delivery,
+              delivery: delivery.data,
               step: 1,
               quote: null,
               error: "",
             },
           }
         : state;
+    }
     case "checkout/draft-payment":
       return {
         ...state,

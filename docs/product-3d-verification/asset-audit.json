@@ -1,0 +1,21 @@
+{
+  "path": "public/images/video/archivos-glb/coca_cola_cans.glb",
+  "bytes": 12950508,
+  "asset": {
+    "extras": {
+      "author": "Safat_Rules (https://sketchfab.com/Safat_Rules)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/coca-cola-cans-fe5ba57722a74dba8d19f513e4672e1c",
+      "title": "Coca cola cans"
+    },
+    "generator": "Sketchfab-15.70.0",
+    "version": "2.0"
+  },
+  "meshCount": 3,
+  "vertexCount": 38163,
+  "triangleCount": 66951,
+  "textures": 6,
+  "textureResolution": "2048 × 2048 each",
+  "productionUse": false,
+  "reason": "Latas; no es la botella de 600 ml. El usuario eligió solo la fotografía."
+}

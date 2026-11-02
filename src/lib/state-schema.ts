@@ -10,6 +10,7 @@ import {
 export { legacySchema, v2Schema } from "./legacy-v4-schema";
 export const stateSchema = v8Schema
   .safeExtend({
+    modelCatalogRevision: z.string().max(100).optional(),
     operationsRevision: z.string().optional(),
     storeLocation: geoPointSchema,
     sales: z.array(saleSchema).max(10000),
@@ -43,6 +44,8 @@ export const stateSchema = v8Schema
     products: z
       .array(
         v8Schema.shape.products.element.extend({
+          modelKey: z.string().max(80).optional(),
+          demoCommercialData: z.boolean().optional(),
           barcode: z
             .string()
             .regex(/^[A-Za-z0-9_-]{4,64}$/)

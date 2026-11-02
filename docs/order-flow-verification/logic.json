@@ -1,0 +1,23 @@
+{
+  "passed": [
+    "received order through existing transaction",
+    "customer/cashier/inactive administrator cannot advance",
+    "administrator advances exactly one stage with immutable snapshot",
+    "duplicate and stale operations rejected",
+    "delivery requires explicit administrator transition",
+    "notification history derives from unique persisted events and respects ownership",
+    "validated forward status sync preserves session, payment, inventory and movements",
+    "forged actor, altered totals, skipped and backwards history rejected"
+  ],
+  "statuses": [
+    1,
+    2,
+    3
+  ],
+  "notifications": [
+    "Recogido",
+    "Listo para recoger",
+    "En preparación",
+    "Pedido recibido"
+  ]
+}

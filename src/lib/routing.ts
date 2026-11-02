@@ -8,23 +8,21 @@ export async function calculateRoute(
   origin: GeoPoint,
   destination: GeoPoint,
   signal: AbortSignal,
+  options: { unrestricted?: boolean } = {},
 ): Promise<RoadRoute> {
-  if (!withinCoverage(origin) || !withinCoverage(destination))
+  if (![origin, destination].every(p => Number.isFinite(p.lat) && Number.isFinite(p.lng) && Math.abs(p.lat) <= 90 && Math.abs(p.lng) <= 180))
+    throw new Error("Selecciona una ubicación válida en el mapa.");
+  if (!options.unrestricted && (!withinCoverage(origin) || !withinCoverage(destination)))
     throw new Error(
       "El punto está fuera del área ficticia de demostración en Arequipa.",
     );
   const wait = Math.max(0, lastRequest + 1100 - Date.now());
   if (wait)
     await new Promise<void>((resolve, reject) => {
-      const timer = setTimeout(resolve, wait);
-      signal.addEventListener(
-        "abort",
-        () => {
-          clearTimeout(timer);
-          reject(new DOMException("Cancelado", "AbortError"));
-        },
-        { once: true },
-      );
+      const abortWait = () => { clearTimeout(timer); reject(new DOMException("Cancelado", "AbortError")); };
+      const timer = setTimeout(() => { signal.removeEventListener("abort", abortWait); resolve(); }, wait);
+      signal.addEventListener("abort", abortWait, { once: true });
+      if (signal.aborted) abortWait();
     });
   signal.throwIfAborted();
   lastRequest = Date.now();
@@ -54,7 +52,7 @@ export async function calculateRoute(
       body.code !== "Ok" ||
       !Array.isArray(coords) ||
       coords.length < 2 ||
-      coords.length > 5000 ||
+      coords.length > (options.unrestricted ? 100000 : 5000) ||
       !coords.every(
         (c: unknown) =>
           Array.isArray(c) &&
@@ -96,7 +94,7 @@ export async function calculateRoute(
         fallback: true,
       };
     throw new Error(
-      "No se pudo obtener una ruta vial para este destino. Comprueba la conexión y confirma de nuevo, o elige recojo.",
+      "No se pudo obtener una ruta vial para este destino. Comprueba la conexión y vuelve a intentarlo o selecciona otro punto cercano a una calle.",
       { cause: error },
     );
   } finally {

@@ -1,3 +1,4 @@
+import { normalizePhone, phoneProblem } from "./phone";
 import { z } from "zod";
 import { deliveryExtras } from "./operations-schema";
 import { withinCoverage } from "@/data/geography";
@@ -17,13 +18,7 @@ export const deliverySchema = z
       .trim()
       .min(3, "Escribe el nombre de quien recibe (mínimo 3 caracteres).")
       .max(80, "Usa hasta 80 caracteres."),
-    phone: z
-      .string()
-      .trim()
-      .regex(
-        /^9\d{8}$/,
-        "Escribe un celular peruano de 9 dígitos que comience con 9.",
-      ),
+    phone: z.string().trim().max(48, "Usa hasta 48 caracteres."),
     address: z.string().trim().max(180, "Usa hasta 180 caracteres."),
     zone: z
       .string()
@@ -39,6 +34,8 @@ export const deliverySchema = z
   .superRefine((v, ctx) => {
     const error = (key: string, message: string) =>
       ctx.addIssue({ code: "custom", path: [key], message });
+    const phoneError = phoneProblem(v.phone, v.phoneCountry, v.phoneType);
+    if (phoneError) error("phone", phoneError);
     if (!v.origin || !withinCoverage(v.origin))
       error("origin", "Configura un origen válido en Arequipa.");
     if (v.mode === "pickup") {
@@ -70,7 +67,7 @@ export const deliverySchema = z
         "zone",
         "La tarifa debe corresponder al recorrido de demostración.",
       );
-  });
+  }).transform(v => ({ ...v, phone: normalizePhone(v.phone, v.phoneCountry) }));
 export const paymentSchema = z.object({
   method: z.enum(["cash", "yape-demo", "plin-demo", "card-demo"]),
   cashAmount: z.string().max(16),

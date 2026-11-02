@@ -1,0 +1,180 @@
+{
+  "timingMs": 10010.59999999404,
+  "appearance": {
+    "filter": "none",
+    "background": "rgb(11, 20, 34)",
+    "canvasFilter": "none",
+    "paths": [
+      "#071322",
+      "#37d3dc",
+      "#66f0e5",
+      "white"
+    ]
+  },
+  "viewports": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "map": {
+        "x": 673.5,
+        "y": 69.859375,
+        "width": 1138.6875,
+        "height": 540
+      }
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "map": {
+        "x": 548.1875,
+        "y": 69.65625,
+        "width": 804.40625,
+        "height": 450
+      }
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "map": {
+        "x": 390.078125,
+        "y": 69.953125,
+        "width": 571.46875,
+        "height": 384
+      }
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "map": {
+        "x": 49.71875,
+        "y": 70.359375,
+        "width": 668.546875,
+        "height": 563.1875
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "map": {
+        "x": 35,
+        "y": 70.296875,
+        "width": 320,
+        "height": 464.1875
+      }
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "map": {
+        "x": 35,
+        "y": 69.5625,
+        "width": 250,
+        "height": 407
+      }
+    }
+  ],
+  "pausedProgress": 0.18492999999970197,
+  "trackingUrl": "http://localhost:4190/pedido/ROS-27d48126-8b32-4788-846c-0d621f297318/seguimiento",
+  "resources": [
+    {
+      "url": "http://localhost:4190/assets/maplibre-gl-worker-Br3j0JGE.js",
+      "status": 200
+    },
+    {
+      "url": "http://localhost:4190/assets/maplibre-gl-worker-Br3j0JGE.js",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.openfreemap.org/planet",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.openfreemap.org/planet/20261025_080012_pt/11/617/1118.pbf",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.openfreemap.org/planet/20261025_080012_pt/11/615/1117.pbf",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.openfreemap.org/planet/20261025_080012_pt/11/617/1117.pbf",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.openfreemap.org/planet/20261025_080012_pt/11/616/1118.pbf",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.openfreemap.org/planet/20261025_080012_pt/11/617/1119.pbf",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.openfreemap.org/planet/20261025_080012_pt/11/616/1119.pbf",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.openfreemap.org/planet/20261025_080012_pt/11/615/1119.pbf",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.openfreemap.org/planet/20261025_080012_pt/11/616/1117.pbf",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.openfreemap.org/planet/20261025_080012_pt/11/615/1118.pbf",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Regular/0-255.pbf",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.openfreemap.org/planet/20261025_080012_pt/11/618/1117.pbf",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.openfreemap.org/planet/20261025_080012_pt/11/618/1118.pbf",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.openfreemap.org/planet/20261025_080012_pt/11/618/1119.pbf",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/0-255.pbf",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.openfreemap.org/planet/20261025_080012_pt/12/1233/2237.pbf",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.openfreemap.org/planet/20261025_080012_pt/12/1234/2236.pbf",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.openfreemap.org/planet/20261025_080012_pt/12/1234/2237.pbf",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.openfreemap.org/planet/20261025_080012_pt/12/1232/2236.pbf",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.openfreemap.org/planet/20261025_080012_pt/12/1232/2237.pbf",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.openfreemap.org/planet/20261025_080012_pt/12/1233/2236.pbf",
+      "status": 200
+    }
+  ],
+  "orderUnchanged": true,
+  "inventoryUnchanged": true,
+  "checkoutUnchanged": true,
+  "providerFallback": true,
+  "noWebGLFallback": true,
+  "vectorClickAndDrag": true,
+  "detailedZoom": true,
+  "errors": []
+}

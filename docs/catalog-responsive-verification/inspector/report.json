@@ -1,0 +1,2712 @@
+{
+ "url": "http://localhost:4190/catalogo",
+ "at": "2026-11-02T00:09:48.307Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 12,
+   "filled": [
+    0.96,
+    0.89,
+    0.9,
+    0.9,
+    0.86,
+    0.86,
+    0.86,
+    0.9,
+    0.9,
+    0.9,
+    0.9,
+    0.9
+   ],
+   "motion": {
+    "elements": 16,
+    "css": 2,
+    "transitions": 0,
+    "scripted": 14,
+    "videos": 1,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 13424,
+     "screens": 14.9,
+     "words": 1786,
+     "img": 59,
+     "video": 1,
+     "canvas": 1,
+     "svg": 85,
+     "sections": 3,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 57,
+     "videoCount": 1,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "oreo-coca-cola-video-cinematografic.jpg",
+      "sunsilk-shampoo.png",
+      "coca-cola-can.png",
+      "nivea-aftershave.png",
+      "ROS-048.jpg",
+      "ROS-039.jpg",
+      "ROS-042.jpg",
+      "ROS-050.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Encuentra lo que necesitas.",
+     "words": 4,
+     "chars": 27,
+     "lines": 1,
+     "size": 86,
+     "vw": 6,
+     "font": "Manrope",
+     "weight": 600,
+     "tracking": -0.06,
+     "leading": 1.02,
+     "top": 831,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "h1": {
+     "text": "Encuentra lo que necesitas.",
+     "words": 4,
+     "lines": 1,
+     "size": 86,
+     "font": "Manrope"
+    },
+    "headings": [
+     {
+      "text": "Un mundo por elegir. Unmundoporelegir.",
+      "words": 5,
+      "chars": 38,
+      "lines": 2,
+      "size": 144,
+      "vw": 10,
+      "font": "Manrope",
+      "weight": 500,
+      "tracking": -0.075,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.67,
+      "top": 175,
+      "tag": "p",
+      "kind": "heading"
+     },
+     {
+      "text": "Encuentra lo que necesitas.",
+      "words": 4,
+      "chars": 27,
+      "lines": 1,
+      "size": 86,
+      "vw": 6,
+      "font": "Manrope",
+      "weight": 600,
+      "tracking": -0.065,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.68,
+      "top": 831,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Rosita.",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 259.2,
+      "vw": 18,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.07,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 1,
+      "top": 922,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Rosita.",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 46,
+      "vw": 3.2,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.054,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.1,
+      "top": 12860,
+      "tag": "strong",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 4,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 1,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "DM Sans",
+       "share": 0.76,
+       "mono": false
+      },
+      {
+       "family": "Manrope",
+       "share": 0.24,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      18,
+      22,
+      25,
+      46,
+      86,
+      144,
+      259
+     ],
+     "sizeCount": 16,
+     "notLoaded": [],
+     "body": {
+      "font": "DM Sans",
+      "size": 13,
+      "leading": 1.6,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 5.4
+     },
+     "measureChars": 37,
+     "max": {
+      "size": 259.2,
+      "vw": 18,
+      "font": "Manrope",
+      "text": "Rosita."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 1,
+     "microLabelShare": 0.002,
+     "microSamples": [
+      "TODO EN UN SOLO LUGAR"
+     ],
+     "upperShare": 0.01,
+     "centerShare": 0.14,
+     "smallText": 132
+    },
+    "eyebrows": [
+     {
+      "text": "TODO EN UN SOLO LUGAR",
+      "above": "Encuentra lo que necesitas.",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 11,
+      "top": 803
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#f7f8f5",
+     "bodyBgHsl": {
+      "h": 80,
+      "s": 0.18,
+      "l": 0.97
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#f1f2e9",
+       "top": 0,
+       "hsl": {
+        "h": 67,
+        "s": 0.26,
+        "l": 0.93
+       }
+      },
+      {
+       "color": "#10251e",
+       "top": 44,
+       "hsl": {
+        "h": 160,
+        "s": 0.4,
+        "l": 0.1
+       }
+      },
+      {
+       "color": "#132f25",
+       "top": 12804,
+       "hsl": {
+        "h": 159,
+        "s": 0.42,
+        "l": 0.13
+       }
+      },
+      {
+       "color": "#123d30",
+       "top": 922,
+       "hsl": {
+        "h": 162,
+        "s": 0.54,
+        "l": 0.15
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#526159",
+       "share": 0.38
+      },
+      {
+       "color": "#17231d",
+       "share": 0.24
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.17
+      },
+      {
+       "color": "#216744",
+       "share": 0.09
+      },
+      {
+       "color": "#fff7eb",
+       "share": 0.04
+      }
+     ],
+     "button": {
+      "bg": "#183e30",
+      "hsl": {
+       "h": 158,
+       "s": 0.44,
+       "l": 0.17
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 83,
+     "inHero": 7,
+     "radius": 0,
+     "height": 48,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Saltar al contenido",
+      "Seguir explorando"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 75,
+     "shadowOverlay": 0,
+     "shadowSamples": [
+      "article.product-card → rgba(255, 255, 255, 0.92) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.06) 0px 6px 18p",
+      "article.product-card → rgba(255, 255, 255, 0.92) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.06) 0px 6px 18p",
+      "article.product-card → rgba(255, 255, 255, 0.92) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.06) 0px 6px 18p",
+      "article.product-card → rgba(255, 255, 255, 0.92) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.06) 0px 6px 18p"
+     ],
+     "gradients": 0,
+     "scrims": 1,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 6,
+     "hairlineSamples": [
+      "div.catalog-heading 1382px",
+      "div.filter-section.subcategory-invitation 240px",
+      "div.filter-section 240px",
+      "div.catalog-toolbar 1066px",
+      "div.footer-note 1280px"
+     ],
+     "outlinedBoxes": 75,
+     "dashed": 0,
+     "blurred": 75,
+     "roundedBoxes": 75,
+     "boxRadius": 20,
+     "squareMedia": 3,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 75,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 1099
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "canvas",
+      "ratio": 1
+     }
+    ],
+    "nav": {
+     "links": 11,
+     "fixed": true,
+     "height": 27,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "dm sans",
+     "manrope"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 13424,
+    "margins": {
+     "left": 80,
+     "right": 54
+    },
+    "sections": [
+     {
+      "sel": "main#contenido",
+      "tag": "main",
+      "top": 44,
+      "height": 12760,
+      "words": 1474,
+      "media": 77,
+      "middle": 61,
+      "heading": {
+       "text": "Un",
+       "size": 144,
+       "tag": "span"
+      },
+      "left": 29,
+      "right": 29,
+      "textLeft": 29,
+      "textRight": 29,
+      "fullBleed": true,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": true
+     },
+     {
+      "sel": "footer.store-footer",
+      "tag": "footer",
+      "top": 12804,
+      "height": 620,
+      "words": 99,
+      "media": 0,
+      "middle": 51,
+      "heading": {
+       "text": "Rosita",
+       "size": 46,
+       "tag": "strong"
+      },
+      "left": 80,
+      "right": 80,
+      "textLeft": 80,
+      "textRight": 80,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Encuentra lo que necesitas.",
+      "size": 86,
+      "top": 831,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 371,
+      "n": 19
+     },
+     {
+      "x": 641,
+      "n": 19
+     },
+     {
+      "x": 912,
+      "n": 19
+     },
+     {
+      "x": 1183,
+      "n": 18
+     },
+     {
+      "x": 53,
+      "n": 2
+     },
+     {
+      "x": 29,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 78,
+    "bodySize": 22,
+    "stage": true,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "dark": false,
+    "ground": "#f7f8f5",
+    "sidebar": null,
+    "topbar": null,
+    "canvas": {
+     "left": 53,
+     "right": 54
+    },
+    "hero": {
+     "text": "Encuentra lo que necesitas.",
+     "words": 4,
+     "chars": 27,
+     "lines": 1,
+     "size": 86,
+     "vw": 6,
+     "font": "Manrope",
+     "weight": 600,
+     "tracking": -0.06,
+     "leading": 1.02,
+     "top": 831,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "charts": 0,
+    "layout": {
+     "panels": 78,
+     "firstScreen": 0,
+     "ragged": [],
+     "voids": []
+    },
+    "tiles": 0,
+    "panels": {
+     "count": 107,
+     "radii": [
+      [
+       20,
+       75
+      ],
+      [
+       0,
+       32
+      ]
+     ],
+     "heavyBorders": 2,
+     "borderSamples": [
+      "#d1e2d5 on #132f25 (10.64:1)",
+      "#52846f on #132f25 (3.35:1)"
+     ],
+     "heavyShadows": 0,
+     "softShadows": 75,
+     "shadowSamples": [],
+     "glass": 75
+    },
+    "chips": {
+     "count": 0,
+     "hues": 0,
+     "samples": []
+    },
+    "numbers": {
+     "cells": 0,
+     "leftAligned": 0,
+     "figures": 0,
+     "tabularShare": null,
+     "kpiMax": null
+    },
+    "rows": null,
+    "chartHues": 0,
+    "placeholders": [],
+    "type": {
+     "under13": 0.34,
+     "tiny": 18,
+     "tinySamples": [
+      "S/ 1 10px",
+      "S/ 300.00 10px",
+      "Precio especial 10px",
+      "Oferta de prueba 10px"
+     ],
+     "sizes": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      18,
+      22,
+      25,
+      46,
+      86,
+      144,
+      259
+     ]
+    },
+    "title": {
+     "text": "Encuentra lo que necesitas.",
+     "size": 86,
+     "top": 831
+    },
+    "colourShare": 0
+   },
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 12,
+   "filled": [
+    0.98,
+    0.94,
+    0.99,
+    0.99,
+    0.99,
+    0.99,
+    0.99,
+    1,
+    0.98,
+    0.98,
+    1,
+    1
+   ],
+   "motion": {
+    "elements": 16,
+    "css": 2,
+    "transitions": 0,
+    "scripted": 14,
+    "videos": 1,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 15633,
+     "screens": 15.3,
+     "words": 1688,
+     "img": 59,
+     "video": 1,
+     "canvas": 1,
+     "svg": 86,
+     "sections": 3,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 67,
+     "videoCount": 1,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "oreo-coca-cola-video-cinematografic.jpg",
+      "sunsilk-shampoo.png",
+      "coca-cola-can.png",
+      "nivea-aftershave.png",
+      "ROS-048.jpg",
+      "ROS-039.jpg",
+      "ROS-042.jpg",
+      "ROS-050.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Encuentra lo que necesitas.",
+     "words": 4,
+     "chars": 27,
+     "lines": 1,
+     "size": 46,
+     "vw": 6,
+     "font": "Manrope",
+     "weight": 600,
+     "tracking": -0.06,
+     "leading": 1.02,
+     "top": 920,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "h1": {
+     "text": "Encuentra lo que necesitas.",
+     "words": 4,
+     "lines": 1,
+     "size": 46.1,
+     "font": "Manrope"
+    },
+    "headings": [
+     {
+      "text": "Rosita.",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 138.2,
+      "vw": 18,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.07,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 1,
+      "top": 0,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Un mundo por elegir. Unmundoporelegir.",
+      "words": 5,
+      "chars": 38,
+      "lines": 1,
+      "size": 76.8,
+      "vw": 10,
+      "font": "Manrope",
+      "weight": 500,
+      "tracking": -0.075,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.87,
+      "top": 490,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Encuentra lo que necesitas.",
+      "words": 4,
+      "chars": 27,
+      "lines": 1,
+      "size": 46.1,
+      "vw": 6,
+      "font": "Manrope",
+      "weight": 600,
+      "tracking": -0.065,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.69,
+      "top": 920,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Rosita.",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 46,
+      "vw": 6,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.054,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.19,
+      "top": 14712,
+      "tag": "strong",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 4,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 1,
+     "centered": 0,
+     "medianWords": 4,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "DM Sans",
+       "share": 0.76,
+       "mono": false
+      },
+      {
+       "family": "Manrope",
+       "share": 0.24,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      16,
+      18,
+      22,
+      25,
+      46,
+      77,
+      138
+     ],
+     "sizeCount": 14,
+     "notLoaded": [],
+     "body": {
+      "font": "DM Sans",
+      "size": 12,
+      "leading": 1.8,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 11.7
+     },
+     "measureChars": 79,
+     "max": {
+      "size": 138.2,
+      "vw": 18,
+      "font": "Manrope",
+      "text": "Rosita."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 1,
+     "microLabelShare": 0.002,
+     "microSamples": [
+      "TODO EN UN SOLO LUGAR"
+     ],
+     "upperShare": 0.01,
+     "centerShare": 0.15,
+     "smallText": 126
+    },
+    "eyebrows": [
+     {
+      "text": "TODO EN UN SOLO LUGAR",
+      "above": "Encuentra lo que necesitas.",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 11,
+      "top": 892
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#f7f8f5",
+     "bodyBgHsl": {
+      "h": 80,
+      "s": 0.18,
+      "l": 0.97
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#f1f2e9",
+       "top": 0,
+       "hsl": {
+        "h": 67,
+        "s": 0.26,
+        "l": 0.93
+       }
+      },
+      {
+       "color": "#10251e",
+       "top": 44,
+       "hsl": {
+        "h": 160,
+        "s": 0.4,
+        "l": 0.1
+       }
+      },
+      {
+       "color": "#132f25",
+       "top": 14656,
+       "hsl": {
+        "h": 159,
+        "s": 0.42,
+        "l": 0.13
+       }
+      },
+      {
+       "color": "#123d30",
+       "top": 0,
+       "hsl": {
+        "h": 162,
+        "s": 0.54,
+        "l": 0.15
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#526159",
+       "share": 0.37
+      },
+      {
+       "color": "#17231d",
+       "share": 0.24
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.18
+      },
+      {
+       "color": "#216744",
+       "share": 0.09
+      },
+      {
+       "color": "#fff7eb",
+       "share": 0.04
+      }
+     ],
+     "button": {
+      "bg": "#183e30",
+      "hsl": {
+       "h": 158,
+       "s": 0.44,
+       "l": 0.17
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 82,
+     "inHero": 6,
+     "radius": 0,
+     "height": 48,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Saltar al contenido",
+      "Seguir explorando"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 75,
+     "shadowOverlay": 0,
+     "shadowSamples": [
+      "article.product-card → rgba(255, 255, 255, 0.92) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.05) 0px 3px 10p",
+      "article.product-card → rgba(255, 255, 255, 0.92) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.05) 0px 3px 10p",
+      "article.product-card → rgba(255, 255, 255, 0.92) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.05) 0px 3px 10p",
+      "article.product-card → rgba(255, 255, 255, 0.92) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.05) 0px 3px 10p"
+     ],
+     "gradients": 0,
+     "scrims": 1,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 4,
+     "hairlineSamples": [
+      "div.catalog-heading 736px",
+      "div.catalog-toolbar 736px",
+      "div.footer-note 736px",
+      "div.footer-bottom 736px"
+     ],
+     "outlinedBoxes": 75,
+     "dashed": 0,
+     "blurred": 75,
+     "roundedBoxes": 75,
+     "boxRadius": 20,
+     "squareMedia": 3,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 75,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 1221
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "canvas",
+      "ratio": 1
+     },
+     {
+      "type": "img",
+      "ratio": 0.77
+     },
+     {
+      "type": "video",
+      "ratio": 0.77
+     }
+    ],
+    "nav": {
+     "links": 5,
+     "fixed": true,
+     "height": 31,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "dm sans",
+     "manrope"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 15633,
+    "margins": {
+     "left": 16,
+     "right": 33
+    },
+    "sections": [
+     {
+      "sel": "main#contenido",
+      "tag": "main",
+      "top": 44,
+      "height": 14612,
+      "words": 1415,
+      "media": 75,
+      "middle": 0,
+      "heading": {
+       "text": "Un",
+       "size": 77,
+       "tag": "span"
+      },
+      "left": 16,
+      "right": 16,
+      "textLeft": 16,
+      "textRight": 37,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.store-footer",
+      "tag": "footer",
+      "top": 14656,
+      "height": 976,
+      "words": 99,
+      "media": 0,
+      "middle": 51,
+      "heading": {
+       "text": "Rosita",
+       "size": 46,
+       "tag": "strong"
+      },
+      "left": 16,
+      "right": 16,
+      "textLeft": 16,
+      "textRight": 16,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Encuentra lo que necesitas.",
+      "size": 46,
+      "top": 920,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 33,
+      "n": 25
+     },
+     {
+      "x": 283,
+      "n": 25
+     },
+     {
+      "x": 533,
+      "n": 25
+     },
+     {
+      "x": 16,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 76,
+    "bodySize": 22,
+    "stage": true,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "dark": false,
+    "ground": "#f7f8f5",
+    "sidebar": null,
+    "topbar": null,
+    "canvas": {
+     "left": 16,
+     "right": 33
+    },
+    "hero": {
+     "text": "Encuentra lo que necesitas.",
+     "words": 4,
+     "chars": 27,
+     "lines": 1,
+     "size": 46,
+     "vw": 6,
+     "font": "Manrope",
+     "weight": 600,
+     "tracking": -0.06,
+     "leading": 1.02,
+     "top": 920,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "charts": 0,
+    "layout": {
+     "panels": 77,
+     "firstScreen": 0,
+     "ragged": [],
+     "voids": []
+    },
+    "tiles": 0,
+    "panels": {
+     "count": 106,
+     "radii": [
+      [
+       20,
+       75
+      ],
+      [
+       0,
+       31
+      ]
+     ],
+     "heavyBorders": 2,
+     "borderSamples": [
+      "#d1e2d5 on #132f25 (10.64:1)",
+      "#52846f on #132f25 (3.35:1)"
+     ],
+     "heavyShadows": 0,
+     "softShadows": 75,
+     "shadowSamples": [],
+     "glass": 75
+    },
+    "chips": {
+     "count": 0,
+     "hues": 0,
+     "samples": []
+    },
+    "numbers": {
+     "cells": 0,
+     "leftAligned": 0,
+     "figures": 0,
+     "tabularShare": null,
+     "kpiMax": null
+    },
+    "rows": null,
+    "chartHues": 0,
+    "placeholders": [],
+    "type": {
+     "under13": 0.3,
+     "tiny": 16,
+     "tinySamples": [
+      "Precio especial 10px",
+      "Oferta de prueba 10px",
+      "Precio especial 10px",
+      "Oferta de prueba 10px"
+     ],
+     "sizes": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      16,
+      18,
+      22,
+      25,
+      46,
+      77,
+      138
+     ]
+    },
+    "title": {
+     "text": "Encuentra lo que necesitas.",
+     "size": 46,
+     "top": 920
+    },
+    "colourShare": 0
+   },
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 12,
+   "filled": [
+    0.96,
+    0.93,
+    1,
+    1,
+    1,
+    0.94,
+    0.88,
+    0.94,
+    0.94,
+    0.99,
+    0.99,
+    0.99
+   ],
+   "motion": {
+    "elements": 16,
+    "css": 2,
+    "transitions": 0,
+    "scripted": 14,
+    "videos": 1,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 40797,
+     "screens": 48.3,
+     "words": 1688,
+     "img": 59,
+     "video": 1,
+     "canvas": 1,
+     "svg": 86,
+     "sections": 3,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 2,
+     "videoCount": 1,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "oreo-coca-cola-video-cinematografic.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Encuentra lo que necesitas.",
+     "words": 4,
+     "chars": 27,
+     "lines": 2,
+     "size": 44,
+     "vw": 11.3,
+     "font": "Manrope",
+     "weight": 600,
+     "tracking": -0.06,
+     "leading": 1.02,
+     "top": 757,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "h1": {
+     "text": "Encuentra lo que necesitas.",
+     "words": 4,
+     "lines": 2,
+     "size": 44,
+     "font": "Manrope"
+    },
+    "headings": [
+     {
+      "text": "Rosita.",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 70.2,
+      "vw": 18,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.07,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 1,
+      "top": 0,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Un mundo por elegir. Unmundoporelegir.",
+      "words": 5,
+      "chars": 38,
+      "lines": 2,
+      "size": 50.7,
+      "vw": 13,
+      "font": "Manrope",
+      "weight": 500,
+      "tracking": -0.075,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 356,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Encuentra lo que necesitas.",
+      "words": 4,
+      "chars": 27,
+      "lines": 2,
+      "size": 44,
+      "vw": 11.3,
+      "font": "Manrope",
+      "weight": 600,
+      "tracking": -0.065,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 757,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 12.90",
+      "words": 2,
+      "chars": 8,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.036,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 1491,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 4.50",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.036,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 2033,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 3.50",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.036,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.18,
+      "top": 2540,
+      "tag": "strong",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 2.50",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.036,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.18,
+      "top": 3047,
+      "tag": "strong",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 16.00",
+      "words": 2,
+      "chars": 8,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.036,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.21,
+      "top": 3553,
+      "tag": "strong",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 24.90",
+      "words": 2,
+      "chars": 8,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.036,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 4095,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 4.00",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.036,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 4602,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 15.50",
+      "words": 2,
+      "chars": 8,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.036,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 5109,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 15.50",
+      "words": 2,
+      "chars": 8,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.036,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 5616,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 12.90",
+      "words": 2,
+      "chars": 8,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.036,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 6122,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 5.50",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.036,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 6629,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 2.50",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.036,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 7136,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 14.50",
+      "words": 2,
+      "chars": 8,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.036,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 7643,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 29.90",
+      "words": 2,
+      "chars": 8,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.036,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 8150,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 69.90",
+      "words": 2,
+      "chars": 8,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.036,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 8656,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 29.90",
+      "words": 2,
+      "chars": 8,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.036,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 9163,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 1.50",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.036,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 9670,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 15.90",
+      "words": 2,
+      "chars": 8,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.036,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 10177,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 9.90",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.036,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 10683,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 7.00",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.036,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 11190,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 2.50",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.036,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 11697,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 2.00",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.036,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 12204,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 5.00",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.036,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 12711,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 3.50",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.036,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 13217,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 8.90",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.036,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 13724,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 19.90",
+      "words": 2,
+      "chars": 8,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.036,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 14231,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 4.90",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.036,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 14738,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 16.90",
+      "words": 2,
+      "chars": 8,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.036,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 15252,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 16.90",
+      "words": 2,
+      "chars": 8,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.036,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 15767,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 4.00",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.036,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 16273,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 24.90",
+      "words": 2,
+      "chars": 8,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.036,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 16780,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 1.00",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.036,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 17287,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 1.80",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.036,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 17794,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 2.00",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.036,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 18301,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 2.50",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.036,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 18807,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 7.00",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.036,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 19314,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 2.50",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.036,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 19821,
+      "tag": "div",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 79,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 1,
+     "centered": 0,
+     "medianWords": 2,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "DM Sans",
+       "share": 0.76,
+       "mono": false
+      },
+      {
+       "family": "Manrope",
+       "share": 0.24,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      16,
+      17,
+      18,
+      19,
+      22,
+      40,
+      44,
+      51,
+      70
+     ],
+     "sizeCount": 16,
+     "notLoaded": [],
+     "body": {
+      "font": "DM Sans",
+      "size": 12,
+      "leading": 1.8,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 11.7
+     },
+     "measureChars": 60,
+     "max": {
+      "size": 70.2,
+      "vw": 18,
+      "font": "Manrope",
+      "text": "Rosita."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 1,
+     "microLabelShare": 0.002,
+     "microSamples": [
+      "TODO EN UN SOLO LUGAR"
+     ],
+     "upperShare": 0.01,
+     "centerShare": 0.15,
+     "smallText": 127
+    },
+    "eyebrows": [
+     {
+      "text": "TODO EN UN SOLO LUGAR",
+      "above": "Encuentra lo que necesitas.",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 11,
+      "top": 729
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#f7f8f5",
+     "bodyBgHsl": {
+      "h": 80,
+      "s": 0.18,
+      "l": 0.97
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#f1f2e9",
+       "top": 0,
+       "hsl": {
+        "h": 67,
+        "s": 0.26,
+        "l": 0.93
+       }
+      },
+      {
+       "color": "#10251e",
+       "top": 44,
+       "hsl": {
+        "h": 160,
+        "s": 0.4,
+        "l": 0.1
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 1115,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#132f25",
+       "top": 39619,
+       "hsl": {
+        "h": 159,
+        "s": 0.42,
+        "l": 0.13
+       }
+      },
+      {
+       "color": "#123d30",
+       "top": 0,
+       "hsl": {
+        "h": 162,
+        "s": 0.54,
+        "l": 0.15
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#526159",
+       "share": 0.37
+      },
+      {
+       "color": "#17231d",
+       "share": 0.24
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.18
+      },
+      {
+       "color": "#216744",
+       "share": 0.09
+      },
+      {
+       "color": "#fff7eb",
+       "share": 0.04
+      }
+     ],
+     "button": {
+      "bg": "#183e30",
+      "hsl": {
+       "h": 158,
+       "s": 0.44,
+       "l": 0.17
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 81,
+     "inHero": 5,
+     "radius": 0,
+     "height": 44,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Saltar al contenido",
+      "Seguir explorando"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 75,
+     "shadowOverlay": 0,
+     "shadowSamples": [
+      "article.product-card → rgba(255, 255, 255, 0.92) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.05) 0px 3px 10p",
+      "article.product-card → rgba(255, 255, 255, 0.92) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.05) 0px 3px 10p",
+      "article.product-card → rgba(255, 255, 255, 0.92) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.05) 0px 3px 10p",
+      "article.product-card → rgba(255, 255, 255, 0.92) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.05) 0px 3px 10p"
+     ],
+     "gradients": 0,
+     "scrims": 1,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 4,
+     "hairlineSamples": [
+      "div.catalog-heading 358px",
+      "div.catalog-toolbar 358px",
+      "div.footer-note 358px",
+      "div.footer-bottom 358px"
+     ],
+     "outlinedBoxes": 75,
+     "dashed": 0,
+     "blurred": 75,
+     "roundedBoxes": 75,
+     "boxRadius": 20,
+     "squareMedia": 3,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "canvas",
+      "ratio": 1
+     },
+     {
+      "type": "img",
+      "ratio": 0.78
+     },
+     {
+      "type": "video",
+      "ratio": 0.78
+     }
+    ],
+    "nav": {
+     "links": 5,
+     "fixed": true,
+     "height": 44,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "dm sans",
+     "manrope"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 40797,
+    "margins": {
+     "left": 16,
+     "right": 33
+    },
+    "sections": [
+     {
+      "sel": "main#contenido",
+      "tag": "main",
+      "top": 44,
+      "height": 39575,
+      "words": 1415,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Un",
+       "size": 51,
+       "tag": "span"
+      },
+      "left": 16,
+      "right": 16,
+      "textLeft": 16,
+      "textRight": 35,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.store-footer",
+      "tag": "footer",
+      "top": 39619,
+      "height": 1178,
+      "words": 99,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Rosita",
+       "size": 40,
+       "tag": "strong"
+      },
+      "left": 16,
+      "right": 44,
+      "textLeft": 16,
+      "textRight": 44,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Encuentra lo que necesitas.",
+      "size": 44,
+      "top": 757,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 33,
+      "n": 75
+     },
+     {
+      "x": 16,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 76,
+    "bodySize": 19,
+    "stage": true,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "dark": false,
+    "ground": "#f7f8f5",
+    "sidebar": null,
+    "topbar": {
+     "h": 44
+    },
+    "canvas": {
+     "left": 16,
+     "right": 33
+    },
+    "hero": {
+     "text": "Encuentra lo que necesitas.",
+     "words": 4,
+     "chars": 27,
+     "lines": 2,
+     "size": 44,
+     "vw": 11.3,
+     "font": "Manrope",
+     "weight": 600,
+     "tracking": -0.06,
+     "leading": 1.02,
+     "top": 757,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "charts": 0,
+    "layout": {
+     "panels": 77,
+     "firstScreen": 0,
+     "ragged": [],
+     "voids": [
+      {
+       "gap": 50,
+       "at": 40474,
+       "panel": "Una tienda de verdad."
+      }
+     ]
+    },
+    "tiles": 0,
+    "panels": {
+     "count": 100,
+     "radii": [
+      [
+       20,
+       75
+      ],
+      [
+       0,
+       25
+      ]
+     ],
+     "heavyBorders": 2,
+     "borderSamples": [
+      "#d1e2d5 on #132f25 (10.64:1)",
+      "#52846f on #132f25 (3.35:1)"
+     ],
+     "heavyShadows": 0,
+     "softShadows": 75,
+     "shadowSamples": [],
+     "glass": 75
+    },
+    "chips": {
+     "count": 0,
+     "hues": 0,
+     "samples": []
+    },
+    "numbers": {
+     "cells": 0,
+     "leftAligned": 0,
+     "figures": 0,
+     "tabularShare": null,
+     "kpiMax": null
+    },
+    "rows": null,
+    "chartHues": 0,
+    "placeholders": [],
+    "type": {
+     "under13": 0.31,
+     "tiny": 21,
+     "tinySamples": [
+      "Ordenar por 10px",
+      "Precio especial 9px",
+      "S/ 4.00 10px",
+      "Oferta de prueba 9px"
+     ],
+     "sizes": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      16,
+      17,
+      18,
+      19,
+      22,
+      40,
+      44,
+      51,
+      70
+     ]
+    },
+    "title": {
+     "text": "Encuentra lo que necesitas.",
+     "size": 44,
+     "top": 757
+    },
+    "colourShare": 0
+   },
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "micro-label",
+   "width": 1440,
+   "message": "1 tiny uppercase letter-spaced label(s): \"TODO EN UN SOLO LUGAR\"",
+   "fix": "Prefer sentence case at body size.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "palette-cream",
+   "width": 1440,
+   "message": "Yellow-cream background (text #fff7eb).",
+   "fix": "Use the drawn palette. If you want warmth, take a low-chroma stone or bone, not a yellow cream.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "tiny-text",
+   "width": 1440,
+   "message": "18 text blocks under 11px: S/ 1 10px, S/ 300.00 10px, Precio especial 10px, Oferta de prueba 10px.",
+   "fix": "Nothing below 11px; secondary text 12px, data 13–14px.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "below-fold",
+   "width": 1440,
+   "message": "Only 0 of 78 blocks start on the first 1440px screen.",
+   "fix": "Every block the brief names shows its header and first rows on the first desktop screen: size the headline block to its question, cap long lists with \"View all\", and put time-sensitive blocks before long tables."
+  },
+  {
+   "level": "WARN",
+   "id": "app-title-size",
+   "width": 1440,
+   "message": "The h1 is 86px (\"Encuentra lo que necesitas.\").",
+   "fix": "An app screen is not a landing page: the title is 18-32px (20-24px on a phone).",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "covered-text",
+   "width": 1440,
+   "message": "Large text lies under another element at some scroll position: \"Rosita.\" (screen 12, 100% hidden)",
+   "fix": "Nothing may sit on top of a headline or statement. Move the picture, shorten the pinned run, or raise the text above it (z-index) and give it a ground.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "C:\\Users\\hisok\\.codex\\visualizations\\2026\\11\\01\\01a19847-a13f-73f2-ae5d-85946fe1277b\\catalog-responsive-inspect\\desktop-fold.jpg",
+   "pages": [
+    "C:\\Users\\hisok\\.codex\\visualizations\\2026\\11\\01\\01a19847-a13f-73f2-ae5d-85946fe1277b\\catalog-responsive-inspect\\desktop-page-01.jpg",
+    "C:\\Users\\hisok\\.codex\\visualizations\\2026\\11\\01\\01a19847-a13f-73f2-ae5d-85946fe1277b\\catalog-responsive-inspect\\desktop-page-02.jpg",
+    "C:\\Users\\hisok\\.codex\\visualizations\\2026\\11\\01\\01a19847-a13f-73f2-ae5d-85946fe1277b\\catalog-responsive-inspect\\desktop-page-03.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "C:\\Users\\hisok\\.codex\\visualizations\\2026\\11\\01\\01a19847-a13f-73f2-ae5d-85946fe1277b\\catalog-responsive-inspect\\tablet-fold.jpg",
+   "pages": [
+    "C:\\Users\\hisok\\.codex\\visualizations\\2026\\11\\01\\01a19847-a13f-73f2-ae5d-85946fe1277b\\catalog-responsive-inspect\\tablet-page-01.jpg",
+    "C:\\Users\\hisok\\.codex\\visualizations\\2026\\11\\01\\01a19847-a13f-73f2-ae5d-85946fe1277b\\catalog-responsive-inspect\\tablet-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "C:\\Users\\hisok\\.codex\\visualizations\\2026\\11\\01\\01a19847-a13f-73f2-ae5d-85946fe1277b\\catalog-responsive-inspect\\mobile-fold.jpg",
+   "pages": [
+    "C:\\Users\\hisok\\.codex\\visualizations\\2026\\11\\01\\01a19847-a13f-73f2-ae5d-85946fe1277b\\catalog-responsive-inspect\\mobile-page-01.jpg",
+    "C:\\Users\\hisok\\.codex\\visualizations\\2026\\11\\01\\01a19847-a13f-73f2-ae5d-85946fe1277b\\catalog-responsive-inspect\\mobile-page-02.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

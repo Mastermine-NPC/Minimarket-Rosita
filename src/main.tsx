@@ -5,6 +5,8 @@ import { AppRouter } from "@/app/router";
 import "@/styles/globals.css";
 import "@/styles/modules.css";
 import "@/styles/polish.css";
+import "@/styles/rosita-editorial.css";
+import "@/styles/product-glass.css";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <Providers>

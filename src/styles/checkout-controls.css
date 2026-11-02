@@ -1,0 +1,37 @@
+/* Checkout only; the country dialog is portalled and has its own namespace. */
+.checkout-page .international-phone-row { display: grid; grid-template-columns: auto minmax(0,1fr); gap: 10px; align-items: stretch; }
+.checkout-page .phone-country-trigger { min-height: 46px; height: auto; border-radius: 12px; gap: 8px; background: #fff; color: var(--brand); border: 1px solid var(--border); }
+.checkout-page .international-phone-row input { width: 100%; min-width: 0; min-height: 46px; border-radius: 12px; }
+.checkout-page .phone-kind-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-top: 12px; }
+.checkout-page .phone-kind-row label { font-size: 13px; color: var(--muted-foreground); }
+.checkout-page .phone-kind-row select { width: auto; min-width: 120px; min-height: 42px; border-radius: 10px; padding: 8px 30px 8px 12px; }
+.checkout-page .international-phone > .hint { margin: 8px 0 0; }
+.phone-country-dialog[data-slot="dialog-content"] { width: min(460px, calc(100vw - 32px)); max-width: 460px; max-height: calc(100dvh - 32px); display: flex; flex-direction: column; gap: 12px; padding: 24px; border-radius: 20px; background: #fff; color: #17231d; }
+.phone-country-dialog .phone-country-search { display: flex; align-items: center; gap: 10px; border: 1px solid #b9c7bd; padding: 0 12px; border-radius: 12px; }
+.phone-country-dialog .phone-country-search input { min-width: 0; border: 0; box-shadow: none; min-height: 44px; width: 100%; }
+.phone-country-options { min-height: 0; overflow-y: auto; overscroll-behavior: contain; max-height: min(420px,50dvh); }
+.phone-country-options button { display: flex; align-items: center; gap: 12px; width: 100%; text-align: left; min-height: 52px; padding: 10px 12px; border: 1px solid transparent; border-radius: 10px; background: transparent; color: #17231d; cursor: pointer; }
+.phone-country-options button:hover { background: #eef4ef; }
+.phone-country-options button[aria-pressed="true"] { background: #e8f1e9; border-color: #a4bfae; color: #145a46; }
+.phone-country-options button > span { flex: 1; min-width: 0; }
+.phone-country-options small { margin-left: 8px; color: #526159; }
+.phone-country-options strong { font-size: 13px; }
+.phone-country-options img, .phone-country-trigger img { flex: none; object-fit: cover; border-radius: 2px; }
+.phone-country-dialog :focus-visible { outline: 2px solid #145a46; outline-offset: 2px; }
+.checkout-page .map-theme-night .leaflet-control-zoom a { background: #142436; color: #d8e4ee; border-color: #35485d; }
+.checkout-page .map-theme-night .pin-store { background: #61e3dc; color: #0b2132; border-color: #ddfffc; }
+.checkout-page .map-theme-night .pin-destination { background: #e7c3d4; color: #182b3d; border-color: #fff0f7; }
+.checkout-page .map-theme-night .leaflet-control-attribution { background: #102131eb; color: #cfdae3; }
+.checkout-page .map-theme-night .leaflet-control-attribution a { color: #9ce7e4; }
+.checkout-page .destination-search { padding: 16px; border-radius: 14px; background: var(--secondary); min-width: 0; }
+.checkout-page .destination-search-row { display: flex; gap: 10px; margin-top: 8px; }
+.checkout-page .destination-search-row input { min-width: 0; flex: 1; }
+@media(max-width: 480px) {
+ .phone-country-dialog[data-slot="dialog-content"] { padding: 20px 16px; }
+ .checkout-page .destination-search-row { flex-wrap: wrap; }
+ .checkout-page .destination-search-row input { flex-basis: 100%; }
+ .checkout-page .international-phone-row { gap: 7px; }
+ .checkout-page .phone-country-trigger { padding-inline: 9px; gap: 5px; }
+}
+@media(prefers-reduced-motion: reduce) { .phone-country-dialog *, .checkout-page .international-phone * { transition: none; animation: none; } }
+.checkout-page .map-theme-night .route-map { background: #0b1422; border-color: #273b50; }

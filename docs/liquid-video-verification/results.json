@@ -1,0 +1,137 @@
+{
+  "results": [
+    {
+      "name": "desktop",
+      "initial": [
+        {
+          "time": 1.0013,
+          "src": "http://localhost:4190/images/video/cinematic/Arequipa-backgraound-02.mp4",
+          "paused": false,
+          "duration": 22
+        },
+        {
+          "time": 1.0218,
+          "src": "http://localhost:4190/images/video/web/video-intro.mp4",
+          "paused": false,
+          "duration": 23.8
+        }
+      ],
+      "after": [
+        {
+          "same": true,
+          "src": "http://localhost:4190/images/video/cinematic/Arequipa-backgraound-02.mp4",
+          "time": 2.6972,
+          "paused": false
+        },
+        {
+          "same": true,
+          "src": "http://localhost:4190/images/video/web/video-intro.mp4",
+          "time": 2.7177,
+          "paused": false
+        }
+      ],
+      "overflow": false,
+      "link": true
+    },
+    {
+      "name": "tablet",
+      "initial": [
+        {
+          "time": 0.8889,
+          "src": "http://localhost:4190/images/video/cinematic/Arequipa-backgraound-02.mp4",
+          "paused": false,
+          "duration": 22
+        },
+        {
+          "time": 0.8869,
+          "src": "http://localhost:4190/images/video/web/video-intro.mp4",
+          "paused": false,
+          "duration": 23.8
+        }
+      ],
+      "after": [
+        {
+          "same": true,
+          "src": "http://localhost:4190/images/video/cinematic/Arequipa-backgraound-02.mp4",
+          "time": 2.4208,
+          "paused": false
+        },
+        {
+          "same": true,
+          "src": "http://localhost:4190/images/video/web/video-intro.mp4",
+          "time": 2.4187,
+          "paused": false
+        }
+      ],
+      "overflow": false,
+      "link": true
+    },
+    {
+      "name": "mobile",
+      "initial": [
+        {
+          "time": 0.8196,
+          "src": "http://localhost:4190/images/video/cinematic/Arequipa-backgraound-02.mp4",
+          "paused": false,
+          "duration": 22
+        },
+        {
+          "time": 0.8216,
+          "src": "http://localhost:4190/images/video/web/video-intro.mp4",
+          "paused": false,
+          "duration": 23.8
+        }
+      ],
+      "after": [
+        {
+          "same": true,
+          "src": "http://localhost:4190/images/video/cinematic/Arequipa-backgraound-02.mp4",
+          "time": 2.2463,
+          "paused": false
+        },
+        {
+          "same": true,
+          "src": "http://localhost:4190/images/video/web/video-intro.mp4",
+          "time": 2.2484,
+          "paused": false
+        }
+      ],
+      "overflow": false,
+      "link": true
+    },
+    {
+      "name": "reduced",
+      "initial": [
+        {
+          "time": 0,
+          "src": "",
+          "paused": true,
+          "duration": null
+        },
+        {
+          "time": 0,
+          "src": "",
+          "paused": true,
+          "duration": null
+        }
+      ],
+      "after": [
+        {
+          "same": true,
+          "src": "",
+          "time": 0,
+          "paused": true
+        },
+        {
+          "same": true,
+          "src": "",
+          "time": 0,
+          "paused": true
+        }
+      ],
+      "overflow": false,
+      "link": true
+    }
+  ],
+  "errors": []
+}

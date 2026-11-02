@@ -4,6 +4,7 @@ import { stagesFor } from "@/data/delivery";
 import { orderDate } from "@/lib/order-date";
 import { Button } from "@/components/ui/button";
 import { OrderSummary } from "@/features/pedidos/order-summary";
+import { OrderTimeline } from "@/features/pedidos/order-timeline";
 import { StatusHistory } from "@/features/pedidos/status-history";
 import {
   AdminHeading,
@@ -109,6 +110,7 @@ export function AdminOrderDetailPage() {
               o reposición automática.
             </p>
           </div>
+          <OrderTimeline order={order} />
           <StatusHistory order={order} />
         </aside>
       </div>

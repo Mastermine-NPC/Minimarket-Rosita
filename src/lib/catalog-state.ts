@@ -8,11 +8,14 @@ export function currentProducts(
     "products" | "inventory" | "categories" | "subcategories"
   >,
 ): Product[] {
+  const canonicalIds = new Set(state.products.map(product => product.id));
   return state.products.map((p) => {
     const inventory = state.inventory[p.id],
       image = productImages.find((i) => i.key === p.imageKey);
     return {
       ...p,
+      // All products share this rule. Existing canonical-ID collisions retain their old URL.
+      publicId: p.code && (p.code === p.id || !canonicalIds.has(p.code)) ? p.code : p.id,
       active: !p.archived && p.active && taxonomyEnabled(state, p),
       imageAssetId: p.imageKey.startsWith("upload:")
         ? p.imageKey.slice(7)

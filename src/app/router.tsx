@@ -1,3 +1,4 @@
+import { RouteTransition } from "@/features/cinema/route-transition";
 import { AdminLayout } from "@/features/administracion/admin-layout";
 import { lazy, Suspense, type ReactNode } from "react";
 import { Route, Routes } from "react-router";
@@ -61,6 +62,7 @@ const OrdersPage = lazy(() =>
 const OrderPage = lazy(() =>
   import("@/pages/order-page").then((m) => ({ default: m.OrderPage })),
 );
+const CustomersPage = lazy(() => import("@/pages/admin/customers-page").then(m => ({ default: m.CustomersPage })));
 const AdminDashboardPage = lazy(() =>
   import("@/pages/admin/dashboard-page").then((m) => ({
     default: m.AdminDashboardPage,
@@ -117,7 +119,7 @@ function Page({ children }: { children: ReactNode }) {
 }
 export function AppRouter() {
   return (
-    <Routes>
+    <RouteTransition>{location => <Routes location={location}>
       <Route
         path="caja"
         element={
@@ -127,6 +129,7 @@ export function AppRouter() {
         }
       />
       <Route path="admin" element={<AdminLayout />}>
+        <Route path="clientes" element={<Page><CustomersPage /></Page>} />
         <Route
           path="agentes"
           element={
@@ -384,6 +387,6 @@ export function AppRouter() {
           }
         />
       </Route>
-    </Routes>
+    </Routes>}</RouteTransition>
   );
 }

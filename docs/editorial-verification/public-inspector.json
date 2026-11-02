@@ -1,0 +1,1865 @@
+{
+ "url": "http://localhost:4190/producto/ROS-002",
+ "at": "2026-11-01T22:03:01.899Z",
+ "allow": [
+  "gradient",
+  "hairline",
+  "outlined-box",
+  "small-text",
+  "eyebrow",
+  "covered-text",
+  "body-size",
+  "few-pictures"
+ ],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 3,
+   "filled": [
+    0.86,
+    0.97,
+    0.97
+   ],
+   "motion": {
+    "elements": 10,
+    "css": 1,
+    "transitions": 6,
+    "scripted": 3,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 2621,
+     "screens": 2.9,
+     "words": 298,
+     "img": 3,
+     "video": 0,
+     "canvas": 2,
+     "svg": 25,
+     "sections": 5,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 3,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "ROS-024-powerade.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Papas Lay’s clásicas",
+     "words": 3,
+     "chars": 20,
+     "lines": 2,
+     "size": 64.8,
+     "vw": 4.5,
+     "font": "Manrope",
+     "weight": 600,
+     "tracking": -0.065,
+     "leading": 1.02,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "right",
+     "widthRatio": 0.36,
+     "top": 263,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Papas Lay’s clásicas",
+     "words": 3,
+     "lines": 2,
+     "size": 64.8,
+     "font": "Manrope"
+    },
+    "headings": [
+     {
+      "text": "Papas Lay’s clásicas",
+      "words": 3,
+      "chars": 20,
+      "lines": 2,
+      "size": 64.8,
+      "vw": 4.5,
+      "font": "Manrope",
+      "weight": 600,
+      "tracking": -0.065,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.36,
+      "top": 263,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 4.00",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 36,
+      "vw": 2.5,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.022,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.36,
+      "top": 524,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Rosita.",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 259.2,
+      "vw": 18,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.07,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 1,
+      "top": 904,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Rosita.",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 46,
+      "vw": 3.2,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.054,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.1,
+      "top": 2057,
+      "tag": "strong",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 4,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 1,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "DM Sans",
+       "share": 0.83,
+       "mono": false
+      },
+      {
+       "family": "Manrope",
+       "share": 0.17,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      18,
+      22,
+      24,
+      25,
+      36,
+      46,
+      65,
+      259
+     ],
+     "sizeCount": 17,
+     "notLoaded": [],
+     "body": {
+      "font": "DM Sans",
+      "size": 12,
+      "leading": 1.65,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 5.8
+     },
+     "measureChars": 89,
+     "max": {
+      "size": 259.2,
+      "vw": 18,
+      "font": "Manrope",
+      "text": "Rosita."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.07,
+     "smallText": 22
+    },
+    "eyebrows": [
+     {
+      "text": "Consumibles",
+      "above": "Papas Lay’s clásicas",
+      "upper": false,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 11,
+      "top": 220
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#f7f8f5",
+     "bodyBgHsl": {
+      "h": 80,
+      "s": 0.18,
+      "l": 0.97
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#f1f2e9",
+       "top": 0,
+       "hsl": {
+        "h": 67,
+        "s": 0.26,
+        "l": 0.93
+       }
+      },
+      {
+       "color": "#e4e9dc",
+       "top": 179,
+       "hsl": {
+        "h": 83,
+        "s": 0.23,
+        "l": 0.89
+       }
+      },
+      {
+       "color": "#132f25",
+       "top": 2001,
+       "hsl": {
+        "h": 159,
+        "s": 0.42,
+        "l": 0.13
+       }
+      },
+      {
+       "color": "#123d30",
+       "top": 904,
+       "hsl": {
+        "h": 162,
+        "s": 0.54,
+        "l": 0.15
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#17231d",
+       "share": 0.26
+      },
+      {
+       "color": "#526159",
+       "share": 0.21
+      },
+      {
+       "color": "#fff7eb",
+       "share": 0.2
+      },
+      {
+       "color": "#e0ebe2",
+       "share": 0.09
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.06
+      }
+     ],
+     "button": {
+      "bg": "#183e30",
+      "hsl": {
+       "h": 158,
+       "s": 0.44,
+       "l": 0.17
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 12,
+     "inHero": 8,
+     "radius": 10,
+     "height": 48,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Saltar al contenido",
+      "Restablecer",
+      "Agregar al carrito"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 3,
+     "hairlineSamples": [
+      "div.detail-quantity 520px",
+      "div.footer-note 1280px",
+      "div.footer-bottom 1280px"
+     ],
+     "outlinedBoxes": 1,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 1,
+     "boxRadius": 20,
+     "squareMedia": 2,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 1328
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "canvas",
+      "ratio": 1
+     }
+    ],
+    "nav": {
+     "links": 11,
+     "fixed": true,
+     "height": 44,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "dm sans",
+     "manrope"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 2621,
+    "margins": {
+     "left": 80,
+     "right": 106
+    },
+    "sections": [
+     {
+      "sel": "main#contenido",
+      "tag": "main",
+      "top": 44,
+      "height": 1957,
+      "words": 186,
+      "media": 5,
+      "middle": 0,
+      "heading": {
+       "text": "Papas Lay’s clásicas",
+       "size": 65,
+       "tag": "h1"
+      },
+      "left": 80,
+      "right": 104,
+      "textLeft": 80,
+      "textRight": 106,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.store-footer",
+      "tag": "footer",
+      "top": 2001,
+      "height": 620,
+      "words": 99,
+      "media": 0,
+      "middle": 51,
+      "heading": {
+       "text": "Rosita",
+       "size": 46,
+       "tag": "strong"
+      },
+      "left": 80,
+      "right": 80,
+      "textLeft": 80,
+      "textRight": 80,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Papas Lay’s clásicas",
+      "size": 65,
+      "top": 263,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 104,
+      "n": 3
+     },
+     {
+      "x": 80,
+      "n": 1
+     },
+     {
+      "x": 212,
+      "n": 1
+     },
+     {
+      "x": 429,
+      "n": 1
+     },
+     {
+      "x": 754,
+      "n": 1
+     },
+     {
+      "x": 840,
+      "n": 1
+     },
+     {
+      "x": 1079,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 9,
+    "bodySize": 12,
+    "stage": true,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 5,
+   "filled": [
+    0.93,
+    0.79,
+    1,
+    1,
+    1
+   ],
+   "motion": {
+    "elements": 4,
+    "css": 1,
+    "transitions": 0,
+    "scripted": 3,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 4113,
+     "screens": 4,
+     "words": 317,
+     "img": 3,
+     "video": 0,
+     "canvas": 2,
+     "svg": 25,
+     "sections": 5,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 3,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "ROS-024-powerade.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Rosita.",
+     "words": 1,
+     "chars": 7,
+     "lines": 1,
+     "size": 138.2,
+     "vw": 18,
+     "font": "Manrope",
+     "weight": 800,
+     "tracking": -0.07,
+     "leading": 1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 1,
+     "top": 0,
+     "tag": "div",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Papas Lay’s clásicas",
+     "words": 3,
+     "lines": 1,
+     "size": 53.8,
+     "font": "Manrope"
+    },
+    "headings": [
+     {
+      "text": "Rosita.",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 138.2,
+      "vw": 18,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.07,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 1,
+      "top": 0,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Rosita.",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 29,
+      "vw": 3.8,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.062,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.11,
+      "top": 87,
+      "tag": "strong",
+      "kind": "heading"
+     },
+     {
+      "text": "Papas Lay’s clásicas",
+      "words": 3,
+      "chars": 20,
+      "lines": 1,
+      "size": 53.8,
+      "vw": 7,
+      "font": "Manrope",
+      "weight": 600,
+      "tracking": -0.065,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 227,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 4.00",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 36,
+      "vw": 4.7,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.022,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 1156,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Rosita.",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 46,
+      "vw": 6,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.054,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.19,
+      "top": 3193,
+      "tag": "strong",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 5,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 2,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "DM Sans",
+       "share": 0.84,
+       "mono": false
+      },
+      {
+       "family": "Manrope",
+       "share": 0.16,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      18,
+      22,
+      24,
+      25,
+      29,
+      36,
+      46,
+      54,
+      138
+     ],
+     "sizeCount": 18,
+     "notLoaded": [],
+     "body": {
+      "font": "DM Sans",
+      "size": 12,
+      "leading": 1.65,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 5.8
+     },
+     "measureChars": 89,
+     "max": {
+      "size": 138.2,
+      "vw": 18,
+      "font": "Manrope",
+      "text": "Rosita."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.01,
+     "centerShare": 0.08,
+     "smallText": 25
+    },
+    "eyebrows": [
+     {
+      "text": "Consumibles",
+      "above": "Papas Lay’s clásicas",
+      "upper": false,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 11,
+      "top": 185
+     },
+     {
+      "text": "Modelo: NKaap",
+      "above": "S/ 4.00",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 14,
+      "top": 1085
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#f7f8f5",
+     "bodyBgHsl": {
+      "h": 80,
+      "s": 0.18,
+      "l": 0.97
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#f1f2e9",
+       "top": 0,
+       "hsl": {
+        "h": 67,
+        "s": 0.26,
+        "l": 0.93
+       }
+      },
+      {
+       "color": "#e4e9dc",
+       "top": 376,
+       "hsl": {
+        "h": 83,
+        "s": 0.23,
+        "l": 0.89
+       }
+      },
+      {
+       "color": "#132f25",
+       "top": 3137,
+       "hsl": {
+        "h": 159,
+        "s": 0.42,
+        "l": 0.13
+       }
+      },
+      {
+       "color": "#123d30",
+       "top": 0,
+       "hsl": {
+        "h": 162,
+        "s": 0.54,
+        "l": 0.15
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#17231d",
+       "share": 0.26
+      },
+      {
+       "color": "#526159",
+       "share": 0.21
+      },
+      {
+       "color": "#fff7eb",
+       "share": 0.19
+      },
+      {
+       "color": "#e0ebe2",
+       "share": 0.08
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.06
+      }
+     ],
+     "button": {
+      "bg": "#183e30",
+      "hsl": {
+       "h": 158,
+       "s": 0.44,
+       "l": 0.17
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 11,
+     "inHero": 6,
+     "radius": 10,
+     "height": 48,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Saltar al contenido",
+      "Buscar",
+      "Pedidos",
+      "0 Carrito",
+      "Menú"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 1,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 5,
+     "hairlineSamples": [
+      "header.store-header 768px",
+      "div.store-nav-wrap 768px",
+      "div.detail-quantity 736px",
+      "div.footer-note 736px",
+      "div.footer-bottom 736px"
+     ],
+     "outlinedBoxes": 1,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 1,
+     "boxRadius": 20,
+     "squareMedia": 2,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 2016
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "canvas",
+      "ratio": 1
+     },
+     {
+      "type": "canvas",
+      "ratio": 0.45
+     }
+    ],
+    "nav": {
+     "links": 3,
+     "fixed": true,
+     "height": 44,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "dm sans",
+     "manrope"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 4113,
+    "margins": {
+     "left": 16,
+     "right": 16
+    },
+    "sections": [
+     {
+      "sel": "main#contenido",
+      "tag": "main",
+      "top": 44,
+      "height": 3093,
+      "words": 186,
+      "media": 5,
+      "middle": 0,
+      "heading": {
+       "text": "Papas Lay’s clásicas",
+       "size": 54,
+       "tag": "h1"
+      },
+      "left": 16,
+      "right": 16,
+      "textLeft": 16,
+      "textRight": 42,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.store-footer",
+      "tag": "footer",
+      "top": 3137,
+      "height": 976,
+      "words": 99,
+      "media": 0,
+      "middle": 51,
+      "heading": {
+       "text": "Rosita",
+       "size": 46,
+       "tag": "strong"
+      },
+      "left": 16,
+      "right": 16,
+      "textLeft": 16,
+      "textRight": 16,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Papas Lay’s clásicas",
+      "size": 54,
+      "top": 227,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 32,
+      "n": 3
+     },
+     {
+      "x": 16,
+      "n": 2
+     },
+     {
+      "x": 410,
+      "n": 2
+     },
+     {
+      "x": 49,
+      "n": 1
+     },
+     {
+      "x": 148,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 9,
+    "bodySize": 12,
+    "stage": true,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 6,
+   "filled": [
+    0.87,
+    0.77,
+    0.98,
+    1,
+    1,
+    1
+   ],
+   "motion": {
+    "elements": 4,
+    "css": 1,
+    "transitions": 0,
+    "scripted": 3,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 4365,
+     "screens": 5.2,
+     "words": 316,
+     "img": 3,
+     "video": 0,
+     "canvas": 2,
+     "svg": 25,
+     "sections": 5,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Rosita.",
+     "words": 1,
+     "chars": 7,
+     "lines": 1,
+     "size": 70.2,
+     "vw": 18,
+     "font": "Manrope",
+     "weight": 800,
+     "tracking": -0.07,
+     "leading": 1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 1,
+     "top": 0,
+     "tag": "div",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Papas Lay’s clásicas",
+     "words": 3,
+     "lines": 1,
+     "size": 36,
+     "font": "Manrope"
+    },
+    "headings": [
+     {
+      "text": "Rosita.",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 70.2,
+      "vw": 18,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.07,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 1,
+      "top": 0,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Rosita.",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 25,
+      "vw": 6.4,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.06,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "left",
+      "widthRatio": 0.2,
+      "top": 5,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Rosita.",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 29,
+      "vw": 7.4,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.062,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.23,
+      "top": 87,
+      "tag": "strong",
+      "kind": "heading"
+     },
+     {
+      "text": "Papas Lay’s clásicas",
+      "words": 3,
+      "chars": 20,
+      "lines": 1,
+      "size": 36,
+      "vw": 9.2,
+      "font": "Manrope",
+      "weight": 600,
+      "tracking": -0.065,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 212,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Lay’s",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.04,
+      "leading": 1.6,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.14,
+      "top": 360,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 4.00",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 34,
+      "vw": 8.7,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.024,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 1136,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Los detalles importan.",
+      "words": 3,
+      "chars": 22,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Manrope",
+      "weight": 700,
+      "tracking": -0.045,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.81,
+      "top": 1696,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "También en consumibles",
+      "words": 3,
+      "chars": 22,
+      "lines": 2,
+      "size": 23,
+      "vw": 5.9,
+      "font": "Manrope",
+      "weight": 700,
+      "tracking": -0.043,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.64,
+      "top": 1930,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 3.50",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.036,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.18,
+      "top": 2371,
+      "tag": "strong",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 4.00",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.036,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.36,
+      "top": 2371,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 1.80",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.036,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.36,
+      "top": 2946,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 3.50",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.036,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.36,
+      "top": 2946,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Rosita.",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 40,
+      "vw": 10.3,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.062,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.31,
+      "top": 3244,
+      "tag": "strong",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 13,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": 2,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "DM Sans",
+       "share": 0.84,
+       "mono": false
+      },
+      {
+       "family": "Manrope",
+       "share": 0.16,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      18,
+      19,
+      22,
+      23,
+      24,
+      25,
+      29,
+      34,
+      36,
+      40,
+      70
+     ],
+     "sizeCount": 20,
+     "notLoaded": [],
+     "body": {
+      "font": "DM Sans",
+      "size": 12,
+      "leading": 1.65,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 5.8
+     },
+     "measureChars": 51,
+     "max": {
+      "size": 70.2,
+      "vw": 18,
+      "font": "Manrope",
+      "text": "Rosita."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.01,
+     "centerShare": 0.08,
+     "smallText": 26
+    },
+    "eyebrows": [
+     {
+      "text": "Consumibles",
+      "above": "Papas Lay’s clásicas",
+      "upper": false,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 11,
+      "top": 170
+     },
+     {
+      "text": "CC BY 4.0 · Classic aislada del conjunto",
+      "above": "S/ 4.00",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 14,
+      "top": 1045
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#f7f8f5",
+     "bodyBgHsl": {
+      "h": 80,
+      "s": 0.18,
+      "l": 0.97
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#f1f2e9",
+       "top": 0,
+       "hsl": {
+        "h": 67,
+        "s": 0.26,
+        "l": 0.93
+       }
+      },
+      {
+       "color": "#e4e9dc",
+       "top": 340,
+       "hsl": {
+        "h": 83,
+        "s": 0.23,
+        "l": 0.89
+       }
+      },
+      {
+       "color": "#132f25",
+       "top": 3188,
+       "hsl": {
+        "h": 159,
+        "s": 0.42,
+        "l": 0.13
+       }
+      },
+      {
+       "color": "#123d30",
+       "top": 0,
+       "hsl": {
+        "h": 162,
+        "s": 0.54,
+        "l": 0.15
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#17231d",
+       "share": 0.26
+      },
+      {
+       "color": "#526159",
+       "share": 0.21
+      },
+      {
+       "color": "#fff7eb",
+       "share": 0.19
+      },
+      {
+       "color": "#e0ebe2",
+       "share": 0.08
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.06
+      }
+     ],
+     "button": {
+      "bg": "#183e30",
+      "hsl": {
+       "h": 158,
+       "s": 0.44,
+       "l": 0.17
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 10,
+     "inHero": 4,
+     "radius": 0,
+     "height": 44,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Saltar al contenido",
+      "Buscar",
+      "0 Carrito",
+      "Menú"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 1,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 5,
+     "hairlineSamples": [
+      "header.store-header 390px",
+      "div.store-nav-wrap 390px",
+      "div.detail-quantity 358px",
+      "div.footer-note 358px",
+      "div.footer-bottom 358px"
+     ],
+     "outlinedBoxes": 1,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 1,
+     "boxRadius": 20,
+     "squareMedia": 2,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 2003
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "canvas",
+      "ratio": 1
+     },
+     {
+      "type": "canvas",
+      "ratio": 0.45
+     }
+    ],
+    "nav": {
+     "links": 3,
+     "fixed": true,
+     "height": 44,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "dm sans",
+     "manrope"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 4365,
+    "margins": {
+     "left": 16,
+     "right": 32
+    },
+    "sections": [
+     {
+      "sel": "main#contenido",
+      "tag": "main",
+      "top": 44,
+      "height": 3144,
+      "words": 186,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Papas Lay’s clásicas",
+       "size": 36,
+       "tag": "h1"
+      },
+      "left": 16,
+      "right": 16,
+      "textLeft": 16,
+      "textRight": 36,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.store-footer",
+      "tag": "footer",
+      "top": 3188,
+      "height": 1178,
+      "words": 99,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Rosita",
+       "size": 40,
+       "tag": "strong"
+      },
+      "left": 16,
+      "right": 44,
+      "textLeft": 16,
+      "textRight": 44,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Papas Lay’s clásicas",
+      "size": 36,
+      "top": 212,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 32,
+      "n": 4
+     },
+     {
+      "x": 16,
+      "n": 3
+     },
+     {
+      "x": 217,
+      "n": 2
+     }
+    ],
+    "leftBlocks": 9,
+    "bodySize": 12,
+    "stage": true,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "palette-cream",
+   "width": 1440,
+   "message": "Yellow-cream background (text #fff7eb).",
+   "fix": "Use the drawn palette. If you want warmth, take a low-chroma stone or bone, not a yellow cream.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "size-count",
+   "width": 1440,
+   "message": "17 different font sizes (8, 9, 10, 11, 12, 13, 14, 15, 16, 18, 22, 24, 25, 36, 46, 65, 259).",
+   "fix": "A page needs about five: display, heading, lead, body, small.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "grey-body",
+   "width": 1440,
+   "message": "The running text is a soft grey on its ground (5.8:1).",
+   "fix": "Set body copy in the full ink (7:1 or more). Keep the muted ink for secondary notes; pages read thin and unfinished when everything is grey.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "measure",
+   "width": 1440,
+   "message": "Longest paragraph runs about 89 characters per line.",
+   "fix": "Cap paragraphs at 45–75 characters (max-width: 60ch).",
+   "alsoAt": [
+    768
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "off-centre",
+   "width": 1440,
+   "message": "The margins differ: 80px on the left, 106px on the right, at 1440px.",
+   "fix": "Put the navigation and the content on one pair of margins; check for padding on one side only, a scrollbar gutter, or a header on another inset than the page.",
+   "alsoAt": [
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "name-only-title",
+   "width": 1440,
+   "message": "The h1 is a bare name (\"Papas Lay’s clásicas\") and nothing else on the first screen says what this is.",
+   "fix": "Keep the name if it leads, and give the line under it (18px or more) the plain words: what it is, for whom, where or when. In the study of 97 Sites of the Day, first screens that named nothing lost usability and content points.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "ragged-edges",
+   "width": 1440,
+   "message": "Left-aligned text starts at 7 different lines (104px, 80px, 212px, 429px, 754px, 840px, 1079px); the three most used hold only 56% of it.",
+   "fix": "Pick two or three anchor lines from the grid and start every heading and paragraph on one of them."
+  },
+  {
+   "level": "WARN",
+   "id": "pinned-over-picture",
+   "width": 1440,
+   "message": "Pinned large text slides across pictures while the page scrolls: \"Rosita.\" (screen 3, 100% over a picture)",
+   "fix": "Jurors read a pinned title crossing drawings or photographs as a collision. Keep the pictures in the column the title does not occupy, or unpin it.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "still-page",
+   "width": 1440,
+   "message": "Little motion: 10 element(s) moved while the page loaded and scrolled.",
+   "fix": "Give every section an entrance for its parts (not one fade of the whole block) and add one moving picture: a looping clip or a slow move on a photograph."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "C:\\Users\\hisok\\.codex\\visualizations\\2026\\11\\01\\01a19847-a13f-73f2-ae5d-85946fe1277b\\editorial-inspect-final\\desktop-fold.jpg",
+   "pages": [
+    "C:\\Users\\hisok\\.codex\\visualizations\\2026\\11\\01\\01a19847-a13f-73f2-ae5d-85946fe1277b\\editorial-inspect-final\\desktop-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "C:\\Users\\hisok\\.codex\\visualizations\\2026\\11\\01\\01a19847-a13f-73f2-ae5d-85946fe1277b\\editorial-inspect-final\\tablet-fold.jpg",
+   "pages": [
+    "C:\\Users\\hisok\\.codex\\visualizations\\2026\\11\\01\\01a19847-a13f-73f2-ae5d-85946fe1277b\\editorial-inspect-final\\tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "C:\\Users\\hisok\\.codex\\visualizations\\2026\\11\\01\\01a19847-a13f-73f2-ae5d-85946fe1277b\\editorial-inspect-final\\mobile-fold.jpg",
+   "pages": [
+    "C:\\Users\\hisok\\.codex\\visualizations\\2026\\11\\01\\01a19847-a13f-73f2-ae5d-85946fe1277b\\editorial-inspect-final\\mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

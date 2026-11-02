@@ -1,0 +1,23 @@
+[
+  {
+    "width": 1440,
+    "titleY": 263.125,
+    "scrollHeader": true,
+    "adminTop": true,
+    "customerSearch": true
+  },
+  {
+    "width": 768,
+    "titleY": 226.59375,
+    "scrollHeader": true,
+    "adminTop": true,
+    "customerSearch": true
+  },
+  {
+    "width": 390,
+    "titleY": 211.59375,
+    "scrollHeader": true,
+    "adminTop": true,
+    "customerSearch": true
+  }
+]

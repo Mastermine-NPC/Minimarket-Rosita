@@ -1,0 +1,8 @@
+export const cinematicChapters = [
+  { id: "bebidas", title: "Dale frescura al día.", description: "La mesa está lista. Solo falta tu bebida favorita. Encuentra Coca-Cola, Inka Kola y algo para compartir.", category: "consumibles", tone: "cola", films: [{ name: "Coca-Cola", file: "coca-cola-video-cinematografic" }, { name: "Inka Kola", file: "inka-cola-video-cinematografic" }] },
+  { id: "snacks", title: "La pausa se disfruta.", description: "Una película, una conversación, un antojo. Oreo y Lay’s acompañan esos pequeños planes que salen bien.", category: "consumibles", tone: "snack", films: [{ name: "Oreo", file: "oreo-video-cinematografic" }, { name: "Lay’s", file: "lays-video-cinematografic" }] },
+  { id: "cuidado", title: "Un momento para ti.", description: "También hay espacio para cuidarte. Explora los productos de higiene y cuidado personal de Rosita.", category: "cuidado-personal", tone: "care", films: [{ name: "Nivea", file: "nivea-video-cinematografic" }] },
+  { id: "ideas", title: "Tus ideas toman color.", description: "Del primer trazo a la última tarea. Útiles para estudiar, crear y darle forma a lo que imaginas.", category: "educacion-oficina", tone: "ideas", films: [{ name: "Faber-Castell", file: "faber-castell-video-cinematografic" }, { name: "Artesco", file: "artesco-video-cinematografic" }] },
+  { id: "ferreteria", title: "Manos a la obra.", description: "Ese arreglo pendiente también tiene su lugar aquí. Pequeñas soluciones para los proyectos de casa.", category: "ferreteria", tone: "tools", films: [{ name: "Ferretería", file: "tornillos-video-cinematografic" }] },
+] as const;
+

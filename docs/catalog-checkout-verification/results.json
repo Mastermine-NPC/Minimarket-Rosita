@@ -1,0 +1,30 @@
+{
+  "results": {
+    "catalog": {
+      "initial": 75,
+      "filtered": 0,
+      "combined": true,
+      "chips": true,
+      "search": true,
+      "subcategory": true,
+      "sort": true,
+      "pagination": "No existe en el catálogo actual"
+    },
+    "checkout": {
+      "phones": [
+        "PE móvil",
+        "PE fijo",
+        "ES móvil",
+        "GB fijo"
+      ],
+      "normalized": "+442079460958",
+      "persisted": true,
+      "orderConfirmed": true,
+      "place": "Universidad Tecnológica del Perú, Consuelo, Arequipa, Perú",
+      "nightVector": true,
+      "mapFallback": true,
+      "markerDrag": true
+    }
+  },
+  "errors": []
+}

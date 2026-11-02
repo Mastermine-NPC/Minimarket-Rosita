@@ -1,0 +1,12 @@
+{
+  "results": [
+    "1440: bottle photo only, no GLB/Canvas, real price and 24-stock cap, cart persistence",
+    "768: bottle photo only, no GLB/Canvas, real price and 24-stock cap, cart persistence",
+    "390: bottle photo only, no GLB/Canvas, real price and 24-stock cap, cart persistence",
+    "Isolated GLB fixture: genuine geometry, PBR maps, rotation, keyboard and zoom in reduced motion",
+    "Pointer drag, animated shader, studio lighting and camera entry rendered",
+    "Failed model restores fallback; retry loads the genuine resource",
+    "No WebGL: fallback replaces failed viewer"
+  ],
+  "errors": []
+}

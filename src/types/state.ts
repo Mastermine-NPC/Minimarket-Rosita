@@ -18,6 +18,7 @@ import type {
 import type { OperationsState, OperationsAction } from "./operations";
 export interface RositaState extends OperationsState {
   catalogRevision?: string;
+  modelCatalogRevision?: string;
   categories: ManagedCategory[];
   subcategories: ManagedSubcategory[];
   media: Record<string, ImageAsset>;

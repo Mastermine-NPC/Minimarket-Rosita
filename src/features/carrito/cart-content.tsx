@@ -36,7 +36,7 @@ export function CartContent({ panel = false }: { panel?: boolean }) {
           <article className="cart-line" key={product.id}>
             <Link
               className="cart-line-photo"
-              to={"/producto/" + product.id}
+              to={"/producto/" + (product.publicId || product.id)}
               onClick={() => setCartOpen(false)}
               aria-label={"Ver " + product.name}
             >
@@ -44,7 +44,7 @@ export function CartContent({ panel = false }: { panel?: boolean }) {
             </Link>
             <div className="cart-line-info">
               <Link
-                to={"/producto/" + product.id}
+                to={"/producto/" + (product.publicId || product.id)}
                 onClick={() => setCartOpen(false)}
               >
                 {product.name}

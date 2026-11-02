@@ -580,3 +580,15 @@
   margin: 4px 0 8px;
   overflow-wrap: anywhere;
 }
+
+/* Only the catalogue expands beyond the shared editorial reading width.
+   content = viewport - two fluid gutters; results = content - sidebar - gap. */
+.store-shell .catalog-page{
+  width:calc(100% - 2 * clamp(16px, 6vw, 140px));
+  max-width:none;
+}
+.catalog-page .catalog-layout{width:100%;min-width:0}
+.catalog-page .catalog-products{gap:clamp(14px, 1.25vw, 24px)}
+.catalog-page .catalog-toolbar{flex-wrap:wrap}
+.catalog-page .catalog-controls{flex-wrap:wrap;min-width:0}
+.catalog-page .filter-section select{min-width:0;max-width:100%}
