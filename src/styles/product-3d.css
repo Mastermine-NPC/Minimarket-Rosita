@@ -22,3 +22,9 @@
 @media (max-width:900px) { .product-page--immersive .product-detail { grid-template-columns: minmax(0,1fr); } .product-3d-presentation { min-height: 0; } .product-3d-canvas { height: 480px; } }
 @media (max-width:500px) { .product-3d-presentation-heading { padding: 20px; } .product-3d-fallback .product-zoom { padding: 0 16px; } .product-3d-fallback .product-zoom-open { height: 360px; } .product-3d-fallback > p { padding: 0 20px 24px; } .product-3d-canvas { height: 410px; } }
 @media (prefers-reduced-motion:reduce) { .product-3d-cursor { display: none !important; } }
+.product-3d-presentation { --product-3d-canvas-height: 500px; --product-3d-controls-height: 150px; }
+.product-3d-content { position: relative; }
+.product-3d-presentation[data-viewer-mode="3d"] .product-3d-content { min-height: calc(var(--product-3d-canvas-height) + var(--product-3d-controls-height)); }
+.product-3d-canvas > .product-3d-loading { min-height: 0; }
+@media (max-width: 900px) { .product-3d-presentation { --product-3d-canvas-height: 480px; --product-3d-controls-height: 180px; } }
+@media (max-width: 500px) { .product-3d-presentation { --product-3d-canvas-height: 410px; --product-3d-controls-height: 220px; } }

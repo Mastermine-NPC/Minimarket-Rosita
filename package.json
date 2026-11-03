@@ -11,9 +11,14 @@
     "typecheck": "tsc -b --pretty false",
     "check": "npm run typecheck && npm run lint && npm run check:contrast && npm run build",
     "check:contrast": "node scripts/check-contrast.mjs",
-    "test:operations": "node scripts/verify-operations.mjs && node scripts/verify-operations-edges.mjs",
+    "test:operations": "node scripts/verify-operations.mjs --offline && node scripts/verify-operations-edges.mjs --offline",
+    "test:routing:live": "node scripts/verify-operations.mjs && node scripts/verify-operations-edges.mjs",
+    "seo:sitemap": "node scripts/generate-sitemap.mjs",
+    "test:catalog": "node scripts/verify-model-catalog.mjs && node scripts/verify-normal-catalog.mjs && node scripts/verify-halloween.mjs",
+    "test": "npm run test:operations && npm run test:catalog && npm run test:order-flow && npm run test:international-phone",
     "test:order-flow": "node scripts/verify-order-flow.mjs",
-    "test:international-phone": "node scripts/verify-international-phone.mjs"
+    "test:international-phone": "node scripts/verify-international-phone.mjs",
+    "test:halloween": "node scripts/verify-halloween.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^6.0.2",

@@ -1,0 +1,412 @@
+﻿[
+    {
+        "method":  "Log.entryAdded",
+        "params":  {
+                       "entry":  {
+                                     "source":  "javascript",
+                                     "level":  "warning",
+                                     "text":  "Deprecated API for given entry type.",
+                                     "timestamp":  1793746577854.9871,
+                                     "lineNumber":  0,
+                                     "stackTrace":  {
+                                                        "callFrames":  [
+                                                                           {
+                                                                               "functionName":  "",
+                                                                               "scriptId":  "1286",
+                                                                               "url":  "",
+                                                                               "lineNumber":  0,
+                                                                               "columnNumber":  1176
+                                                                           },
+                                                                           {
+                                                                               "functionName":  "",
+                                                                               "scriptId":  "1286",
+                                                                               "url":  "",
+                                                                               "lineNumber":  0,
+                                                                               "columnNumber":  1395
+                                                                           }
+                                                                       ]
+                                                    }
+                                 }
+                   }
+    },
+    {
+        "method":  "Log.entryAdded",
+        "params":  {
+                       "entry":  {
+                                     "source":  "javascript",
+                                     "level":  "warning",
+                                     "text":  "Deprecated API for given entry type.",
+                                     "timestamp":  1793746577945.502,
+                                     "lineNumber":  0,
+                                     "stackTrace":  {
+                                                        "callFrames":  [
+                                                                           {
+                                                                               "functionName":  "",
+                                                                               "scriptId":  "1286",
+                                                                               "url":  "",
+                                                                               "lineNumber":  0,
+                                                                               "columnNumber":  1176
+                                                                           },
+                                                                           {
+                                                                               "functionName":  "",
+                                                                               "scriptId":  "1286",
+                                                                               "url":  "",
+                                                                               "lineNumber":  0,
+                                                                               "columnNumber":  1395
+                                                                           }
+                                                                       ]
+                                                    }
+                                 }
+                   }
+    },
+    {
+        "method":  "Log.entryAdded",
+        "params":  {
+                       "entry":  {
+                                     "source":  "javascript",
+                                     "level":  "warning",
+                                     "text":  "Deprecated API for given entry type.",
+                                     "timestamp":  1793746578066.449,
+                                     "lineNumber":  0,
+                                     "stackTrace":  {
+                                                        "callFrames":  [
+                                                                           {
+                                                                               "functionName":  "",
+                                                                               "scriptId":  "1286",
+                                                                               "url":  "",
+                                                                               "lineNumber":  0,
+                                                                               "columnNumber":  1176
+                                                                           },
+                                                                           {
+                                                                               "functionName":  "",
+                                                                               "scriptId":  "1286",
+                                                                               "url":  "",
+                                                                               "lineNumber":  0,
+                                                                               "columnNumber":  1395
+                                                                           }
+                                                                       ]
+                                                    }
+                                 }
+                   }
+    },
+    {
+        "method":  "Log.entryAdded",
+        "params":  {
+                       "entry":  {
+                                     "source":  "javascript",
+                                     "level":  "warning",
+                                     "text":  "Deprecated API for given entry type.",
+                                     "timestamp":  1793746578158.6169,
+                                     "lineNumber":  0,
+                                     "stackTrace":  {
+                                                        "callFrames":  [
+                                                                           {
+                                                                               "functionName":  "",
+                                                                               "scriptId":  "1286",
+                                                                               "url":  "",
+                                                                               "lineNumber":  0,
+                                                                               "columnNumber":  1176
+                                                                           },
+                                                                           {
+                                                                               "functionName":  "",
+                                                                               "scriptId":  "1286",
+                                                                               "url":  "",
+                                                                               "lineNumber":  0,
+                                                                               "columnNumber":  1395
+                                                                           }
+                                                                       ]
+                                                    }
+                                 }
+                   }
+    },
+    {
+        "method":  "Log.entryAdded",
+        "params":  {
+                       "entry":  {
+                                     "source":  "javascript",
+                                     "level":  "warning",
+                                     "text":  "Deprecated API for given entry type.",
+                                     "timestamp":  1793746578239.699,
+                                     "lineNumber":  0,
+                                     "stackTrace":  {
+                                                        "callFrames":  [
+                                                                           {
+                                                                               "functionName":  "",
+                                                                               "scriptId":  "1286",
+                                                                               "url":  "",
+                                                                               "lineNumber":  0,
+                                                                               "columnNumber":  1176
+                                                                           },
+                                                                           {
+                                                                               "functionName":  "",
+                                                                               "scriptId":  "1286",
+                                                                               "url":  "",
+                                                                               "lineNumber":  0,
+                                                                               "columnNumber":  1395
+                                                                           }
+                                                                       ]
+                                                    }
+                                 }
+                   }
+    },
+    {
+        "method":  "Log.entryAdded",
+        "params":  {
+                       "entry":  {
+                                     "source":  "javascript",
+                                     "level":  "warning",
+                                     "text":  "Deprecated API for given entry type.",
+                                     "timestamp":  1793746578344.4951,
+                                     "lineNumber":  0,
+                                     "stackTrace":  {
+                                                        "callFrames":  [
+                                                                           {
+                                                                               "functionName":  "",
+                                                                               "scriptId":  "1286",
+                                                                               "url":  "",
+                                                                               "lineNumber":  0,
+                                                                               "columnNumber":  1176
+                                                                           },
+                                                                           {
+                                                                               "functionName":  "",
+                                                                               "scriptId":  "1286",
+                                                                               "url":  "",
+                                                                               "lineNumber":  0,
+                                                                               "columnNumber":  1395
+                                                                           }
+                                                                       ]
+                                                    }
+                                 }
+                   }
+    },
+    {
+        "method":  "Log.entryAdded",
+        "params":  {
+                       "entry":  {
+                                     "source":  "javascript",
+                                     "level":  "warning",
+                                     "text":  "Deprecated API for given entry type.",
+                                     "timestamp":  1793746578439.324,
+                                     "lineNumber":  0,
+                                     "stackTrace":  {
+                                                        "callFrames":  [
+                                                                           {
+                                                                               "functionName":  "",
+                                                                               "scriptId":  "1286",
+                                                                               "url":  "",
+                                                                               "lineNumber":  0,
+                                                                               "columnNumber":  1176
+                                                                           },
+                                                                           {
+                                                                               "functionName":  "",
+                                                                               "scriptId":  "1286",
+                                                                               "url":  "",
+                                                                               "lineNumber":  0,
+                                                                               "columnNumber":  1395
+                                                                           }
+                                                                       ]
+                                                    }
+                                 }
+                   }
+    },
+    {
+        "method":  "Log.entryAdded",
+        "params":  {
+                       "entry":  {
+                                     "source":  "javascript",
+                                     "level":  "warning",
+                                     "text":  "Deprecated API for given entry type.",
+                                     "timestamp":  1793746578531.969,
+                                     "lineNumber":  0,
+                                     "stackTrace":  {
+                                                        "callFrames":  [
+                                                                           {
+                                                                               "functionName":  "",
+                                                                               "scriptId":  "1286",
+                                                                               "url":  "",
+                                                                               "lineNumber":  0,
+                                                                               "columnNumber":  1176
+                                                                           },
+                                                                           {
+                                                                               "functionName":  "",
+                                                                               "scriptId":  "1286",
+                                                                               "url":  "",
+                                                                               "lineNumber":  0,
+                                                                               "columnNumber":  1395
+                                                                           }
+                                                                       ]
+                                                    }
+                                 }
+                   }
+    },
+    {
+        "method":  "Log.entryAdded",
+        "params":  {
+                       "entry":  {
+                                     "source":  "javascript",
+                                     "level":  "warning",
+                                     "text":  "Deprecated API for given entry type.",
+                                     "timestamp":  1793746578688.2161,
+                                     "lineNumber":  0,
+                                     "stackTrace":  {
+                                                        "callFrames":  [
+                                                                           {
+                                                                               "functionName":  "",
+                                                                               "scriptId":  "1286",
+                                                                               "url":  "",
+                                                                               "lineNumber":  0,
+                                                                               "columnNumber":  1176
+                                                                           },
+                                                                           {
+                                                                               "functionName":  "",
+                                                                               "scriptId":  "1286",
+                                                                               "url":  "",
+                                                                               "lineNumber":  0,
+                                                                               "columnNumber":  1395
+                                                                           }
+                                                                       ]
+                                                    }
+                                 }
+                   }
+    },
+    {
+        "method":  "Network.responseReceived",
+        "params":  {
+                       "requestId":  "902601CBA131A17C45CD6C690822A971",
+                       "loaderId":  "902601CBA131A17C45CD6C690822A971",
+                       "timestamp":  39334.876539,
+                       "type":  "Document",
+                       "response":  {
+                                        "url":  "http://localhost:5197/categoria/consumibles?subcategoria=cereales",
+                                        "status":  500,
+                                        "statusText":  "Internal Server Error",
+                                        "headers":  {
+                                                        "Connection":  "keep-alive",
+                                                        "Date":  "Tue, 03 Nov 2026 22:59:40 GMT",
+                                                        "Keep-Alive":  "timeout=5",
+                                                        "Transfer-Encoding":  "chunked"
+                                                    },
+                                        "mimeType":  "text/plain",
+                                        "charset":  "",
+                                        "connectionReused":  true,
+                                        "connectionId":  19674,
+                                        "remoteIPAddress":  "127.0.0.1",
+                                        "remotePort":  5197,
+                                        "fromDiskCache":  false,
+                                        "fromServiceWorker":  false,
+                                        "fromPrefetchCache":  false,
+                                        "encodedDataLength":  150,
+                                        "timing":  {
+                                                       "requestTime":  39334.872782,
+                                                       "proxyStart":  -1,
+                                                       "proxyEnd":  -1,
+                                                       "dnsStart":  -1,
+                                                       "dnsEnd":  -1,
+                                                       "connectStart":  -1,
+                                                       "connectEnd":  -1,
+                                                       "sslStart":  -1,
+                                                       "sslEnd":  -1,
+                                                       "workerStart":  -1,
+                                                       "workerReady":  -1,
+                                                       "workerFetchStart":  -1,
+                                                       "workerRespondWithSettled":  -1,
+                                                       "sendStart":  0.461,
+                                                       "sendEnd":  0.65,
+                                                       "pushStart":  0,
+                                                       "pushEnd":  0,
+                                                       "receiveHeadersStart":  2.436,
+                                                       "receiveHeadersEnd":  2.578
+                                                   },
+                                        "responseTime":  1793746780076.6,
+                                        "protocol":  "http/1.1",
+                                        "alternateProtocolUsage":  "unspecifiedReason",
+                                        "securityState":  "secure"
+                                    },
+                       "hasExtraInfo":  true,
+                       "frameId":  "BACBC4B559446EDCACE708B0468091C0"
+                   }
+    },
+    {
+        "method":  "Log.entryAdded",
+        "params":  {
+                       "entry":  {
+                                     "source":  "network",
+                                     "level":  "error",
+                                     "text":  "Failed to load resource: the server responded with a status of 500 (Internal Server Error)",
+                                     "timestamp":  1793746780082.5569,
+                                     "url":  "http://localhost:5197/categoria/consumibles?subcategoria=cereales",
+                                     "networkRequestId":  "902601CBA131A17C45CD6C690822A971"
+                                 }
+                   }
+    },
+    {
+        "method":  "Network.responseReceived",
+        "params":  {
+                       "requestId":  "25724.15113",
+                       "loaderId":  "902601CBA131A17C45CD6C690822A971",
+                       "timestamp":  39334.90397,
+                       "type":  "Other",
+                       "response":  {
+                                        "url":  "http://localhost:5197/favicon.ico",
+                                        "status":  500,
+                                        "statusText":  "Internal Server Error",
+                                        "headers":  {
+                                                        "Transfer-Encoding":  "chunked",
+                                                        "Keep-Alive":  "timeout=5",
+                                                        "Date":  "Tue, 03 Nov 2026 22:59:40 GMT",
+                                                        "Connection":  "keep-alive"
+                                                    },
+                                        "mimeType":  "text/plain",
+                                        "charset":  "",
+                                        "connectionReused":  true,
+                                        "connectionId":  19674,
+                                        "remoteIPAddress":  "127.0.0.1",
+                                        "remotePort":  5197,
+                                        "fromDiskCache":  false,
+                                        "fromServiceWorker":  false,
+                                        "fromPrefetchCache":  false,
+                                        "encodedDataLength":  150,
+                                        "timing":  {
+                                                       "requestTime":  39334.900976,
+                                                       "proxyStart":  -1,
+                                                       "proxyEnd":  -1,
+                                                       "dnsStart":  -1,
+                                                       "dnsEnd":  -1,
+                                                       "connectStart":  -1,
+                                                       "connectEnd":  -1,
+                                                       "sslStart":  -1,
+                                                       "sslEnd":  -1,
+                                                       "workerStart":  -1,
+                                                       "workerReady":  -1,
+                                                       "workerFetchStart":  -1,
+                                                       "workerRespondWithSettled":  -1,
+                                                       "sendStart":  0.324,
+                                                       "sendEnd":  0.439,
+                                                       "pushStart":  0,
+                                                       "pushEnd":  0,
+                                                       "receiveHeadersStart":  1.715,
+                                                       "receiveHeadersEnd":  1.887
+                                                   },
+                                        "responseTime":  1793746780104.073,
+                                        "protocol":  "http/1.1",
+                                        "alternateProtocolUsage":  "unspecifiedReason",
+                                        "securityState":  "secure"
+                                    },
+                       "hasExtraInfo":  true,
+                       "frameId":  "BACBC4B559446EDCACE708B0468091C0"
+                   }
+    },
+    {
+        "method":  "Log.entryAdded",
+        "params":  {
+                       "entry":  {
+                                     "source":  "network",
+                                     "level":  "error",
+                                     "text":  "Failed to load resource: the server responded with a status of 500 (Internal Server Error)",
+                                     "timestamp":  1793746780105.366,
+                                     "url":  "http://localhost:5197/favicon.ico",
+                                     "networkRequestId":  "25724.15113"
+                                 }
+                   }
+    }
+]

@@ -1,0 +1,111 @@
+﻿[
+    {
+        "path":  "/categoria/consumibles?subcategoria=cereales",
+        "width":  320,
+        "scrollWidth":  305,
+        "h1":  "Consumibles",
+        "title":  "Consumibles | Minimarket Rosita",
+        "canonical":  1,
+        "descriptions":  1,
+        "products":  1,
+        "distortedAtlas":  0
+    },
+    {
+        "path":  "/categoria/consumibles?subcategoria=cereales",
+        "width":  375,
+        "scrollWidth":  360,
+        "h1":  "Consumibles",
+        "title":  "Consumibles | Minimarket Rosita",
+        "canonical":  1,
+        "descriptions":  1,
+        "products":  1,
+        "distortedAtlas":  0
+    },
+    {
+        "path":  "/categoria/consumibles?subcategoria=cereales",
+        "width":  390,
+        "scrollWidth":  375,
+        "h1":  "Consumibles",
+        "title":  "Consumibles | Minimarket Rosita",
+        "canonical":  1,
+        "descriptions":  1,
+        "products":  1,
+        "distortedAtlas":  0
+    },
+    {
+        "path":  "/categoria/consumibles?subcategoria=cereales",
+        "width":  430,
+        "scrollWidth":  415,
+        "h1":  "Consumibles",
+        "title":  "Consumibles | Minimarket Rosita",
+        "canonical":  1,
+        "descriptions":  1,
+        "products":  1,
+        "distortedAtlas":  0
+    },
+    {
+        "path":  "/categoria/consumibles?subcategoria=cereales",
+        "width":  768,
+        "scrollWidth":  753,
+        "h1":  "Consumibles",
+        "title":  "Consumibles | Minimarket Rosita",
+        "canonical":  1,
+        "descriptions":  1,
+        "products":  1,
+        "distortedAtlas":  0
+    },
+    {
+        "path":  "/categoria/consumibles?subcategoria=cereales",
+        "width":  1024,
+        "scrollWidth":  1009,
+        "h1":  "Consumibles",
+        "title":  "Consumibles | Minimarket Rosita",
+        "canonical":  1,
+        "descriptions":  1,
+        "products":  1,
+        "distortedAtlas":  0
+    },
+    {
+        "path":  "/categoria/consumibles?subcategoria=cereales",
+        "width":  1280,
+        "scrollWidth":  1265,
+        "h1":  "Consumibles",
+        "title":  "Consumibles | Minimarket Rosita",
+        "canonical":  1,
+        "descriptions":  1,
+        "products":  1,
+        "distortedAtlas":  0
+    },
+    {
+        "path":  "/categoria/consumibles?subcategoria=cereales",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "h1":  "Consumibles",
+        "title":  "Consumibles | Minimarket Rosita",
+        "canonical":  1,
+        "descriptions":  1,
+        "products":  1,
+        "distortedAtlas":  0
+    },
+    {
+        "path":  "/categoria/consumibles?subcategoria=cereales",
+        "width":  1920,
+        "scrollWidth":  1905,
+        "h1":  "Consumibles",
+        "title":  "Consumibles | Minimarket Rosita",
+        "canonical":  1,
+        "descriptions":  1,
+        "products":  1,
+        "distortedAtlas":  0
+    },
+    {
+        "status":  200,
+        "pageStatus":  200
+    },
+    {
+        "checkboxAccessibleNames":  [
+                                        "Solo disponibles",
+                                        "Ofertas de prueba"
+                                    ]
+    }
+]

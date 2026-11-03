@@ -1,0 +1,49 @@
+.store-shell .store-footer.compact-store-footer {
+  padding: 0 clamp(16px, 3vw, 40px);
+  background: #132f25;
+  color: #fff7eb;
+}
+.compact-footer-main {
+  max-width: 1280px;
+  margin: 0 auto;
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+  padding-block: 12px;
+}
+.compact-footer-brand { font: 800 28px/1 var(--font-title); letter-spacing: -.05em; text-decoration: none; }
+.compact-footer-links { display: flex; flex-wrap: wrap; gap: 8px 18px; }
+.compact-footer-links a { font-size: 12px; text-decoration: none; }
+.compact-footer-links a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.compact-footer-socials { display: flex; gap: 6px; margin-left: auto; align-items: center; }
+.compact-footer-socials > :is(a,span) { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; }
+.compact-footer-socials svg { width: 19px; height: 19px; }
+.compact-footer-socials .social-coming-soon { opacity: .55; }
+.compact-footer-payments { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
+.compact-footer-payments > span { display: inline-flex; align-items: center; gap: 5px; font-size: 11px; white-space: nowrap; }
+.compact-footer-payments svg { width: 19px; height: 19px; }
+.compact-footer-bottom {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 20px;
+  padding-block: 0 12px;
+  font-size: 10px;
+  line-height: 1.5;
+}
+.compact-store-footer :is(a):focus-visible { outline: 2px solid #f4b7c9; outline-offset: 4px; border-radius: 3px; }
+@media (max-width: 900px) {
+  .compact-footer-main { gap: 10px 20px; }
+  .compact-footer-payments { flex-basis: 100%; }
+}
+@media (max-width: 600px) {
+  .compact-footer-brand { font-size: 24px; }
+  .compact-footer-links { order: 2; flex-basis: 100%; gap: 8px 16px; }
+  .compact-footer-socials { margin-left: auto; }
+  .compact-footer-payments { order: 3; gap: 14px; }
+  .compact-footer-bottom { flex-direction: column; padding-bottom: 16px; }
+}

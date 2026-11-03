@@ -286,8 +286,13 @@
 /* Extend only the decorative paint across vertical boundaries, never the text. */
 .home-experience .liquid-section:not(.cinema-hero):not(.cinema-intro)::before { content: ""; position: absolute; inset: -14px 0 auto; height: 30px; background: inherit; clip-path: var(--liquid-edge); z-index: -1; pointer-events: none; }
 .home-experience .cinema-story.is-pinned .liquid-section::before { display: none; }
+/* Move the section silhouette, leaving text and controls undistorted inside its padding. */
+.home-experience :is(.home-featured-section,.home-delivery,.home-last-word) {
+  clip-path: var(--liquid-outline, polygon(0 14px,12.5% 7px,25% 16px,37.5% 9px,50% 18px,62.5% 8px,75% 15px,87.5% 6px,100% 14px,100% calc(100% - 14px),87.5% calc(100% - 7px),75% calc(100% - 16px),62.5% calc(100% - 9px),50% calc(100% - 18px),37.5% calc(100% - 8px),25% calc(100% - 15px),12.5% calc(100% - 6px),0 calc(100% - 14px)));
+}
+.home-experience :is(.home-featured-section,.home-delivery,.home-last-word).liquid-section::before { display: none; }
 @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
-  .home-experience .home-category-media { transform: perspective(1400px) rotateY(var(--liquid-tilt-x,0deg)) rotateX(var(--liquid-tilt-y,0deg)); }
+
 }
 @media (prefers-reduced-motion: reduce) {
   .home-experience .liquid-media-plane, .home-experience .liquid-background-plane { display: none; }
@@ -310,88 +315,18 @@
   }
 }
 
-/* Category depth composes with the existing reveal and shared liquid imagery. */
-@media (prefers-reduced-motion: no-preference) {
-  .home-experience .home-category-grid { perspective: 2000px; }
-  .home-experience .home-category-card.category-card[data-category-tilt] {
-    position: relative;
-    transform-style: preserve-3d;
-    rotate: var(--category-tilt-axis-x, 0) var(--category-tilt-axis-y, 1) 0 var(--category-tilt-angle, 0deg);
-    translate: 0 calc(var(--category-tilt-active, 0) * -3px);
-  }
-  .home-experience .home-category-card[data-category-tilt] .home-category-media {
-    transform: translate3d(calc(var(--category-tilt-x, 0) * 1.5px), calc(var(--category-tilt-y, 0) * 1px), calc(var(--category-tilt-active, 0) * 14px));
-  }
-  .home-experience .home-category-card[data-category-tilt] .home-category-caption,
-  .home-experience .home-category-card[data-category-tilt] .home-category-caption > div { transform-style: preserve-3d; }
-  .home-experience .home-category-card[data-category-tilt] h3 { transform: translateZ(calc(var(--category-tilt-active, 0) * 10px)); }
-  .home-experience .home-category-card[data-category-tilt] .home-category-caption p { transform: translateZ(calc(var(--category-tilt-active, 0) * 5px)); }
-  .home-experience .home-category-card[data-category-tilt] .home-category-arrow {
-    transform: translate3d(calc(var(--category-tilt-x, 0) * 2px), calc(var(--category-tilt-y, 0) * 2px), calc(var(--category-tilt-active, 0) * 18px));
-  }
-  .home-experience .home-category-card[data-category-tilt] .home-category-products { transform: scale(calc(1 + var(--category-tilt-active, 0) * .018)); }
-  .home-experience .home-category-card[data-category-tilt]::after {
-    content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
-    background: radial-gradient(ellipse at var(--category-tilt-light-x, 50%) var(--category-tilt-light-y, 50%), #ffffff18, #ffffff06 30%, transparent 65%);
-    box-shadow: inset 0 0 0 1px #ffffff12;
-    opacity: var(--category-tilt-active, 0); transform: translateZ(22px);
-  }
-  .home-experience .home-category-card[data-category-tilt]:focus-visible::after { opacity: .45; }
-}
-@media (hover: none) and (prefers-reduced-motion: no-preference) {
-  .home-experience .home-category-card[data-category-tilt]:active { scale: .997; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .home-experience .home-category-card[data-category-tilt]:hover .home-category-media > :is(img, .liquid-media-plane) { transform: none; }
-  .home-experience .home-category-card[data-category-tilt]:hover .home-category-arrow { transform: none; }
-}
-@media (hover: none) {
-  .home-experience .home-category-card[data-category-tilt]:hover .home-category-media > :is(img, .liquid-media-plane) { transform: none; }
-}
-
-/* Parchment glass: clipped material and rim, with independent suspended content. */
-.home-experience .home-category-card.category-card {
-  position: relative;
-  padding: clamp(22px, 2.3vw, 30px);
-  transform-style: preserve-3d;
-}
-.home-experience .home-category-card > .category-liquid-surface {
-  position: absolute; inset: 0; pointer-events: none;
-  clip-path: var(--category-glass-clip);
-  background: linear-gradient(125deg, #e8f1e91c, #e8f1e90b 48%, #e8f1e917);
-  -webkit-backdrop-filter: blur(16px);
-  backdrop-filter: blur(16px);
-  transform: translateZ(-2px);
-}
-.home-experience .home-category-card > .category-liquid-contour {
-  display: block;
-  position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible;
-  pointer-events: none; transform: translateZ(1px);
-  filter: drop-shadow(0 10px 12px #061e1838);
-}
-.home-experience .home-category-card .home-category-media {
-  background: #e8f1e90a;
-  clip-path: var(--category-glass-clip);
-}
-.home-experience .home-category-card .home-category-products { background: transparent; padding: 22px 16px; }
-.home-experience .home-category-card .home-category-caption { padding: 20px 6px 8px; }
-.home-experience .home-category-card .category-liquid-glint { animation: category-water-light 42s linear infinite; }
-.home-experience .home-category-card:nth-child(even) .category-liquid-glint { animation-direction: reverse; animation-duration: 49s; }
-.home-experience .home-category-card[data-category-tilt]::after {
-  clip-path: var(--category-glass-clip);
-  box-shadow: none;
-  background: radial-gradient(ellipse at var(--category-tilt-light-x, 50%) var(--category-tilt-light-y, 50%), #ffffff10, #ffffff04 34%, transparent 68%);
-}
-.home-experience .home-category-card:focus-visible { outline-offset: 6px; }
-@keyframes category-water-light { to { stroke-dashoffset: -1000; } }
-@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
-  .home-experience .home-category-card > .category-liquid-surface { background: #e8f1e91c; }
-}
-@media (max-width: 700px) {
-  .home-experience .home-category-card.category-card { padding: 22px 18px; }
-  .home-experience .home-category-card > .category-liquid-surface { -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
-  .home-experience .home-category-card .home-category-products { padding-inline: 10px; gap: 9px; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .home-experience .home-category-card .category-liquid-glint { animation: none; }
-}
+/* Lean category carousel: no WebGL, blur, SVG contours or per-pointer work. */
+.home-experience .home-category-card.category-card { padding: 20px; border: 1px solid #e8f1e92e; border-radius: 20px; background: #e8f1e90c; transform-style: flat; transition: none; }
+.home-experience .home-category-card.category-card:hover { transform: none; }
+.home-experience .home-category-card .home-category-media { clip-path: none; transform: none; background: #e8f1e9; border-radius: 12px; }
+.home-experience .home-category-caption { text-decoration: none; color: inherit; }
+.home-experience .category-carousel { position: relative; contain: layout paint; }
+.home-experience .category-carousel-image { position: absolute; inset: 0 0 42px; display: grid; place-items: center; padding: 20px; }
+.home-experience .category-carousel-image > .product-image { width: min(190px,75%); height: 100%; aspect-ratio: auto; background-color: transparent; }
+.home-experience .category-carousel-image > img { width: 100%; height: 100%; object-fit: contain; }
+.home-experience .category-carousel-controls { position: absolute; inset: auto 12px 8px; display: flex; justify-content: center; align-items: center; gap: 16px; color: var(--brand); }
+.home-experience .category-carousel-controls button { display: grid; place-items: center; width: 44px; height: 44px; background: #fff; border: 1px solid #c6d4ca; border-radius: 50%; color: var(--brand); cursor: pointer; }
+.home-experience .category-carousel-controls span { min-width: 44px; text-align: center; font-size: 12px; font-variant-numeric: tabular-nums; }
+.home-experience .category-carousel-controls button:hover { background: #f9f8f0; }
+.home-experience .category-carousel-controls button:focus-visible, .home-experience .home-category-caption:focus-visible { outline: 2px solid var(--rose); outline-offset: 4px; }
+@media (hover:hover) and (prefers-reduced-motion:no-preference) { .home-experience .category-carousel-controls button { transition: background-color 150ms; } }

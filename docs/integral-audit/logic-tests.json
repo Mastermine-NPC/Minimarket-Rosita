@@ -1,0 +1,32 @@
+[
+  {
+    "file": "verify-operations.mjs",
+    "code": 0,
+    "output": ""
+  },
+  {
+    "file": "verify-order-flow.mjs",
+    "code": 0,
+    "output": ""
+  },
+  {
+    "file": "verify-international-phone.mjs",
+    "code": 0,
+    "output": ""
+  },
+  {
+    "file": "verify-halloween.mjs",
+    "code": 0,
+    "output": ""
+  },
+  {
+    "file": "verify-model-catalog.mjs",
+    "code": 0,
+    "output": ""
+  },
+  {
+    "file": "verify-normal-catalog.mjs",
+    "code": 0,
+    "output": ""
+  }
+]

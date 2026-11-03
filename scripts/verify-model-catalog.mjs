@@ -1,7 +1,7 @@
 import { createServer } from 'vite';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-const server = await createServer({server:{middlewareMode:true},appType:'custom'});
+const server = await createServer({server:{middlewareMode:true,hmr:false,ws:false},appType:'custom'});
 try {
  const load=p=>server.ssrLoadModule('/src/'+p);
  const {initialState}=await load('data/demo.ts');
@@ -11,7 +11,7 @@ try {
  const {rositaReducer}=await load('app/state/reducer.ts');
  const {readRositaState,writeRositaState}=await load('lib/storage.ts');
  const valid=s=>assert(stateSchema.safeParse(s).success,JSON.stringify(stateSchema.safeParse(s).error?.issues));
- valid(initialState);assert.equal(modelCatalogProducts.length,12);assert.equal(initialState.products.length,75);
+ valid(initialState);assert.equal(modelCatalogProducts.length,12);assert.equal(initialState.products.length,79);
  const old=structuredClone(initialState);delete old.modelCatalogRevision;
  old.products=old.products.filter(p=>!p.modelKey);
  old.inventory=Object.fromEntries(old.products.map(p=>[p.id,old.inventory[p.id]]));
@@ -26,12 +26,12 @@ try {
  let raw=JSON.stringify({version:9,data:old});const storage={getItem:()=>raw,setItem:(_k,v)=>raw=v};
  const migrated=readRositaState(storage);assert.equal(migrated.status,'migrated');valid(migrated.data);
  assert.deepEqual(migrated.data.cart,old.cart);assert.deepEqual(migrated.data.inventory['ROS-001'],old.inventory['ROS-001']);assert(writeRositaState(migrated.data,storage).ok);
- assert.equal(readRositaState(storage).status,'loaded');assert.equal(readRositaState(storage).data.products.length,75);
+ assert.equal(readRositaState(storage).status,'loaded');assert.equal(readRositaState(storage).data.products.length,initialState.products.length);
  const collision=structuredClone(old);const seed=modelCatalogProducts[0];collision.products.push({...old.products[0],id:seed.id,code:seed.id,barcode:'COLLISION',name:'Producto anterior'});collision.inventory[seed.id]={priceCents:100,stock:3};
  const collisionResult=integrateModelCatalog(collision);valid(collisionResult);assert.equal(collisionResult.products.find(p=>p.modelKey===seed.modelKey).id,'ROS-065');assert.deepEqual(collisionResult.inventory[seed.id],collision.inventory[seed.id]);
  let edited=structuredClone(enriched);const admin=edited.users.find(u=>u.role==='admin');edited.sessionUserId=admin.id;const product=edited.products.find(p=>p.modelKey==='nivea-aftershave');
  edited=rositaReducer(edited,{type:'admin/product-save',editing:true,expectedUpdatedAt:product.updatedAt,input:{...product,priceCents:1234,initialStock:8},operationId:'model-edit',at:'2026-11-01T20:00:00.000Z'});
  assert(edited.adminResult.ok,edited.adminResult.error);assert.equal(edited.products.find(p=>p.id===product.id).modelKey,'nivea-aftershave');assert.equal(edited.inventory[product.id].priceCents,1234);assert.equal(integrateModelCatalog(edited).inventory[product.id].priceCents,1234);
- const result={passed:['75 real catalog records, 12 additive model products','Validated schema, unique IDs/codes/barcodes','Version 9 storage migration and repeated restart are idempotent','Existing prices, stock, cart, orders, movements and checkout retained','ID collision preserves existing product and model association','Administration price edit keeps model key and is never re-seeded'],newProducts:modelCatalogProducts.map(p=>({id:p.id,name:p.name,modelKey:p.modelKey}))};
+ const result={passed:['79 real catalog records, 12 additive model products','Validated schema, unique IDs/codes/barcodes','Version 9 storage migration and repeated restart are idempotent','Existing prices, stock, cart, orders, movements and checkout retained','ID collision preserves existing product and model association','Administration price edit keeps model key and is never re-seeded'],newProducts:modelCatalogProducts.map(p=>({id:p.id,name:p.name,modelKey:p.modelKey}))};
  await fs.writeFile('docs/models-integration-verification/data-results.json',JSON.stringify(result,null,2));console.log(result.passed);
 } finally {await server.close();}

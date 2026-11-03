@@ -6,7 +6,7 @@ export const cocaColaBottle: ProductModelConfig = {
   modelUrl: null,
   label: "Botella Coca-Cola de 600 ml",
   fallbackMessage: "Vista fotográfica. El modelo 3D de la botella todavía no está disponible.",
-  camera: { position: [0, 0.4, 5.8], fov: 36, minDistance: 3.1, maxDistance: 9, minPolarAngle: 0.3, maxPolarAngle: Math.PI - 0.3 },
+  camera: { position: [0, 0.25, 6.6], fov: 36, minDistance: 3.1, maxDistance: 9, minPolarAngle: 0.3, maxPolarAngle: Math.PI - 0.3 },
   model: { height: 3.2, rotation: [0, -0.15, 0] },
   lighting: { ambient: 1.1, key: 5, rim: 7, exposure: 1.1 },
   background: { color: "#f3f1ed", accent: "#b71925", distortion: 0.055, speed: 0.35, parallax: 0.14 },
@@ -34,7 +34,7 @@ export const productModels: Record<string, ProductModelConfig> = {
 export const catalogModelConfigs: Record<string, ProductModelConfig> = {
   "coca-cola-can": {
     ...cocaColaBottle, modelUrl: "/models/coca-cola/can.glb", label: "Coca-Cola en lata", fallbackMessage: "Render 3D de Coca-Cola en lata.",
-    model: { height: 3.2, rotation: [0, 0.3, 0], roughness: 0.4, metalness: 0.55 },
+    model: { height: 3.2, rotation: [0, 0.3, 0], roughness: 0.32, metalness: 0.8 },
     lighting: { ambient: 1.2, fill: 2.2, key: 4, rim: 5, exposure: 1.1 },
     attribution: { author: "Safat_Rules", url: "https://sketchfab.com/3d-models/coca-cola-cans-fe5ba57722a74dba8d19f513e4672e1c", license: "CC BY 4.0 · una lata aislada del conjunto", licenseUrl: "https://creativecommons.org/licenses/by/4.0/" },
   },

@@ -1,0 +1,145 @@
+﻿[
+    {
+        "lcp":  328,
+        "cls":  0.007680896686159844,
+        "staticUploads":  0,
+        "videoUploads":  0,
+        "path":  "/catalogo",
+        "videos":  [
+                       {
+                           "source":  "http://localhost:5198/images/video/cinematic/oreo-coca-cola-video-cinematografic.mp4",
+                           "paused":  false,
+                           "ready":  4
+                       }
+                   ],
+        "resourceBytes":  4281168,
+        "load":  180.79999999701977
+    },
+    {
+        "lcp":  628,
+        "cls":  0,
+        "staticUploads":  3,
+        "videoUploads":  61,
+        "path":  "/",
+        "videos":  [
+                       {
+                           "source":  "http://localhost:5198/images/video/cinematic/Arequipa-backgraound-02.mp4",
+                           "paused":  false,
+                           "ready":  4
+                       },
+                       {
+                           "source":  "http://localhost:5198/images/video/video_halloween.mp4",
+                           "paused":  false,
+                           "ready":  4
+                       },
+                       {
+                           "source":  "",
+                           "paused":  true,
+                           "ready":  0
+                       },
+                       {
+                           "source":  "",
+                           "paused":  true,
+                           "ready":  0
+                       },
+                       {
+                           "source":  "",
+                           "paused":  true,
+                           "ready":  0
+                       },
+                       {
+                           "source":  "",
+                           "paused":  true,
+                           "ready":  0
+                       },
+                       {
+                           "source":  "",
+                           "paused":  true,
+                           "ready":  0
+                       },
+                       {
+                           "source":  "",
+                           "paused":  true,
+                           "ready":  0
+                       },
+                       {
+                           "source":  "",
+                           "paused":  true,
+                           "ready":  0
+                       },
+                       {
+                           "source":  "",
+                           "paused":  true,
+                           "ready":  0
+                       }
+                   ],
+        "resourceBytes":  8771303,
+        "load":  75.20000000298023,
+        "stillUploadsInTwoSeconds":  88
+    },
+    {
+        "lcp":  964,
+        "cls":  1.0854757987072945,
+        "staticUploads":  0,
+        "videoUploads":  0,
+        "path":  "/producto/ROS-064",
+        "model":  "ready",
+        "videos":  [
+
+                   ],
+        "resourceBytes":  8129108,
+        "load":  251.10000000149012
+    },
+    {
+        "lcp":  812,
+        "cls":  1.085695391658972,
+        "staticUploads":  0,
+        "videoUploads":  0,
+        "path":  "/producto/ROS-065",
+        "model":  "ready",
+        "videos":  [
+
+                   ],
+        "resourceBytes":  12429632,
+        "load":  93.5
+    },
+    {
+        "lcp":  900,
+        "cls":  1.1091275587360214,
+        "staticUploads":  0,
+        "videoUploads":  0,
+        "path":  "/producto/ROS-066",
+        "model":  "ready",
+        "videos":  [
+
+                   ],
+        "resourceBytes":  5037981,
+        "load":  178.89999999850988
+    },
+    {
+        "lcp":  876,
+        "cls":  1.0857350920796143,
+        "staticUploads":  0,
+        "videoUploads":  0,
+        "path":  "/producto/ROS-002",
+        "model":  "ready",
+        "videos":  [
+
+                   ],
+        "resourceBytes":  5104645,
+        "load":  172.60000000149012
+    },
+    {
+        "lcp":  824,
+        "cls":  1.11559553862727,
+        "staticUploads":  0,
+        "videoUploads":  0,
+        "path":  "/producto/ROS-022",
+        "model":  "ready",
+        "videos":  [
+
+                   ],
+        "resourceBytes":  3049640,
+        "load":  107.5
+    }
+]

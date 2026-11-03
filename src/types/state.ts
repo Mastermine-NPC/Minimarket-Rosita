@@ -17,6 +17,7 @@ import type {
 } from "./commerce";
 import type { OperationsState, OperationsAction } from "./operations";
 export interface RositaState extends OperationsState {
+  halloweenRevision?: string;
   catalogRevision?: string;
   modelCatalogRevision?: string;
   categories: ManagedCategory[];

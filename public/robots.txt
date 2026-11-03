@@ -1,0 +1,13 @@
+User-agent: *
+Disallow: /admin
+Disallow: /caja
+Disallow: /personal
+Disallow: /login
+Disallow: /registro
+Disallow: /cuenta
+Disallow: /checkout
+Disallow: /mis-pedidos
+Disallow: /pedido/
+Disallow: /sistema-diseno
+Disallow: /comprobacion
+Disallow: /estado

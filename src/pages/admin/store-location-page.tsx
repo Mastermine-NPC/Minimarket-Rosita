@@ -33,7 +33,7 @@ export function StoreLocationPage() {
         {storeOrigin.lng}. Los pedidos anteriores conservan su origen y
         recorrido guardados.
       </p>
-      <div className="cash-panel customer-form">
+      <div className="cash-panel customer-form store-location-form">
         <RouteMap origin={point} onSelect={select} />
         <div className="coordinate-fields">
           <label>

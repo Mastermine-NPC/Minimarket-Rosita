@@ -1,0 +1,2778 @@
+﻿[
+    {
+        "path":  "/producto/ROS-001",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Gaseosa Coca-Cola | Minimarket Rosita",
+        "h1":  "Gaseosa Coca-Cola",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-001",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Gaseosa Coca-Cola | Minimarket Rosita",
+        "h1":  "Gaseosa Coca-Cola",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-002",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Papas Lay’s clásicas | Minimarket Rosita",
+        "h1":  "Papas Lay’s clásicas",
+        "products":  0,
+        "model":  "ready",
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-002",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Papas Lay’s clásicas | Minimarket Rosita",
+        "h1":  "Papas Lay’s clásicas",
+        "products":  0,
+        "model":  "ready",
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-003",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Doritos sabor a queso | Minimarket Rosita",
+        "h1":  "Doritos sabor a queso",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-003",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Doritos sabor a queso | Minimarket Rosita",
+        "h1":  "Doritos sabor a queso",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-004",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Set de destornilladores | Minimarket Rosita",
+        "h1":  "Set de destornilladores",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-004",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Set de destornilladores | Minimarket Rosita",
+        "h1":  "Set de destornilladores",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-005",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Juego de llaves y dados Husky | Minimarket Rosita",
+        "h1":  "Juego de llaves y dados Husky",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-005",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Juego de llaves y dados Husky | Minimarket Rosita",
+        "h1":  "Juego de llaves y dados Husky",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-006",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Taladro inalámbrico | Minimarket Rosita",
+        "h1":  "Taladro inalámbrico",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-006",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Taladro inalámbrico | Minimarket Rosita",
+        "h1":  "Taladro inalámbrico",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-007",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Adaptador de enchufe | Minimarket Rosita",
+        "h1":  "Adaptador de enchufe",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-007",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Adaptador de enchufe | Minimarket Rosita",
+        "h1":  "Adaptador de enchufe",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-008",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Pilas Duracell AA | Minimarket Rosita",
+        "h1":  "Pilas Duracell AA",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-008",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Pilas Duracell AA | Minimarket Rosita",
+        "h1":  "Pilas Duracell AA",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-009",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Memoria USB HP 32 GB | Minimarket Rosita",
+        "h1":  "Memoria USB HP 32 GB",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-009",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Memoria USB HP 32 GB | Minimarket Rosita",
+        "h1":  "Memoria USB HP 32 GB",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-010",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Monopoly clásico | Minimarket Rosita",
+        "h1":  "Monopoly clásico",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-010",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Monopoly clásico | Minimarket Rosita",
+        "h1":  "Monopoly clásico",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-011",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Ajedrez magnético 4 en 1 | Minimarket Rosita",
+        "h1":  "Ajedrez magnético 4 en 1",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-011",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Ajedrez magnético 4 en 1 | Minimarket Rosita",
+        "h1":  "Ajedrez magnético 4 en 1",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-012",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Jenga familiar | Minimarket Rosita",
+        "h1":  "Jenga familiar",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-012",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Jenga familiar | Minimarket Rosita",
+        "h1":  "Jenga familiar",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-013",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Juego de escuadras | Minimarket Rosita",
+        "h1":  "Juego de escuadras",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-013",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Juego de escuadras | Minimarket Rosita",
+        "h1":  "Juego de escuadras",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-014",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Sobres manila Grafi | Minimarket Rosita",
+        "h1":  "Sobres manila Grafi",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-014",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Sobres manila Grafi | Minimarket Rosita",
+        "h1":  "Sobres manila Grafi",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-015",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Perforador Artesco | Minimarket Rosita",
+        "h1":  "Perforador Artesco",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-015",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Perforador Artesco | Minimarket Rosita",
+        "h1":  "Perforador Artesco",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-016",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Jabón Protex avena | Minimarket Rosita",
+        "h1":  "Jabón Protex avena",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-016",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Jabón Protex avena | Minimarket Rosita",
+        "h1":  "Jabón Protex avena",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-017",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Shampoo Sedal | Minimarket Rosita",
+        "h1":  "Shampoo Sedal",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-017",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Shampoo Sedal | Minimarket Rosita",
+        "h1":  "Shampoo Sedal",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-018",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Tratamiento Nutribela 10 | Minimarket Rosita",
+        "h1":  "Tratamiento Nutribela 10",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-018",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Tratamiento Nutribela 10 | Minimarket Rosita",
+        "h1":  "Tratamiento Nutribela 10",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-019",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Galletas Oreo | Minimarket Rosita",
+        "h1":  "Galletas Oreo",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-019",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Galletas Oreo | Minimarket Rosita",
+        "h1":  "Galletas Oreo",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-020",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Cinta métrica de 3 metros | Minimarket Rosita",
+        "h1":  "Cinta métrica de 3 metros",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-020",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Cinta métrica de 3 metros | Minimarket Rosita",
+        "h1":  "Cinta métrica de 3 metros",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-021",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Cable USB-C | Minimarket Rosita",
+        "h1":  "Cable USB-C",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-021",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Cable USB-C | Minimarket Rosita",
+        "h1":  "Cable USB-C",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-022",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Pelota infantil | Minimarket Rosita",
+        "h1":  "Pelota infantil",
+        "products":  0,
+        "model":  "ready",
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-022",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Pelota infantil | Minimarket Rosita",
+        "h1":  "Pelota infantil",
+        "products":  0,
+        "model":  "ready",
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-023",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Cuaderno cuadriculado | Minimarket Rosita",
+        "h1":  "Cuaderno cuadriculado",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-023",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Cuaderno cuadriculado | Minimarket Rosita",
+        "h1":  "Cuaderno cuadriculado",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-024",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Pasta dental Colgate | Minimarket Rosita",
+        "h1":  "Pasta dental Colgate",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-024",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Pasta dental Colgate | Minimarket Rosita",
+        "h1":  "Pasta dental Colgate",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-052",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Caja de colores | Minimarket Rosita",
+        "h1":  "Caja de colores",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-052",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Caja de colores | Minimarket Rosita",
+        "h1":  "Caja de colores",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-053",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Folder Manila | Minimarket Rosita",
+        "h1":  "Folder Manila",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-053",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Folder Manila | Minimarket Rosita",
+        "h1":  "Folder Manila",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-054",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Post its | Minimarket Rosita",
+        "h1":  "Post its",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-054",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Post its | Minimarket Rosita",
+        "h1":  "Post its",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-055",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Portaminas | Minimarket Rosita",
+        "h1":  "Portaminas",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-055",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Portaminas | Minimarket Rosita",
+        "h1":  "Portaminas",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-050",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Borradores | Minimarket Rosita",
+        "h1":  "Borradores",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-050",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Borradores | Minimarket Rosita",
+        "h1":  "Borradores",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-051",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Tajador | Minimarket Rosita",
+        "h1":  "Tajador",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-051",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Tajador | Minimarket Rosita",
+        "h1":  "Tajador",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-033",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Martillo | Minimarket Rosita",
+        "h1":  "Martillo",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-033",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Martillo | Minimarket Rosita",
+        "h1":  "Martillo",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-034",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Serrucho | Minimarket Rosita",
+        "h1":  "Serrucho",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-034",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Serrucho | Minimarket Rosita",
+        "h1":  "Serrucho",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-035",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Extensión | Minimarket Rosita",
+        "h1":  "Extensión",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-035",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Extensión | Minimarket Rosita",
+        "h1":  "Extensión",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-036",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Pela cables | Minimarket Rosita",
+        "h1":  "Pela cables",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-036",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Pela cables | Minimarket Rosita",
+        "h1":  "Pela cables",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-037",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Tornillos | Minimarket Rosita",
+        "h1":  "Tornillos",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-037",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Tornillos | Minimarket Rosita",
+        "h1":  "Tornillos",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-038",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Cinta aislante | Minimarket Rosita",
+        "h1":  "Cinta aislante",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-038",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Cinta aislante | Minimarket Rosita",
+        "h1":  "Cinta aislante",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-044",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Juego de cartas UNO | Minimarket Rosita",
+        "h1":  "Juego de cartas UNO",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-044",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Juego de cartas UNO | Minimarket Rosita",
+        "h1":  "Juego de cartas UNO",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-045",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Pelota de fútbol | Minimarket Rosita",
+        "h1":  "Pelota de fútbol",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-045",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Pelota de fútbol | Minimarket Rosita",
+        "h1":  "Pelota de fútbol",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-046",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Pelota de vóley | Minimarket Rosita",
+        "h1":  "Pelota de vóley",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-046",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Pelota de vóley | Minimarket Rosita",
+        "h1":  "Pelota de vóley",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-047",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Osito de peluche | Minimarket Rosita",
+        "h1":  "Osito de peluche",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-047",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Osito de peluche | Minimarket Rosita",
+        "h1":  "Osito de peluche",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-048",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Arma de juguete con balas de hidrogel | Minimarket Rosita",
+        "h1":  "Arma de juguete con balas de hidrogel",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-048",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Arma de juguete con balas de hidrogel | Minimarket Rosita",
+        "h1":  "Arma de juguete con balas de hidrogel",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-049",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Muñeca Barbie Dreamhouse | Minimarket Rosita",
+        "h1":  "Muñeca Barbie Dreamhouse",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-049",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Muñeca Barbie Dreamhouse | Minimarket Rosita",
+        "h1":  "Muñeca Barbie Dreamhouse",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-039",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Auriculares | Minimarket Rosita",
+        "h1":  "Auriculares",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-039",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Auriculares | Minimarket Rosita",
+        "h1":  "Auriculares",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-040",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Proyector | Minimarket Rosita",
+        "h1":  "Proyector",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-040",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Proyector | Minimarket Rosita",
+        "h1":  "Proyector",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-041",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "USB 16 GB | Minimarket Rosita",
+        "h1":  "USB 16 GB",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-041",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "USB 16 GB | Minimarket Rosita",
+        "h1":  "USB 16 GB",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-042",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Auriculares de cable | Minimarket Rosita",
+        "h1":  "Auriculares de cable",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-042",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Auriculares de cable | Minimarket Rosita",
+        "h1":  "Auriculares de cable",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-043",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Cable HDMI | Minimarket Rosita",
+        "h1":  "Cable HDMI",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-043",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Cable HDMI | Minimarket Rosita",
+        "h1":  "Cable HDMI",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-062",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Mouse inalámbrico | Minimarket Rosita",
+        "h1":  "Mouse inalámbrico",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-062",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Mouse inalámbrico | Minimarket Rosita",
+        "h1":  "Mouse inalámbrico",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-024-IMPORT",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Powerade Bebida Rehidratante 500 ml | Minimarket Rosita",
+        "h1":  "Powerade Bebida Rehidratante 500 ml",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-024-IMPORT",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Powerade Bebida Rehidratante 500 ml | Minimarket Rosita",
+        "h1":  "Powerade Bebida Rehidratante 500 ml",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-025",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Gaseosa Pepsi 1.5 L | Minimarket Rosita",
+        "h1":  "Gaseosa Pepsi 1.5 L",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-025",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Gaseosa Pepsi 1.5 L | Minimarket Rosita",
+        "h1":  "Gaseosa Pepsi 1.5 L",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-026",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Gaseosa Fanta Naranja 500 ml | Minimarket Rosita",
+        "h1":  "Gaseosa Fanta Naranja 500 ml",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-026",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Gaseosa Fanta Naranja 500 ml | Minimarket Rosita",
+        "h1":  "Gaseosa Fanta Naranja 500 ml",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-027",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Gaseosa Sprite 500 ml | Minimarket Rosita",
+        "h1":  "Gaseosa Sprite 500 ml",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-027",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Gaseosa Sprite 500 ml | Minimarket Rosita",
+        "h1":  "Gaseosa Sprite 500 ml",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-028",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Galletas Tentación Naranja 135 g | Minimarket Rosita",
+        "h1":  "Galletas Tentación Naranja 135 g",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-028",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Galletas Tentación Naranja 135 g | Minimarket Rosita",
+        "h1":  "Galletas Tentación Naranja 135 g",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-029",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Cheetos Cheese Tris 35 g | Minimarket Rosita",
+        "h1":  "Cheetos Cheese Tris 35 g",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-029",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Cheetos Cheese Tris 35 g | Minimarket Rosita",
+        "h1":  "Cheetos Cheese Tris 35 g",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-030",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Chocolates Vizzio 72 g | Minimarket Rosita",
+        "h1":  "Chocolates Vizzio 72 g",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-030",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Chocolates Vizzio 72 g | Minimarket Rosita",
+        "h1":  "Chocolates Vizzio 72 g",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-031",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Wafer MAX Fresa 36 g | Minimarket Rosita",
+        "h1":  "Wafer MAX Fresa 36 g",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-031",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Wafer MAX Fresa 36 g | Minimarket Rosita",
+        "h1":  "Wafer MAX Fresa 36 g",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-032",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Cereal Meli 100 g | Minimarket Rosita",
+        "h1":  "Cereal Meli 100 g",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-032",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Cereal Meli 100 g | Minimarket Rosita",
+        "h1":  "Cereal Meli 100 g",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-056",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Desodorante en Aerosol Old Spice VIP 150 ml | Minimarket Rosita",
+        "h1":  "Desodorante en Aerosol Old Spice VIP 150 ml",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-056",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Desodorante en Aerosol Old Spice VIP 150 ml | Minimarket Rosita",
+        "h1":  "Desodorante en Aerosol Old Spice VIP 150 ml",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-057",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Crema Facial Pond\u0027s Clarant B3 100 g | Minimarket Rosita",
+        "h1":  "Crema Facial Pond\u0027s Clarant B3 100 g",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-057",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Crema Facial Pond\u0027s Clarant B3 100 g | Minimarket Rosita",
+        "h1":  "Crema Facial Pond\u0027s Clarant B3 100 g",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-058",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Shampoo Head \u0026 Shoulders Classic Clean 375 ml | Minimarket Rosita",
+        "h1":  "Shampoo Head \u0026 Shoulders Classic Clean 375 ml",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-058",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Shampoo Head \u0026 Shoulders Classic Clean 375 ml | Minimarket Rosita",
+        "h1":  "Shampoo Head \u0026 Shoulders Classic Clean 375 ml",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-059",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Jabón en Barra Dove Original 90 g | Minimarket Rosita",
+        "h1":  "Jabón en Barra Dove Original 90 g",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-059",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Jabón en Barra Dove Original 90 g | Minimarket Rosita",
+        "h1":  "Jabón en Barra Dove Original 90 g",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-060",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Desodorante en Aerosol Rexona Men Active Dry 150 ml | Minimarket Rosita",
+        "h1":  "Desodorante en Aerosol Rexona Men Active Dry 150 ml",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-060",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Desodorante en Aerosol Rexona Men Active Dry 150 ml | Minimarket Rosita",
+        "h1":  "Desodorante en Aerosol Rexona Men Active Dry 150 ml",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-061",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Toallas Higiénicas Nosotras Invisibles / Normal 10 un | Minimarket Rosita",
+        "h1":  "Toallas Higiénicas Nosotras Invisibles / Normal 10 un",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-061",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Toallas Higiénicas Nosotras Invisibles / Normal 10 un | Minimarket Rosita",
+        "h1":  "Toallas Higiénicas Nosotras Invisibles / Normal 10 un",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-064",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Coca-Cola en lata | Minimarket Rosita",
+        "h1":  "Coca-Cola en lata",
+        "products":  0,
+        "model":  "ready",
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-064",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Coca-Cola en lata | Minimarket Rosita",
+        "h1":  "Coca-Cola en lata",
+        "products":  0,
+        "model":  "ready",
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-065",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Nivea Aftershave | Minimarket Rosita",
+        "h1":  "Nivea Aftershave",
+        "products":  0,
+        "model":  "ready",
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-065",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Nivea Aftershave | Minimarket Rosita",
+        "h1":  "Nivea Aftershave",
+        "products":  0,
+        "model":  "ready",
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-066",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Champú Sunsilk | Minimarket Rosita",
+        "h1":  "Champú Sunsilk",
+        "products":  0,
+        "model":  "ready",
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-066",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Champú Sunsilk | Minimarket Rosita",
+        "h1":  "Champú Sunsilk",
+        "products":  0,
+        "model":  "ready",
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-067",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Papas Lay’s Sweet BBQ | Minimarket Rosita",
+        "h1":  "Papas Lay’s Sweet BBQ",
+        "products":  0,
+        "model":  "ready",
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-067",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Papas Lay’s Sweet BBQ | Minimarket Rosita",
+        "h1":  "Papas Lay’s Sweet BBQ",
+        "products":  0,
+        "model":  "ready",
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-068",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Papas Lay’s Cheddar | Minimarket Rosita",
+        "h1":  "Papas Lay’s Cheddar",
+        "products":  0,
+        "model":  "ready",
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-068",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Papas Lay’s Cheddar | Minimarket Rosita",
+        "h1":  "Papas Lay’s Cheddar",
+        "products":  0,
+        "model":  "ready",
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-069",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Papas Lay’s Chile Limón | Minimarket Rosita",
+        "h1":  "Papas Lay’s Chile Limón",
+        "products":  0,
+        "model":  "ready",
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-069",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Papas Lay’s Chile Limón | Minimarket Rosita",
+        "h1":  "Papas Lay’s Chile Limón",
+        "products":  0,
+        "model":  "ready",
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-070",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Papas Lay’s Flaming Hot | Minimarket Rosita",
+        "h1":  "Papas Lay’s Flaming Hot",
+        "products":  0,
+        "model":  "ready",
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-070",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Papas Lay’s Flaming Hot | Minimarket Rosita",
+        "h1":  "Papas Lay’s Flaming Hot",
+        "products":  0,
+        "model":  "ready",
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-071",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Papas Lay’s Honey BBQ | Minimarket Rosita",
+        "h1":  "Papas Lay’s Honey BBQ",
+        "products":  0,
+        "model":  "ready",
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-071",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Papas Lay’s Honey BBQ | Minimarket Rosita",
+        "h1":  "Papas Lay’s Honey BBQ",
+        "products":  0,
+        "model":  "ready",
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-072",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Papas Lay’s Classic Less Salt | Minimarket Rosita",
+        "h1":  "Papas Lay’s Classic Less Salt",
+        "products":  0,
+        "model":  "ready",
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-072",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Papas Lay’s Classic Less Salt | Minimarket Rosita",
+        "h1":  "Papas Lay’s Classic Less Salt",
+        "products":  0,
+        "model":  "ready",
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-073",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Papas Lay’s Dill Pickle | Minimarket Rosita",
+        "h1":  "Papas Lay’s Dill Pickle",
+        "products":  0,
+        "model":  "ready",
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-073",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Papas Lay’s Dill Pickle | Minimarket Rosita",
+        "h1":  "Papas Lay’s Dill Pickle",
+        "products":  0,
+        "model":  "ready",
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-074",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Papas Lay’s Ranch Wavy | Minimarket Rosita",
+        "h1":  "Papas Lay’s Ranch Wavy",
+        "products":  0,
+        "model":  "ready",
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-074",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Papas Lay’s Ranch Wavy | Minimarket Rosita",
+        "h1":  "Papas Lay’s Ranch Wavy",
+        "products":  0,
+        "model":  "ready",
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-075",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Papas Lay’s BBQ Wavy | Minimarket Rosita",
+        "h1":  "Papas Lay’s BBQ Wavy",
+        "products":  0,
+        "model":  "ready",
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-075",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Papas Lay’s BBQ Wavy | Minimarket Rosita",
+        "h1":  "Papas Lay’s BBQ Wavy",
+        "products":  0,
+        "model":  "ready",
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-076",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Calabaza infantil para dulces | Minimarket Rosita",
+        "h1":  "Calabaza infantil para dulces",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-076",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Calabaza infantil para dulces | Minimarket Rosita",
+        "h1":  "Calabaza infantil para dulces",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-077",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Bolsa de dulces Halloween | Minimarket Rosita",
+        "h1":  "Bolsa de dulces Halloween",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-077",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Bolsa de dulces Halloween | Minimarket Rosita",
+        "h1":  "Bolsa de dulces Halloween",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-078",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Disfraz de bruja infantil | Minimarket Rosita",
+        "h1":  "Disfraz de bruja infantil",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-078",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Disfraz de bruja infantil | Minimarket Rosita",
+        "h1":  "Disfraz de bruja infantil",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-079",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Disfraz de vampiro infantil | Minimarket Rosita",
+        "h1":  "Disfraz de vampiro infantil",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/producto/ROS-079",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Disfraz de vampiro infantil | Minimarket Rosita",
+        "h1":  "Disfraz de vampiro infantil",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/consumibles",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Consumibles | Minimarket Rosita",
+        "h1":  "Consumibles",
+        "products":  23,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/consumibles",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Consumibles | Minimarket Rosita",
+        "h1":  "Consumibles",
+        "products":  23,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/ferreteria",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Ferretería | Minimarket Rosita",
+        "h1":  "Ferretería",
+        "products":  10,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/ferreteria",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Ferretería | Minimarket Rosita",
+        "h1":  "Ferretería",
+        "products":  10,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/tecnologia",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Tecnología | Minimarket Rosita",
+        "h1":  "Tecnología",
+        "products":  10,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/tecnologia",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Tecnología | Minimarket Rosita",
+        "h1":  "Tecnología",
+        "products":  10,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/jugueteria",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Juguetería | Minimarket Rosita",
+        "h1":  "Juguetería",
+        "products":  10,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/jugueteria",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Juguetería | Minimarket Rosita",
+        "h1":  "Juguetería",
+        "products":  10,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/educacion-oficina",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Educación y oficina | Minimarket Rosita",
+        "h1":  "Educación y oficina",
+        "products":  10,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/educacion-oficina",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Educación y oficina | Minimarket Rosita",
+        "h1":  "Educación y oficina",
+        "products":  10,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/cuidado-personal",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Cuidado personal | Minimarket Rosita",
+        "h1":  "Cuidado personal",
+        "products":  12,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/cuidado-personal",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Cuidado personal | Minimarket Rosita",
+        "h1":  "Cuidado personal",
+        "products":  12,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/halloween",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Halloween | Minimarket Rosita",
+        "h1":  "Halloween",
+        "products":  4,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/halloween",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Halloween | Minimarket Rosita",
+        "h1":  "Halloween",
+        "products":  4,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/consumibles?subcategoria=bebidas",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Consumibles | Minimarket Rosita",
+        "h1":  "Consumibles",
+        "products":  6,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/consumibles?subcategoria=bebidas",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Consumibles | Minimarket Rosita",
+        "h1":  "Consumibles",
+        "products":  6,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/consumibles?subcategoria=snacks",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Consumibles | Minimarket Rosita",
+        "h1":  "Consumibles",
+        "products":  12,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/consumibles?subcategoria=snacks",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Consumibles | Minimarket Rosita",
+        "h1":  "Consumibles",
+        "products":  12,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/consumibles?subcategoria=galletas",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Consumibles | Minimarket Rosita",
+        "h1":  "Consumibles",
+        "products":  3,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/consumibles?subcategoria=galletas",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Consumibles | Minimarket Rosita",
+        "h1":  "Consumibles",
+        "products":  3,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/ferreteria?subcategoria=herramientas-manuales",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Ferretería | Minimarket Rosita",
+        "h1":  "Ferretería",
+        "products":  6,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/ferreteria?subcategoria=herramientas-manuales",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Ferretería | Minimarket Rosita",
+        "h1":  "Ferretería",
+        "products":  6,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/ferreteria?subcategoria=herramientas-electricas",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Ferretería | Minimarket Rosita",
+        "h1":  "Ferretería",
+        "products":  1,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/ferreteria?subcategoria=herramientas-electricas",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Ferretería | Minimarket Rosita",
+        "h1":  "Ferretería",
+        "products":  1,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/tecnologia?subcategoria=cables-adaptadores",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Tecnología | Minimarket Rosita",
+        "h1":  "Tecnología",
+        "products":  3,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/tecnologia?subcategoria=cables-adaptadores",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Tecnología | Minimarket Rosita",
+        "h1":  "Tecnología",
+        "products":  3,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/tecnologia?subcategoria=pilas",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Tecnología | Minimarket Rosita",
+        "h1":  "Tecnología",
+        "products":  1,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/tecnologia?subcategoria=pilas",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Tecnología | Minimarket Rosita",
+        "h1":  "Tecnología",
+        "products":  1,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/tecnologia?subcategoria=almacenamiento",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Tecnología | Minimarket Rosita",
+        "h1":  "Tecnología",
+        "products":  2,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/tecnologia?subcategoria=almacenamiento",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Tecnología | Minimarket Rosita",
+        "h1":  "Tecnología",
+        "products":  2,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/jugueteria?subcategoria=juegos-mesa",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Juguetería | Minimarket Rosita",
+        "h1":  "Juguetería",
+        "products":  4,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/jugueteria?subcategoria=juegos-mesa",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Juguetería | Minimarket Rosita",
+        "h1":  "Juguetería",
+        "products":  4,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/jugueteria?subcategoria=juegos-deportivos",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Juguetería | Minimarket Rosita",
+        "h1":  "Juguetería",
+        "products":  3,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/jugueteria?subcategoria=juegos-deportivos",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Juguetería | Minimarket Rosita",
+        "h1":  "Juguetería",
+        "products":  3,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/educacion-oficina?subcategoria=geometria",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Educación y oficina | Minimarket Rosita",
+        "h1":  "Educación y oficina",
+        "products":  1,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/educacion-oficina?subcategoria=geometria",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Educación y oficina | Minimarket Rosita",
+        "h1":  "Educación y oficina",
+        "products":  1,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/educacion-oficina?subcategoria=cuadernos-papel",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Educación y oficina | Minimarket Rosita",
+        "h1":  "Educación y oficina",
+        "products":  1,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/educacion-oficina?subcategoria=cuadernos-papel",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Educación y oficina | Minimarket Rosita",
+        "h1":  "Educación y oficina",
+        "products":  1,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/educacion-oficina?subcategoria=organizacion",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Educación y oficina | Minimarket Rosita",
+        "h1":  "Educación y oficina",
+        "products":  3,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/educacion-oficina?subcategoria=organizacion",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Educación y oficina | Minimarket Rosita",
+        "h1":  "Educación y oficina",
+        "products":  3,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/educacion-oficina?subcategoria=accesorios-oficina",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Educación y oficina | Minimarket Rosita",
+        "h1":  "Educación y oficina",
+        "products":  3,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/educacion-oficina?subcategoria=accesorios-oficina",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Educación y oficina | Minimarket Rosita",
+        "h1":  "Educación y oficina",
+        "products":  3,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/cuidado-personal?subcategoria=higiene-bucal",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Cuidado personal | Minimarket Rosita",
+        "h1":  "Cuidado personal",
+        "products":  1,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/cuidado-personal?subcategoria=higiene-bucal",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Cuidado personal | Minimarket Rosita",
+        "h1":  "Cuidado personal",
+        "products":  1,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/cuidado-personal?subcategoria=cuidado-capilar",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Cuidado personal | Minimarket Rosita",
+        "h1":  "Cuidado personal",
+        "products":  4,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/cuidado-personal?subcategoria=cuidado-capilar",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Cuidado personal | Minimarket Rosita",
+        "h1":  "Cuidado personal",
+        "products":  4,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/cuidado-personal?subcategoria=jabones",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Cuidado personal | Minimarket Rosita",
+        "h1":  "Cuidado personal",
+        "products":  2,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/cuidado-personal?subcategoria=jabones",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Cuidado personal | Minimarket Rosita",
+        "h1":  "Cuidado personal",
+        "products":  2,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/consumibles?subcategoria=consumibles-por-clasificar",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Consumibles | Minimarket Rosita",
+        "h1":  "Consumibles",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/consumibles?subcategoria=consumibles-por-clasificar",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Consumibles | Minimarket Rosita",
+        "h1":  "Consumibles",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/ferreteria?subcategoria=ferreteria-por-clasificar",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Ferretería | Minimarket Rosita",
+        "h1":  "Ferretería",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/ferreteria?subcategoria=ferreteria-por-clasificar",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Ferretería | Minimarket Rosita",
+        "h1":  "Ferretería",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/tecnologia?subcategoria=tecnologia-por-clasificar",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Tecnología | Minimarket Rosita",
+        "h1":  "Tecnología",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/tecnologia?subcategoria=tecnologia-por-clasificar",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Tecnología | Minimarket Rosita",
+        "h1":  "Tecnología",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/jugueteria?subcategoria=jugueteria-por-clasificar",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Juguetería | Minimarket Rosita",
+        "h1":  "Juguetería",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/jugueteria?subcategoria=jugueteria-por-clasificar",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Juguetería | Minimarket Rosita",
+        "h1":  "Juguetería",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/educacion-oficina?subcategoria=educacion-oficina-por-clasificar",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Educación y oficina | Minimarket Rosita",
+        "h1":  "Educación y oficina",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/educacion-oficina?subcategoria=educacion-oficina-por-clasificar",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Educación y oficina | Minimarket Rosita",
+        "h1":  "Educación y oficina",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/cuidado-personal?subcategoria=cuidado-personal-por-clasificar",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Cuidado personal | Minimarket Rosita",
+        "h1":  "Cuidado personal",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/cuidado-personal?subcategoria=cuidado-personal-por-clasificar",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Cuidado personal | Minimarket Rosita",
+        "h1":  "Cuidado personal",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/educacion-oficina?subcategoria=escritura",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Educación y oficina | Minimarket Rosita",
+        "h1":  "Educación y oficina",
+        "products":  2,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/educacion-oficina?subcategoria=escritura",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Educación y oficina | Minimarket Rosita",
+        "h1":  "Educación y oficina",
+        "products":  2,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/ferreteria?subcategoria=accesorios-ferreteria",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Ferretería | Minimarket Rosita",
+        "h1":  "Ferretería",
+        "products":  3,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/ferreteria?subcategoria=accesorios-ferreteria",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Ferretería | Minimarket Rosita",
+        "h1":  "Ferretería",
+        "products":  3,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/jugueteria?subcategoria=peluches",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Juguetería | Minimarket Rosita",
+        "h1":  "Juguetería",
+        "products":  1,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/jugueteria?subcategoria=peluches",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Juguetería | Minimarket Rosita",
+        "h1":  "Juguetería",
+        "products":  1,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/jugueteria?subcategoria=juguetes-accion",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Juguetería | Minimarket Rosita",
+        "h1":  "Juguetería",
+        "products":  1,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/jugueteria?subcategoria=juguetes-accion",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Juguetería | Minimarket Rosita",
+        "h1":  "Juguetería",
+        "products":  1,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/jugueteria?subcategoria=munecas",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Juguetería | Minimarket Rosita",
+        "h1":  "Juguetería",
+        "products":  1,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/jugueteria?subcategoria=munecas",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Juguetería | Minimarket Rosita",
+        "h1":  "Juguetería",
+        "products":  1,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/tecnologia?subcategoria=audio",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Tecnología | Minimarket Rosita",
+        "h1":  "Tecnología",
+        "products":  2,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/tecnologia?subcategoria=audio",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Tecnología | Minimarket Rosita",
+        "h1":  "Tecnología",
+        "products":  2,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/tecnologia?subcategoria=proyeccion",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Tecnología | Minimarket Rosita",
+        "h1":  "Tecnología",
+        "products":  1,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/tecnologia?subcategoria=proyeccion",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Tecnología | Minimarket Rosita",
+        "h1":  "Tecnología",
+        "products":  1,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/tecnologia?subcategoria=perifericos",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Tecnología | Minimarket Rosita",
+        "h1":  "Tecnología",
+        "products":  1,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/tecnologia?subcategoria=perifericos",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Tecnología | Minimarket Rosita",
+        "h1":  "Tecnología",
+        "products":  1,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/consumibles?subcategoria=dulces-chocolates",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Consumibles | Minimarket Rosita",
+        "h1":  "Consumibles",
+        "products":  1,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/consumibles?subcategoria=dulces-chocolates",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Consumibles | Minimarket Rosita",
+        "h1":  "Consumibles",
+        "products":  1,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/consumibles?subcategoria=cereales",
+        "width":  320,
+        "scrollWidth":  320,
+        "title":  "",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/consumibles?subcategoria=cereales",
+        "width":  1440,
+        "scrollWidth":  1440,
+        "title":  "",
+        "products":  0,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/cuidado-personal?subcategoria=desodorantes",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Cuidado personal | Minimarket Rosita",
+        "h1":  "Cuidado personal",
+        "products":  2,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/cuidado-personal?subcategoria=desodorantes",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Cuidado personal | Minimarket Rosita",
+        "h1":  "Cuidado personal",
+        "products":  2,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/cuidado-personal?subcategoria=cuidado-facial",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Cuidado personal | Minimarket Rosita",
+        "h1":  "Cuidado personal",
+        "products":  2,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/cuidado-personal?subcategoria=cuidado-facial",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Cuidado personal | Minimarket Rosita",
+        "h1":  "Cuidado personal",
+        "products":  2,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/cuidado-personal?subcategoria=higiene-intima",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Cuidado personal | Minimarket Rosita",
+        "h1":  "Cuidado personal",
+        "products":  1,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/cuidado-personal?subcategoria=higiene-intima",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Cuidado personal | Minimarket Rosita",
+        "h1":  "Cuidado personal",
+        "products":  1,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/halloween?subcategoria=halloween-accesorios",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Halloween | Minimarket Rosita",
+        "h1":  "Halloween",
+        "products":  1,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/halloween?subcategoria=halloween-accesorios",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Halloween | Minimarket Rosita",
+        "h1":  "Halloween",
+        "products":  1,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/halloween?subcategoria=halloween-dulces",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Halloween | Minimarket Rosita",
+        "h1":  "Halloween",
+        "products":  1,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/halloween?subcategoria=halloween-dulces",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Halloween | Minimarket Rosita",
+        "h1":  "Halloween",
+        "products":  1,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/halloween?subcategoria=halloween-disfraces",
+        "width":  320,
+        "scrollWidth":  305,
+        "title":  "Halloween | Minimarket Rosita",
+        "h1":  "Halloween",
+        "products":  2,
+        "errors":  [
+
+                   ]
+    },
+    {
+        "path":  "/categoria/halloween?subcategoria=halloween-disfraces",
+        "width":  1440,
+        "scrollWidth":  1425,
+        "title":  "Halloween | Minimarket Rosita",
+        "h1":  "Halloween",
+        "products":  2,
+        "errors":  [
+
+                   ]
+    }
+]

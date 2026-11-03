@@ -1,5 +1,6 @@
 {
-  "date": "2026-10-30",
+  "date": "2026-11-03T23:30:54.329Z",
+  "routingMode": "live-provider",
   "passed": [
     "Agentes: creación/reset PBKDF2, correo único, sin edición de admin/cliente; cajero no administra ni crea agentes; cuenta inactiva no inicia sesión.",
     "Fixture histórica real v7→9: pedidos y movimientos idénticos, nombres/imágenes, productos propios, precios/stock y assets locales preservados.",

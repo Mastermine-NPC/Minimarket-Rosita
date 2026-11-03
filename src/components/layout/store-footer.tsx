@@ -1,84 +1,43 @@
 import { useTaxonomy } from "@/hooks/use-taxonomy";
 import { Link } from "react-router";
-import { ArrowUpRight, MapPin, Phone } from "lucide-react";
+import { Banknote, CreditCard, MessageCircle, Smartphone } from "lucide-react";
+import "@/styles/footer-compact.css";
+
+function Instagram() {
+  return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" /></svg>;
+}
+function Facebook() {
+  return <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 22v-9h3l.5-4H14V7c0-1 .3-1.5 1.7-1.5H18V2.2A27 27 0 0 0 15 2c-3 0-5 1.8-5 5v2H7v4h3v9z" /></svg>;
+}
 
 export function StoreFooter() {
-  const { activeCategories: categories, categoryPath } = useTaxonomy();
-  return (
-    <footer className="store-footer">
-      <div className="footer-main">
-        <div className="footer-brand">
-          <strong>
-            Rosita<span>.</span>
-          </strong>
-          <p>
-            Lo cotidiano también
-            <br />
-            puede sentirse especial.
-          </p>
-          <span>Tu minimarket peruano.</span>
-        </div>
-        <div>
-          <h2>Encuentra lo tuyo</h2>
-          <nav aria-label="Categorías al pie">
-            {categories.map((c) => (
-              <Link key={c.id} to={categoryPath(c)}>
-                {c.name}
-              </Link>
-            ))}
-          </nav>
-        </div>
-        <div>
-          <h2>Rosita y ayuda</h2>
-          <nav aria-label="Información Rosita">
-            <Link to="/nosotros">Nosotros</Link>
-            <Link to="/ayuda">Centro de ayuda</Link>
-            <Link to="/ayuda#preguntas-frecuentes">Preguntas frecuentes</Link>
-            <Link to="/ayuda#entregas-pagos">Entregas y pagos</Link>
-            <Link to="/contacto">Contacto</Link>
-            <Link to="/mis-pedidos">Mis pedidos</Link>
-          </nav>
-        </div>
-        <div>
-          <h2>Estamos cerca</h2>
-          <p>
-            <MapPin size={17} aria-hidden="true" />
-            UPIS Mercado Mayorista
-            <br />
-            Zn. B, Mz. D, Lt. 6
-          </p>
-          <p>
-            <Phone size={17} aria-hidden="true" />
-            +51 938 572 212
-          </p>
-          <span className="footer-contact-note">
-            Datos del material de Rosita.
-          </span>
-        </div>
-        <div className="footer-note">
-          <span className="footer-pink-dot" aria-hidden="true" />
-          <h2>
-            Una tienda de verdad.
-            <br />
-            Un prototipo por ahora.
-          </h2>
-          <p>
-            Precios y stock de prueba. Sin cobros ni entregas reales. Acceso,
-            pedidos y administración son simulados.
-          </p>
-          <Link to="/catalogo">
-            Seguir explorando <ArrowUpRight size={16} aria-hidden="true" />
-          </Link>
-        </div>
+  const { activeCategories, categoryPath } = useTaxonomy();
+  const halloween = activeCategories.find(category => category.name.toLocaleLowerCase("es") === "halloween");
+  return <footer className="store-footer compact-store-footer">
+    <div className="compact-footer-main">
+      <Link className="compact-footer-brand" to="/" aria-label="Rosita, inicio">Rosita.</Link>
+      <nav className="compact-footer-links" aria-label="Enlaces al pie">
+        <Link to="/catalogo">Catálogo</Link>
+        {halloween && <Link to={categoryPath(halloween)}>Halloween</Link>}
+        <Link to="/ayuda">Ayuda</Link>
+        <Link to="/contacto">Contacto</Link>
+        <Link to="/personal">Personal</Link>
+      </nav>
+      <div className="compact-footer-socials" role="group" aria-label="Redes sociales">
+        <a href="https://wa.me/51938572212" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp de Rosita (abre otra pestaña)" title="WhatsApp"><MessageCircle aria-hidden="true" /></a>
+        <span className="social-coming-soon" role="img" aria-label="Instagram, próximamente" title="Instagram · próximamente"><Instagram aria-hidden="true" /></span>
+        <span className="social-coming-soon" role="img" aria-label="Facebook, próximamente" title="Facebook · próximamente"><Facebook aria-hidden="true" /></span>
       </div>
-      <div className="footer-bottom">
-        <span>Minimarket Rosita · Prototipo académico</span>
-        <nav aria-label="Recursos internos">
-          <Link to="/personal">Acceso de personal</Link>
-          <Link to="/sistema-diseno">Sistema de diseño</Link>
-          <Link to="/comprobacion">Comprobación técnica</Link>
-        </nav>
+      <div className="compact-footer-payments" role="group" aria-label="Métodos de pago de demostración">
+        <span><Banknote aria-hidden="true" /> Efectivo</span>
+        <span><CreditCard aria-hidden="true" /> Tarjeta</span>
+        <span><Smartphone aria-hidden="true" /> Yape</span>
+        <span><Smartphone aria-hidden="true" /> Plin</span>
       </div>
-    </footer>
-  );
+    </div>
+    <div className="compact-footer-bottom">
+      <span>Minimarket Rosita · Prototipo académico</span>
+      <span>Precios y stock de prueba. Sin cobros ni entregas reales.</span>
+    </div>
+  </footer>;
 }

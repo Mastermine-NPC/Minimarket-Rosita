@@ -1,13 +1,14 @@
 import { useRosita } from "./use-rosita";
 import { categoryPath } from "@/lib/taxonomy";
+import { useMemo } from "react";
 export function useTaxonomy() {
   const { state } = useRosita();
-  const categories = [...state.categories].sort(
+  const categories = useMemo(() => [...state.categories].sort(
     (a, b) => a.order - b.order || a.name.localeCompare(b.name, "es"),
-  );
-  const subcategories = [...state.subcategories].sort(
+  ), [state.categories]);
+  const subcategories = useMemo(() => [...state.subcategories].sort(
     (a, b) => a.order - b.order || a.name.localeCompare(b.name, "es"),
-  );
+  ), [state.subcategories]);
   const categoryById = (id: string) =>
     categories.find(
       (c) => c.id === id || c.slug === id || c.aliases.includes(id),

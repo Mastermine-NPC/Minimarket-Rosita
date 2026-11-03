@@ -1,0 +1,50 @@
+{
+  "viewport": "1440x1000",
+  "runs": [
+    {
+      "rootWrites": 344,
+      "geometry": 1916,
+      "resizes": 172,
+      "copies": 559,
+      "draws": 559,
+      "p95FrameMs": 173.40000000000055,
+      "frames": 41,
+      "categoryCanvas": 18,
+      "elapsedSeconds": 5.012580000002345,
+      "RecalcStyleDuration": 755.2889999999999,
+      "LayoutDuration": 4.857,
+      "ScriptDuration": 3934.522,
+      "TaskDuration": 4991.514999999999
+    },
+    {
+      "rootWrites": 344,
+      "geometry": 1916,
+      "resizes": 172,
+      "copies": 559,
+      "draws": 559,
+      "p95FrameMs": 133.30000000000018,
+      "frames": 41,
+      "categoryCanvas": 18,
+      "elapsedSeconds": 4.66222999999809,
+      "RecalcStyleDuration": 624.9499999999999,
+      "LayoutDuration": 2.7239999999999904,
+      "ScriptDuration": 3772.8219999999997,
+      "TaskDuration": 4658.258
+    },
+    {
+      "rootWrites": 360,
+      "geometry": 2005,
+      "resizes": 180,
+      "copies": 585,
+      "draws": 585,
+      "p95FrameMs": 133.39999999999964,
+      "frames": 43,
+      "categoryCanvas": 18,
+      "elapsedSeconds": 4.7016809999986435,
+      "RecalcStyleDuration": 643.261,
+      "LayoutDuration": 4.182999999999993,
+      "ScriptDuration": 3794.491,
+      "TaskDuration": 4695.066000000001
+    }
+  ]
+}

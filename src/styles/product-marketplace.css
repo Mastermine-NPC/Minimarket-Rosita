@@ -1,0 +1,133 @@
+/* Shared retail cards: quiet white imagery, compact names, prominent prices. */
+.store-shell article.product-card.marketplace-product-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #e4e7e2;
+  border-radius: 6px;
+  background: #fff;
+  color: #19271f;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  transition: border-color 180ms ease;
+}
+.store-shell article.product-card.marketplace-product-card:hover {
+  transform: none;
+  background: #fff;
+  border-color: #b8c8bc;
+  box-shadow: none;
+}
+.store-shell article.product-card.marketplace-product-card .product-photo-link {
+  height: clamp(220px, 20vw, 270px);
+  min-height: 220px;
+  background: #fff;
+  padding: 32px 22px 40px;
+  border-radius: 0;
+  border-bottom: 1px solid #f0f1ed;
+}
+.store-shell article.product-card.marketplace-product-card .product-image {
+  width: min(100%, 210px);
+  height: 100%;
+  max-height: 210px;
+  background-color: #fff;
+  mix-blend-mode: multiply;
+  transition: transform 200ms ease;
+}
+.store-shell article.product-card.marketplace-product-card:hover .product-image {
+  transform: scale(1.025);
+}
+.store-shell article.product-card.marketplace-product-card .product-image:not(.product-illustration) {
+  /* Atlas tiles are square; a forced rectangular height stretches their contents. */
+  width: min(100%, 190px);
+  height: auto;
+  aspect-ratio: 1;
+  max-height: none;
+}
+.store-shell article.product-card.marketplace-product-card .product-card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px;
+}
+.store-shell article.product-card.marketplace-product-card h3 {
+  margin: 0;
+  min-height: 40px;
+  font: 400 16px/1.3 var(--font-body);
+  letter-spacing: 0;
+}
+.marketplace-product-card h3 a { color: inherit; }
+.store-shell .marketplace-product-card .product-brand {
+  font: 400 12px/1.4 var(--font-body);
+  color: #5b685f;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.store-shell .marketplace-product-card .product-presentation {
+  font-size: 12px;
+  line-height: 1.4;
+  margin: 0 0 6px;
+  color: #5b685f;
+}
+.marketplace-price-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: end; }
+.store-shell .marketplace-product-card .product-price {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 2px;
+  margin: 0;
+  min-height: 48px;
+  justify-content: end;
+}
+.store-shell .marketplace-product-card .product-price > strong {
+  font: 500 26px/1.15 var(--font-body);
+  letter-spacing: -.04em;
+}
+.store-shell .marketplace-product-card .product-price del {
+  order: -1;
+  color: #657167;
+  font-size: 11px;
+}
+.store-shell .marketplace-product-card .offer-caption { display: none; }
+.marketplace-discount { color: #167044; font-size: 12px; padding-bottom: 3px; }
+.store-shell .marketplace-product-card .stock-label {
+  margin: 5px 0 8px;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #167044;
+}
+.store-shell .marketplace-product-card .stock-empty { color: #8a3434; }
+.store-shell .marketplace-product-card .demo-product-notice {
+  margin: 0 0 8px;
+  font-size: 11px;
+  line-height: 1.4;
+  color: #657167;
+}
+.store-shell .marketplace-product-card .product-add {
+  margin-top: auto;
+  min-height: 44px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+.store-shell .marketplace-product-card .product-3d-badge {
+  background: #edf4ef;
+  color: #183e30;
+  border-radius: 3px;
+  padding: 5px 8px;
+  font-size: 11px;
+}
+.store-shell .marketplace-product-card :is(.product-render-label, .product-tag) {
+  background: #edf4ef;
+  color: #183e30;
+  border-radius: 3px;
+  font-size: 10px;
+}
+@media (max-width: 600px) {
+  .store-shell article.product-card.marketplace-product-card .product-photo-link { height: 220px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .store-shell article.product-card.marketplace-product-card,
+  .store-shell article.product-card.marketplace-product-card .product-image { transition: none; }
+  .store-shell article.product-card.marketplace-product-card:hover .product-image { transform: none; }
+}

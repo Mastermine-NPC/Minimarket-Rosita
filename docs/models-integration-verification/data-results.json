@@ -1,6 +1,6 @@
 {
   "passed": [
-    "75 real catalog records, 12 additive model products",
+    "79 real catalog records, 12 additive model products",
     "Validated schema, unique IDs/codes/barcodes",
     "Version 9 storage migration and repeated restart are idempotent",
     "Existing prices, stock, cart, orders, movements and checkout retained",

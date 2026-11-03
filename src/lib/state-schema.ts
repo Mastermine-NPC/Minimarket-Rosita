@@ -10,6 +10,7 @@ import {
 export { legacySchema, v2Schema } from "./legacy-v4-schema";
 export const stateSchema = v8Schema
   .safeExtend({
+    halloweenRevision: z.string().max(100).optional(),
     modelCatalogRevision: z.string().max(100).optional(),
     operationsRevision: z.string().optional(),
     storeLocation: geoPointSchema,

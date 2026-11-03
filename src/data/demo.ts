@@ -1,3 +1,4 @@
+import { integrateHalloweenCatalog } from "@/lib/halloween-catalog-update";
 import { integrateModelCatalog } from "@/lib/model-catalog-update";
 import { initializeOperations } from "@/lib/operations-init";
 import { storeOrigin } from "./geography";
@@ -69,6 +70,6 @@ const baseState: RositaState = {
   authError: "",
 };
 export const initialState: RositaState = initializeOperations(
-  integrateModelCatalog(integrateCatalog(baseState)),
+  integrateHalloweenCatalog(integrateModelCatalog(integrateCatalog(baseState))),
 );
 export const categories = catalogCategories.map((category) => category.name);

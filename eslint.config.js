@@ -42,6 +42,7 @@ export default tseslint.config(
       "docs/category-tilt-verification/*.mjs",
       "docs/category-liquid-glass-verification/*.mjs",
       "docs/catalog-checkout-verification/*.mjs",
+      "docs/halloween-verification/*.mjs",
       "docs/cinematic-verification/*.mjs",
       "docs/global-cinema-verification/*.mjs",
       "docs/product-3d-verification/*.mjs",

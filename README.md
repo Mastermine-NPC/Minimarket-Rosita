@@ -12,7 +12,7 @@ nvm use
 npm run dev
 ```
 
-Abre el puerto mostrado por Vite (normalmente [localhost:5173](http://localhost:5173/)). La vista previa compilada final de esta sesión está en **[127.0.0.1:4176](http://127.0.0.1:4176/)**. `npm run check` ejecuta tipos, ESLint, 26 contrastes y build. `npm run test:operations` permite repetir deliberadamente pruebas de lógica en datos aislados; requiere red para el segundo destino vial. `npm run preview` sirve la compilación local; no publica. Reinstalación exacta: `npx --yes npm@11.21.1 ci`.
+Abre el puerto mostrado por Vite (normalmente [localhost:5173](http://localhost:5173/)). La vista previa compilada final de esta sesión está en **[127.0.0.1:4176](http://127.0.0.1:4176/)**. `npm run check` ejecuta tipos, ESLint, 26 contrastes y build. `npm test` ejecuta las pruebas de operaciones, catálogo, migraciones, pedidos y teléfonos con datos aislados. La prueba vial de `test:operations` usa una respuesta sintética sin red y no certifica al proveedor. `npm run test:routing:live` comprueba el proveedor real y transmite coordenadas; ejecútala solo con autorización para esa transmisión. `npm run preview` sirve la compilación local; no publica. Reinstalación exacta: `npx --yes npm@11.21.1 ci`.
 
 ## Accesos ficticios
 
@@ -47,3 +47,9 @@ Se conservan 63 productos iniciales, fotografías, Manrope/DM Sans, verde/rosa, 
 [Guiones, coordenadas, proveedores, rutas y límites](docs/OPERACIONES-1.0.0.md) · [Pruebas reales](docs/VERIFICACION.md) · [Persistencia](docs/PERSISTENCIA.md) · [Design System 2.7](docs/DESIGN-SYSTEM.md) · [Checkpoint y recuperación](docs/ESTADO-ACTUAL.md) · [Integración anterior de catálogo](docs/CATALOGO-0.9.0.md).
 
 Usa una pestaña/navegador. No hay sincronización entre dispositivos ni garantía transaccional entre pestañas. Datos corruptos/futuros/bloqueados muestran aviso; restablecimiento exclusivo de Rosita, nunca `localStorage.clear()`.
+
+## Auditoría integral · 3 de noviembre de 2026
+
+[Informe técnico y límites de verificación](docs/integral-audit/README.md) · [Inventario de rutas](docs/integral-audit/ROUTES.md). La auditoría usa un perfil de navegador y fixtures independientes de los datos del usuario. No despliega ni modifica sesiones reales.
+
+El sitemap puede generarse después del build con `SITE_URL` configurado al origen público confirmado: `SITE_URL=https://tu-dominio-confirmado.example npm run seo:sitemap`. El dominio del ejemplo debe reemplazarse; no se genera ni publica un sitemap de producción sin ese dato. Incluye el catálogo inicial, no modificaciones posteriores guardadas en localStorage.

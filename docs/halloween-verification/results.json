@@ -1,0 +1,12 @@
+{
+  "video": {
+    "src": "http://localhost:4190/images/video/video_halloween.mp4",
+    "loop": true,
+    "muted": true,
+    "inline": true,
+    "time": 0.015167
+  },
+  "categoryCards": 7,
+  "publicProducts": 4,
+  "errors": []
+}

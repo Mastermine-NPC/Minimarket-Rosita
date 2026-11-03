@@ -1,0 +1,885 @@
+[33me0076b1[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mredesign-minimarket[m[33m)[m Actualiza diseño, modelos 3D y experiencia visual
+ .agents/skills/design-taste-frontend/README.md                                  |   81 [32m+[m
+ .agents/skills/design-taste-frontend/SKILL.md                                   |  542 [32m+++[m
+ .agents/skills/design-taste-frontend/assets/app.css                             |  216 [32m++[m
+ .agents/skills/design-taste-frontend/assets/base.css                            |  105 [32m+[m
+ .agents/skills/design-taste-frontend/assets/base.js                             |   37 [32m+[m
+ .agents/skills/design-taste-frontend/assets/charts.js                           |  619 [32m++++[m
+ .agents/skills/design-taste-frontend/assets/scenes/stage.css                    |   28 [32m+[m
+ .agents/skills/design-taste-frontend/assets/scenes/stage.js                     |  134 [32m+[m
+ .agents/skills/design-taste-frontend/evals/evals.json                           |   76 [32m+[m
+ .agents/skills/design-taste-frontend/library/app.json                           | 1327 [32m++++++++[m
+ .agents/skills/design-taste-frontend/library/directions.json                    | 1078 [32m++++++[m
+ .agents/skills/design-taste-frontend/library/heroes.json                        | 1086 [32m++++++[m
+ .agents/skills/design-taste-frontend/library/motions.json                       |   92 [32m+[m
+ .agents/skills/design-taste-frontend/library/palettes.json                      | 1485 [32m+++++++++[m
+ .agents/skills/design-taste-frontend/library/photos.json                        | 7240 [32m++++++++++++++++++++++++++++++++++++++++[m
+ .agents/skills/design-taste-frontend/library/sections.json                      | 4429 [32m++++++++++++++++++++++++[m
+ .agents/skills/design-taste-frontend/library/sites.json                         | 8350 [32m++++++++++++++++++++++++++++++++++++++++++++++[m
+ .agents/skills/design-taste-frontend/library/type.json                          | 2024 [32m+++++++++++[m
+ .agents/skills/design-taste-frontend/references/app-screens.md                  | 1199 [32m+++++++[m
+ .agents/skills/design-taste-frontend/references/colour.md                       |  141 [32m+[m
+ .agents/skills/design-taste-frontend/references/copy.md                         |  177 [32m+[m
+ .agents/skills/design-taste-frontend/references/critique.md                     |  182 [32m+[m
+ .agents/skills/design-taste-frontend/references/imagery.md                      |  791 [32m+++++[m
+ .agents/skills/design-taste-frontend/references/layout.md                       |  292 [32m++[m
+ .agents/skills/design-taste-frontend/references/motion.md                       |  980 [32m++++++[m
+ .agents/skills/design-taste-frontend/references/research.md                     |  356 [32m++[m
+ .agents/skills/design-taste-frontend/references/scenes.md                       |  174 [32m+[m
+ .agents/skills/design-taste-frontend/references/tells.md                        |  115 [32m+[m
+ .agents/skills/design-taste-frontend/references/type.md                         |  170 [32m+[m
+ .agents/skills/design-taste-frontend/scripts/assets.mjs                         |  865 [32m+++++[m
+ .agents/skills/design-taste-frontend/scripts/draw.mjs                           |  584 [32m++++[m
+ .agents/skills/design-taste-frontend/scripts/inspect.mjs                        |  308 [32m++[m
+ .agents/skills/design-taste-frontend/scripts/lib/app-draw.mjs                   |  203 [32m++[m
+ .agents/skills/design-taste-frontend/scripts/lib/cdp.mjs                        |  248 [32m++[m
+ .agents/skills/design-taste-frontend/scripts/lib/inspection-files.mjs           |    9 [32m+[m
+ .agents/skills/design-taste-frontend/scripts/lib/probe.mjs                      |  929 [32m++++++[m
+ .agents/skills/design-taste-frontend/scripts/lib/rules.mjs                      |  243 [32m++[m
+ .agents/skills/design-taste-frontend/scripts/lint.mjs                           |  119 [32m+[m
+ .agents/skills/design-taste-frontend/scripts/scenes.mjs                         |  124 [32m+[m
+ .taste-skill/admin/direction.json                                               |  209 [32m++[m
+ .taste-skill/direction.json                                                     |  459 [32m+++[m
+ docs/catalog-checkout-verification/README.md                                    |   40 [32m+[m
+ docs/catalog-checkout-verification/catalog-combined.png                         |  Bin [31m0[m -> [32m149764[m bytes
+ docs/catalog-checkout-verification/checkout-1024.png                            |  Bin [31m0[m -> [32m154899[m bytes
+ docs/catalog-checkout-verification/checkout-1440.png                            |  Bin [31m0[m -> [32m142246[m bytes
+ docs/catalog-checkout-verification/checkout-320.png                             |  Bin [31m0[m -> [32m50753[m bytes
+ docs/catalog-checkout-verification/checkout-390.png                             |  Bin [31m0[m -> [32m85958[m bytes
+ docs/catalog-checkout-verification/checkout-768.png                             |  Bin [31m0[m -> [32m173369[m bytes
+ docs/catalog-checkout-verification/checkout-map-fallback.png                    |  Bin [31m0[m -> [32m178971[m bytes
+ docs/catalog-checkout-verification/checkout-night-map.png                       |  Bin [31m0[m -> [32m303279[m bytes
+ docs/catalog-checkout-verification/confirmed-order.png                          |  Bin [31m0[m -> [32m102468[m bytes
+ docs/catalog-checkout-verification/filters-320.png                              |  Bin [31m0[m -> [32m85987[m bytes
+ docs/catalog-checkout-verification/filters-390.png                              |  Bin [31m0[m -> [32m173744[m bytes
+ docs/catalog-checkout-verification/filters-768.png                              |  Bin [31m0[m -> [32m178642[m bytes
+ docs/catalog-checkout-verification/phone-country-selector.png                   |  Bin [31m0[m -> [32m105752[m bytes
+ docs/catalog-checkout-verification/phone-logic.txt                              |    1 [32m+[m
+ docs/catalog-checkout-verification/price-control.png                            |  Bin [31m0[m -> [32m665206[m bytes
+ docs/catalog-checkout-verification/results.json                                 |   30 [32m+[m
+ docs/catalog-checkout-verification/selector-results.json                        |   20 [32m+[m
+ docs/catalog-checkout-verification/subcategory.png                              |  Bin [31m0[m -> [32m248823[m bytes
+ docs/catalog-checkout-verification/verify-selector.mjs                          |   11 [32m+[m
+ docs/catalog-checkout-verification/verify.mjs                                   |   36 [32m+[m
+ docs/catalog-responsive-verification/README.md                                  |   49 [32m+[m
+ docs/catalog-responsive-verification/after/1024x768.png                         |  Bin [31m0[m -> [32m124618[m bytes
+ docs/catalog-responsive-verification/after/1440x900.png                         |  Bin [31m0[m -> [32m288632[m bytes
+ docs/catalog-responsive-verification/after/1920x1080.png                        |  Bin [31m0[m -> [32m495158[m bytes
+ docs/catalog-responsive-verification/after/2560x1440.png                        |  Bin [31m0[m -> [32m696080[m bytes
+ docs/catalog-responsive-verification/after/3840x2160.png                        |  Bin [31m0[m -> [32m1439160[m bytes
+ docs/catalog-responsive-verification/after/390x844.png                          |  Bin [31m0[m -> [32m57834[m bytes
+ docs/catalog-responsive-verification/after/768x1024.png                         |  Bin [31m0[m -> [32m232723[m bytes
+ docs/catalog-responsive-verification/after/measurements.json                    | 1635 [32m+++++++++[m
+ docs/catalog-responsive-verification/before/1024x768.png                        |  Bin [31m0[m -> [32m159570[m bytes
+ docs/catalog-responsive-verification/before/1440x900.png                        |  Bin [31m0[m -> [32m200539[m bytes
+ docs/catalog-responsive-verification/before/1920x1080.png                       |  Bin [31m0[m -> [32m310000[m bytes
+ docs/catalog-responsive-verification/before/2560x1440.png                       |  Bin [31m0[m -> [32m406282[m bytes
+ docs/catalog-responsive-verification/before/3840x2160.png                       |  Bin [31m0[m -> [32m690774[m bytes
+ docs/catalog-responsive-verification/before/390x844.png                         |  Bin [31m0[m -> [32m91974[m bytes
+ docs/catalog-responsive-verification/before/768x1024.png                        |  Bin [31m0[m -> [32m152756[m bytes
+ docs/catalog-responsive-verification/before/measurements.json                   |  709 [32m++++[m
+ docs/catalog-responsive-verification/inspector/desktop-fold.jpg                 |  Bin [31m0[m -> [32m92375[m bytes
+ docs/catalog-responsive-verification/inspector/desktop-page-01.jpg              |  Bin [31m0[m -> [32m159478[m bytes
+ docs/catalog-responsive-verification/inspector/desktop-page-02.jpg              |  Bin [31m0[m -> [32m162010[m bytes
+ docs/catalog-responsive-verification/inspector/desktop-page-03.jpg              |  Bin [31m0[m -> [32m164232[m bytes
+ docs/catalog-responsive-verification/inspector/mobile-fold.jpg                  |  Bin [31m0[m -> [32m40238[m bytes
+ docs/catalog-responsive-verification/inspector/mobile-page-01.jpg               |  Bin [31m0[m -> [32m220724[m bytes
+ docs/catalog-responsive-verification/inspector/mobile-page-02.jpg               |  Bin [31m0[m -> [32m91087[m bytes
+ docs/catalog-responsive-verification/inspector/report.json                      | 2712 [32m+++++++++++++++[m
+ docs/catalog-responsive-verification/inspector/tablet-fold.jpg                  |  Bin [31m0[m -> [32m64974[m bytes
+ docs/catalog-responsive-verification/inspector/tablet-page-01.jpg               |  Bin [31m0[m -> [32m249902[m bytes
+ docs/catalog-responsive-verification/inspector/tablet-page-02.jpg               |  Bin [31m0[m -> [32m257407[m bytes
+ docs/catalog-responsive-verification/interactions.mjs                           |   16 [32m+[m
+ docs/catalog-responsive-verification/interactions/category-filters-1440x600.png |  Bin [31m0[m -> [32m169367[m bytes
+ docs/catalog-responsive-verification/interactions/mobile-filters-320.png        |  Bin [31m0[m -> [32m52015[m bytes
+ docs/catalog-responsive-verification/interactions/results.json                  |   16 [32m+[m
+ docs/catalog-responsive-verification/interactions/search-1920.png               |  Bin [31m0[m -> [32m201196[m bytes
+ docs/catalog-responsive-verification/sticky/1024x640-footer.png                 |  Bin [31m0[m -> [32m70751[m bytes
+ docs/catalog-responsive-verification/sticky/1024x640-header.png                 |  Bin [31m0[m -> [32m128043[m bytes
+ docs/catalog-responsive-verification/sticky/1024x640-inner-bottom.png           |  Bin [31m0[m -> [32m120589[m bytes
+ docs/catalog-responsive-verification/sticky/1024x640-middle.png                 |  Bin [31m0[m -> [32m130068[m bytes
+ docs/catalog-responsive-verification/sticky/1440x1000-footer.png                |  Bin [31m0[m -> [32m136322[m bytes
+ docs/catalog-responsive-verification/sticky/1440x1000-header.png                |  Bin [31m0[m -> [32m342111[m bytes
+ docs/catalog-responsive-verification/sticky/1440x1000-inner-bottom.png          |  Bin [31m0[m -> [32m341660[m bytes
+ docs/catalog-responsive-verification/sticky/1440x1000-middle.png                |  Bin [31m0[m -> [32m265416[m bytes
+ docs/catalog-responsive-verification/sticky/1440x480-footer.png                 |  Bin [31m0[m -> [32m65774[m bytes
+ docs/catalog-responsive-verification/sticky/1440x480-header.png                 |  Bin [31m0[m -> [32m173342[m bytes
+ docs/catalog-responsive-verification/sticky/1440x480-inner-bottom.png           |  Bin [31m0[m -> [32m164802[m bytes
+ docs/catalog-responsive-verification/sticky/1440x480-middle.png                 |  Bin [31m0[m -> [32m151895[m bytes
+ docs/catalog-responsive-verification/sticky/1440x720-footer.png                 |  Bin [31m0[m -> [32m84211[m bytes
+ docs/catalog-responsive-verification/sticky/1440x720-header.png                 |  Bin [31m0[m -> [32m217153[m bytes
+ docs/catalog-responsive-verification/sticky/1440x720-inner-bottom.png           |  Bin [31m0[m -> [32m209035[m bytes
+ docs/catalog-responsive-verification/sticky/1440x720-middle.png                 |  Bin [31m0[m -> [32m217517[m bytes
+ docs/catalog-responsive-verification/sticky/mobile-filters.png                  |  Bin [31m0[m -> [32m186375[m bytes
+ docs/catalog-responsive-verification/sticky/results.json                        | 1162 [32m+++++++[m
+ docs/catalog-responsive-verification/verify.mjs                                 |   23 [32m+[m
+ docs/category-liquid-glass-verification/1440-jugueteria.png                     |  Bin [31m0[m -> [32m761362[m bytes
+ docs/category-liquid-glass-verification/768-jugueteria.png                      |  Bin [31m0[m -> [32m497208[m bytes
+ docs/category-liquid-glass-verification/README.md                               |   27 [32m+[m
+ docs/category-liquid-glass-verification/before.png                              |  Bin [31m0[m -> [32m507393[m bytes
+ docs/category-liquid-glass-verification/reduced.png                             |  Bin [31m0[m -> [32m635784[m bytes
+ docs/category-liquid-glass-verification/results.json                            |   70 [32m+[m
+ docs/category-liquid-glass-verification/touch-390-jugueteria.png                |  Bin [31m0[m -> [32m230702[m bytes
+ docs/category-liquid-glass-verification/touch-768-jugueteria.png                |  Bin [31m0[m -> [32m449550[m bytes
+ docs/category-liquid-glass-verification/verify.mjs                              |   44 [32m+[m
+ docs/category-tilt-verification/1440-jugueteria.png                             |  Bin [31m0[m -> [32m507393[m bytes
+ docs/category-tilt-verification/768-jugueteria.png                              |  Bin [31m0[m -> [32m342872[m bytes
+ docs/category-tilt-verification/README.md                                       |   33 [32m+[m
+ docs/category-tilt-verification/reduced.png                                     |  Bin [31m0[m -> [32m475633[m bytes
+ docs/category-tilt-verification/results.json                                    |   70 [32m+[m
+ docs/category-tilt-verification/touch-390-jugueteria.png                        |  Bin [31m0[m -> [32m155575[m bytes
+ docs/category-tilt-verification/touch-768-jugueteria.png                        |  Bin [31m0[m -> [32m294567[m bytes
+ docs/category-tilt-verification/verify.mjs                                      |   38 [32m+[m
+ docs/cinematic-verification/Arequipa-backgraound-sheet.jpg                      |  Bin [31m0[m -> [32m67414[m bytes
+ docs/cinematic-verification/README.md                                           |   94 [32m+[m
+ docs/cinematic-verification/arequipa.jpg                                        |  Bin [31m0[m -> [32m75125[m bytes
+ docs/cinematic-verification/background-2-sheet.jpg                              |  Bin [31m0[m -> [32m82596[m bytes
+ docs/cinematic-verification/background-2.jpg                                    |  Bin [31m0[m -> [32m4553[m bytes
+ docs/cinematic-verification/build.txt                                           |   81 [32m+[m
+ docs/cinematic-verification/check.txt                                           |  128 [32m+[m
+ docs/cinematic-verification/faber-castell-video-cinematografic-sheet.jpg        |  Bin [31m0[m -> [32m48092[m bytes
+ docs/cinematic-verification/intro.jpg                                           |  Bin [31m0[m -> [32m54620[m bytes
+ docs/cinematic-verification/media.json                                          |   56 [32m+[m
+ docs/cinematic-verification/nivea-video-cinematografic-sheet.jpg                |  Bin [31m0[m -> [32m41794[m bytes
+ docs/cinematic-verification/oreo-video-cinematografic-sheet.jpg                 |  Bin [31m0[m -> [32m49826[m bytes
+ docs/cinematic-verification/results.json                                        |   11 [32m+[m
+ docs/cinematic-verification/screenshots/desktop-fold.jpg                        |  Bin [31m0[m -> [32m167216[m bytes
+ docs/cinematic-verification/screenshots/desktop-page-01.jpg                     |  Bin [31m0[m -> [32m155819[m bytes
+ docs/cinematic-verification/screenshots/desktop-page-02.jpg                     |  Bin [31m0[m -> [32m134947[m bytes
+ docs/cinematic-verification/screenshots/desktop-page-03.jpg                     |  Bin [31m0[m -> [32m101830[m bytes
+ docs/cinematic-verification/screenshots/mobile-fold.jpg                         |  Bin [31m0[m -> [32m56969[m bytes
+ docs/cinematic-verification/screenshots/mobile-page-01.jpg                      |  Bin [31m0[m -> [32m281276[m bytes
+ docs/cinematic-verification/screenshots/mobile-page-02.jpg                      |  Bin [31m0[m -> [32m150713[m bytes
+ docs/cinematic-verification/screenshots/tablet-fold.jpg                         |  Bin [31m0[m -> [32m102534[m bytes
+ docs/cinematic-verification/screenshots/tablet-page-01.jpg                      |  Bin [31m0[m -> [32m208250[m bytes
+ docs/cinematic-verification/screenshots/tablet-page-02.jpg                      |  Bin [31m0[m -> [32m94445[m bytes
+ docs/cinematic-verification/tornillos-video-cinematografic-sheet.jpg            |  Bin [31m0[m -> [32m30119[m bytes
+ docs/cinematic-verification/verify.mjs                                          |   87 [32m+[m
+ docs/cinematic-verification/visual-report.json                                  | 2729 [32m+++++++++++++++[m
+ docs/dark-night-map-verification/README.md                                      |   71 [32m+[m
+ docs/dark-night-map-verification/audit.json                                     |   22 [32m+[m
+ docs/dark-night-map-verification/screenshots/fallback-no-webgl-mobile.png       |  Bin [31m0[m -> [32m129178[m bytes
+ docs/dark-night-map-verification/screenshots/fallback-provider-startup.png      |  Bin [31m0[m -> [32m583722[m bytes
+ docs/dark-night-map-verification/screenshots/fallback-provider.png              |  Bin [31m0[m -> [32m575896[m bytes
+ docs/dark-night-map-verification/screenshots/night-1024.png                     |  Bin [31m0[m -> [32m293086[m bytes
+ docs/dark-night-map-verification/screenshots/night-1440.png                     |  Bin [31m0[m -> [32m392518[m bytes
+ docs/dark-night-map-verification/screenshots/night-1920.png                     |  Bin [31m0[m -> [32m504493[m bytes
+ docs/dark-night-map-verification/screenshots/night-320.png                      |  Bin [31m0[m -> [32m124357[m bytes
+ docs/dark-night-map-verification/screenshots/night-390.png                      |  Bin [31m0[m -> [32m172189[m bytes
+ docs/dark-night-map-verification/screenshots/night-768.png                      |  Bin [31m0[m -> [32m494553[m bytes
+ docs/dark-night-map-verification/screenshots/night-completed.png                |  Bin [31m0[m -> [32m436875[m bytes
+ docs/dark-night-map-verification/screenshots/night-detail.png                   |  Bin [31m0[m -> [32m327586[m bytes
+ docs/dark-night-map-verification/screenshots/night-progress.png                 |  Bin [31m0[m -> [32m434842[m bytes
+ docs/dark-night-map-verification/screenshots/results.json                       |  180 [32m+[m
+ docs/dark-night-map-verification/verify.mjs                                     |   36 [32m+[m
+ docs/editorial-verification/README.md                                           |   47 [32m+[m
+ docs/editorial-verification/admin-inspector.json                                | 2617 [32m+++++++++++++++[m
+ docs/editorial-verification/cart.mjs                                            |    2 [32m+[m
+ docs/editorial-verification/extract-lays.py                                     |   43 [32m+[m
+ docs/editorial-verification/final-results.json                                  |   23 [32m+[m
+ docs/editorial-verification/final.mjs                                           |    6 [32m+[m
+ docs/editorial-verification/header-results.json                                 |    5 [32m+[m
+ docs/editorial-verification/header.mjs                                          |    9 [32m+[m
+ docs/editorial-verification/public-inspector.json                               | 1865 [32m+++++++++++[m
+ docs/editorial-verification/purchase-results.json                               |    8 [32m+[m
+ docs/editorial-verification/results.json                                        |  158 [32m+[m
+ docs/editorial-verification/screenshots/admin-1440.png                          |  Bin [31m0[m -> [32m137636[m bytes
+ docs/editorial-verification/screenshots/admin-390.png                           |  Bin [31m0[m -> [32m62658[m bytes
+ docs/editorial-verification/screenshots/admin-768.png                           |  Bin [31m0[m -> [32m76956[m bytes
+ docs/editorial-verification/screenshots/admin-agentes-1440.png                  |  Bin [31m0[m -> [32m121120[m bytes
+ docs/editorial-verification/screenshots/admin-agentes-390.png                   |  Bin [31m0[m -> [32m52830[m bytes
+ docs/editorial-verification/screenshots/admin-agentes-768.png                   |  Bin [31m0[m -> [32m74295[m bytes
+ docs/editorial-verification/screenshots/admin-categorias-1440.png               |  Bin [31m0[m -> [32m122824[m bytes
+ docs/editorial-verification/screenshots/admin-categorias-390.png                |  Bin [31m0[m -> [32m48041[m bytes
+ docs/editorial-verification/screenshots/admin-categorias-768.png                |  Bin [31m0[m -> [32m55157[m bytes
+ docs/editorial-verification/screenshots/admin-clientes-1440.png                 |  Bin [31m0[m -> [32m80344[m bytes
+ docs/editorial-verification/screenshots/admin-clientes-390.png                  |  Bin [31m0[m -> [32m30359[m bytes
+ docs/editorial-verification/screenshots/admin-clientes-768.png                  |  Bin [31m0[m -> [32m35280[m bytes
+ docs/editorial-verification/screenshots/admin-inventario-1440.png               |  Bin [31m0[m -> [32m133945[m bytes
+ docs/editorial-verification/screenshots/admin-inventario-390.png                |  Bin [31m0[m -> [32m42401[m bytes
+ docs/editorial-verification/screenshots/admin-inventario-768.png                |  Bin [31m0[m -> [32m52400[m bytes
+ docs/editorial-verification/screenshots/admin-pedidos-1440.png                  |  Bin [31m0[m -> [32m96399[m bytes
+ docs/editorial-verification/screenshots/admin-pedidos-390.png                   |  Bin [31m0[m -> [32m38447[m bytes
+ docs/editorial-verification/screenshots/admin-pedidos-768.png                   |  Bin [31m0[m -> [32m53713[m bytes
+ docs/editorial-verification/screenshots/admin-productos-1440.png                |  Bin [31m0[m -> [32m171538[m bytes
+ docs/editorial-verification/screenshots/admin-productos-390.png                 |  Bin [31m0[m -> [32m46562[m bytes
+ docs/editorial-verification/screenshots/admin-productos-768.png                 |  Bin [31m0[m -> [32m59830[m bytes
+ docs/editorial-verification/screenshots/ball-1440.png                           |  Bin [31m0[m -> [32m174870[m bytes
+ docs/editorial-verification/screenshots/ball-390.png                            |  Bin [31m0[m -> [32m62168[m bytes
+ docs/editorial-verification/screenshots/ball-768.png                            |  Bin [31m0[m -> [32m79774[m bytes
+ docs/editorial-verification/screenshots/cart-1440.png                           |  Bin [31m0[m -> [32m118934[m bytes
+ docs/editorial-verification/screenshots/cart-390.png                            |  Bin [31m0[m -> [32m59138[m bytes
+ docs/editorial-verification/screenshots/cart-768.png                            |  Bin [31m0[m -> [32m76966[m bytes
+ docs/editorial-verification/screenshots/cart-filled-1440.png                    |  Bin [31m0[m -> [32m175556[m bytes
+ docs/editorial-verification/screenshots/cart-filled-390.png                     |  Bin [31m0[m -> [32m121584[m bytes
+ docs/editorial-verification/screenshots/cart-filled-768.png                     |  Bin [31m0[m -> [32m152202[m bytes
+ docs/editorial-verification/screenshots/catalog-1440.png                        |  Bin [31m0[m -> [32m833126[m bytes
+ docs/editorial-verification/screenshots/catalog-390.png                         |  Bin [31m0[m -> [32m343645[m bytes
+ docs/editorial-verification/screenshots/catalog-768.png                         |  Bin [31m0[m -> [32m540106[m bytes
+ docs/editorial-verification/screenshots/catalog-products-1440.png               |  Bin [31m0[m -> [32m267876[m bytes
+ docs/editorial-verification/screenshots/catalog-products-390.png                |  Bin [31m0[m -> [32m105674[m bytes
+ docs/editorial-verification/screenshots/catalog-products-768.png                |  Bin [31m0[m -> [32m141492[m bytes
+ docs/editorial-verification/screenshots/category-1440.png                       |  Bin [31m0[m -> [32m588458[m bytes
+ docs/editorial-verification/screenshots/category-390.png                        |  Bin [31m0[m -> [32m249089[m bytes
+ docs/editorial-verification/screenshots/category-768.png                        |  Bin [31m0[m -> [32m385472[m bytes
+ docs/editorial-verification/screenshots/coke-1440.png                           |  Bin [31m0[m -> [32m227015[m bytes
+ docs/editorial-verification/screenshots/coke-390.png                            |  Bin [31m0[m -> [32m114642[m bytes
+ docs/editorial-verification/screenshots/coke-768.png                            |  Bin [31m0[m -> [32m123545[m bytes
+ docs/editorial-verification/screenshots/header-closed-1440.png                  |  Bin [31m0[m -> [32m298658[m bytes
+ docs/editorial-verification/screenshots/header-closed-390.png                   |  Bin [31m0[m -> [32m148227[m bytes
+ docs/editorial-verification/screenshots/header-closed-768.png                   |  Bin [31m0[m -> [32m195491[m bytes
+ docs/editorial-verification/screenshots/header-open-1440.png                    |  Bin [31m0[m -> [32m304721[m bytes
+ docs/editorial-verification/screenshots/header-open-390.png                     |  Bin [31m0[m -> [32m147784[m bytes
+ docs/editorial-verification/screenshots/header-open-768.png                     |  Bin [31m0[m -> [32m190173[m bytes
+ docs/editorial-verification/screenshots/home-1440.png                           |  Bin [31m0[m -> [32m1332730[m bytes
+ docs/editorial-verification/screenshots/home-390.png                            |  Bin [31m0[m -> [32m350716[m bytes
+ docs/editorial-verification/screenshots/home-768.png                            |  Bin [31m0[m -> [32m689878[m bytes
+ docs/editorial-verification/screenshots/lays-1440.png                           |  Bin [31m0[m -> [32m298917[m bytes
+ docs/editorial-verification/screenshots/lays-390.png                            |  Bin [31m0[m -> [32m148168[m bytes
+ docs/editorial-verification/screenshots/lays-768.png                            |  Bin [31m0[m -> [32m195322[m bytes
+ docs/editorial-verification/screenshots/login-1440.png                          |  Bin [31m0[m -> [32m517801[m bytes
+ docs/editorial-verification/screenshots/login-390.png                           |  Bin [31m0[m -> [32m69481[m bytes
+ docs/editorial-verification/screenshots/login-768.png                           |  Bin [31m0[m -> [32m220973[m bytes
+ docs/editorial-verification/visual.mjs                                          |    7 [32m+[m
+ docs/global-cinema-verification/README.md                                       |   74 [32m+[m
+ docs/global-cinema-verification/background-2-sheet.jpg                          |  Bin [31m0[m -> [32m82596[m bytes
+ docs/global-cinema-verification/build.txt                                       |   81 [32m+[m
+ docs/global-cinema-verification/check.txt                                       |  128 [32m+[m
+ docs/global-cinema-verification/purchase-results.json                           |    8 [32m+[m
+ docs/global-cinema-verification/purchase.mjs                                    |   35 [32m+[m
+ docs/global-cinema-verification/recorrido.mp4                                   |  Bin [31m0[m -> [32m881942[m bytes
+ docs/global-cinema-verification/results.json                                    |    9 [32m+[m
+ docs/global-cinema-verification/screenshots/motion-0.png                        |  Bin [31m0[m -> [32m731587[m bytes
+ docs/global-cinema-verification/screenshots/motion-2.png                        |  Bin [31m0[m -> [32m828501[m bytes
+ docs/global-cinema-verification/screenshots/motion-4.png                        |  Bin [31m0[m -> [32m894054[m bytes
+ docs/global-cinema-verification/screenshots/routes-1440.jpg                     |  Bin [31m0[m -> [32m340199[m bytes
+ docs/global-cinema-verification/screenshots/routes-390.jpg                      |  Bin [31m0[m -> [32m222494[m bytes
+ docs/global-cinema-verification/screenshots/routes-768.jpg                      |  Bin [31m0[m -> [32m256880[m bytes
+ docs/global-cinema-verification/screenshots/transition-fixed-1440.png           |  Bin [31m0[m -> [32m583582[m bytes
+ docs/global-cinema-verification/screenshots/transition-fixed-390.png            |  Bin [31m0[m -> [32m133705[m bytes
+ docs/global-cinema-verification/screenshots/transition-fixed-768.png            |  Bin [31m0[m -> [32m279067[m bytes
+ docs/global-cinema-verification/unseen-reference.png                            |  Bin [31m0[m -> [32m2019903[m bytes
+ docs/global-cinema-verification/verify.mjs                                      |   48 [32m+[m
+ docs/global-cinema-verification/visual-report.json                              | 3098 [32m+++++++++++++++++[m
+ docs/global-liquid-verification/README.md                                       |   41 [32m+[m
+ docs/global-liquid-verification/context-loss.png                                |  Bin [31m0[m -> [32m1255347[m bytes
+ docs/global-liquid-verification/desktop-bebidas.png                             |  Bin [31m0[m -> [32m959114[m bytes
+ docs/global-liquid-verification/desktop-cuidado.png                             |  Bin [31m0[m -> [32m930637[m bytes
+ docs/global-liquid-verification/desktop-ferreteria.png                          |  Bin [31m0[m -> [32m962580[m bytes
+ docs/global-liquid-verification/desktop-ideas.png                               |  Bin [31m0[m -> [32m1182760[m bytes
+ docs/global-liquid-verification/desktop-seam.png                                |  Bin [31m0[m -> [32m1051674[m bytes
+ docs/global-liquid-verification/desktop-snacks.png                              |  Bin [31m0[m -> [32m455460[m bytes
+ docs/global-liquid-verification/desktop-top.png                                 |  Bin [31m0[m -> [32m1039585[m bytes
+ docs/global-liquid-verification/home-category-section.png                       |  Bin [31m0[m -> [32m510534[m bytes
+ docs/global-liquid-verification/home-delivery.png                               |  Bin [31m0[m -> [32m95715[m bytes
+ docs/global-liquid-verification/home-featured-section.png                       |  Bin [31m0[m -> [32m214266[m bytes
+ docs/global-liquid-verification/home-last-word.png                              |  Bin [31m0[m -> [32m93106[m bytes
+ docs/global-liquid-verification/horizontal-transition-0.png                     |  Bin [31m0[m -> [32m756192[m bytes
+ docs/global-liquid-verification/horizontal-transition-1.png                     |  Bin [31m0[m -> [32m767244[m bytes
+ docs/global-liquid-verification/horizontal-transition-2.png                     |  Bin [31m0[m -> [32m711421[m bytes
+ docs/global-liquid-verification/horizontal-transition-3.png                     |  Bin [31m0[m -> [32m696175[m bytes
+ docs/global-liquid-verification/horizontal-transition.png                       |  Bin [31m0[m -> [32m774976[m bytes
+ docs/global-liquid-verification/no-webgl.png                                    |  Bin [31m0[m -> [32m1241813[m bytes
+ docs/global-liquid-verification/reduced.png                                     |  Bin [31m0[m -> [32m279165[m bytes
+ docs/global-liquid-verification/results.json                                    |   36 [32m+[m
+ docs/global-liquid-verification/touch-390.png                                   |  Bin [31m0[m -> [32m175012[m bytes
+ docs/global-liquid-verification/touch-768.png                                   |  Bin [31m0[m -> [32m331336[m bytes
+ docs/global-liquid-verification/verify.mjs                                      |   65 [32m+[m
+ docs/intro-liquid-verification/README.md                                        |   21 [32m+[m
+ docs/intro-liquid-verification/mobile-poster.png                                |  Bin [31m0[m -> [32m281814[m bytes
+ docs/intro-liquid-verification/poster-loading.png                               |  Bin [31m0[m -> [32m914798[m bytes
+ docs/intro-liquid-verification/poster-perspective.png                           |  Bin [31m0[m -> [32m924734[m bytes
+ docs/intro-liquid-verification/regression.txt                                   |    1 [32m+[m
+ docs/intro-liquid-verification/results.json                                     |   64 [32m+[m
+ docs/intro-liquid-verification/verify.mjs                                       |   35 [32m+[m
+ docs/intro-liquid-verification/video-playing.png                                |  Bin [31m0[m -> [32m890333[m bytes
+ docs/liquid-video-verification/README.md                                        |   23 [32m+[m
+ docs/liquid-video-verification/context-loss.png                                 |  Bin [31m0[m -> [32m1162067[m bytes
+ docs/liquid-video-verification/desktop-seam.png                                 |  Bin [31m0[m -> [32m1079366[m bytes
+ docs/liquid-video-verification/desktop-top.png                                  |  Bin [31m0[m -> [32m1033875[m bytes
+ docs/liquid-video-verification/mobile-seam.png                                  |  Bin [31m0[m -> [32m319011[m bytes
+ docs/liquid-video-verification/mobile-top.png                                   |  Bin [31m0[m -> [32m300353[m bytes
+ docs/liquid-video-verification/no-webgl.png                                     |  Bin [31m0[m -> [32m1241972[m bytes
+ docs/liquid-video-verification/reduced-seam.png                                 |  Bin [31m0[m -> [32m345213[m bytes
+ docs/liquid-video-verification/reduced-top.png                                  |  Bin [31m0[m -> [32m279165[m bytes
+ docs/liquid-video-verification/results.json                                     |  137 [32m+[m
+ docs/liquid-video-verification/tablet-seam.png                                  |  Bin [31m0[m -> [32m667013[m bytes
+ docs/liquid-video-verification/tablet-top.png                                   |  Bin [31m0[m -> [32m566191[m bytes
+ docs/liquid-video-verification/verify.mjs                                       |   35 [32m+[m
+ docs/models-integration-verification/README.md                                  |   78 [32m+[m
+ docs/models-integration-verification/asset-audit.json                           |  247 [32m++[m
+ docs/models-integration-verification/browser-results.json                       |   48 [32m+[m
+ docs/models-integration-verification/data-results.json                          |   72 [32m+[m
+ docs/models-integration-verification/prepare-models.py                          |   62 [32m+[m
+ docs/models-integration-verification/screenshots/bottle-preserved-1440.png      |  Bin [31m0[m -> [32m384407[m bytes
+ docs/models-integration-verification/screenshots/bottle-preserved-390.png       |  Bin [31m0[m -> [32m306361[m bytes
+ docs/models-integration-verification/screenshots/bottle-preserved-768.png       |  Bin [31m0[m -> [32m366120[m bytes
+ docs/models-integration-verification/screenshots/cart-1440.png                  |  Bin [31m0[m -> [32m158841[m bytes
+ docs/models-integration-verification/screenshots/cart-390.png                   |  Bin [31m0[m -> [32m125652[m bytes
+ docs/models-integration-verification/screenshots/cart-768.png                   |  Bin [31m0[m -> [32m152918[m bytes
+ docs/models-integration-verification/screenshots/coca-cola-can-1440.png         |  Bin [31m0[m -> [32m403667[m bytes
+ docs/models-integration-verification/screenshots/coca-cola-can-390.png          |  Bin [31m0[m -> [32m318209[m bytes
+ docs/models-integration-verification/screenshots/coca-cola-can-768.png          |  Bin [31m0[m -> [32m397237[m bytes
+ docs/models-integration-verification/screenshots/evidence-four-models.png       |  Bin [31m0[m -> [32m187940[m bytes
+ docs/models-integration-verification/screenshots/lays-catalog-1440.png          |  Bin [31m0[m -> [32m1269192[m bytes
+ docs/models-integration-verification/screenshots/lays-catalog-390.png           |  Bin [31m0[m -> [32m583020[m bytes
+ docs/models-integration-verification/screenshots/lays-catalog-768.png           |  Bin [31m0[m -> [32m835041[m bytes
+ docs/models-integration-verification/screenshots/lays-classic-1440.png          |  Bin [31m0[m -> [32m426820[m bytes
+ docs/models-integration-verification/screenshots/lays-classic-390.png           |  Bin [31m0[m -> [32m335262[m bytes
+ docs/models-integration-verification/screenshots/lays-classic-768.png           |  Bin [31m0[m -> [32m408078[m bytes
+ docs/models-integration-verification/screenshots/nivea-aftershave-1440.png      |  Bin [31m0[m -> [32m439743[m bytes
+ docs/models-integration-verification/screenshots/nivea-aftershave-390.png       |  Bin [31m0[m -> [32m345445[m bytes
+ docs/models-integration-verification/screenshots/nivea-aftershave-768.png       |  Bin [31m0[m -> [32m434256[m bytes
+ docs/models-integration-verification/screenshots/sunsilk-shampoo-1440.png       |  Bin [31m0[m -> [32m379544[m bytes
+ docs/models-integration-verification/screenshots/sunsilk-shampoo-390.png        |  Bin [31m0[m -> [32m310876[m bytes
+ docs/models-integration-verification/screenshots/sunsilk-shampoo-768.png        |  Bin [31m0[m -> [32m384990[m bytes
+ docs/models-integration-verification/verify.mjs                                 |   60 [32m+[m
+ docs/navigation-panel-verification/README.md                                    |   19 [32m+[m
+ docs/navigation-panel-verification/screenshots/closed-1440.png                  |  Bin [31m0[m -> [32m1328732[m bytes
+ docs/navigation-panel-verification/screenshots/closed-390.png                   |  Bin [31m0[m -> [32m321645[m bytes
+ docs/navigation-panel-verification/screenshots/open-1440.png                    |  Bin [31m0[m -> [32m558934[m bytes
+ docs/navigation-panel-verification/screenshots/open-390.png                     |  Bin [31m0[m -> [32m219854[m bytes
+ docs/navigation-panel-verification/screenshots/results.json                     |   54 [32m+[m
+ docs/navigation-panel-verification/verify.mjs                                   |   26 [32m+[m
+ docs/normal-catalog-verification/README.md                                      |   34 [32m+[m
+ docs/normal-catalog-verification/data-results.json                              |   72 [32m+[m
+ docs/normal-catalog-verification/screenshots/cart-1440.png                      |  Bin [31m0[m -> [32m158683[m bytes
+ docs/normal-catalog-verification/screenshots/cart-390.png                       |  Bin [31m0[m -> [32m125510[m bytes
+ docs/normal-catalog-verification/screenshots/cart-768.png                       |  Bin [31m0[m -> [32m152755[m bytes
+ docs/normal-catalog-verification/screenshots/catalogo-ROS-002-1440.png          |  Bin [31m0[m -> [32m232406[m bytes
+ docs/normal-catalog-verification/screenshots/catalogo-ROS-002-390.png           |  Bin [31m0[m -> [32m130863[m bytes
+ docs/normal-catalog-verification/screenshots/catalogo-ROS-002-768.png           |  Bin [31m0[m -> [32m184540[m bytes
+ docs/normal-catalog-verification/screenshots/catalogo-ROS-064-1440.png          |  Bin [31m0[m -> [32m234417[m bytes
+ docs/normal-catalog-verification/screenshots/catalogo-ROS-064-390.png           |  Bin [31m0[m -> [32m89222[m bytes
+ docs/normal-catalog-verification/screenshots/catalogo-ROS-064-768.png           |  Bin [31m0[m -> [32m118332[m bytes
+ docs/normal-catalog-verification/screenshots/catalogo-ROS-065-1440.png          |  Bin [31m0[m -> [32m275144[m bytes
+ docs/normal-catalog-verification/screenshots/catalogo-ROS-065-390.png           |  Bin [31m0[m -> [32m130494[m bytes
+ docs/normal-catalog-verification/screenshots/catalogo-ROS-065-768.png           |  Bin [31m0[m -> [32m181558[m bytes
+ docs/normal-catalog-verification/screenshots/catalogo-ROS-066-1440.png          |  Bin [31m0[m -> [32m233519[m bytes
+ docs/normal-catalog-verification/screenshots/catalogo-ROS-066-390.png           |  Bin [31m0[m -> [32m89222[m bytes
+ docs/normal-catalog-verification/screenshots/catalogo-ROS-066-768.png           |  Bin [31m0[m -> [32m118332[m bytes
+ docs/normal-catalog-verification/screenshots/legacy-session-normal-catalog.png  |  Bin [31m0[m -> [32m824576[m bytes
+ docs/normal-catalog-verification/screenshots/results.json                       |   87 [32m+[m
+ docs/normal-catalog-verification/verify.mjs                                     |   40 [32m+[m
+ docs/operations-verification/logic.json                                         |    2 [32m+[m[31m-[m
+ docs/order-flow-verification/README.md                                          |   69 [32m+[m
+ docs/order-flow-verification/logic.json                                         |   23 [32m+[m
+ docs/order-flow-verification/screenshots/1440x700.png                           |  Bin [31m0[m -> [32m559023[m bytes
+ docs/order-flow-verification/screenshots/320x740.png                            |  Bin [31m0[m -> [32m402192[m bytes
+ docs/order-flow-verification/screenshots/390x844.png                            |  Bin [31m0[m -> [32m448392[m bytes
+ docs/order-flow-verification/screenshots/768x1024.png                           |  Bin [31m0[m -> [32m569875[m bytes
+ docs/order-flow-verification/screenshots/delivered-notifications.png            |  Bin [31m0[m -> [32m652969[m bytes
+ docs/order-flow-verification/screenshots/demo-completed.png                     |  Bin [31m0[m -> [32m602789[m bytes
+ docs/order-flow-verification/screenshots/demo-map-viewport.png                  |  Bin [31m0[m -> [32m426908[m bytes
+ docs/order-flow-verification/screenshots/in-transit.png                         |  Bin [31m0[m -> [32m438373[m bytes
+ docs/order-flow-verification/screenshots/results.json                           |   87 [32m+[m
+ docs/order-flow-verification/verify.mjs                                         |   38 [32m+[m
+ docs/product-3d-verification/README.md                                          |   68 [32m+[m
+ docs/product-3d-verification/asset-audit.json                                   |   21 [32m+[m
+ docs/product-3d-verification/build.txt                                          |   86 [32m+[m
+ docs/product-3d-verification/check.txt                                          |  134 [32m+[m
+ docs/product-3d-verification/fixture.html                                       |    1 [32m+[m
+ docs/product-3d-verification/fixture.tsx                                        |   12 [32m+[m
+ docs/product-3d-verification/results.json                                       |   12 [32m+[m
+ docs/product-3d-verification/screenshots/bottle-1440.png                        |  Bin [31m0[m -> [32m363035[m bytes
+ docs/product-3d-verification/screenshots/bottle-390.png                         |  Bin [31m0[m -> [32m292899[m bytes
+ docs/product-3d-verification/screenshots/bottle-768.png                         |  Bin [31m0[m -> [32m346320[m bytes
+ docs/product-3d-verification/screenshots/fixture-interactive.png                |  Bin [31m0[m -> [32m130301[m bytes
+ docs/product-3d-verification/screenshots/fixture-reduced.png                    |  Bin [31m0[m -> [32m190509[m bytes
+ docs/product-3d-verification/verify.mjs                                         |   51 [32m+[m
+ docs/product-3d-verification/vite.fixture.config.ts                             |    8 [32m+[m
+ docs/sticky-filter-verification/README.md                                       |   25 [32m+[m
+ docs/sticky-filter-verification/results.json                                    | 1162 [32m+++++++[m
+ docs/sticky-filter-verification/screenshots/1024x640-footer.png                 |  Bin [31m0[m -> [32m74230[m bytes
+ docs/sticky-filter-verification/screenshots/1024x640-header.png                 |  Bin [31m0[m -> [32m189085[m bytes
+ docs/sticky-filter-verification/screenshots/1024x640-inner-bottom.png           |  Bin [31m0[m -> [32m181276[m bytes
+ docs/sticky-filter-verification/screenshots/1024x640-middle.png                 |  Bin [31m0[m -> [32m164085[m bytes
+ docs/sticky-filter-verification/screenshots/1440x1000-footer.png                |  Bin [31m0[m -> [32m131537[m bytes
+ docs/sticky-filter-verification/screenshots/1440x1000-header.png                |  Bin [31m0[m -> [32m356500[m bytes
+ docs/sticky-filter-verification/screenshots/1440x1000-inner-bottom.png          |  Bin [31m0[m -> [32m356018[m bytes
+ docs/sticky-filter-verification/screenshots/1440x1000-middle.png                |  Bin [31m0[m -> [32m245143[m bytes
+ docs/sticky-filter-verification/screenshots/1440x480-footer.png                 |  Bin [31m0[m -> [32m63530[m bytes
+ docs/sticky-filter-verification/screenshots/1440x480-header.png                 |  Bin [31m0[m -> [32m167283[m bytes
+ docs/sticky-filter-verification/screenshots/1440x480-inner-bottom.png           |  Bin [31m0[m -> [32m159438[m bytes
+ docs/sticky-filter-verification/screenshots/1440x480-middle.png                 |  Bin [31m0[m -> [32m125215[m bytes
+ docs/sticky-filter-verification/screenshots/1440x720-footer.png                 |  Bin [31m0[m -> [32m82441[m bytes
+ docs/sticky-filter-verification/screenshots/1440x720-header.png                 |  Bin [31m0[m -> [32m218641[m bytes
+ docs/sticky-filter-verification/screenshots/1440x720-inner-bottom.png           |  Bin [31m0[m -> [32m212193[m bytes
+ docs/sticky-filter-verification/screenshots/1440x720-middle.png                 |  Bin [31m0[m -> [32m199337[m bytes
+ docs/sticky-filter-verification/screenshots/mobile-filters.png                  |  Bin [31m0[m -> [32m170847[m bytes
+ docs/sticky-filter-verification/verify.mjs                                      |    4 [32m+[m
+ docs/tracking-experience-verification/README.md                                 |   55 [32m+[m
+ docs/tracking-experience-verification/screenshots/1024x768.png                  |  Bin [31m0[m -> [32m580371[m bytes
+ docs/tracking-experience-verification/screenshots/1440x600.png                  |  Bin [31m0[m -> [32m669333[m bytes
+ docs/tracking-experience-verification/screenshots/1920x1080.png                 |  Bin [31m0[m -> [32m1092998[m bytes
+ docs/tracking-experience-verification/screenshots/320x740.png                   |  Bin [31m0[m -> [32m373001[m bytes
+ docs/tracking-experience-verification/screenshots/390x844.png                   |  Bin [31m0[m -> [32m429547[m bytes
+ docs/tracking-experience-verification/screenshots/768x1024.png                  |  Bin [31m0[m -> [32m709210[m bytes
+ docs/tracking-experience-verification/screenshots/another-city.png              |  Bin [31m0[m -> [32m328230[m bytes
+ docs/tracking-experience-verification/screenshots/completed.png                 |  Bin [31m0[m -> [32m895969[m bytes
+ docs/tracking-experience-verification/screenshots/initial-1440.png              |  Bin [31m0[m -> [32m776462[m bytes
+ docs/tracking-experience-verification/screenshots/paused.png                    |  Bin [31m0[m -> [32m646948[m bytes
+ docs/tracking-experience-verification/screenshots/results.json                  | 1651 [32m+++++++++[m
+ docs/tracking-experience-verification/screenshots/route-error.png               |  Bin [31m0[m -> [32m693720[m bytes
+ docs/tracking-experience-verification/screenshots/route-ready-1440.png          |  Bin [31m0[m -> [32m869498[m bytes
+ docs/tracking-experience-verification/screenshots/search-results.png            |  Bin [31m0[m -> [32m317268[m bytes
+ docs/tracking-experience-verification/verify.mjs                                |   32 [32m+[m
+ docs/ux-card-verification/README.md                                             |   53 [32m+[m
+ docs/ux-card-verification/commerce.mjs                                          |   14 [32m+[m
+ docs/ux-card-verification/contrast-results.json                                 |   32 [32m+[m
+ docs/ux-card-verification/contrast.mjs                                          |    9 [32m+[m
+ docs/ux-card-verification/inspector.json                                        | 1578 [32m+++++++++[m
+ docs/ux-card-verification/purchase-results.json                                 |    8 [32m+[m
+ docs/ux-card-verification/screenshots/admin-unchanged-1440.png                  |  Bin [31m0[m -> [32m63685[m bytes
+ docs/ux-card-verification/screenshots/card-in-cart-1440.png                     |  Bin [31m0[m -> [32m96407[m bytes
+ docs/ux-card-verification/screenshots/card-in-cart-390.png                      |  Bin [31m0[m -> [32m46768[m bytes
+ docs/ux-card-verification/screenshots/catalog-final-1440.png                    |  Bin [31m0[m -> [32m243307[m bytes
+ docs/ux-card-verification/screenshots/catalog-final-390.png                     |  Bin [31m0[m -> [32m94280[m bytes
+ docs/ux-card-verification/screenshots/catalog-glass-1440.png                    |  Bin [31m0[m -> [32m287923[m bytes
+ docs/ux-card-verification/screenshots/catalog-glass-390.png                     |  Bin [31m0[m -> [32m116078[m bytes
+ docs/ux-card-verification/screenshots/catalog-glass-768.png                     |  Bin [31m0[m -> [32m153888[m bytes
+ docs/ux-card-verification/screenshots/commerce-results.json                     |   16 [32m+[m
+ docs/ux-card-verification/screenshots/featured-glass-1440.png                   |  Bin [31m0[m -> [32m187661[m bytes
+ docs/ux-card-verification/screenshots/featured-glass-390.png                    |  Bin [31m0[m -> [32m60530[m bytes
+ docs/ux-card-verification/screenshots/film-selection-retained-390.png           |  Bin [31m0[m -> [32m325864[m bytes
+ docs/ux-card-verification/screenshots/header-open-1440.png                      |  Bin [31m0[m -> [32m217322[m bytes
+ docs/ux-card-verification/screenshots/header-open-390.png                       |  Bin [31m0[m -> [32m111143[m bytes
+ docs/ux-card-verification/screenshots/header-open-768.png                       |  Bin [31m0[m -> [32m148224[m bytes
+ docs/ux-card-verification/screenshots/login-unchanged-1440.png                  |  Bin [31m0[m -> [32m478171[m bytes
+ docs/ux-card-verification/screenshots/login-unchanged-390.png                   |  Bin [31m0[m -> [32m62088[m bytes
+ docs/ux-card-verification/screenshots/related-glass-1440.png                    |  Bin [31m0[m -> [32m228486[m bytes
+ docs/ux-card-verification/screenshots/related-glass-390.png                     |  Bin [31m0[m -> [32m108073[m bytes
+ docs/ux-card-verification/screenshots/related-glass-768.png                     |  Bin [31m0[m -> [32m160707[m bytes
+ docs/ux-card-verification/screenshots/results.json                              |   35 [32m+[m
+ docs/ux-card-verification/screenshots/video-continuity-1440.png                 |  Bin [31m0[m -> [32m1328917[m bytes
+ docs/ux-card-verification/screenshots/video-continuity-390.png                  |  Bin [31m0[m -> [32m436107[m bytes
+ docs/ux-card-verification/screenshots/video-results.json                        |   24 [32m+[m
+ docs/ux-card-verification/verify.mjs                                            |   38 [32m+[m
+ docs/ux-card-verification/videos.mjs                                            |   14 [32m+[m
+ docs/white-glass-verification/README.md                                         |   11 [32m+[m
+ docs/white-glass-verification/desktop.png                                       |  Bin [31m0[m -> [32m238426[m bytes
+ docs/white-glass-verification/mobile.png                                        |  Bin [31m0[m -> [32m93875[m bytes
+ eslint.config.js                                                                |   21 [32m+[m[31m-[m
+ package-lock.json                                                               |  884 [32m++++[m[31m-[m
+ package.json                                                                    |   16 [32m+[m[31m-[m
+ public/images/flags/AC.svg                                                      |    1 [32m+[m
+ public/images/flags/AD.svg                                                      |    1 [32m+[m
+ public/images/flags/AE.svg                                                      |    1 [32m+[m
+ public/images/flags/AF.svg                                                      |    1 [32m+[m
+ public/images/flags/AG.svg                                                      |    1 [32m+[m
+ public/images/flags/AI.svg                                                      |    1 [32m+[m
+ public/images/flags/AL.svg                                                      |    1 [32m+[m
+ public/images/flags/AM.svg                                                      |    1 [32m+[m
+ public/images/flags/AO.svg                                                      |    1 [32m+[m
+ public/images/flags/AR.svg                                                      |    1 [32m+[m
+ public/images/flags/AS.svg                                                      |    1 [32m+[m
+ public/images/flags/AT.svg                                                      |    1 [32m+[m
+ public/images/flags/AU.svg                                                      |    1 [32m+[m
+ public/images/flags/AW.svg                                                      |    1 [32m+[m
+ public/images/flags/AX.svg                                                      |    1 [32m+[m
+ public/images/flags/AZ.svg                                                      |    1 [32m+[m
+ public/images/flags/BA.svg                                                      |    1 [32m+[m
+ public/images/flags/BB.svg                                                      |    1 [32m+[m
+ public/images/flags/BD.svg                                                      |    1 [32m+[m
+ public/images/flags/BE.svg                                                      |    1 [32m+[m
+ public/images/flags/BF.svg                                                      |    1 [32m+[m
+ public/images/flags/BG.svg                                                      |    1 [32m+[m
+ public/images/flags/BH.svg                                                      |    1 [32m+[m
+ public/images/flags/BI.svg                                                      |    1 [32m+[m
+ public/images/flags/BJ.svg                                                      |    1 [32m+[m
+ public/images/flags/BL.svg                                                      |    1 [32m+[m
+ public/images/flags/BM.svg                                                      |    1 [32m+[m
+ public/images/flags/BN.svg                                                      |    1 [32m+[m
+ public/images/flags/BO.svg                                                      |    1 [32m+[m
+ public/images/flags/BQ.svg                                                      |    1 [32m+[m
+ public/images/flags/BR.svg                                                      |    1 [32m+[m
+ public/images/flags/BS.svg                                                      |    1 [32m+[m
+ public/images/flags/BT.svg                                                      |    1 [32m+[m
+ public/images/flags/BW.svg                                                      |    1 [32m+[m
+ public/images/flags/BY.svg                                                      |    1 [32m+[m
+ public/images/flags/BZ.svg                                                      |    1 [32m+[m
+ public/images/flags/CA.svg                                                      |    1 [32m+[m
+ public/images/flags/CC.svg                                                      |    1 [32m+[m
+ public/images/flags/CD.svg                                                      |    1 [32m+[m
+ public/images/flags/CF.svg                                                      |    1 [32m+[m
+ public/images/flags/CG.svg                                                      |    1 [32m+[m
+ public/images/flags/CH.svg                                                      |    1 [32m+[m
+ public/images/flags/CI.svg                                                      |    1 [32m+[m
+ public/images/flags/CK.svg                                                      |    1 [32m+[m
+ public/images/flags/CL.svg                                                      |    1 [32m+[m
+ public/images/flags/CM.svg                                                      |    1 [32m+[m
+ public/images/flags/CN.svg                                                      |    1 [32m+[m
+ public/images/flags/CO.svg                                                      |    1 [32m+[m
+ public/images/flags/CR.svg                                                      |    1 [32m+[m
+ public/images/flags/CU.svg                                                      |    1 [32m+[m
+ public/images/flags/CV.svg                                                      |    1 [32m+[m
+ public/images/flags/CW.svg                                                      |    1 [32m+[m
+ public/images/flags/CX.svg                                                      |    1 [32m+[m
+ public/images/flags/CY.svg                                                      |    1 [32m+[m
+ public/images/flags/CZ.svg                                                      |    1 [32m+[m
+ public/images/flags/DE.svg                                                      |    1 [32m+[m
+ public/images/flags/DJ.svg                                                      |    1 [32m+[m
+ public/images/flags/DK.svg                                                      |    1 [32m+[m
+ public/images/flags/DM.svg                                                      |    1 [32m+[m
+ public/images/flags/DO.svg                                                      |    1 [32m+[m
+ public/images/flags/DZ.svg                                                      |    1 [32m+[m
+ public/images/flags/EC.svg                                                      |    1 [32m+[m
+ public/images/flags/EE.svg                                                      |    1 [32m+[m
+ public/images/flags/EG.svg                                                      |    1 [32m+[m
+ public/images/flags/EH.svg                                                      |    1 [32m+[m
+ public/images/flags/ER.svg                                                      |    1 [32m+[m
+ public/images/flags/ES.svg                                                      |    1 [32m+[m
+ public/images/flags/ET.svg                                                      |    1 [32m+[m
+ public/images/flags/FI.svg                                                      |    1 [32m+[m
+ public/images/flags/FJ.svg                                                      |    1 [32m+[m
+ public/images/flags/FK.svg                                                      |    1 [32m+[m
+ public/images/flags/FM.svg                                                      |    1 [32m+[m
+ public/images/flags/FO.svg                                                      |    1 [32m+[m
+ public/images/flags/FR.svg                                                      |    1 [32m+[m
+ public/images/flags/GA.svg                                                      |    1 [32m+[m
+ public/images/flags/GB.svg                                                      |    1 [32m+[m
+ public/images/flags/GD.svg                                                      |    1 [32m+[m
+ public/images/flags/GE.svg                                                      |    1 [32m+[m
+ public/images/flags/GF.svg                                                      |    1 [32m+[m
+ public/images/flags/GG.svg                                                      |    1 [32m+[m
+ public/images/flags/GH.svg                                                      |    1 [32m+[m
+ public/images/flags/GI.svg                                                      |    1 [32m+[m
+ public/images/flags/GL.svg                                                      |    1 [32m+[m
+ public/images/flags/GM.svg                                                      |    1 [32m+[m
+ public/images/flags/GN.svg                                                      |    1 [32m+[m
+ public/images/flags/GP.svg                                                      |    1 [32m+[m
+ public/images/flags/GQ.svg                                                      |    1 [32m+[m
+ public/images/flags/GR.svg                                                      |    1 [32m+[m
+ public/images/flags/GT.svg                                                      |    1 [32m+[m
+ public/images/flags/GU.svg                                                      |    1 [32m+[m
+ public/images/flags/GW.svg                                                      |    1 [32m+[m
+ public/images/flags/GY.svg                                                      |    1 [32m+[m
+ public/images/flags/HK.svg                                                      |    1 [32m+[m
+ public/images/flags/HN.svg                                                      |    1 [32m+[m
+ public/images/flags/HR.svg                                                      |    1 [32m+[m
+ public/images/flags/HT.svg                                                      |    1 [32m+[m
+ public/images/flags/HU.svg                                                      |    1 [32m+[m
+ public/images/flags/ID.svg                                                      |    1 [32m+[m
+ public/images/flags/IE.svg                                                      |    1 [32m+[m
+ public/images/flags/IL.svg                                                      |    1 [32m+[m
+ public/images/flags/IM.svg                                                      |    1 [32m+[m
+ public/images/flags/IN.svg                                                      |    1 [32m+[m
+ public/images/flags/IO.svg                                                      |    1 [32m+[m
+ public/images/flags/IQ.svg                                                      |    1 [32m+[m
+ public/images/flags/IR.svg                                                      |    1 [32m+[m
+ public/images/flags/IS.svg                                                      |    1 [32m+[m
+ public/images/flags/IT.svg                                                      |    1 [32m+[m
+ public/images/flags/JE.svg                                                      |    1 [32m+[m
+ public/images/flags/JM.svg                                                      |    1 [32m+[m
+ public/images/flags/JO.svg                                                      |    1 [32m+[m
+ public/images/flags/JP.svg                                                      |    1 [32m+[m
+ public/images/flags/KE.svg                                                      |    1 [32m+[m
+ public/images/flags/KG.svg                                                      |    1 [32m+[m
+ public/images/flags/KH.svg                                                      |    1 [32m+[m
+ public/images/flags/KI.svg                                                      |    1 [32m+[m
+ public/images/flags/KM.svg                                                      |    1 [32m+[m
+ public/images/flags/KN.svg                                                      |    1 [32m+[m
+ public/images/flags/KP.svg                                                      |    1 [32m+[m
+ public/images/flags/KR.svg                                                      |    1 [32m+[m
+ public/images/flags/KW.svg                                                      |    1 [32m+[m
+ public/images/flags/KY.svg                                                      |    1 [32m+[m
+ public/images/flags/KZ.svg                                                      |    1 [32m+[m
+ public/images/flags/LA.svg                                                      |    1 [32m+[m
+ public/images/flags/LB.svg                                                      |    1 [32m+[m
+ public/images/flags/LC.svg                                                      |    1 [32m+[m
+ public/images/flags/LI.svg                                                      |    1 [32m+[m
+ public/images/flags/LICENSE                                                     |   22 [32m+[m
+ public/images/flags/LK.svg                                                      |    1 [32m+[m
+ public/images/flags/LR.svg                                                      |    1 [32m+[m
+ public/images/flags/LS.svg                                                      |    1 [32m+[m
+ public/images/flags/LT.svg                                                      |    1 [32m+[m
+ public/images/flags/LU.svg                                                      |    1 [32m+[m
+ public/images/flags/LV.svg                                                      |    1 [32m+[m
+ public/images/flags/LY.svg                                                      |    1 [32m+[m
+ public/images/flags/MA.svg                                                      |    1 [32m+[m
+ public/images/flags/MC.svg                                                      |    1 [32m+[m
+ public/images/flags/MD.svg                                                      |    1 [32m+[m
+ public/images/flags/ME.svg                                                      |    1 [32m+[m
+ public/images/flags/MF.svg                                                      |    1 [32m+[m
+ public/images/flags/MG.svg                                                      |    1 [32m+[m
+ public/images/flags/MH.svg                                                      |    1 [32m+[m
+ public/images/flags/MK.svg                                                      |    1 [32m+[m
+ public/images/flags/ML.svg                                                      |    1 [32m+[m
+ public/images/flags/MM.svg                                                      |    1 [32m+[m
+ public/images/flags/MN.svg                                                      |    1 [32m+[m
+ public/images/flags/MO.svg                                                      |    1 [32m+[m
+ public/images/flags/MP.svg                                                      |    1 [32m+[m
+ public/images/flags/MQ.svg                                                      |    1 [32m+[m
+ public/images/flags/MR.svg                                                      |    1 [32m+[m
+ public/images/flags/MS.svg                                                      |    1 [32m+[m
+ public/images/flags/MT.svg                                                      |    1 [32m+[m
+ public/images/flags/MU.svg                                                      |    1 [32m+[m
+ public/images/flags/MV.svg                                                      |    1 [32m+[m
+ public/images/flags/MW.svg                                                      |    1 [32m+[m
+ public/images/flags/MX.svg                                                      |    1 [32m+[m
+ public/images/flags/MY.svg                                                      |    1 [32m+[m
+ public/images/flags/MZ.svg                                                      |    1 [32m+[m
+ public/images/flags/NA.svg                                                      |    1 [32m+[m
+ public/images/flags/NC.svg                                                      |    1 [32m+[m
+ public/images/flags/NE.svg                                                      |    1 [32m+[m
+ public/images/flags/NF.svg                                                      |    1 [32m+[m
+ public/images/flags/NG.svg                                                      |    1 [32m+[m
+ public/images/flags/NI.svg                                                      |    1 [32m+[m
+ public/images/flags/NL.svg                                                      |    1 [32m+[m
+ public/images/flags/NO.svg                                                      |    1 [32m+[m
+ public/images/flags/NP.svg                                                      |    1 [32m+[m
+ public/images/flags/NR.svg                                                      |    1 [32m+[m
+ public/images/flags/NU.svg                                                      |    1 [32m+[m
+ public/images/flags/NZ.svg                                                      |    1 [32m+[m
+ public/images/flags/OM.svg                                                      |    1 [32m+[m
+ public/images/flags/PA.svg                                                      |    1 [32m+[m
+ public/images/flags/PE.svg                                                      |    1 [32m+[m
+ public/images/flags/PF.svg                                                      |    1 [32m+[m
+ public/images/flags/PG.svg                                                      |    1 [32m+[m
+ public/images/flags/PH.svg                                                      |    1 [32m+[m
+ public/images/flags/PK.svg                                                      |    1 [32m+[m
+ public/images/flags/PL.svg                                                      |    1 [32m+[m
+ public/images/flags/PM.svg                                                      |    1 [32m+[m
+ public/images/flags/PR.svg                                                      |    1 [32m+[m
+ public/images/flags/PS.svg                                                      |    1 [32m+[m
+ public/images/flags/PT.svg                                                      |    1 [32m+[m
+ public/images/flags/PW.svg                                                      |    1 [32m+[m
+ public/images/flags/PY.svg                                                      |    1 [32m+[m
+ public/images/flags/QA.svg                                                      |    1 [32m+[m
+ public/images/flags/RE.svg                                                      |    1 [32m+[m
+ public/images/flags/RO.svg                                                      |    1 [32m+[m
+ public/images/flags/RS.svg                                                      |    1 [32m+[m
+ public/images/flags/RU.svg                                                      |    1 [32m+[m
+ public/images/flags/RW.svg                                                      |    1 [32m+[m
+ public/images/flags/SA.svg                                                      |    1 [32m+[m
+ public/images/flags/SB.svg                                                      |    1 [32m+[m
+ public/images/flags/SC.svg                                                      |    1 [32m+[m
+ public/images/flags/SD.svg                                                      |    1 [32m+[m
+ public/images/flags/SE.svg                                                      |    1 [32m+[m
+ public/images/flags/SG.svg                                                      |    1 [32m+[m
+ public/images/flags/SH.svg                                                      |    1 [32m+[m
+ public/images/flags/SI.svg                                                      |    1 [32m+[m
+ public/images/flags/SJ.svg                                                      |    1 [32m+[m
+ public/images/flags/SK.svg                                                      |    1 [32m+[m
+ public/images/flags/SL.svg                                                      |    1 [32m+[m
+ public/images/flags/SM.svg                                                      |    1 [32m+[m
+ public/images/flags/SN.svg                                                      |    1 [32m+[m
+ public/images/flags/SO.svg                                                      |    1 [32m+[m
+ public/images/flags/SOURCE.md                                                   |    1 [32m+[m
+ public/images/flags/SR.svg                                                      |    1 [32m+[m
+ public/images/flags/SS.svg                                                      |    1 [32m+[m
+ public/images/flags/ST.svg                                                      |    1 [32m+[m
+ public/images/flags/SV.svg                                                      |    1 [32m+[m
+ public/images/flags/SX.svg                                                      |    1 [32m+[m
+ public/images/flags/SY.svg                                                      |    1 [32m+[m
+ public/images/flags/SZ.svg                                                      |    1 [32m+[m
+ public/images/flags/TA.svg                                                      |    1 [32m+[m
+ public/images/flags/TC.svg                                                      |    1 [32m+[m
+ public/images/flags/TD.svg                                                      |    1 [32m+[m
+ public/images/flags/TG.svg                                                      |    1 [32m+[m
+ public/images/flags/TH.svg                                                      |    1 [32m+[m
+ public/images/flags/TJ.svg                                                      |    1 [32m+[m
+ public/images/flags/TK.svg                                                      |    1 [32m+[m
+ public/images/flags/TL.svg                                                      |    1 [32m+[m
+ public/images/flags/TM.svg                                                      |    1 [32m+[m
+ public/images/flags/TN.svg                                                      |    1 [32m+[m
+ public/images/flags/TO.svg                                                      |    1 [32m+[m
+ public/images/flags/TR.svg                                                      |    1 [32m+[m
+ public/images/flags/TT.svg                                                      |    1 [32m+[m
+ public/images/flags/TV.svg                                                      |    1 [32m+[m
+ public/images/flags/TW.svg                                                      |    1 [32m+[m
+ public/images/flags/TZ.svg                                                      |    1 [32m+[m
+ public/images/flags/UA.svg                                                      |    1 [32m+[m
+ public/images/flags/UG.svg                                                      |    1 [32m+[m
+ public/images/flags/US.svg                                                      |    1 [32m+[m
+ public/images/flags/UY.svg                                                      |    1 [32m+[m
+ public/images/flags/UZ.svg                                                      |    1 [32m+[m
+ public/images/flags/VA.svg                                                      |    1 [32m+[m
+ public/images/flags/VC.svg                                                      |    1 [32m+[m
+ public/images/flags/VE.svg                                                      |    1 [32m+[m
+ public/images/flags/VG.svg                                                      |    1 [32m+[m
+ public/images/flags/VI.svg                                                      |    1 [32m+[m
+ public/images/flags/VN.svg                                                      |    1 [32m+[m
+ public/images/flags/VU.svg                                                      |    1 [32m+[m
+ public/images/flags/WF.svg                                                      |    1 [32m+[m
+ public/images/flags/WS.svg                                                      |    1 [32m+[m
+ public/images/flags/XK.svg                                                      |    1 [32m+[m
+ public/images/flags/YE.svg                                                      |    1 [32m+[m
+ public/images/flags/YT.svg                                                      |    1 [32m+[m
+ public/images/flags/ZA.svg                                                      |    1 [32m+[m
+ public/images/flags/ZM.svg                                                      |    1 [32m+[m
+ public/images/flags/ZW.svg                                                      |    1 [32m+[m
+ public/images/productos/modelos/coca-cola-can.png                               |  Bin [31m0[m -> [32m96597[m bytes
+ public/images/productos/modelos/lays-bbq-wavy.png                               |  Bin [31m0[m -> [32m179982[m bytes
+ public/images/productos/modelos/lays-cheddar.png                                |  Bin [31m0[m -> [32m166181[m bytes
+ public/images/productos/modelos/lays-chile-limon.png                            |  Bin [31m0[m -> [32m176848[m bytes
+ public/images/productos/modelos/lays-classic-less-salt.png                      |  Bin [31m0[m -> [32m138930[m bytes
+ public/images/productos/modelos/lays-dill-pickle.png                            |  Bin [31m0[m -> [32m154079[m bytes
+ public/images/productos/modelos/lays-flaming-hot.png                            |  Bin [31m0[m -> [32m165505[m bytes
+ public/images/productos/modelos/lays-honey-bbq.png                              |  Bin [31m0[m -> [32m170638[m bytes
+ public/images/productos/modelos/lays-ranch-wavy.png                             |  Bin [31m0[m -> [32m171421[m bytes
+ public/images/productos/modelos/lays-sweet-bbq.png                              |  Bin [31m0[m -> [32m173611[m bytes
+ public/images/productos/modelos/nivea-aftershave.png                            |  Bin [31m0[m -> [32m121820[m bytes
+ public/images/productos/modelos/sunsilk-shampoo.png                             |  Bin [31m0[m -> [32m68109[m bytes
+ public/images/video/Arequipa-backgraound-02.mp4                                 |  Bin [31m0[m -> [32m105853658[m bytes
+ public/images/video/Arequipa-backgraound.mp4                                    |  Bin [31m0[m -> [32m21030232[m bytes
+ public/images/video/aloe-clary-sage-shampoo-video-cinematografic.mp4            |  Bin [31m0[m -> [32m13570578[m bytes
+ public/images/video/artesco-video-cinematografic.mp4                            |  Bin [31m0[m -> [32m4017712[m bytes
+ public/images/video/audio-watch-bag-video-cinematografic.mp4                    |  Bin [31m0[m -> [32m1423033[m bytes
+ public/images/video/b-roll-shampoo-video-cinematografic.mp4                     |  Bin [31m0[m -> [32m5690779[m bytes
+ public/images/video/cinematic/Arequipa-backgraound-02.jpg                       |  Bin [31m0[m -> [32m62136[m bytes
+ public/images/video/cinematic/Arequipa-backgraound-02.mp4                       |  Bin [31m0[m -> [32m3185982[m bytes
+ public/images/video/cinematic/Arequipa-backgraound.jpg                          |  Bin [31m0[m -> [32m116090[m bytes
+ public/images/video/cinematic/Arequipa-backgraound.mp4                          |  Bin [31m0[m -> [32m1830907[m bytes
+ public/images/video/cinematic/artesco-video-cinematografic.jpg                  |  Bin [31m0[m -> [32m78718[m bytes
+ public/images/video/cinematic/artesco-video-cinematografic.mp4                  |  Bin [31m0[m -> [32m1386954[m bytes
+ public/images/video/cinematic/audio-watch-bag-video-cinematografic.jpg          |  Bin [31m0[m -> [32m27043[m bytes
+ public/images/video/cinematic/audio-watch-bag-video-cinematografic.mp4          |  Bin [31m0[m -> [32m1009174[m bytes
+ public/images/video/cinematic/coca-cola-video-cinematografic.jpg                |  Bin [31m0[m -> [32m23549[m bytes
+ public/images/video/cinematic/coca-cola-video-cinematografic.mp4                |  Bin [31m0[m -> [32m1597983[m bytes
+ public/images/video/cinematic/faber-castell-video-cinematografic.jpg            |  Bin [31m0[m -> [32m62367[m bytes
+ public/images/video/cinematic/faber-castell-video-cinematografic.mp4            |  Bin [31m0[m -> [32m1999369[m bytes
+ public/images/video/cinematic/inka-cola-video-cinematografic.jpg                |  Bin [31m0[m -> [32m77788[m bytes
+ public/images/video/cinematic/inka-cola-video-cinematografic.mp4                |  Bin [31m0[m -> [32m824719[m bytes
+ public/images/video/cinematic/lays-video-cinematografic.jpg                     |  Bin [31m0[m -> [32m7847[m bytes
+ public/images/video/cinematic/lays-video-cinematografic.mp4                     |  Bin [31m0[m -> [32m515701[m bytes
+ public/images/video/cinematic/nivea-video-cinematografic.jpg                    |  Bin [31m0[m -> [32m31066[m bytes
+ public/images/video/cinematic/nivea-video-cinematografic.mp4                    |  Bin [31m0[m -> [32m1455003[m bytes
+ public/images/video/cinematic/oreo-coca-cola-video-cinematografic.jpg           |  Bin [31m0[m -> [32m47257[m bytes
+ public/images/video/cinematic/oreo-coca-cola-video-cinematografic.mp4           |  Bin [31m0[m -> [32m1543044[m bytes
+ public/images/video/cinematic/oreo-video-cinematografic.jpg                     |  Bin [31m0[m -> [32m38529[m bytes
+ public/images/video/cinematic/oreo-video-cinematografic.mp4                     |  Bin [31m0[m -> [32m2451727[m bytes
+ public/images/video/cinematic/tornillos-video-cinematografic.jpg                |  Bin [31m0[m -> [32m31644[m bytes
+ public/images/video/cinematic/tornillos-video-cinematografic.mp4                |  Bin [31m0[m -> [32m1466503[m bytes
+ public/images/video/coca-cola-video-cinematografic.mp4                          |  Bin [31m0[m -> [32m6722741[m bytes
+ public/images/video/faber-castell-video-cinematografic.mp4                      |  Bin [31m0[m -> [32m17568149[m bytes
+ public/images/video/inka-cola-video-cinematografic.mp4                          |  Bin [31m0[m -> [32m3188370[m bytes
+ public/images/video/lays-video-cinematografic.mp4                               |  Bin [31m0[m -> [32m2290030[m bytes
+ public/images/video/navaja-video-cinematografic.mp4                             |  Bin [31m0[m -> [32m9911054[m bytes
+ public/images/video/nivea-video-cinematografic.mp4                              |  Bin [31m0[m -> [32m3713743[m bytes
+ public/images/video/oreo-coca-cola-video-cinematografic.mp4                     |  Bin [31m0[m -> [32m6072597[m bytes
+ public/images/video/oreo-video-cinematografic.mp4                               |  Bin [31m0[m -> [32m5852421[m bytes
+ public/images/video/protex-jabon-video-cinematografic.mp4                       |  Bin [31m0[m -> [32m5520148[m bytes
+ public/images/video/tornillos-video-cinematografic.mp4                          |  Bin [31m0[m -> [32m55106840[m bytes
+ public/images/video/vizora-shampoo-video-cinematografic.mp4                     |  Bin [31m0[m -> [32m727147[m bytes
+ public/map-services.json                                                        |    4 [32m+[m
+ public/maps/THIRD-PARTY-NOTICES.txt                                             |  149 [32m+[m
+ public/maps/dark-night.json                                                     |  515 [32m+++[m
+ public/models/ball/beach-ball.glb                                               |  Bin [31m0[m -> [32m19388[m bytes
+ public/models/coca-cola/can.glb                                                 |  Bin [31m0[m -> [32m5108500[m bytes
+ public/models/lays/bbq-wavy.glb                                                 |  Bin [31m0[m -> [32m2533068[m bytes
+ public/models/lays/cheddar.glb                                                  |  Bin [31m0[m -> [32m2535492[m bytes
+ public/models/lays/chile-limon.glb                                              |  Bin [31m0[m -> [32m2646028[m bytes
+ public/models/lays/classic-less-salt.glb                                        |  Bin [31m0[m -> [32m2351852[m bytes
+ public/models/lays/classic.glb                                                  |  Bin [31m0[m -> [32m2175888[m bytes
+ public/models/lays/dill-pickle.glb                                              |  Bin [31m0[m -> [32m2475896[m bytes
+ public/models/lays/flaming-hot.glb                                              |  Bin [31m0[m -> [32m2585252[m bytes
+ public/models/lays/honey-bbq.glb                                                |  Bin [31m0[m -> [32m2633788[m bytes
+ public/models/lays/ranch-wavy.glb                                               |  Bin [31m0[m -> [32m2555328[m bytes
+ public/models/lays/sweet-bbq.glb                                                |  Bin [31m0[m -> [32m2368200[m bytes
+ public/models/sunsilk/bottle.glb                                                |  Bin [31m0[m -> [32m2062544[m bytes
+ scripts/verify-international-phone.mjs                                          |   18 [32m+[m
+ scripts/verify-model-catalog.mjs                                                |   37 [32m+[m
+ scripts/verify-normal-catalog.mjs                                               |   49 [32m+[m
+ scripts/verify-operations.mjs                                                   |    7 [32m+[m[31m-[m
+ scripts/verify-order-flow.mjs                                                   |   24 [32m+[m
+ skills-lock.json                                                                |   11 [32m+[m
+ src/app/providers.tsx                                                           |    3 [32m+[m[31m-[m
+ src/app/router.tsx                                                              |    7 [32m+[m[31m-[m
+ src/app/state/reducer.ts                                                        |    8 [32m+[m[31m-[m
+ src/app/state/rosita-provider.tsx                                               |   54 [32m+[m[31m-[m
+ src/components/layout/app-layout.tsx                                            |   15 [32m+[m[31m-[m
+ src/components/layout/store-header.tsx                                          |   31 [32m+[m[31m-[m
+ src/components/layout/store-search.tsx                                          |    3 [32m+[m[31m-[m
+ src/components/layout/use-header-clearance.ts                                   |   34 [32m+[m
+ src/components/layout/use-smart-header.ts                                       |   68 [32m+[m
+ src/components/ui/dialog.tsx                                                    |    2 [32m+[m[31m-[m
+ src/components/ui/sheet.tsx                                                     |    2 [32m+[m[31m-[m
+ src/data/demo.ts                                                                |    3 [32m+[m[31m-[m
+ src/data/model-catalog.ts                                                       |   30 [32m+[m
+ src/data/product-images.ts                                                      |    2 [32m+[m
+ src/features/administracion/admin-layout.tsx                                    |    4 [32m+[m[31m-[m
+ src/features/carrito/cart-content.tsx                                           |    4 [32m+[m[31m-[m
+ src/features/catalogo/catalog-filters.tsx                                       |   13 [32m+[m[31m-[m
+ src/features/catalogo/catalog-logic.ts                                          |    3 [32m+[m[31m-[m
+ src/features/catalogo/product-card.tsx                                          |    6 [32m+[m[31m-[m
+ src/features/cinema/editorial-atmosphere.tsx                                    |   46 [32m+[m
+ src/features/cinema/public-scene.tsx                                            |   40 [32m+[m
+ src/features/cinema/route-transition.tsx                                        |   58 [32m+[m
+ src/features/cinema/use-public-motion.ts                                        |   41 [32m+[m
+ src/features/cinema/use-smooth-scroll.ts                                        |   27 [32m+[m
+ src/features/entrega/delivery-tracking.tsx                                      |  277 [32m+[m[31m-[m
+ src/features/entrega/destination-search.tsx                                     |   33 [32m+[m
+ src/features/entrega/night-basemap.ts                                           |   53 [32m+[m
+ src/features/entrega/order-tracking-page.tsx                                    |   32 [32m+[m
+ src/features/entrega/route-map.tsx                                              |  133 [32m+[m[31m-[m
+ src/features/entrega/use-route-simulation.ts                                    |   43 [32m+[m
+ src/features/entrega/use-tracking-demonstration.ts                              |   36 [32m+[m
+ src/features/inicio/ambient-video.tsx                                           |  176 [32m+[m[31m-[m
+ src/features/inicio/category-liquid-surface.tsx                                 |   22 [32m+[m
+ src/features/inicio/cinematic-chapter.tsx                                       |   27 [32m+[m
+ src/features/inicio/cinematic-chapters.ts                                       |    8 [32m+[m
+ src/features/inicio/cinematic-story.tsx                                         |   74 [32m+[m
+ src/features/inicio/liquid-home-engine.ts                                       |  302 [32m++[m
+ src/features/inicio/liquid-shaders.ts                                           |   66 [32m+[m
+ src/features/inicio/liquid-videos.tsx                                           |    8 [32m+[m
+ src/features/inicio/use-category-tilt.ts                                        |  111 [32m+[m
+ src/features/inicio/use-liquid-home.ts                                          |    9 [32m+[m
+ src/features/pedidos/delivery-form.tsx                                          |   54 [32m+[m[31m-[m
+ src/features/pedidos/international-phone.tsx                                    |   45 [32m+[m
+ src/features/pedidos/order-notification-center.tsx                              |   16 [32m+[m
+ src/features/pedidos/order-notifications-context.ts                             |   12 [32m+[m
+ src/features/pedidos/order-notifications-provider.tsx                           |   56 [32m+[m
+ src/features/pedidos/order-timeline.tsx                                         |   11 [32m+[m
+ src/features/product-3d/model-resources.ts                                      |   68 [32m+[m
+ src/features/product-3d/product-model-canvas.tsx                                |  163 [32m+[m
+ src/features/product-3d/product-models.ts                                       |   64 [32m+[m
+ src/features/product-3d/product-presentation.tsx                                |   40 [32m+[m
+ src/features/product-3d/shader-backdrop.tsx                                     |   37 [32m+[m
+ src/features/product-3d/types.ts                                                |   12 [32m+[m
+ src/hooks/use-heading-focus.ts                                                  |    2 [32m+[m[31m-[m
+ src/hooks/use-navigation-key.ts                                                 |    9 [32m+[m
+ src/hooks/use-store-scroll.ts                                                   |    6 [32m+[m[31m-[m
+ src/lib/admin-operations.ts                                                     |    7 [32m+[m[31m-[m
+ src/lib/catalog-navigation.ts                                                   |   12 [32m+[m
+ src/lib/catalog-state.ts                                                        |    3 [32m+[m
+ src/lib/checkout-validation.ts                                                  |   13 [32m+[m[31m-[m
+ src/lib/geocoding.ts                                                            |   38 [32m+[m
+ src/lib/geography.ts                                                            |   34 [32m+[m[31m-[m
+ src/lib/model-catalog-update.ts                                                 |   53 [32m+[m
+ src/lib/motion.ts                                                               |    1 [31m-[m
+ src/lib/operations-schema.ts                                                    |    2 [32m+[m
+ src/lib/order-events.ts                                                         |   44 [32m+[m
+ src/lib/order-notice-preferences.ts                                             |   33 [32m+[m
+ src/lib/phone.ts                                                                |   26 [32m+[m
+ src/lib/routing.ts                                                              |   22 [32m+[m[31m-[m
+ src/lib/state-schema.ts                                                         |    3 [32m+[m
+ src/lib/storage.ts                                                              |    7 [32m+[m[31m-[m
+ src/main.tsx                                                                    |    2 [32m+[m
+ src/pages/account-page.tsx                                                      |    2 [32m+[m[31m-[m
+ src/pages/admin/customers-page.tsx                                              |   19 [32m+[m
+ src/pages/admin/dashboard-page.tsx                                              |   14 [32m+[m[31m-[m
+ src/pages/admin/order-detail-page.tsx                                           |    2 [32m+[m
+ src/pages/auth-page.tsx                                                         |    6 [32m+[m[31m-[m
+ src/pages/catalog-page.tsx                                                      |   54 [32m+[m[31m-[m
+ src/pages/help-page.tsx                                                         |    2 [32m+[m[31m-[m
+ src/pages/home-page.tsx                                                         |  217 [32m+[m[31m-[m
+ src/pages/order-page.tsx                                                        |  105 [32m+[m[31m-[m
+ src/pages/orders-page.tsx                                                       |    2 [32m+[m
+ src/pages/product-page.tsx                                                      |   29 [32m+[m[31m-[m
+ src/styles/catalog-controls.css                                                 |   47 [32m+[m
+ src/styles/checkout-controls.css                                                |   37 [32m+[m
+ src/styles/cinema-global.css                                                    |   45 [32m+[m
+ src/styles/globals.css                                                          |   12 [32m+[m[31m-[m
+ src/styles/home.css                                                             | 1217 [32m++[m[31m-----[m
+ src/styles/modules.css                                                          |   12 [32m+[m
+ src/styles/order-notifications.css                                              |   39 [32m+[m
+ src/styles/order-tracking.css                                                   |   98 [32m+[m
+ src/styles/product-3d.css                                                       |   24 [32m+[m
+ src/styles/product-glass.css                                                    |   27 [32m+[m
+ src/styles/rosita-editorial.css                                                 |  120 [32m+[m
+ src/types/catalog.ts                                                            |    6 [32m+[m
+ src/types/commerce.ts                                                           |    2 [32m+[m
+ src/types/state.ts                                                              |    1 [32m+[m
+ vite.config.ts                                                                  |    1 [32m+[m
+ 883 files changed, 68322 insertions(+), 1694 deletions(-)

@@ -4,10 +4,12 @@ import assert from "node:assert/strict";
 const root = process.cwd(),
   server = await createServer({
     root,
-    server: { middlewareMode: true },
+    server: { middlewareMode: true, hmr: false, ws: false },
     appType: "custom",
   }),
   passed = [];
+const offline = process.argv.includes("--offline");
+const realFetch = globalThis.fetch;
 try {
   const load = (p) => server.ssrLoadModule("/src/" + p),
     { initialState } = await load("data/demo.ts"),
@@ -215,6 +217,18 @@ try {
     label: "Otro punto de prueba",
     source: "Coordenadas de prueba dentro de cobertura",
   };
+  if (offline) {
+    // Test response parsing and transactions without transmitting precise locations.
+    // This synthetic geometry is only a test fixture, never a production road fallback.
+    globalThis.fetch = async () => new Response(JSON.stringify({
+      code: "Ok",
+      routes: [{ distance: 8000, duration: 900, geometry: { coordinates: [
+        [storeOrigin.lng, storeOrigin.lat],
+        [(storeOrigin.lng + second.lng) / 2, (storeOrigin.lat + second.lat) / 2],
+        [second.lng, second.lat],
+      ] } }],
+    }), { status: 200, headers: { "Content-Type": "application/json" } });
+  }
   const route = await calculateRoute(
     storeOrigin,
     second,
@@ -260,7 +274,7 @@ try {
     }).success,
   );
   passed.push(
-    "Otro destino vial real, rechazo de cobertura/punto no confirmado/ruta incompatible y cancelación explícita de petición.",
+    `${offline ? "Respuesta vial sintética sin red (no verifica el proveedor)" : "Otro destino vial real"}, rechazo de cobertura/punto no confirmado/ruta incompatible y cancelación explícita de petición.`,
   );
   const keys = new Map([
     ["unrelated", "keep"],
@@ -282,7 +296,8 @@ try {
     root + "/docs/operations-verification/extra.json",
     JSON.stringify(
       {
-        date: "2026-10-30",
+        date: new Date().toISOString(),
+        routingMode: offline ? "offline-mock" : "live-provider",
         passed,
         secondRoute: {
           destination: second,
@@ -297,5 +312,6 @@ try {
   );
   console.log(passed.join("\n"));
 } finally {
+  globalThis.fetch = realFetch;
   await server.close();
 }

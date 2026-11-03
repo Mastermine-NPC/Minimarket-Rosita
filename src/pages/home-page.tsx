@@ -1,9 +1,6 @@
-import { CategoryLiquidSurface } from "@/features/inicio/category-liquid-surface";
-import { useCategoryTilt } from "@/features/inicio/use-category-tilt";
 import { useLiquidHome } from "@/features/inicio/use-liquid-home";
 import { LiquidVideos } from "@/features/inicio/liquid-videos";
 import { AmbientVideo } from "@/features/inicio/ambient-video";
-import { MediaImage } from "@/components/image-picker";
 import { useTaxonomy } from "@/hooks/use-taxonomy";
 import { useEffect, useRef } from "react";
 import { Link } from "react-router";
@@ -15,7 +12,6 @@ import {
 import { useCatalog } from "@/hooks/use-catalog";
 
 import { useHeadingFocus } from "@/hooks/use-heading-focus";
-import { ProductImage } from "@/features/catalogo/product-image";
 import { Button } from "@/components/ui/button";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useMotionPreference } from "@/hooks/use-motion-preference";
@@ -30,6 +26,7 @@ import { useHomeReveals } from "@/features/inicio/use-home-reveals";
 import "@/styles/home.css";
 export function HomePage() {
   const { activeCategories: categories, categoryPath } = useTaxonomy();
+  const halloween = categories.find(category => category.name.toLocaleLowerCase("es") === "halloween");
   const products = useCatalog(),
     root = useRef<HTMLDivElement>(null),
     heading = useHeadingFocus(),
@@ -44,7 +41,6 @@ export function HomePage() {
   const heroY = useTransform(scrollYProgress, [0, 1], [0, 100]);
   useHomeReveals(root);
   useLiquidHome(root);
-  useCategoryTilt(root, categories.map(category => category.id).join(","));
   useEffect(() => {
     const header = document.querySelector(".navigation-discover"),
       html = document.documentElement,
@@ -88,9 +84,9 @@ export function HomePage() {
         <a href="#momentos" className="home-scroll-cue"><span>Hay un Rosita para cada momento</span><ArrowDown size={20} aria-hidden="true" /></a>
       </section>
       <section className="cinema-intro" id="momentos" aria-labelledby="momentos-title">
-        <AmbientVideo src="/images/video/web/video-intro.mp4" poster="/images/video/web/video-intro-poster.jpg" label="Un día en Rosita" loop keepPlaying />
+        <AmbientVideo src="/images/video/video_halloween.mp4" poster="/images/jfif/carrusel1.jfif.jpeg" label="Un día en Rosita" loop keepPlaying />
         <h2 id="momentos-title" data-home-reveal>Lo cotidiano.<br />Extraordinario.</h2>
-        <div data-home-reveal><p>Un antojo, una idea, un nuevo proyecto. En Minimarket Rosita, los pequeños planes tienen mucho por descubrir.</p><a className="home-editorial-link" href="#bebidas">Encuentra tu momento <ArrowDown size={20} aria-hidden="true" /></a></div>
+        <div data-home-reveal><p>Un antojo, una idea, un nuevo proyecto. En Minimarket Rosita, los pequeños planes tienen mucho por descubrir.</p><Link className="home-editorial-link" to={halloween ? categoryPath(halloween) : "/catalogo"}>Explora nuestros productos especiales <ArrowDown size={20} aria-hidden="true" /></Link></div>
       </section>
       </LiquidVideos>
       <CinematicStory />
@@ -130,75 +126,6 @@ export function HomePage() {
             </Button>
           </div>
         )}
-      </section>
-      <section
-        className="home-category-section"
-        data-cursor-theme="dark"
-        aria-labelledby="categorias"
-      >
-        <div className="home-section-heading" data-home-reveal>
-          <div>
-
-            <h2 id="categorias" tabIndex={-1}>
-              Todo tu Rosita.
-            </h2>
-          </div>
-          <p>
-            Para casa, para estudiar,
-            <br />
-            para jugar y para ti.
-          </p>
-        </div>
-        <div className="home-category-grid">
-          {categories.map((category, i) => {
-            return (
-              <Link
-                className={
-                  "category-card home-category-card home-category-" +
-                  category.id
-                }
-                key={category.id}
-                to={categoryPath(category)}
-                data-home-reveal
-                data-cursor="Ver"
-                style={
-                  {
-                    "--home-stagger": `${(i % 3) * 65}ms`,
-                    "--category-glass-clip": `url(#home-category-glass-${category.id})`,
-                  } as React.CSSProperties
-                }
-              >
-                <CategoryLiquidSurface id={`home-category-glass-${category.id}`} />
-                <div className="home-category-media">
-                  {category.imageKey !== "none" ? (
-                    <MediaImage
-                      imageKey={category.imageKey}
-                      alt={category.name}
-                    />
-                  ) : (
-                    <div className="home-category-products" aria-hidden="true">
-                      {active
-                        .filter((p) => p.category === category.id)
-                        .slice(0, 3)
-                        .map((p) => (
-                          <ProductImage key={p.id} product={p} />
-                        ))}
-                    </div>
-                  )}
-                </div>
-                <div className="home-category-caption">
-                  <div>
-                    <h3>{category.name}</h3>
-                    <p>{category.description}</p>
-                  </div>
-                  <span className="home-category-arrow">
-                    <ArrowUpRight size={22} aria-hidden="true" />
-                  </span>
-                </div>
-              </Link>
-            );
-          })}
-        </div>
       </section>
       <section
         className="home-delivery container"

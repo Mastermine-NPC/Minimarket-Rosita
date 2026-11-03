@@ -1,0 +1,37 @@
+[
+  {
+    "file": "verify-operations.mjs",
+    "code": 0,
+    "output": ""
+  },
+  {
+    "file": "verify-operations-edges.mjs",
+    "code": 1,
+    "output": "/home/hisok/Desktop/extension-cor/PROYECTO-PROTOTIPO/src/lib/routing.ts:69\n\t\tthrow new Error(\"No se pudo obtener una ruta vial para este destino. Comprueba la conexión y vuelve a intentarlo o selecciona otro punto cercano a una calle.\", { cause: error });\n\t\t      ^\n\nError: No se pudo obtener una ruta vial para este destino. Comprueba la conexión y vuelve a intentarlo o selecciona otro punto cercano a una calle.\n    at calculateRoute (/home/hisok/Desktop/extension-cor/PROYECTO-PROTOTIPO/src/lib/routing.ts:69:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async file:///home/hisok/Desktop/extension-cor/PROYECTO-PROTOTIPO/scripts/verify-operations-edges.mjs:218:17 {\n  [cause]: TypeError: fetch failed\n      at node:internal/deps/undici/undici:13510:13\n      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n      at async calculateRoute (/home/hisok/Desktop/extension-cor/PROYECTO-PROTOTIPO/src/lib/routing.ts:38:20)\n      at async file:///home/hisok/Desktop/extension-cor/PROYECTO-PROTOTIPO/scripts/verify-operations-edges.mjs:218:17 {\n    [cause]: Error: getaddrinfo EAI_AGAIN routing.openstreetmap.de\n        at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26) {\n      errno: -3001,\n      code: 'EAI_AGAIN',\n      syscall: 'getaddrinfo',\n      hostname: 'routing.openstreetmap.de'\n    }\n  }\n}\n\nNode.js v20.19.4\n"
+  },
+  {
+    "file": "verify-order-flow.mjs",
+    "code": 0,
+    "output": ""
+  },
+  {
+    "file": "verify-international-phone.mjs",
+    "code": 0,
+    "output": ""
+  },
+  {
+    "file": "verify-halloween.mjs",
+    "code": 0,
+    "output": ""
+  },
+  {
+    "file": "verify-model-catalog.mjs",
+    "code": 1,
+    "output": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n79 !== 75\n\n    at file:///home/hisok/Desktop/extension-cor/PROYECTO-PROTOTIPO/scripts/verify-model-catalog.mjs:14:74 {\n  generatedMessage: true,\n  code: 'ERR_ASSERTION',\n  actual: 79,\n  expected: 75,\n  operator: 'strictEqual'\n}\n\nNode.js v20.19.4\n"
+  },
+  {
+    "file": "verify-normal-catalog.mjs",
+    "code": 1,
+    "output": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n79 !== 75\n\n    at file:///home/hisok/Desktop/extension-cor/PROYECTO-PROTOTIPO/scripts/verify-normal-catalog.mjs:32:9 {\n  generatedMessage: true,\n  code: 'ERR_ASSERTION',\n  actual: 79,\n  expected: 75,\n  operator: 'strictEqual'\n}\n\nNode.js v20.19.4\n"
+  }
+]

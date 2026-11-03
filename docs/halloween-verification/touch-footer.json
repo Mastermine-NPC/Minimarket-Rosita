@@ -1,0 +1,40 @@
+[
+  {
+    "width": 1440,
+    "style": {
+      "background": "rgb(249, 248, 240)",
+      "color": "rgb(20, 90, 70)",
+      "link": "rgb(20, 90, 70)",
+      "rect": {
+        "x": 80,
+        "y": 745.25,
+        "width": 1280,
+        "height": 110.1875,
+        "top": 745.25,
+        "right": 1360,
+        "bottom": 855.4375,
+        "left": 80
+      }
+    },
+    "touch": false
+  },
+  {
+    "width": 390,
+    "style": {
+      "background": "rgb(249, 248, 240)",
+      "color": "rgb(20, 90, 70)",
+      "link": "rgb(20, 90, 70)",
+      "rect": {
+        "x": 16,
+        "y": 367.515625,
+        "width": 358,
+        "height": 249.375,
+        "top": 367.515625,
+        "right": 374,
+        "bottom": 616.890625,
+        "left": 16
+      }
+    },
+    "touch": true
+  }
+]

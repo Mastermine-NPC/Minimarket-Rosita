@@ -4,10 +4,12 @@ import fs from "node:fs/promises";
 const root = process.cwd();
 const server = await createServer({
   root,
-  server: { middlewareMode: true },
+  server: { middlewareMode: true, hmr: false, ws: false },
   appType: "custom",
 });
 let passed = [];
+const offline = process.argv.includes("--offline");
+const networkFetch = globalThis.fetch;
 try {
   const load = (p) => server.ssrLoadModule("/src/" + p);
   const { initialState, emptyCheckout } = await load("data/demo.ts"),
@@ -29,14 +31,14 @@ try {
     assert(v.success, JSON.stringify(v.error?.issues));
   };
   valid(initialState);
-  assert.equal(initialState.products.length, 75);
-  assert.equal(new Set(initialState.products.map((p) => p.barcode)).size, 75);
+  assert.equal(initialState.products.length, 79);
+  assert.equal(new Set(initialState.products.map((p) => p.barcode)).size, initialState.products.length);
   const client = initialState.users.find((u) => u.role === "customer"),
     cashier = initialState.users.find((u) => u.role === "cashier"),
     admin = initialState.users.find((u) => u.role === "admin");
   assert(await verifyPassword("CajaDemo!2026", cashier));
   passed.push(
-    "Esquema 9, 75 códigos únicos y credencial ficticia de caja válidos.",
+    "Esquema 9, 79 códigos únicos y credencial ficticia de caja válidos.",
   );
   let n = 0;
   const stamp = () => ({
@@ -303,12 +305,14 @@ try {
   passed.push(
     "Migración v8→v9 conserva precios/stock/carrito/cuentas; no duplica agente. Roundtrip ventas, turnos, pedidos; corrupción/futuro/bloqueo manejados.",
   );
-  // actual route + fallback, geometry and order snapshot
+  // Default CI can use the recorded road geometry without sending precise coordinates.
+  if (offline) globalThis.fetch = async () => { throw new Error("offline verification"); };
   const route = await calculateRoute(
     storeOrigin,
     utpAccess,
     new AbortController().signal,
   );
+  globalThis.fetch = networkFetch;
   assert(route.coordinates.length > 100);
   assert(
     distanceBetween({ lat: route.end[1], lng: route.end[0] }, utpAccess) < 100,
@@ -383,7 +387,7 @@ try {
   assert(writeRositaState(s, storage).ok);
   assert.equal(readRositaState(storage).data.tracking[snap.id].progress, 0.4);
   passed.push(
-    "Ruta vial real Rosita→UTP, interpolación y fallback exclusivo; delivery con tarifa 6.50, snapshot inmutable, progreso persistido.",
+    `${offline ? "Geometría vial Rosita→UTP de respaldo verificado, sin red" : "Ruta vial real Rosita→UTP"}, interpolación y fallback exclusivo; delivery con tarifa 6.50, snapshot inmutable, progreso persistido.`,
   );
   await fs.mkdir(root + "/docs/operations-verification", { recursive: true });
   await fs.writeFile(
@@ -409,5 +413,6 @@ try {
   );
   console.log(passed.join("\n"));
 } finally {
+  globalThis.fetch = networkFetch;
   await server.close();
 }

@@ -1,0 +1,148 @@
+[
+  {
+    "path": "public/images/video/archivos-glb/lays_bags__10_different_flavours__gameready.glb",
+    "bytes": 15024700,
+    "valid": true,
+    "meshes": 10,
+    "images": 11,
+    "extensions": []
+  },
+  {
+    "path": "public/images/video/archivos-glb/nivea_aftershave.glb",
+    "bytes": 9366148,
+    "valid": true,
+    "meshes": 3,
+    "images": 1,
+    "extensions": [
+      "KHR_materials_unlit"
+    ]
+  },
+  {
+    "path": "public/images/video/archivos-glb/sunsilk_shampoo_bottle.glb",
+    "bytes": 2068436,
+    "valid": true,
+    "meshes": 7,
+    "images": 2,
+    "extensions": [
+      "KHR_materials_specular"
+    ]
+  },
+  {
+    "path": "public/images/video/archivos-glb/coca_cola_cans.glb",
+    "bytes": 12950508,
+    "valid": true,
+    "meshes": 3,
+    "images": 6,
+    "extensions": [
+      "KHR_materials_specular"
+    ]
+  },
+  {
+    "path": "public/models/lays/cheddar.glb",
+    "bytes": 2535492,
+    "valid": true,
+    "meshes": 1,
+    "images": 2,
+    "extensions": []
+  },
+  {
+    "path": "public/models/lays/dill-pickle.glb",
+    "bytes": 2475896,
+    "valid": true,
+    "meshes": 1,
+    "images": 2,
+    "extensions": []
+  },
+  {
+    "path": "public/models/lays/flaming-hot.glb",
+    "bytes": 2585252,
+    "valid": true,
+    "meshes": 1,
+    "images": 2,
+    "extensions": []
+  },
+  {
+    "path": "public/models/lays/bbq-wavy.glb",
+    "bytes": 2533068,
+    "valid": true,
+    "meshes": 1,
+    "images": 2,
+    "extensions": []
+  },
+  {
+    "path": "public/models/lays/honey-bbq.glb",
+    "bytes": 2633788,
+    "valid": true,
+    "meshes": 1,
+    "images": 2,
+    "extensions": []
+  },
+  {
+    "path": "public/models/lays/classic-less-salt.glb",
+    "bytes": 2351852,
+    "valid": true,
+    "meshes": 1,
+    "images": 2,
+    "extensions": []
+  },
+  {
+    "path": "public/models/lays/sweet-bbq.glb",
+    "bytes": 2368200,
+    "valid": true,
+    "meshes": 1,
+    "images": 2,
+    "extensions": []
+  },
+  {
+    "path": "public/models/lays/ranch-wavy.glb",
+    "bytes": 2555328,
+    "valid": true,
+    "meshes": 1,
+    "images": 2,
+    "extensions": []
+  },
+  {
+    "path": "public/models/lays/classic.glb",
+    "bytes": 2175888,
+    "valid": true,
+    "meshes": 1,
+    "images": 2,
+    "extensions": []
+  },
+  {
+    "path": "public/models/lays/chile-limon.glb",
+    "bytes": 2646028,
+    "valid": true,
+    "meshes": 1,
+    "images": 2,
+    "extensions": []
+  },
+  {
+    "path": "public/models/coca-cola/can.glb",
+    "bytes": 5108500,
+    "valid": true,
+    "meshes": 1,
+    "images": 3,
+    "extensions": [
+      "KHR_materials_specular"
+    ]
+  },
+  {
+    "path": "public/models/sunsilk/bottle.glb",
+    "bytes": 2062544,
+    "valid": true,
+    "meshes": 3,
+    "images": 2,
+    "extensions": [
+      "KHR_materials_specular"
+    ]
+  },
+  {
+    "path": "public/models/ball/beach-ball.glb",
+    "bytes": 19388,
+    "valid": true,
+    "meshes": 1,
+    "images": 0,
+    "extensions": []
+  }
+]

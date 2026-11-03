@@ -1,0 +1,46 @@
+﻿[
+    {
+        "result":  {
+                       "count":  2,
+                       "names":  [
+                                     "Gaseosa Coca-Cola",
+                                     "Coca-Cola en lata"
+                                 ],
+                       "ascending":  true
+                   },
+        "name":  "search-brand-sort"
+    },
+    {
+        "result":  true,
+        "name":  "empty-search"
+    },
+    {
+        "result":  {
+                       "columns":  3,
+                       "offsets":  [
+                                       6,
+                                       12,
+                                       18
+                                   ],
+                       "valid":  true
+                   },
+        "name":  "promotions-after-two-rows"
+    },
+    {
+        "result":  {
+                       "quantity":  2,
+                       "stock":  23,
+                       "added":  "2 en tu carrito\nVer carrito"
+                   },
+        "name":  "add-product-and-persist"
+    },
+    {
+        "result":  {
+                       "text":  "Inicio\n/\nCarrito\nCASI EN TUS MANOS\nTu carrito.\n\nRevisa cantidades e importes de tu selección.\n\nVaciar carrito\nGaseosa Coca-Cola\n\nBotella · 600 ml\n\nS/ 3.50 c/u · Stock: 23\n\n2\nS/ 7.00\nSubtotal · 2 unidades\nS/ 7.00\n\nAgregar al carrito no reserva ni descuenta stock.\n\nContinuar con mi pedido\n\nIdentifícate antes de confirmar una entrega. Pago y envío de demostración, sin operaciones reales.",
+                       "cart":  {
+                                    "ROS-001":  2
+                                }
+                   },
+        "name":  "cart-reload"
+    }
+]

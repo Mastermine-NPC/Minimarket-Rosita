@@ -13,8 +13,9 @@ import { SlidersHorizontal, SearchX, ArrowRight, X, RotateCcw, ArrowDownWideNarr
 
 import "@/styles/subcategories.css";
 import "@/styles/catalog-controls.css";
+import "@/styles/catalog-product-stage.css";
 
-import { ProductCard } from "@/features/catalogo/product-card";
+import { CatalogProductGrid } from "@/features/catalogo/catalog-product-grid";
 import { CatalogFilters } from "@/features/catalogo/catalog-filters";
 import {
   filterProducts,
@@ -259,11 +260,7 @@ export function CatalogPage() {
             </div>
           )}
           {list.length ? (
-            <div className="product-grid catalog-products">
-              {list.map((p) => (
-                <ProductCard key={p.id} product={p} />
-              ))}
-            </div>
+            <CatalogProductGrid products={list} />
           ) : (
             <div className="catalog-empty">
               <span className="empty-icon">

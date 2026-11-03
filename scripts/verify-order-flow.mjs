@@ -1,7 +1,7 @@
 import { createServer } from 'vite';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-const server=await createServer({root:process.cwd(),server:{middlewareMode:true,hmr:false},appType:'custom'});
+const server=await createServer({root:process.cwd(),server:{middlewareMode:true,hmr:false,ws:false},appType:'custom'});
 try{
  const load=p=>server.ssrLoadModule('/src/'+p);
  const {initialState,emptyCheckout}=await load('data/demo.ts'),{rositaReducer:r}=await load('app/state/reducer.ts'),{prepareQuote}=await load('lib/order-transaction.ts'),{stateSchema}=await load('lib/state-schema.ts'),{orderNotifications,receiveOrderUpdates}=await load('lib/order-events.ts'),{storeOrigin}=await load('data/geography.ts');

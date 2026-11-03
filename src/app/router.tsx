@@ -3,6 +3,7 @@ import { AdminLayout } from "@/features/administracion/admin-layout";
 import { lazy, Suspense, type ReactNode } from "react";
 import { Route, Routes } from "react-router";
 import { AppLayout } from "@/components/layout/app-layout";
+import { PageMetadata } from "@/components/layout/page-metadata";
 import { Skeleton } from "@/components/ui/skeleton";
 const TaxonomyPage = lazy(() =>
   import("@/pages/admin/taxonomy-page").then((m) => ({
@@ -119,7 +120,7 @@ function Page({ children }: { children: ReactNode }) {
 }
 export function AppRouter() {
   return (
-    <RouteTransition>{location => <Routes location={location}>
+    <><PageMetadata /><RouteTransition>{location => <Routes location={location}>
       <Route
         path="caja"
         element={
@@ -387,6 +388,6 @@ export function AppRouter() {
           }
         />
       </Route>
-    </Routes>}</RouteTransition>
+    </Routes>}</RouteTransition></>
   );
 }

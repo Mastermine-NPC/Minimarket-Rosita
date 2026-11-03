@@ -6,6 +6,12 @@ html { scroll-behavior: smooth; }
 .store-shell .store-header { position: sticky; top: 0; z-index: 35; }
 .public-route-content { transform-origin: 50% 12%; min-height: 50svh; }
 .public-page-body { scroll-margin-top: calc(var(--public-nav-height) + 20px); }
+.store-shell #contenido {
+  display: flow-root;
+  min-height: calc(100svh - var(--public-nav-height));
+}
+.store-shell .public-page-body { display: flow-root; }
+.store-shell .route-loading { min-height: max(400px, calc(100svh - var(--public-nav-height))); }
 .cinema-route-curtain { position: fixed; inset: 0; background: #123d30; color: var(--rose); z-index: 200; display: grid; place-items: center; pointer-events: none; clip-path: inset(0 0 100% 0); perspective: 900px; }
 .cinema-route-curtain span { font: 800 clamp(70px, 18vw, 260px)/1 var(--font-title); letter-spacing: -.07em; }
 .cinema-background.ambient-video { position: absolute; inset: 0; height: 100%; width: 100%; aspect-ratio: auto; border-radius: 0; background: #10251e; }

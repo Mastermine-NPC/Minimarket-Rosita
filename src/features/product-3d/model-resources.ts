@@ -21,7 +21,7 @@ export function disposeModel(root: Object3D) {
   images.forEach(image => image.close());
   materials.forEach(material => material.dispose());
 }
-export function prepareModel(root: Object3D, config: ProductModelConfig["model"]) {
+export function prepareModel(root: Object3D, config: ProductModelConfig["model"], anisotropy = 1) {
   root.updateMatrixWorld(true);
   const bounds = new Box3().setFromObject(root);
   const size = bounds.getSize(new Vector3());
@@ -33,6 +33,13 @@ export function prepareModel(root: Object3D, config: ProductModelConfig["model"]
     node.castShadow = true; node.receiveShadow = true;
     const materials = Array.isArray(node.material) ? node.material : [node.material];
     materials.forEach(material => {
+      // Keep the author's PBR maps and improve angled label detail without larger textures.
+      Object.values(material).forEach(value => {
+        if (value instanceof Texture && value.anisotropy !== anisotropy) {
+          value.anisotropy = anisotropy;
+          value.needsUpdate = true;
+        }
+      });
       if (!(material instanceof MeshPhysicalMaterial) && !("roughness" in material)) return;
       if (config.roughness !== undefined) material.roughness = config.roughness;
       if (config.metalness !== undefined) material.metalness = config.metalness;

@@ -1,0 +1,62 @@
+﻿[
+    {
+        "method":  "Log.entryAdded",
+        "params":  {
+                       "entry":  {
+                                     "source":  "javascript",
+                                     "level":  "warning",
+                                     "text":  "Deprecated API for given entry type.",
+                                     "timestamp":  1793745911616.5779,
+                                     "lineNumber":  0,
+                                     "stackTrace":  {
+                                                        "callFrames":  [
+                                                                           {
+                                                                               "functionName":  "",
+                                                                               "scriptId":  "314",
+                                                                               "url":  "",
+                                                                               "lineNumber":  0,
+                                                                               "columnNumber":  1176
+                                                                           },
+                                                                           {
+                                                                               "functionName":  "",
+                                                                               "scriptId":  "314",
+                                                                               "url":  "",
+                                                                               "lineNumber":  0,
+                                                                               "columnNumber":  1395
+                                                                           }
+                                                                       ]
+                                                    }
+                                 }
+                   }
+    },
+    {
+        "method":  "Log.entryAdded",
+        "params":  {
+                       "entry":  {
+                                     "source":  "javascript",
+                                     "level":  "warning",
+                                     "text":  "Deprecated API for given entry type.",
+                                     "timestamp":  1793745911713.2429,
+                                     "lineNumber":  0,
+                                     "stackTrace":  {
+                                                        "callFrames":  [
+                                                                           {
+                                                                               "functionName":  "",
+                                                                               "scriptId":  "314",
+                                                                               "url":  "",
+                                                                               "lineNumber":  0,
+                                                                               "columnNumber":  1176
+                                                                           },
+                                                                           {
+                                                                               "functionName":  "",
+                                                                               "scriptId":  "314",
+                                                                               "url":  "",
+                                                                               "lineNumber":  0,
+                                                                               "columnNumber":  1395
+                                                                           }
+                                                                       ]
+                                                    }
+                                 }
+                   }
+    }
+]

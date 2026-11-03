@@ -9,6 +9,7 @@ type Plane = {
   kind: "pair" | "media" | "background";
   owned: boolean;
   failed: boolean;
+  visible: boolean; width: number; height: number; rect: DOMRect | null; fit: number;
 };
 
 /** One WebGL context/RAF for the Home. DOM media keep ownership of playback. */
@@ -23,12 +24,21 @@ export function createLiquidHome(root: HTMLElement) {
   const planes: Plane[] = [];
   const scenes = [...root.querySelectorAll<HTMLElement>(".cinema-scene")];
   const textures: WebGLTexture[] = [], shaders: WebGLShader[] = [];
+  const stillTextures = new Map<Source, { texture: WebGLTexture; width: number; height: number }>();
   let program: WebGLProgram | null = null, buffer: WebGLBuffer | null = null;
   let failed = !gl, frame = 0, last = 0, lastMove = 0, scrollAt = 0, scrollY = window.scrollY;
   let staticPainted = false;
   const tilt = { x: 0, y: 0, targetX: 0, targetY: 0 };
   const uniforms: Record<string, WebGLUniformLocation | null> = {};
   let alive = true;
+  const textScope = root.querySelector<HTMLElement>(".cinema-intro");
+  const localStyles = new Map<HTMLElement, Map<string, string>>();
+  function setLocal(element: HTMLElement | null, name: string, value: string) {
+    if (!element) return;
+    let cache = localStyles.get(element); if (!cache) { cache = new Map(); localStyles.set(element, cache); }
+    if (cache.get(name) === value) return;
+    cache.set(name, value); element.style.setProperty(name, value);
+  }
   const atlas = new Image();
   const atlasTiles: { canvas: HTMLCanvasElement; x: number; y: number }[] = [];
   const pair = root.querySelector<HTMLElement>(".liquid-videos");
@@ -47,13 +57,13 @@ export function createLiquidHome(root: HTMLElement) {
       canvas.setAttribute("aria-hidden", "true");
       host.append(canvas);
     }
-    planes.push({ host, canvas, context, sources, kind, owned: !existing, failed: false });
+    planes.push({ host, canvas, context, sources, kind, owned: !existing, failed: false, visible: false, width: 1, height: 1, rect: null, fit: sources[0] instanceof HTMLImageElement && getComputedStyle(sources[0]).objectFit === "contain" ? 1 : 0 });
   }
   if (pair) add(pair, [...pair.querySelectorAll("video")], "pair", pair.querySelector("canvas")!);
   root.querySelectorAll<HTMLElement>(".cinema-scene .ambient-video").forEach(host => add(host, [...host.querySelectorAll("video")], "media"));
-  root.querySelectorAll<HTMLImageElement>(".home-category-media > img").forEach(image => add(image.parentElement!, [image], "media"));
-  root.querySelectorAll<HTMLImageElement>(".product-image > img").forEach(image => add(image.parentElement!, [image], "media"));
+  root.querySelectorAll<HTMLImageElement>(".product-image > img").forEach(image => { if (!image.closest(".home-category-grid")) add(image.parentElement!, [image], "media"); });
   root.querySelectorAll<HTMLElement>(".product-image[style]").forEach(host => {
+    if (host.closest(".home-category-grid")) return;
     if (!host.style.backgroundImage.includes("productos-rosita-atlas")) return;
     const [x, y] = host.style.backgroundPosition.split(" ").map(value => parseFloat(value));
     const tile = document.createElement("canvas"); tile.width = 0; tile.height = 0;
@@ -75,6 +85,25 @@ export function createLiquidHome(root: HTMLElement) {
     if (!section.closest(".liquid-videos")) add(section, [], "background");
   });
 
+  const planeByHost = new Map(planes.map(plane => [plane.host, plane]));
+  const visibilityObserver = new IntersectionObserver(entries => {
+    for (const entry of entries) { const plane = planeByHost.get(entry.target as HTMLElement); if (plane) plane.visible = entry.isIntersecting; }
+  }, { rootMargin: "24px" });
+  const resizeObserver = new ResizeObserver(entries => {
+    for (const entry of entries) {
+      const plane = planeByHost.get(entry.target as HTMLElement);
+      if (plane) { plane.width = plane.host.clientWidth; plane.height = plane.host.clientHeight; }
+    }
+    let width = 1, height = 1;
+    for (const plane of planes) {
+      const ratio = Math.min(devicePixelRatio, light ? .85 : 1.25, 2048 / Math.max(plane.width,plane.height));
+      width = Math.max(width,Math.round(plane.width*ratio)); height = Math.max(height,Math.round(plane.height*ratio));
+    }
+    if (renderer.width !== width) renderer.width = width;
+    if (renderer.height !== height) renderer.height = height;
+  });
+  for (const plane of planes) { visibilityObserver.observe(plane.host); resizeObserver.observe(plane.host); }
+  let seam = .5;
   function restore() {
     root.dataset.liquidEngine = "fallback";
     if (pair) pair.dataset.liquid = "fallback";
@@ -124,7 +153,8 @@ export function createLiquidHome(root: HTMLElement) {
   }
   function renderPlane(plane: Plane, now: number, boost: number) {
     if (!gl || !program || plane.failed) return;
-    const rect = plane.host.getBoundingClientRect();
+    const rect = plane.rect;
+    if (!plane.visible || !rect) return;
     if (rect.bottom < -24 || rect.top > innerHeight + 24 || rect.right < 0 || rect.left > innerWidth || rect.width < 1 || rect.height < 1) return;
     const scene = plane.host.closest<HTMLElement>(".cinema-scene");
     if (scene?.parentElement?.classList.contains("is-pinned")) {
@@ -148,37 +178,59 @@ export function createLiquidHome(root: HTMLElement) {
       if (plane.kind === "pair") plane.host.dataset.liquid = "fallback";
       return;
     }
-    const logicalWidth = plane.host.clientWidth, logicalHeight = plane.host.clientHeight;
+    const logicalWidth = plane.width, logicalHeight = plane.height;
     const ratio = Math.min(devicePixelRatio, light ? .85 : 1.25, 2048 / Math.max(logicalWidth, logicalHeight));
     const width = Math.max(1, Math.round(logicalWidth * ratio)), height = Math.max(1, Math.round(logicalHeight * ratio));
-    if (renderer.width !== width || renderer.height !== height) { renderer.width = width; renderer.height = height; }
     gl.viewport(0, 0, width, height); gl.useProgram(program);
     for (let i = 0; i < sources.length; i++) {
       const source = sources[i];
-      gl.activeTexture(gl.TEXTURE0 + i); gl.bindTexture(gl.TEXTURE_2D, textures[i]);
-      gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
-      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, source);
+      gl.activeTexture(gl.TEXTURE0 + i);
+      if (source instanceof HTMLVideoElement) {
+        gl.bindTexture(gl.TEXTURE_2D, textures[i]);
+        gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
+        gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, source);
+      } else {
+        // Static products/posters keep their GPU texture; only video frames need repeated uploads.
+        const [sourceWidth, sourceHeight] = dimensions(source);
+        let cached = stillTextures.get(source);
+        if (!cached) {
+          const texture = gl.createTexture();
+          if (!texture) throw new Error("Liquid texture unavailable");
+          textures.push(texture);
+          cached = { texture, width: 0, height: 0 };
+          stillTextures.set(source, cached);
+          gl.bindTexture(gl.TEXTURE_2D, texture);
+          gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+          gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+          gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+          gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+        } else gl.bindTexture(gl.TEXTURE_2D, cached.texture);
+        if (cached.width !== sourceWidth || cached.height !== sourceHeight) {
+          gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
+          gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, source);
+          cached.width = sourceWidth; cached.height = sourceHeight;
+        }
+      }
     }
     const first = sources[0] ? dimensions(sources[0]) : [1,1];
     const second = sources[1] ? dimensions(sources[1]) : first;
     gl.uniform2f(uniforms.size, logicalWidth, logicalHeight);
     gl.uniform2f(uniforms.firstSize, first[0], first[1]); gl.uniform2f(uniforms.secondSize, second[0], second[1]);
     gl.uniform2f(uniforms.tilt, tilt.x, tilt.y);
-    const intro = plane.kind === "pair" ? plane.host.querySelector<HTMLElement>(".cinema-intro") : null;
-    gl.uniform1f(uniforms.seam, intro ? (intro.offsetTop + 14) / logicalHeight : .5);
+    gl.uniform1f(uniforms.seam, seam);
     gl.uniform1f(uniforms.time, now / 1000);
     gl.uniform1f(uniforms.pair, plane.kind === "pair" ? 1 : 0);
     gl.uniform1f(uniforms.background, plane.kind === "background" ? 1 : 0);
     gl.uniform1f(uniforms.lightweight, light ? 1 : 0);
     gl.uniform1f(uniforms.transition, Math.max(boost, Math.sin(Number(scene?.dataset.liquidProgress ?? 1) * Math.PI)));
-    gl.uniform1f(uniforms.fit, sources[0] instanceof HTMLImageElement && getComputedStyle(sources[0]).objectFit === "contain" ? 1 : 0);
+    gl.uniform1f(uniforms.fit, plane.fit);
     gl.drawArrays(gl.TRIANGLES, 0, 6);
     if (plane.canvas.width !== width || plane.canvas.height !== height) { plane.canvas.width = width; plane.canvas.height = height; }
     plane.context.clearRect(0, 0, width, height);
-    plane.context.drawImage(renderer, 0, 0);
-    plane.canvas.style.visibility = "visible";
-    plane.host.dataset.liquidSurface = "ready";
-    if (plane.kind === "pair") plane.host.dataset.liquid = "webgl";
+    plane.context.drawImage(renderer, 0, renderer.height - height, width, height, 0, 0, width, height);
+    if (plane.canvas.style.visibility !== "visible") plane.canvas.style.visibility = "visible";
+    if (plane.host.dataset.liquidSurface !== "ready") plane.host.dataset.liquidSurface = "ready";
+    if (plane.kind === "pair" && plane.host.dataset.liquid !== "webgl") plane.host.dataset.liquid = "webgl";
   }
 
   function move(event: PointerEvent) {
@@ -202,6 +254,12 @@ export function createLiquidHome(root: HTMLElement) {
     if (now - lastMove > 650) leave();
     const ease = 1 - Math.exp(-elapsed / 220);
     tilt.x += (tilt.targetX - tilt.x) * ease; tilt.y += (tilt.targetY - tilt.y) * ease;
+    if (Math.abs(tilt.x - tilt.targetX) < .001) tilt.x = tilt.targetX;
+    if (Math.abs(tilt.y - tilt.targetY) < .001) tilt.y = tilt.targetY;
+    // Read visible geometry together, before any style/canvas writes.
+    for (const plane of planes) plane.rect = plane.visible ? plane.host.getBoundingClientRect() : null;
+    const introOffset = pair && textScope && planes.find(plane => plane.kind === "pair")?.visible ? textScope.offsetTop : null;
+    if (introOffset !== null && pair) seam = (introOffset + 14) / (planes.find(plane => plane.kind === "pair")?.height || 1);
     reveal(now);
     if (!reduced.matches) {
       for (const scene of scenes) {
@@ -212,20 +270,33 @@ export function createLiquidHome(root: HTMLElement) {
     if (reduced.matches && staticPainted) return;
     const time = reduced.matches ? 0 : now / 1000;
     const boost = reduced.matches ? 0 : Math.exp(-(now - scrollAt) / 450) * .55;
-    root.style.setProperty("--liquid-tilt-x", `${tilt.x * .32}deg`);
-    root.style.setProperty("--liquid-tilt-y", `${-tilt.y * .24}deg`);
-    root.style.setProperty("--liquid-text-axis-x", String(-tilt.y));
-    root.style.setProperty("--liquid-text-axis-y", String(tilt.x));
-    root.style.setProperty("--liquid-text-angle", `${Math.hypot(tilt.x, tilt.y) * .18}deg`);
-    root.style.setProperty("--liquid-text-x", `${tilt.x * 2}px`);
-    root.style.setProperty("--liquid-text-y", `${tilt.y * 1.5}px`);
-    const edge = Array.from({ length: 33 }, (_, i) => {
-      const x = i / 32;
-      return `${x * 100}% ${14 + (Math.sin(x * 11 + time * .65) * .55 + Math.sin(x * 23 - time * .43) * .3 + Math.sin(x * 6 - time * .8) * .15) * 10}px`;
-    });
-    root.style.setProperty("--liquid-edge", `polygon(${edge.join(",")},100% 100%,0 100%)`);
+    const textVisible = planes.some(plane => plane.kind === "pair" && plane.visible);
+    if (textVisible || reduced.matches) {
+      setLocal(textScope,"--liquid-text-axis-x",(-tilt.y).toFixed(3));
+      setLocal(textScope,"--liquid-text-axis-y",tilt.x.toFixed(3));
+      setLocal(textScope,"--liquid-text-angle",`${(Math.hypot(tilt.x,tilt.y)*.18).toFixed(3)}deg`);
+      setLocal(textScope,"--liquid-text-x",`${(tilt.x*2).toFixed(2)}px`);
+      setLocal(textScope,"--liquid-text-y",`${(tilt.y*1.5).toFixed(2)}px`);
+    }
+    const edgeTargets = planes.filter(plane => plane.visible && (plane.kind === "background" || (plane.kind === "pair" && (failed || reduced.matches))));
+    if (edgeTargets.length) {
+      const edge = Array.from({length:33},(_,i) => {
+        const x=i/32; return `${(x*100).toFixed(2)}% ${(14+(Math.sin(x*11+time*.65)*.55+Math.sin(x*23-time*.43)*.3+Math.sin(x*6-time*.8)*.15)*10).toFixed(2)}px`;
+      });
+      const lowerEdge = Array.from({length:33},(_,i) => {
+        const x=1-i/32;
+        const depth=14+(Math.sin(x*11+time*.65+1.2)*.55+Math.sin(x*23-time*.43)*.3+Math.sin(x*6-time*.8)*.15)*10;
+        return `${(x*100).toFixed(2)}% calc(100% - ${depth.toFixed(2)}px)`;
+      });
+      for (const plane of edgeTargets) {
+        setLocal(plane.host,"--liquid-edge",`polygon(${edge.join(",")},100% 100%,0 100%)`);
+        if (plane.host.matches(".home-featured-section,.home-delivery,.home-last-word")) {
+          setLocal(plane.host,"--liquid-outline",`polygon(${edge.join(",")},${lowerEdge.join(",")})`);
+        }
+      }
+    }
     if (failed || reduced.matches) { restore(); staticPainted = reduced.matches; return; }
-    root.dataset.liquidEngine = "webgl";
+    if (root.dataset.liquidEngine !== "webgl") root.dataset.liquidEngine = "webgl";
     for (const plane of planes) {
       try { renderPlane(plane, now, boost); }
       catch {
@@ -281,7 +352,7 @@ export function createLiquidHome(root: HTMLElement) {
   frame = requestAnimationFrame(tick);
   return () => {
     alive = false; atlas.onload = null;
-    cancelAnimationFrame(frame); selection.disconnect(); restore();
+    cancelAnimationFrame(frame); selection.disconnect(); visibilityObserver.disconnect(); resizeObserver.disconnect(); restore();
     document.removeEventListener("visibilitychange", visibility);
     renderer.removeEventListener("webglcontextlost", contextLost);
     root.removeEventListener("pointermove", move); root.removeEventListener("pointerleave", leave);
@@ -293,9 +364,11 @@ export function createLiquidHome(root: HTMLElement) {
     for (const plane of planes) if (plane.owned) plane.canvas.remove();
     root.querySelectorAll(".liquid-section").forEach(section => section.classList.remove("liquid-section"));
     textures.forEach(texture => gl?.deleteTexture(texture)); shaders.forEach(shader => gl?.deleteShader(shader));
+    stillTextures.clear();
     gl?.deleteBuffer(buffer); gl?.deleteProgram(program); gl?.getExtension("WEBGL_lose_context")?.loseContext();
     root.style.removeProperty("--liquid-tilt-x"); root.style.removeProperty("--liquid-tilt-y"); root.style.removeProperty("--liquid-edge");
     for (const name of ["axis-x", "axis-y", "angle", "x", "y"]) root.style.removeProperty(`--liquid-text-${name}`);
+    for (const [element, values] of localStyles) for (const name of values.keys()) element.style.removeProperty(name);
     pairPosters.clear();
     delete root.dataset.liquidEngine;
   };

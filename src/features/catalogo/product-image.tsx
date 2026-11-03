@@ -14,7 +14,7 @@ export function ProductImage({
     if (uploaded.src)
       return (
         <div className={"product-image product-illustration " + className}>
-          <img src={uploaded.src} alt={product.name} loading="lazy" />
+          <img src={uploaded.src} alt={product.name} loading="lazy" decoding="async" width={320} height={320} />
         </div>
       );
     return (
@@ -34,13 +34,16 @@ export function ProductImage({
     return (
       <div className={"product-image product-illustration " + className}>
         <img
-          src={product.imageSrc}
+          src={product.imageSrc.startsWith("/images/productos/modelos/") ? product.imageSrc + "?v=transparent-studio-1" : product.imageSrc}
           alt={
             (product.imageIsIllustration
               ? "Ilustración de demostración: "
               : "") + product.name
           }
           loading="lazy"
+          decoding="async"
+          width={320}
+          height={320}
         />
         {product.imageIsIllustration && (
           <span>Ilustración · sin fotografía</span>

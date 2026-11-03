@@ -1,0 +1,5 @@
+
+> minimarket-rosita@1.0.0 test:halloween
+> node scripts/verify-halloween.mjs
+
+PASS shared 79-product catalog, four Halloween products, additive v9 migration, repeat initialization, ID/code/barcode collision, existing custom edits/history, admin price edit, cash sale and exactly-once stock movement

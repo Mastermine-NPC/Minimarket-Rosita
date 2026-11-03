@@ -15,6 +15,7 @@ import { Button } from "@/components/ui/button";
 import { useCart } from "@/hooks/use-cart";
 import { useHeadingFocus } from "@/hooks/use-heading-focus";
 import { formatPEN } from "@/lib/currency";
+import "@/styles/product-detail-marketplace.css";
 export function ProductPage() {
   const { id } = useParams();
   return <ProductDetail key={id} id={id || ""} />;
@@ -53,12 +54,27 @@ function ProductDetail({ id: routeId }: { id: string }) {
       )
       .slice(0, 4);
   return (
-    <div className={"container product-page" + (modelConfig ? " product-page--immersive" : "")}>
+    <div className={"container product-page marketplace-product-page" + (modelConfig ? " product-page--immersive" : "")}>
+      <nav className="product-detail-trail" aria-label="Ruta del producto">
       <Link className="back-link" to={back}>
         <ArrowLeft size={17} aria-hidden="true" />
         Volver al catálogo
       </Link>
+      <span aria-hidden="true">/</span>
+      <Link to={categoryPath(category)}>{category.name}</Link>
+      <span aria-hidden="true">/</span>
+      <span>{product.name}</span>
+      </nav>
       <section className="product-detail">
+        {modelConfig ? <ProductPresentation config={modelConfig} brand={product.brand} presentation={product.presentation} fallback={<ProductImageZoom product={product} />} /> : (
+        <div className={"detail-photo tone-" + category.tone}>
+          <ProductImageZoom
+            key={product.imageSrc || String(product.imageIndex)}
+            product={product}
+          />
+        </div>
+        )}
+        <div className="detail-purchase-panel">
         <div className="detail-info detail-heading">
           <Link className="eyebrow" to={categoryPath(category)}>
             {category.name}
@@ -67,11 +83,6 @@ function ProductDetail({ id: routeId }: { id: string }) {
             <p role="status" className="field-error">
               Producto retirado del catálogo. Los pedidos anteriores se
               conservan.
-            </p>
-          )}
-          {product.imageNote && (
-            <p className="hint" role="note">
-              {product.imageNote}
             </p>
           )}
           <span className="detail-code">{product.code || product.id}</span>
@@ -83,14 +94,6 @@ function ProductDetail({ id: routeId }: { id: string }) {
           </p>
         </div>
 
-        {modelConfig ? <ProductPresentation config={modelConfig} brand={product.brand} presentation={product.presentation} fallback={<ProductImageZoom product={product} />} /> : (
-        <div className={"detail-photo tone-" + category.tone}>
-          <ProductImageZoom
-            key={product.imageSrc || String(product.imageIndex)}
-            product={product}
-          />
-        </div>
-        )}
         <div className="detail-info detail-commerce">
           <ProductPrice
             price={product.price}
@@ -101,7 +104,6 @@ function ProductDetail({ id: routeId }: { id: string }) {
               ? "● " + product.stock + " unidades disponibles"
               : "— Producto agotado"}
           </p>
-          <p className="detail-description">{product.description}</p>
           <div className="detail-quantity">
             <span>Cantidad que deseas agregar</span>
             <QuantitySelector
@@ -148,9 +150,10 @@ function ProductDetail({ id: routeId }: { id: string }) {
             un pedido de demostración.
           </p>
         </div>
+        </div>
       </section>
       <section className="detail-information">
-        <h2>Los detalles importan.</h2>
+        <h2>Características del producto</h2>
         <dl>
           {[
             ["Presentación", product.presentation],
@@ -164,6 +167,11 @@ function ProductDetail({ id: routeId }: { id: string }) {
             </div>
           ))}
         </dl>
+      </section>
+      <section className="detail-description-section">
+        <h2>Descripción</h2>
+        <p className="detail-description">{product.description}</p>
+        {product.imageNote && <p className="hint" role="note">{product.imageNote}</p>}
       </section>
       <section className="related-section">
         <div className="section-heading">

@@ -1,0 +1,265 @@
+﻿[
+    {
+        "result":  {
+                       "count":  2,
+                       "names":  [
+                                     "Gaseosa Coca-Cola",
+                                     "Coca-Cola en lata"
+                                 ],
+                       "ascending":  true
+                   },
+        "name":  "search-brand-sort"
+    },
+    {
+        "result":  true,
+        "name":  "empty-search"
+    },
+    {
+        "result":  {
+                       "columns":  3,
+                       "offsets":  [
+                                       6,
+                                       12,
+                                       18
+                                   ],
+                       "valid":  true
+                   },
+        "name":  "promotions-after-two-rows"
+    },
+    {
+        "result":  {
+                       "quantity":  2,
+                       "stock":  23,
+                       "added":  "2 en tu carrito\nVer carrito"
+                   },
+        "name":  "add-product-and-persist"
+    },
+    {
+        "result":  {
+                       "text":  "Inicio\n/\nCarrito\nCASI EN TUS MANOS\nTu carrito.\n\nRevisa cantidades e importes de tu selección.\n\nVaciar carrito\nGaseosa Coca-Cola\n\nBotella · 600 ml\n\nS/ 3.50 c/u · Stock: 23\n\n2\nS/ 7.00\nSubtotal · 2 unidades\nS/ 7.00\n\nAgregar al carrito no reserva ni descuenta stock.\n\nContinuar con mi pedido\n\nIdentifícate antes de confirmar una entrega. Pago y envío de demostración, sin operaciones reales.",
+                       "cart":  {
+                                    "ROS-001":  2
+                                }
+                   },
+        "name":  "cart-reload"
+    },
+    {
+        "result":  {
+                       "url":  "/cuenta",
+                       "user":  "rosita-cliente-demo"
+                   },
+        "name":  "customer-login-ui"
+    },
+    {
+        "result":  "Hola, Cliente Rosita.",
+        "name":  "account"
+    },
+    {
+        "result":  "Este espacio es para administración.",
+        "name":  "customer-cannot-admin"
+    },
+    {
+        "result":  {
+                       "text":  "Saltar al contenido\nVolver al carrito\nTU COMPRA, PASO A PASO\nYa casi lo tienes.\n\nPedido de demostración\nSin cobros ni reparto real\n\n1\nEntrega\n2\nPago simulado\n3\nRevisión\nPASO 1 DE 3\nEntrega o recojo\n\nDatos ficticios y tarifas de demostración. No se envía un pedido al negocio.\n\n¿Cómo lo recibirías?\nDelivery simulado\nRecojo en tienda · envío S/ 0.00\nOrigen fijo · Minimarket Rosita\n\nUPIS Mercado Mayorista, Zona B, Manzana D, Lote 6, Arequipa\n\n-16.33112128439101, -71.58692292883559 · Punto confirmado por el usuario.\nNombre de quien recibe\nCEL:\n+51\nTipo de teléfono\nCelular\nFijo\nOtro\n\nIncluye el código de área para teléfonos fijos. Puedes pegar un número con prefijo internacional.\n\nElegir UTP Tacna y Arica\n\nDestino sugerido: Av. Tacna y Arica 160, Arequipa. Llegada vial sobre la avenida; el acceso peatonal exacto no está verificado. Puedes elegir otro destino.\n\nBuscar dirección o lugar\nBuscar\nBúsqueda: Photon · © OpenStreetMap\n+\n−\n Leaflet | OpenFreeMap · OpenMapTiles · © OpenStreetMap\nLatitud del destino\nLongitud del destino\nSeleccionar coordenadas\n\nÁrea ficticia: latitudes −16.52 a −16.25 y longitudes −71.72 a −71.43. No representa cobertura comercial real. Clic en el mapa o arrastra el pin; confirma después. Solo se envían coordenadas al proveedor de rutas.\n\nDirección escrita\nReferencia (opcional)\nConfirmar punto y calcular ruta\n\nContinuar al pago simulado\nEN TU CARRITO\n1 unidad\nSubtotal\nS/ 3.50\nEnvío de prueba\nElige una zona\nSubtotal actual\nS/ 3.50\n\nLas tarifas son ficticias y se muestran antes de confirmar. El stock se descuenta una sola vez al crear el pedido.\n\nEditar productos\nRosita.\nCatálogo\nHalloween\nAyuda\nContacto\nPersonal\nEfectivo\nTarjeta\nYape\nPlin\nMinimarket Rosita · Prototipo académico\nPrecios y stock de prueba. Sin cobros ni entregas reales.",
+                       "fields":  [
+                                      {
+                                          "id":  "",
+                                          "name":  "",
+                                          "type":  "search",
+                                          "value":  ""
+                                      },
+                                      {
+                                          "id":  "delivery-mode",
+                                          "name":  "mode",
+                                          "type":  "select-one",
+                                          "value":  "delivery"
+                                      },
+                                      {
+                                          "id":  "delivery-recipient",
+                                          "name":  "recipient",
+                                          "type":  "text",
+                                          "value":  ""
+                                      },
+                                      {
+                                          "id":  "delivery-phone",
+                                          "name":  "",
+                                          "type":  "tel",
+                                          "value":  ""
+                                      },
+                                      {
+                                          "id":  "delivery-phone-type",
+                                          "name":  "",
+                                          "type":  "select-one",
+                                          "value":  "other"
+                                      },
+                                      {
+                                          "id":  "destination-query",
+                                          "name":  "",
+                                          "type":  "text",
+                                          "value":  ""
+                                      },
+                                      {
+                                          "id":  "destination-lat",
+                                          "name":  "",
+                                          "type":  "text",
+                                          "value":  "-16.408537"
+                                      },
+                                      {
+                                          "id":  "destination-lng",
+                                          "name":  "",
+                                          "type":  "text",
+                                          "value":  "-71.540952"
+                                      },
+                                      {
+                                          "id":  "delivery-address",
+                                          "name":  "address",
+                                          "type":  "text",
+                                          "value":  ""
+                                      },
+                                      {
+                                          "id":  "delivery-reference",
+                                          "name":  "reference",
+                                          "type":  "text",
+                                          "value":  ""
+                                      }
+                                  ],
+                       "buttons":  [
+                                       "Buscar",
+                                       "1Carrito",
+                                       "Menú",
+                                       "+51",
+                                       "Elegir UTP Tacna y Arica",
+                                       "Buscar",
+                                       "Seleccionar coordenadas",
+                                       "Confirmar punto y calcular ruta",
+                                       "Continuar al pago simulado"
+                                   ]
+                   },
+        "name":  "checkout-initial"
+    },
+    {
+        "result":  {
+                       "step":  "2Pago simulado",
+                       "errors":  [
+
+                                  ],
+                       "fields":  [
+                                      {
+                                          "id":  "",
+                                          "type":  "search",
+                                          "value":  ""
+                                      },
+                                      {
+                                          "id":  "",
+                                          "type":  "radio",
+                                          "value":  "card-demo"
+                                      },
+                                      {
+                                          "id":  "",
+                                          "type":  "radio",
+                                          "value":  "cash"
+                                      },
+                                      {
+                                          "id":  "",
+                                          "type":  "radio",
+                                          "value":  "yape-demo"
+                                      },
+                                      {
+                                          "id":  "",
+                                          "type":  "radio",
+                                          "value":  "plin-demo"
+                                      },
+                                      {
+                                          "id":  "cash-amount",
+                                          "type":  "text",
+                                          "value":  ""
+                                      }
+                                  ]
+                   },
+        "name":  "checkout-delivery-validation"
+    },
+    {
+        "result":  {
+                       "path":  "/pedido/ROS-f1254984-e703-4ab7-9215-1984dee00b5b/confirmacion",
+                       "orders":  2,
+                       "stock":  22,
+                       "movements":  2,
+                       "cart":  {
+
+                                }
+                   },
+        "name":  "checkout-confirmed-exactly-once"
+    },
+    {
+        "result":  {
+                       "url":  "/admin",
+                       "user":  "rosita-admin-demo"
+                   },
+        "name":  "admin-login-ui"
+    },
+    {
+        "result":  {
+                       "text":  true,
+                       "count":  1,
+                       "buttons":  [
+                                       "Nuevo producto",
+                                       "Limpiar filtros",
+                                       "Editar",
+                                       "Desactivar",
+                                       "Eliminar",
+                                       "Anterior",
+                                       "Siguiente"
+                                   ]
+                   },
+        "name":  "halloween-admin"
+    },
+    {
+        "result":  {
+                       "text":  "Saltar al contenido\nMINIMARKET ROSITA · PERSONAL\nCaja de demostración\n\nAgente de caja demo · Abre un turno para vender\n\nVer tienda\nSalir\n\nOperaciones ficticias, sin cobros reales. Los datos se guardan en este navegador.\n\nNueva venta\nTurno y cierre\nHistorial\n\nNecesitas abrir un turno con fondo inicial.\n\nIr a apertura de turno\nSeleccionar productos\nEscanear o ingresar código\n\nCompatible con lectores que escriben como teclado y terminan con Enter. Solo escucha este campo.\n\nCódigo ficticio para simular lectura\nElige un producto\nGaseosa Coca-Cola · 0000000000017\nPapas Lay’s clásicas · 0000000000024\nDoritos sabor a queso · 0000000000031\nSet de destornilladores · 0000000000048\nJuego de llaves y dados Husky · 0000000000055\nTaladro inalámbrico · 0000000000062\nAdaptador de enchufe · 0000000000079\nPilas Duracell AA · 0000000000086\nMonopoly clásico · 0000000000109\nAjedrez magnético 4 en 1 · 0000000000116\nJenga familiar · 0000000000123\nJuego de escuadras · 0000000000130\nSobres manila Grafi · 0000000000147\nPerforador Artesco · 0000000000154\nJabón Protex avena · 0000000000161\nShampoo Sedal · 0000000000178\nTratamiento Nutribela 10 · 0000000000185\nGalletas Oreo · 0000000000192\nCinta métrica de 3 metros · 0000000000208\nCable USB-C · 0000000000215\nPelota infantil · 0000000000222\nCuaderno cuadriculado · 0000000000239\nPasta dental Colgate · 0000000000635\nCaja de colores · 0000000000529\nFolder Manila · 0000000000536\nPost its · 0000000000543\nPortaminas · 0000000000550\nBorradores · 0000000000505\nTajador · 0000000000512\nMartillo · 0000000000338\nSerrucho · 0000000000345\nExtensión · 0000000000352\nPela cables · 0000000000369\nTornillos · 0000000000376\nCinta aislante · 0000000000383\nJuego de cartas UNO · 0000000000444\nPelota de fútbol · 0000000000451\nPelota de vóley · 0000000000468\nOsito de peluche · 0000000000475\nArma de juguete con balas de hidrogel · 0000000000482\nMuñeca Barbie Dreamhouse · 0000000000499\nAuriculares · 0000000000390\nProyector · 0000000000406\nUSB 16 GB · 0000000000413\nAuriculares de cable · 0000000000420\nCable HDMI · 0000000000437\nMouse inalámbrico · 0000000000628\nPowerade Bebida Rehidratante 500 ml · 0000000000246\nGaseosa Pepsi 1.5 L · 0000000000253\nGaseosa Fanta Naranja 5",
+                       "buttons":  [
+                                       "Salir",
+                                       "Nueva venta",
+                                       "Turno y cierre",
+                                       "Historial",
+                                       "Ir a apertura de turno",
+                                       "Simular lectura",
+                                       "Agregar Gaseosa Coca-Cola",
+                                       "Agregar Papas Lay’s clásicas",
+                                       "Agregar Doritos sabor a queso",
+                                       "Agregar Set de destornilladores",
+                                       "Agregar Juego de llaves y dados Husky",
+                                       "Agregar Taladro inalámbrico",
+                                       "Agregar Adaptador de enchufe",
+                                       "Agregar Pilas Duracell AA",
+                                       "Agregar Monopoly clásico",
+                                       "Agregar Ajedrez magnético 4 en 1",
+                                       "Agregar Jenga familiar",
+                                       "Agregar Juego de escuadras",
+                                       "Agregar Sobres manila Grafi",
+                                       "Agregar Perforador Artesco"
+                                   ]
+                   },
+        "name":  "cash-screen"
+    },
+    {
+        "result":  {
+                       "sales":  0,
+                       "stock":  18,
+                       "movements":  1
+                   },
+        "name":  "cash-halloween-sale"
+    },
+    {
+        "result":  {
+                       "open":  "true",
+                       "width":  360,
+                       "viewport":  375,
+                       "focus":  "\u003cbutton class=\"navigation-discover\" aria-label=\"Cerrar navegación de tienda\" aria-expanded=\"true\" aria-controls=\"store-navigation-panel\"\u003e\u003cspan class=\""
+                   },
+        "name":  "mobile-menu"
+    },
+    {
+        "result":  "false",
+        "name":  "escape-menu"
+    }
+]

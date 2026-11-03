@@ -1,7 +1,9 @@
+import { halloweenProducts } from "./halloween-catalog";
 import { modelCatalogProducts } from "./model-catalog";
 import { catalogAdditions } from "./catalog-additions";
 import { products } from "./catalog";
 export const productImages = [
+  ...halloweenProducts.map(product => ({ key: "halloween-" + product.image, label: product.name + " · ilustración", src: `/images/illustrations/halloween/${product.image}.svg`, index: undefined as number | undefined, illustration: true })),
   ...modelCatalogProducts.map(product => ({ key: "model-" + product.modelKey, label: product.name + " · render 3D", src: product.imageSrc, index: undefined as number | undefined, illustration: false })),
   {
     key: "none",

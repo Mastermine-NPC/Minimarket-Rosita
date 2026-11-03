@@ -1,0 +1,17 @@
+
+> minimarket-rosita@1.0.0 test:operations
+> node scripts/verify-operations.mjs && node scripts/verify-operations-edges.mjs
+
+1:17:34 PM [vite] (client) Re-optimizing dependencies because vite config has changed
+Esquema 9, 79 códigos únicos y credencial ficticia de caja válidos.
+Caja efectivo: insuficiente rechazado, vuelto correcto, una venta y un descuento aun repitiendo la acción.
+Pedido digital de recojo: envío cero, stock compartido, cuatro estados y ninguna segunda venta/salida al recoger.
+Permisos, agente desactivado, cantidades inválidas y tarjeta obsoleta rechazados; tarjeta válida, turno y diferencia sin sumar tarjeta al efectivo.
+Reportes y CSV: caja/pedido/canales, tres salidas y cuatro unidades sin doble conteo; filtro de recojo.
+Migración v8→v9 conserva precios/stock/carrito/cuentas; no duplica agente. Roundtrip ventas, turnos, pedidos; corrupción/futuro/bloqueo manejados.
+Ruta vial real Rosita→UTP, interpolación y fallback exclusivo; delivery con tarifa 6.50, snapshot inmutable, progreso persistido.
+Agentes: creación/reset PBKDF2, correo único, sin edición de admin/cliente; cajero no administra ni crea agentes; cuenta inactiva no inicia sesión.
+Fixture histórica real v7→9: pedidos y movimientos idénticos, nombres/imágenes, productos propios, precios/stock y assets locales preservados.
+Revalidación de precio, desactivación, agotado, fracciones/exceso y turno abierto; snapshots de venta no cambian con catálogo.
+Otro destino vial real, rechazo de cobertura/punto no confirmado/ruta incompatible y cancelación explícita de petición.
+Restablecimiento exclusivo de Rosita conserva claves ajenas.

@@ -1,0 +1,8 @@
+/* Existing taxonomy feeds header/footer automatically; allow one extra category. */
+.store-shell .category-inline { flex-wrap: wrap; column-gap: 16px; row-gap: 4px; }
+.store-shell .store-footer .footer-note { background: #f9f8f0; color: var(--brand); border: 1px solid #dce3d4; border-radius: 16px; padding: 28px; }
+.store-shell .store-footer .footer-note :is(h2,p,a,svg) { color: var(--brand); }
+.store-shell .store-footer .footer-note a { border-color: #a5bdab; }
+.store-shell .store-footer .footer-note a:hover { color: var(--action-hover); text-decoration: underline; }
+.store-shell .store-footer .footer-note a:focus-visible { outline: 2px solid var(--brand); outline-offset: 5px; }
+@media(max-width:600px) { .store-shell .store-footer .footer-note { padding: 22px; } }

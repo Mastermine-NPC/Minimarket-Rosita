@@ -8,6 +8,7 @@ import { ProductPrice } from "./product-price";
 import { QuantitySelector } from "./quantity-selector";
 import { useCart } from "@/hooks/use-cart";
 import type { Product } from "@/types/catalog";
+import "@/styles/product-marketplace.css";
 export function ProductCard({
   product,
   returnTo,
@@ -24,7 +25,7 @@ export function ProductCard({
       "/producto/" + (product.publicId || product.id) + "?volver=" + encodeURIComponent(back),
     full = quantity >= product.stock;
   return (
-    <article className="product-card" data-product-id={product.id}>
+    <article className="product-card marketplace-product-card" data-product-id={product.id}>
       <Link
         to={target}
         className="product-photo-link"
@@ -38,16 +39,17 @@ export function ProductCard({
         )}
       </Link>
       <div className="product-card-body">
-        <span className="product-brand">{product.brand}</span>
-        <p className="product-catalog-code">
-          {product.code || product.id} · {categoryById(product.category)?.name}
-        </p>
         <h3>
           <Link to={target}>{product.name}</Link>
         </h3>
-        {product.demoCommercialData && <p className="demo-product-notice">Precio y stock de prueba</p>}
+        <span className="product-brand">{product.brand} · {categoryById(product.category)?.name}</span>
         <p className="product-presentation">{product.presentation}</p>
-        <ProductPrice price={product.price} previous={product.previousPrice} />
+        <div className="marketplace-price-row">
+          <ProductPrice price={product.price} previous={product.previousPrice} />
+          {product.previousPrice && product.previousPrice > product.price && <span className="marketplace-discount">
+            {Math.round((1 - product.price / product.previousPrice) * 100)}% menos
+          </span>}
+        </div>
         <p className={"stock-label " + (!product.stock ? "stock-empty" : "")}>
           <span aria-hidden="true">{product.stock ? "●" : "—"}</span>{" "}
           {product.stock
@@ -56,6 +58,7 @@ export function ProductCard({
               : "Disponible"
             : "Agotado"}
         </p>
+        {product.demoCommercialData && <p className="demo-product-notice">Precio y stock de demostración</p>}
         <Button
           className="product-add"
           disabled={product.active === false || !product.stock || full}

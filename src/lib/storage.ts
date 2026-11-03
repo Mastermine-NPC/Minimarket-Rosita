@@ -1,3 +1,4 @@
+import { integrateHalloweenCatalog } from "./halloween-catalog-update";
 import { integrateModelCatalog } from "./model-catalog-update";
 import { initializeOperations } from "./operations-init";
 import { v8Schema } from "./legacy-v8-schema";
@@ -140,7 +141,7 @@ export function readRositaState(storage?: Storage): StoredState {
       data = { ...data, users: withDemoClient(data.users) };
     if (value.version < 8) data = integrateCatalog(data);
     if (value.version < 9) data = initializeOperations(data);
-    const enriched = integrateModelCatalog(data);
+    const enriched = integrateHalloweenCatalog(integrateModelCatalog(data));
     if (enriched !== data) { data = enriched; migrated = true; }
     data = stateSchema.parse(data);
     const cart = Object.fromEntries(
@@ -166,7 +167,7 @@ export function readRositaState(storage?: Storage): StoredState {
       data,
       status: migrated ? "migrated" : repaired ? "repaired" : "loaded",
       notice: migrated && value.version === 9
-        ? "Añadimos productos 3D de demostración; conservamos precios, existencias y pedidos anteriores."
+        ? "Actualizamos el catálogo de demostración; conservamos precios, existencias y pedidos anteriores."
         : migrated
         ? "Datos migrados: conservamos catálogo, precios, stock e historial; añadimos entrega, recojo y caja de demostración."
         : repaired

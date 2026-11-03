@@ -592,3 +592,11 @@
 .catalog-page .catalog-toolbar{flex-wrap:wrap}
 .catalog-page .catalog-controls{flex-wrap:wrap;min-width:0}
 .catalog-page .filter-section select{min-width:0;max-width:100%}
+.system-page .system-navigation-tabs {
+  max-width: 100%;
+  height: auto;
+  min-height: 44px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.system-page .system-navigation-tabs > button { min-height: 38px; }

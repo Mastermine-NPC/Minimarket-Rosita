@@ -1,0 +1,49 @@
+.store-shell.product-background-shell,
+.store-shell.product-background-shell .public-page-body { background: #fff; }
+.store-shell.product-background-shell .catalog-page {
+  background: #fff;
+  border-radius: 8px;
+  margin-block: 20px 36px;
+  padding: clamp(16px, 2vw, 28px);
+}
+.store-shell.product-background-shell .catalog-page .breadcrumbs { margin-block: 0 16px; }
+.store-shell.product-background-shell .catalog-page .catalog-heading {
+  background: transparent;
+  padding: 0 0 20px;
+  margin: 0 0 20px;
+  gap: 16px;
+}
+.store-shell.product-background-shell .catalog-heading h1 {
+  font-size: clamp(30px, 3.4vw, 52px);
+  line-height: 1.1;
+  margin-block: 8px 10px;
+}
+.store-shell.product-background-shell .catalog-heading p { margin-block: 0; }
+.store-shell.product-background-shell .catalog-layout { gap: 24px; margin-top: 0; align-items: start; }
+.store-shell.product-background-shell .catalog-results { min-width: 0; }
+.store-shell.product-background-shell .catalog-results::before { content: none; }
+.store-shell.product-background-shell .catalog-page .catalog-toolbar {
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+.store-shell.product-background-shell .catalog-page .catalog-filters {
+  padding: 18px;
+  background: #fff;
+}
+.store-shell.product-background-shell .catalog-products { row-gap: 16px; }
+@media (max-width: 600px) {
+  .store-shell.product-background-shell .catalog-page { margin-block: 12px 24px; padding: 16px; }
+  .store-shell.product-background-shell .catalog-page .catalog-heading { padding-bottom: 16px; margin-bottom: 16px; }
+  .store-shell.product-background-shell .catalog-layout { gap: 16px; }
+}
+.product-background-shell :is(.detail-info, .detail-information, .cart-page-header) {
+  background: #fff;
+  padding: clamp(16px, 2vw, 28px);
+}
+.home-store-shell.product-background-shell .home-experience,
+.home-store-shell.product-background-shell .home-featured-section { background: #fff; }

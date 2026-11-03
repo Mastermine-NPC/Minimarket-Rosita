@@ -1,0 +1,21 @@
+.catalog-products > .catalog-promotion {
+  grid-column: 1 / -1;
+  display: block;
+  align-self: start;
+  min-width: 0;
+  margin-block: 8px;
+  overflow: hidden;
+  border-radius: 0;
+}
+.catalog-promotion img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.catalog-promotion:focus-visible {
+  outline: 3px solid var(--brand);
+  outline-offset: 4px;
+}
+@media (max-width: 600px) {
+  .catalog-products > .catalog-promotion { margin-block: 4px; }
+}

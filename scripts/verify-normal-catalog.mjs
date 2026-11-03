@@ -1,7 +1,7 @@
 import { createServer } from 'vite';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-const server=await createServer({server:{middlewareMode:true},appType:'custom'});
+const server=await createServer({server:{middlewareMode:true,hmr:false,ws:false},appType:'custom'});
 try{
  const load=p=>server.ssrLoadModule('/src/'+p);
  const {initialState,emptyCheckout}=await load('data/demo.ts');
@@ -29,7 +29,7 @@ try{
  const before=structuredClone(legacy);const migrated=integrateModelCatalog(legacy);
  assert(stateSchema.safeParse(migrated).success);
  assert.deepEqual(legacy,before);
- assert.equal(migrated.products.length,75);
+ assert.equal(migrated.products.length,initialState.products.length);
  for(const key of ['inventory','cart','orders','movements','checkout','sales','shifts','cashDrafts','tracking'])assert.deepEqual(migrated[key],before[key],key+' must retain canonical references');
  assert.equal(migrated.products.find(p=>p.id==='ROS-3D-COLA').code,'ROS-064');
  assert(migrated.products.every(p=>!p.code?.startsWith('ROS-3D')));
@@ -44,6 +44,6 @@ try{
  for(const name of ['Coca-Cola',"Lay's",'Nivea','Sunsilk'])assert(filterProducts(currentProducts(migrated),new URLSearchParams({q:name})).some(p=>p.modelKey||p.id==='ROS-002'));
  assert.equal(filterProducts(currentProducts(migrated),new URLSearchParams({q:'ROS-3D'})).length,0);
  const conflict=structuredClone(before);conflict.products.push({...conflict.products[0],id:'USER-ARTICLE',code:'ROS-064',barcode:'USER-ARTICLE'});conflict.inventory['USER-ARTICLE']={stock:2,priceCents:123};const result=integrateModelCatalog(conflict);assert.equal(result.products.find(p=>p.id==='USER-ARTICLE').code,'ROS-064');assert.notEqual(result.products.find(p=>p.modelKey==='coca-cola-can').code,'ROS-064');assert(stateSchema.safeParse(result).success);
- const report={passed:['One shared 75-product catalog without query parameters','Four ordinary featured references within the first 12 cards','Normal name search; legacy code search unnecessary and no longer matches public codes','Legacy IDs kept as canonical foreign keys; inventory, cart, checkout, orders and cash drafts unchanged','Normal public numeric codes and idempotent persisted migration','Occupied commercial codes preserve the prior record'],first12:catalog.slice(0,12).map(p=>({id:p.id,code:p.code,name:p.name}))};
+ const report={passed:['One shared 79-product catalog without query parameters','Four ordinary featured references within the first 12 cards','Normal name search; legacy code search unnecessary and no longer matches public codes','Legacy IDs kept as canonical foreign keys; inventory, cart, checkout, orders and cash drafts unchanged','Normal public numeric codes and idempotent persisted migration','Occupied commercial codes preserve the prior record'],first12:catalog.slice(0,12).map(p=>({id:p.id,code:p.code,name:p.name}))};
  await fs.writeFile('docs/normal-catalog-verification/data-results.json',JSON.stringify(report,null,2));console.log(report);
 }finally{await server.close()}

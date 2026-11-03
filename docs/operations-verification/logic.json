@@ -1,7 +1,7 @@
 {
   "date": "2026-10-30",
   "passed": [
-    "Esquema 9, 75 códigos únicos y credencial ficticia de caja válidos.",
+    "Esquema 9, 79 códigos únicos y credencial ficticia de caja válidos.",
     "Caja efectivo: insuficiente rechazado, vuelto correcto, una venta y un descuento aun repitiendo la acción.",
     "Pedido digital de recojo: envío cero, stock compartido, cuatro estados y ninguna segunda venta/salida al recoger.",
     "Permisos, agente desactivado, cantidades inválidas y tarjeta obsoleta rechazados; tarjeta válida, turno y diferencia sin sumar tarjeta al efectivo.",

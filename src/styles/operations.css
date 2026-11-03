@@ -82,6 +82,14 @@
   padding: 24px;
   min-width: 0;
 }
+.store-location-form > * { min-width: 0; }
+.store-location-form > button {
+  max-width: 100%;
+  height: auto;
+  min-height: 44px;
+  white-space: normal;
+}
+.store-location-form > p { overflow-wrap: anywhere; }
 .cash-products {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

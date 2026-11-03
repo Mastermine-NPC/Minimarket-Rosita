@@ -1,0 +1,151 @@
+﻿{
+    "lcp":  836,
+    "cls":  0.97494063720461,
+    "staticUploads":  0,
+    "videoUploads":  0,
+    "shifts":  [
+                   {
+                       "value":  0.9511111111111111,
+                       "time":  460.5,
+                       "sources":  [
+                                       {
+                                           "tag":  "MAIN",
+                                           "class":  "",
+                                           "previous":  {
+                                                            "x":  0,
+                                                            "y":  44,
+                                                            "width":  1425,
+                                                            "height":  450,
+                                                            "top":  44,
+                                                            "right":  1425,
+                                                            "bottom":  494,
+                                                            "left":  0
+                                                        },
+                                           "current":  {
+                                                           "x":  0,
+                                                           "y":  68,
+                                                           "width":  1425,
+                                                           "height":  832,
+                                                           "top":  68,
+                                                           "right":  1425,
+                                                           "bottom":  900,
+                                                           "left":  0
+                                                       }
+                                       },
+                                       {
+                                           "tag":  "DIV",
+                                           "class":  "public-route-content",
+                                           "previous":  {
+                                                            "x":  0,
+                                                            "y":  44.00347900390625,
+                                                            "width":  1425,
+                                                            "height":  450,
+                                                            "top":  44.00347900390625,
+                                                            "right":  1425,
+                                                            "bottom":  494.00347900390625,
+                                                            "left":  0
+                                                        },
+                                           "current":  {
+                                                           "x":  0,
+                                                           "y":  99.70660400390625,
+                                                           "width":  1425,
+                                                           "height":  800.2933959960938,
+                                                           "top":  99.70660400390625,
+                                                           "right":  1425,
+                                                           "bottom":  900,
+                                                           "left":  0
+                                                       }
+                                       },
+                                       {
+                                           "tag":  "FOOTER",
+                                           "class":  "store-footer compact-store-footer",
+                                           "previous":  {
+                                                            "x":  0,
+                                                            "y":  494,
+                                                            "width":  1425,
+                                                            "height":  103,
+                                                            "top":  494,
+                                                            "right":  1425,
+                                                            "bottom":  597,
+                                                            "left":  0
+                                                        },
+                                           "current":  {
+                                                           "x":  0,
+                                                           "y":  0,
+                                                           "width":  0,
+                                                           "height":  0,
+                                                           "top":  0,
+                                                           "right":  0,
+                                                           "bottom":  0,
+                                                           "left":  0
+                                                       }
+                                       }
+                                   ]
+                   },
+                   {
+                       "value":  0.022272288909408022,
+                       "time":  464,
+                       "sources":  [
+                                       {
+                                           "previous":  {
+                                                            "x":  270.859375,
+                                                            "y":  321.00347900390625,
+                                                            "width":  375,
+                                                            "height":  375,
+                                                            "top":  321.00347900390625,
+                                                            "right":  645.859375,
+                                                            "bottom":  696.0034790039062,
+                                                            "left":  270.859375
+                                                        },
+                                           "current":  {
+                                                           "x":  138.359375,
+                                                           "y":  268.50347900390625,
+                                                           "width":  640,
+                                                           "height":  480,
+                                                           "top":  268.50347900390625,
+                                                           "right":  778.359375,
+                                                           "bottom":  748.5034790039062,
+                                                           "left":  138.359375
+                                                       }
+                                       }
+                                   ]
+                   },
+                   {
+                       "value":  0.0015572371840908313,
+                       "time":  478.30000000447035,
+                       "sources":  [
+                                       {
+                                           "tag":  "P",
+                                           "class":  "product-model-credit",
+                                           "previous":  {
+                                                            "x":  0,
+                                                            "y":  0,
+                                                            "width":  0,
+                                                            "height":  0,
+                                                            "top":  0,
+                                                            "right":  0,
+                                                            "bottom":  0,
+                                                            "left":  0
+                                                        },
+                                           "current":  {
+                                                           "x":  112.5,
+                                                           "y":  856.1190795898438,
+                                                           "width":  691.71875,
+                                                           "height":  42.390625,
+                                                           "top":  856.1190795898438,
+                                                           "right":  804.21875,
+                                                           "bottom":  898.5097045898438,
+                                                           "left":  112.5
+                                                       }
+                                       }
+                                   ]
+                   }
+               ],
+    "path":  "/producto/ROS-064",
+    "model":  "ready",
+    "videos":  [
+
+               ],
+    "resourceBytes":  8129141,
+    "load":  109.80000000447035
+}

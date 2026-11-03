@@ -70,7 +70,7 @@ export function SystemPage() {
         <Badge variant="secondary">Aplicación 1.0.0 · Frontend local</Badge>
       </div>
       <Tabs defaultValue="fundamentos">
-        <TabsList>
+        <TabsList className="system-navigation-tabs">
           <TabsTrigger value="fundamentos">Fundamentos</TabsTrigger>
           <TabsTrigger value="componentes">Componentes</TabsTrigger>
           <TabsTrigger value="reglas">Reglas de uso</TabsTrigger>

@@ -1,6 +1,6 @@
 {
   "passed": [
-    "One shared 75-product catalog without query parameters",
+    "One shared 79-product catalog without query parameters",
     "Four ordinary featured references within the first 12 cards",
     "Normal name search; legacy code search unnecessary and no longer matches public codes",
     "Legacy IDs kept as canonical foreign keys; inventory, cart, checkout, orders and cash drafts unchanged",

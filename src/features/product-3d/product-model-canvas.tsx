@@ -1,9 +1,9 @@
 import { useCallback, useEffect, useId, useLayoutEffect, useMemo, useRef, useState, type RefObject } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { Environment, Lightformer, OrbitControls } from "@react-three/drei";
+import { ContactShadows, Environment, Lightformer, OrbitControls } from "@react-three/drei";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import type { OrbitControls as OrbitControlsType } from "three-stdlib";
-import { Group, Vector2, type Object3D, type PerspectiveCamera } from "three";
+import { ACESFilmicToneMapping, Group, Vector2, type Object3D, type PerspectiveCamera } from "three";
 import gsap from "gsap";
 import { RotateCcw, ZoomIn, ZoomOut, ArrowLeft, ArrowRight, ArrowUp, ArrowDown } from "lucide-react";
 import { ShaderBackdrop } from "./shader-backdrop";
@@ -11,15 +11,27 @@ import { disposeModel, limitModelTextures, prepareModel } from "./model-resource
 import type { ProductModelConfig } from "./types";
 
 type Props = { config: ProductModelConfig; active: boolean; reduced: boolean; onFailure: () => void };
+function StudioShadow({ config, reduced }: Pick<Props, "config" | "reduced">) {
+  const [settled, setSettled] = useState(reduced);
+  const { invalidate } = useThree();
+  useEffect(() => {
+    // Bake once after the entrance, rather than render a shadow map on every frame.
+    const timer = window.setTimeout(() => { setSettled(true); invalidate(); }, reduced ? 0 : config.animation.duration * 1000 + 100);
+    return () => window.clearTimeout(timer);
+  }, [config, reduced, invalidate]);
+  return settled ? <ContactShadows position={[0, -config.model.height / 2 - 0.04, 0]} opacity={0.4} scale={10} blur={2.8} far={5} resolution={256} frames={1} color="#000000" /> : null;
+}
 function Model({ config, reduced, pointer, scroll, onReady, onFailure, introRef }: Props & { pointer: Vector2; scroll: { current: number }; onReady: () => void; introRef: RefObject<gsap.core.Timeline | null> }) {
   const [model, setModel] = useState<{ scene: Object3D; scale: number } | null>(null);
   const entry = useRef<Group>(null);
   const parallax = useRef<Group>(null);
-  const { camera, invalidate } = useThree();
+  const { camera, gl, invalidate } = useThree();
   useEffect(() => {
     if (!config.modelUrl) return;
     let alive = true;
+    let loading = true;
     let owned: Object3D | undefined;
+    const release = () => { if (owned) { disposeModel(owned); owned = undefined; } };
     const abort = new AbortController();
     void (async () => {
       const response = await fetch(config.modelUrl!, { signal: abort.signal });
@@ -27,20 +39,19 @@ function Model({ config, reduced, pointer, scroll, onReady, onFailure, introRef 
       const buffer = await response.arrayBuffer();
       const url = new URL(config.modelUrl!, location.href);
       const gltf = await new GLTFLoader().parseAsync(buffer, new URL(".", url).href);
-      if (!alive) { disposeModel(gltf.scene); return; }
       owned = gltf.scene;
+      if (!alive) return;
       await limitModelTextures(gltf.scene, innerWidth < 900 ? 1024 : 2048);
-      if (!alive) { disposeModel(gltf.scene); return; }
-      owned = gltf.scene;
-      const scale = prepareModel(gltf.scene, config.model);
+      if (!alive) return;
+      const scale = prepareModel(gltf.scene, config.model, Math.min(4, gl.capabilities.getMaxAnisotropy()));
       setModel({ scene: gltf.scene, scale });
       onReady(); invalidate();
     })().catch(error => { if (alive && error?.name !== "AbortError") {
       console.warn("No se pudo preparar el modelo 3D", error);
       onFailure();
-    } });
-    return () => { alive = false; abort.abort(); if (owned) disposeModel(owned); };
-  }, [config, invalidate, onReady, onFailure]);
+    } }).finally(() => { loading = false; if (!alive) release(); });
+    return () => { alive = false; abort.abort(); if (!loading) release(); };
+  }, [config, gl, invalidate, onReady, onFailure]);
   useLayoutEffect(() => {
     if (!model || reduced || !entry.current) return;
     const perspective = camera as PerspectiveCamera;
@@ -73,11 +84,17 @@ function RenderBudget({ active, reduced, onFailure }: Pick<Props, "active" | "re
     if (!active || reduced) { invalidate(); return; }
     let frame = 0, previous = 0;
     const tick = (time: number) => {
-      if (time - previous >= 1000 / 30) { previous = time; if (!document.hidden) invalidate(); }
+      if (document.hidden) { frame = 0; return; }
+      if (time - previous >= 1000 / 30) { previous = time; invalidate(); }
       frame = requestAnimationFrame(tick);
     };
-    frame = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(frame);
+    const visibility = () => {
+      if (document.hidden) { cancelAnimationFrame(frame); frame = 0; }
+      else if (!frame) { previous = 0; frame = requestAnimationFrame(tick); }
+    };
+    visibility();
+    document.addEventListener("visibilitychange", visibility);
+    return () => { cancelAnimationFrame(frame); document.removeEventListener("visibilitychange", visibility); };
   }, [active, reduced, invalidate]);
   return null;
 }
@@ -129,20 +146,21 @@ export default function ProductModelCanvas({ config, active, reduced, onFailure 
         if (event.key === "ArrowUp") rotate(0, -0.15); if (event.key === "ArrowDown") rotate(0, 0.15);
         if (event.key === "+") zoom(true); if (event.key === "-") zoom(false); if (event.key === "Home") reset();
       }}>
-      <Canvas frameloop="demand" dpr={[1, 1.5]} shadows camera={{ position: config.camera.position, fov: config.camera.fov, near: 0.05, far: 60 }}
-        gl={{ antialias: true, alpha: false, powerPreference: "low-power" }} onCreated={({ gl }) => { gl.toneMappingExposure = config.lighting.exposure; }} fallback={<p>WebGL no disponible. Consulta la fotografía del producto.</p>}>
+      <Canvas frameloop="demand" dpr={[1, 1.5]} camera={{ position: config.camera.position, fov: config.camera.fov, near: 0.05, far: 60 }}
+        gl={{ antialias: true, alpha: false, powerPreference: "low-power", toneMapping: ACESFilmicToneMapping }} onCreated={({ gl }) => { gl.toneMappingExposure = config.lighting.exposure; }} fallback={<p>WebGL no disponible. Consulta la fotografía del producto.</p>}>
         <RenderBudget active={active} reduced={reduced} onFailure={onFailure} />
         <ShaderBackdrop config={config.background} reduced={reduced} pointer={pointer} />
-        <ambientLight intensity={config.lighting.ambient} />
-        <directionalLight castShadow position={[4, 6, 5]} intensity={config.lighting.key} shadow-mapSize={[1024, 1024]} shadow-camera-left={-5} shadow-camera-right={5} shadow-camera-top={5} shadow-camera-bottom={-5} shadow-bias={-0.0005} />
-        <spotLight position={[-4, 4, -2]} intensity={config.lighting.rim * 8} angle={0.5} penumbra={1} color="#ffffff" />
+        <ambientLight intensity={config.lighting.ambient * 0.45} />
+        <directionalLight position={[3, 6, 5]} intensity={config.lighting.key * 0.25} />
+        <spotLight position={[-4, 3, -3]} intensity={config.lighting.rim * 2} angle={0.65} penumbra={1} color="#ffffff" />
         <Environment resolution={128} frames={1}>
-          {!!config.lighting.fill && <Lightformer intensity={config.lighting.fill} position={[0, 1, 4]} scale={[6, 6, 1]} />}
-          <Lightformer intensity={4} position={[3, 3, 3]} scale={[2, 5, 1]} />
-          <Lightformer intensity={3} position={[-3, 1, 2]} scale={[1, 4, 1]} />
-          <Lightformer intensity={2} position={[0, 4, -3]} scale={[4, 1, 1]} />
+          {/* Broad studio panels: readable labels and long, soft reflections on packaging. */}
+          <Lightformer intensity={config.lighting.fill ?? 1.5} position={[0, 1, 5]} scale={[5, 4, 1]} />
+          <Lightformer intensity={3} position={[4, 2, 3]} scale={[2, 5, 1]} />
+          <Lightformer intensity={2} position={[-4, 1, 2]} scale={[1.5, 4, 1]} />
+          <Lightformer intensity={2.5} position={[0, 5, 0]} scale={[4, 3, 1]} />
         </Environment>
-        <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -config.model.height / 2 - 0.04, 0]} receiveShadow><planeGeometry args={[30, 30]} /><shadowMaterial transparent opacity={0.18} /></mesh>
+        {ready && <StudioShadow config={config} reduced={reduced} />}
         <Model config={config} active={active} reduced={reduced} onFailure={onFailure} onReady={reportReady} introRef={introRef} pointer={pointer} scroll={scroll} />
         <OrbitControls ref={controls} makeDefault enablePan={false} enableDamping={!reduced} dampingFactor={config.interaction.damping} rotateSpeed={config.interaction.rotateSpeed} zoomSpeed={config.interaction.zoomSpeed} minDistance={config.camera.minDistance} maxDistance={config.camera.maxDistance} minPolarAngle={config.camera.minPolarAngle} maxPolarAngle={config.camera.maxPolarAngle} onStart={() => { introRef.current?.kill(); setDragging(true); }} onEnd={() => setDragging(false)} />
       </Canvas>

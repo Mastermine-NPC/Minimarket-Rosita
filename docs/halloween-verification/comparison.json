@@ -1,0 +1,18 @@
+{
+  "before": {
+    "p95FrameMsMedian": 133.39999999999964,
+    "styleMsPerSecondMedian": 136.81510931945098,
+    "scriptMsPerSecondMedian": 807.049861528482,
+    "rootWritesMedian": 344,
+    "resizesMedian": 172,
+    "categoryCanvas": 18
+  },
+  "after": {
+    "p95FrameMsMedian": 13.400000000000546,
+    "styleMsPerSecondMedian": 86.20520732887407,
+    "scriptMsPerSecondMedian": 13.241979659883663,
+    "rootWritesMedian": 0,
+    "resizesMedian": 0,
+    "categoryCanvas": 0
+  }
+}
