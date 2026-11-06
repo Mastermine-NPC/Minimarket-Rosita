@@ -47,7 +47,7 @@
   padding: 8px 12px;
   background: var(--card);
   color: var(--foreground);
-  font-size: 12px;
+  font-size: var(--ds-type-small);
   line-height: 1.5;
   border-radius: 8px;
 }
@@ -93,7 +93,7 @@
 .delivery-reference summary {
   cursor: pointer;
   min-height: 44px;
-  font-weight: 700;
+  font-weight: var(--ds-weight-bold);
   line-height: 1.5;
 }
 .delivery-reference > p {
@@ -110,7 +110,7 @@
 }
 .card-simulation legend {
   padding-inline: 8px;
-  font-weight: 700;
+  font-weight: var(--ds-weight-bold);
 }
 .card-simulation p {
   line-height: 1.65;
@@ -136,7 +136,7 @@
   padding-block: clamp(24px, 3vw, 48px);
 }
 .admin-page-heading {
-  gap: 24px;
+  gap: var(--ds-component-gap);
   margin-bottom: 32px;
   align-items: flex-start;
 }
@@ -184,7 +184,7 @@
   padding-top: 32px;
 }
 .admin-page .analytics-grid {
-  gap: 24px;
+  gap: var(--ds-component-gap);
 }
 .admin-page .analytics-grid section {
   padding: 24px;
@@ -209,7 +209,7 @@
   color: var(--muted-foreground);
 }
 .inventory-state {
-  font-weight: 700;
+  font-weight: var(--ds-weight-bold);
   border: 1px solid currentColor;
   white-space: normal;
 }
@@ -235,7 +235,7 @@
   background: var(--secondary);
 }
 .about-intro figcaption {
-  font-size: 12px;
+  font-size: var(--ds-type-small);
   line-height: 1.6;
 }
 .info-story {
@@ -284,7 +284,7 @@
   line-height: 1.8;
 }
 .contact-grid .customer-form {
-  gap: 24px;
+  gap: var(--ds-component-gap);
 }
 .contact-grid textarea {
   min-height: 170px;
@@ -301,14 +301,14 @@
   padding-left: 0;
 }
 .footer-main h2 {
-  font-size: 14px;
+  font-size: var(--ds-type-secondary);
   margin: 0 0 20px;
 }
 .footer-main nav {
   gap: 10px;
 }
 .footer-main nav a {
-  font-size: 14px;
+  font-size: var(--ds-type-secondary);
   line-height: 1.5;
   min-height: 32px;
   display: flex;
@@ -329,7 +329,7 @@
 .footer-note {
   grid-column: 1/-1;
   display: flex;
-  gap: 24px;
+  gap: var(--ds-component-gap);
   align-items: center;
   border-top: 1px solid var(--inverse-muted);
   padding-top: 28px;
@@ -346,7 +346,7 @@
   display: none;
 }
 .footer-bottom {
-  gap: 24px;
+  gap: var(--ds-component-gap);
   padding-block: 24px 32px;
 }
 .footer-bottom nav {
@@ -354,7 +354,7 @@
   gap: 12px 24px;
 }
 .footer-bottom a {
-  font-size: 12px;
+  font-size: var(--ds-type-small);
   min-height: 32px;
   display: inline-flex;
   align-items: center;
@@ -406,7 +406,7 @@
     padding-inline: 18px;
   }
   .contact-grid {
-    gap: 24px;
+    gap: var(--ds-component-gap);
   }
   .card-simulation {
     padding: 18px;
@@ -417,7 +417,7 @@
   .ambient-video .video-control {
     bottom: 10px;
     left: 10px;
-    font-size: 12px;
+    font-size: var(--ds-type-small);
   }
   .home-photo-note {
     max-width: 90%;

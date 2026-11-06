@@ -1,0 +1,95 @@
+{
+  "technicalTestsOnly": true,
+  "measurements": [
+    {
+      "route": "/login",
+      "width": 1440,
+      "height": 1000,
+      "top": 0,
+      "viewport": 1000
+    },
+    {
+      "route": "/registro",
+      "width": 1440,
+      "height": 1018.453125,
+      "top": 0,
+      "viewport": 1000
+    },
+    {
+      "route": "/login",
+      "width": 1024,
+      "height": 768,
+      "top": 0,
+      "viewport": 768
+    },
+    {
+      "route": "/registro",
+      "width": 1024,
+      "height": 868.75,
+      "top": 0,
+      "viewport": 768
+    },
+    {
+      "route": "/login",
+      "width": 768,
+      "height": 1024,
+      "top": 0,
+      "viewport": 1024
+    },
+    {
+      "route": "/registro",
+      "width": 768,
+      "height": 1024,
+      "top": 0,
+      "viewport": 1024
+    },
+    {
+      "route": "/login",
+      "width": 390,
+      "height": 927.234375,
+      "top": 0,
+      "viewport": 844
+    },
+    {
+      "route": "/registro",
+      "width": 390,
+      "height": 1016.84375,
+      "top": 0,
+      "viewport": 844
+    },
+    {
+      "route": "/login",
+      "width": 320,
+      "height": 989.921875,
+      "top": 0,
+      "viewport": 740
+    },
+    {
+      "route": "/registro",
+      "width": 320,
+      "height": 1116.5,
+      "top": 0,
+      "viewport": 740
+    }
+  ],
+  "removedSections": true,
+  "firstVideo": "coca-cola-video-cinematografic.mp4",
+  "authentication": [
+    "validation",
+    "password-toggle",
+    "mismatch",
+    "duplicate-email",
+    "register",
+    "login",
+    "session-reload",
+    "logout",
+    "returnTo",
+    "customer-demo",
+    "admin-demo",
+    "cashier-demo",
+    "cart-inventory-orders-preserved"
+  ],
+  "videoContinuity": true,
+  "reducedMotion": true,
+  "errors": []
+}

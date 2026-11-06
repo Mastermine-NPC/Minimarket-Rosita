@@ -27,7 +27,7 @@
 .main-links .admin-panel-link {
   display: inline-flex !important;
   color: var(--brand);
-  font-weight: 700;
+  font-weight: var(--ds-weight-bold);
 }
 .category-inline {
   min-width: 0;
@@ -46,7 +46,7 @@
   flex-wrap: wrap;
 }
 .catalog-category-select label {
-  font-weight: 700;
+  font-weight: var(--ds-weight-bold);
   font-size: 13px;
 }
 .catalog-category-select select {
@@ -175,7 +175,7 @@
   cursor: pointer;
   min-height: 54px;
   padding: 18px 20px;
-  font-weight: 700;
+  font-weight: var(--ds-weight-bold);
   line-height: 1.5;
 }
 .help-topic summary::marker {
@@ -216,7 +216,7 @@
   margin: 0 0 12px;
 }
 .demo-access > p {
-  font-size: 12px;
+  font-size: var(--ds-type-small);
   line-height: 1.6;
 }
 .demo-access > div {
@@ -227,7 +227,7 @@
   border-top: 1px solid var(--border);
 }
 .demo-access span {
-  font-size: 12px;
+  font-size: var(--ds-type-small);
   overflow-wrap: anywhere;
 }
 .demo-access button {
@@ -246,7 +246,7 @@
 .image-picker input[type="file"] {
   width: 100%;
   min-width: 0;
-  font-size: 12px;
+  font-size: var(--ds-type-small);
   white-space: normal;
 }
 .image-picker select {
@@ -273,7 +273,7 @@
   gap: 8px;
   background: var(--secondary);
   color: var(--brand);
-  font-size: 12px;
+  font-size: var(--ds-type-small);
   min-height: 120px;
 }
 .home-category-media > .media-placeholder {
@@ -330,7 +330,7 @@
   padding: 20px;
   background: var(--secondary);
   border-radius: 16px;
-  font-size: 14px;
+  font-size: var(--ds-type-secondary);
 }
 .analytics-summary strong {
   color: var(--brand);
@@ -338,7 +338,7 @@
 .analytics-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
+  gap: var(--ds-component-gap);
   margin-top: 24px;
 }
 .analytics-grid > section {
@@ -357,7 +357,7 @@
 .report-print table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 12px;
+  font-size: var(--ds-type-small);
 }
 .analytics-grid th,
 .analytics-grid td,
@@ -385,7 +385,7 @@
   padding: 10px 0;
   margin: 8px 0;
   border-bottom: 6px solid var(--secondary);
-  font-size: 12px;
+  font-size: var(--ds-type-small);
 }
 .metric-bar i {
   position: absolute;
@@ -408,7 +408,7 @@
   border: 1px solid var(--input);
   border-radius: 10px;
   background: var(--card);
-  font-size: 14px;
+  font-size: var(--ds-type-secondary);
 }
 .report-actions {
   margin-bottom: 24px;
@@ -429,7 +429,7 @@
   line-height: 1.6;
 }
 .report-total {
-  font-weight: 700;
+  font-weight: var(--ds-weight-bold);
   padding: 14px;
   background: var(--secondary);
   border-radius: 12px;

@@ -1,0 +1,2166 @@
+{
+  "routes": [
+    "caja",
+    "admin",
+    "clientes",
+    "agentes",
+    "ubicacion",
+    "categorias",
+    "reportes",
+    "productos",
+    "inventario",
+    "pedidos",
+    "pedidos/:id",
+    "*",
+    "nosotros",
+    "ayuda",
+    "contacto",
+    "personal",
+    "login",
+    "registro",
+    "cuenta",
+    "checkout",
+    "mis-pedidos",
+    "pedido/:id",
+    "pedido/:id/confirmacion",
+    "pedido/:id/seguimiento",
+    "catalogo",
+    "categoria/:slug",
+    "producto/:id",
+    "carrito",
+    "sistema-diseno",
+    "comprobacion",
+    "estado",
+    "*",
+    "/",
+    "/laboratorio-ui"
+  ],
+  "components": [
+    "src/components/ui/card.tsx",
+    "src/components/ui/select.tsx",
+    "src/components/ui/checkbox.tsx",
+    "src/components/ui/sonner.tsx",
+    "src/components/ui/skeleton.tsx",
+    "src/components/ui/badge.tsx",
+    "src/components/ui/alert.tsx",
+    "src/components/ui/label.tsx",
+    "src/components/ui/tabs.tsx",
+    "src/components/ui/sheet.tsx",
+    "src/components/ui/table.tsx",
+    "src/components/ui/button.tsx",
+    "src/components/ui/dialog.tsx",
+    "src/components/ui/input.tsx"
+  ],
+  "pages": [
+    "src/pages/home-page.tsx",
+    "src/pages/order-page.tsx",
+    "src/pages/help-page.tsx",
+    "src/pages/not-found-page.tsx",
+    "src/pages/system-page.tsx",
+    "src/pages/product-page.tsx",
+    "src/pages/about-page.tsx",
+    "src/pages/orders-page.tsx",
+    "src/pages/contact-page.tsx",
+    "src/pages/checkout-page.tsx",
+    "src/pages/cash-page.tsx",
+    "src/pages/check-page.tsx",
+    "src/pages/state-page.tsx",
+    "src/pages/account-page.tsx",
+    "src/pages/auth-page.tsx",
+    "src/pages/catalog-page.tsx",
+    "src/pages/cart-page.tsx",
+    "src/pages/admin/products-page.tsx",
+    "src/pages/admin/customers-page.tsx",
+    "src/pages/admin/inventory-page.tsx",
+    "src/pages/admin/store-location-page.tsx",
+    "src/pages/admin/reports-page.tsx",
+    "src/pages/admin/order-detail-page.tsx",
+    "src/pages/admin/orders-page.tsx",
+    "src/pages/admin/agents-page.tsx",
+    "src/pages/admin/dashboard-page.tsx",
+    "src/pages/admin/taxonomy-page.tsx"
+  ],
+  "styles": [
+    {
+      "file": "src/styles/fonts.css",
+      "definitions": [],
+      "references": {},
+      "literalColors": {},
+      "fontDeclarations": [
+        "font-family: \"DM Sans\"",
+        "font-weight: 400 700",
+        "font-family: \"Manrope\"",
+        "font-weight: 600 800"
+      ]
+    },
+    {
+      "file": "src/styles/catalog-controls.css",
+      "definitions": [],
+      "references": {
+        "--muted-foreground": 1,
+        "--foreground": 1,
+        "--brand": 8
+      },
+      "literalColors": {
+        "#d6e1d9": 1,
+        "#ffffffdf": 1,
+        "#fff": 6,
+        "#102d2506": 1,
+        "#c3d1c8": 1,
+        "#dde7e0": 1,
+        "#ffffffd9": 1,
+        "#e8f1e9": 2,
+        "#7ea38d": 3,
+        "#fff8": 1,
+        "#dce6df": 1,
+        "#526159": 2,
+        "#d9e3dc": 1,
+        "#b5cbbd": 1,
+        "#edf4ef": 1,
+        "#145a46": 2,
+        "#102d2508": 1,
+        "#9eb6a7": 2,
+        "#f3f7f4": 1,
+        "#e1eee5": 1
+      },
+      "fontDeclarations": [
+        "font-weight: 600",
+        "font-size: 13px",
+        "font-size: 14px",
+        "font-size: 17px",
+        "font-size: 12px",
+        "font-size: 13px",
+        "font-size: 13px",
+        "font-size: 12px"
+      ]
+    },
+    {
+      "file": "src/styles/catalog-product-stage.css",
+      "definitions": [],
+      "references": {},
+      "literalColors": {
+        "#edf0e7": 1,
+        "#183e30": 2,
+        "#fff": 1,
+        "#fafbf6": 1
+      },
+      "fontDeclarations": [
+        "font-size: 12px",
+        "font-size: 11px"
+      ]
+    },
+    {
+      "file": "src/styles/order-tracking.css",
+      "definitions": [],
+      "references": {
+        "--muted-foreground": 8,
+        "--border": 4,
+        "--primary": 5,
+        "--secondary": 1
+      },
+      "literalColors": {
+        "#fafaf4": 1,
+        "#183e30": 5,
+        "#f4b8c8": 2,
+        "#145a46": 1,
+        "#9e3030": 1,
+        "#fff2ef": 1,
+        "#0b1422": 1,
+        "#273b50": 1,
+        "#35485d": 3,
+        "#0003": 2,
+        "#142436": 3,
+        "#d8e4ee": 2,
+        "#233b50": 1,
+        "#82eee6": 1,
+        "#101d2b": 1,
+        "#75899c": 1,
+        "#0b1422eb": 1,
+        "#c5d0dc": 1,
+        "#91e4df": 1,
+        "#dce8f2": 1,
+        "#40556b": 3,
+        "#61e3dc": 1,
+        "#0b2132": 1,
+        "#ddfffc": 1,
+        "#0007": 2,
+        "#e7c3d4": 1,
+        "#182b3d": 1,
+        "#fff0f7": 1,
+        "#f1fffd": 1,
+        "#0c3448": 1,
+        "#56e4df": 1,
+        "#102d40": 1,
+        "#0006": 1,
+        "#23b9be": 1,
+        "#d7a8bd": 1,
+        "#1a9ca7": 1,
+        "#dce8eb": 2,
+        "#21c3c9": 3
+      },
+      "fontDeclarations": [
+        "font-size:clamp(30px,3.5vw,48px)",
+        "font-size:13px",
+        "font-size:13px",
+        "font-size:24px",
+        "font-size:13px",
+        "font-size:12px",
+        "font-size:18px",
+        "font-weight:600",
+        "font-size:14px",
+        "font-size:13px",
+        "font-size:16px",
+        "font-size:24px",
+        "font-size:14px",
+        "font-size:14px",
+        "font-weight:600",
+        "font-size:13px",
+        "font-size:12px",
+        "font:inherit",
+        "font-size:14px",
+        "font-size:12px",
+        "font-size:15px",
+        "font-size:12px",
+        "font-size:16px",
+        "font-size:13px",
+        "font-size:14px",
+        "font-size:14px",
+        "font-size:11px",
+        "font-size:12px"
+      ]
+    },
+    {
+      "file": "src/styles/product-screen-background.css",
+      "definitions": [],
+      "references": {},
+      "literalColors": {
+        "#fff": 6
+      },
+      "fontDeclarations": [
+        "font-size: clamp(30px, 3.4vw, 52px)"
+      ]
+    },
+    {
+      "file": "src/styles/auth-screen.css",
+      "definitions": [],
+      "references": {
+        "--foreground": 2,
+        "--font-title": 3,
+        "--brand": 5,
+        "--muted-foreground": 4,
+        "--destructive": 2,
+        "--border": 3,
+        "--ring": 1,
+        "--rose": 1
+      },
+      "literalColors": {
+        "#f7f8f5": 3,
+        "#fff": 6,
+        "#103e32": 1,
+        "#082a20a6": 1,
+        "#082a2038": 1,
+        "#082a20cf": 1,
+        "#082a20eb": 1,
+        "#718276": 1,
+        "#145a4618": 1,
+        "#082a20d9": 1,
+        "#082a2066": 1,
+        "#082a2077": 1
+      },
+      "fontDeclarations": [
+        "font-size: 13px",
+        "font: 800 30px/1.1 var(--font-title)",
+        "font: 800 clamp(46px, 5.3vw, 88px)/1.02 var(--font-title)",
+        "font-size: 17px",
+        "font-weight: 600",
+        "font-size: 13px",
+        "font-size: 14px",
+        "font: 800 clamp(36px, 4vw, 64px)/1.04 var(--font-title)",
+        "font-size: 16px",
+        "font-size: 14px",
+        "font-weight: 600",
+        "font-size: 16px",
+        "font-size: 15px",
+        "font-size: 13px",
+        "font-size: 13px",
+        "font-size: 14px",
+        "font-size: 13px",
+        "font-size: 14px",
+        "font-weight: 600",
+        "font-size: 18px",
+        "font-size: 13px",
+        "font-size: 13px",
+        "font-size: 13px",
+        "font-size: clamp(40px, 5.5vw, 60px)",
+        "font-size: 16px",
+        "font-size: 42px",
+        "font-size: 24px",
+        "font-size: 12px",
+        "font-size: clamp(38px, 9vw, 52px)",
+        "font-size: 13px",
+        "font-size: clamp(34px, 8.5vw, 42px)",
+        "font-size: 15px"
+      ]
+    },
+    {
+      "file": "src/styles/operations.css",
+      "definitions": [],
+      "references": {
+        "--border": 6,
+        "--muted-foreground": 1,
+        "--card": 2,
+        "--secondary": 1,
+        "--brand": 2
+      },
+      "literalColors": {
+        "#145a46": 1,
+        "#17231d30": 1
+      },
+      "fontDeclarations": [
+        "font-size: 0.75rem",
+        "font-size: 26px",
+        "font-size: 1.5rem",
+        "font-weight: 700"
+      ]
+    },
+    {
+      "file": "src/styles/modules.css",
+      "definitions": [],
+      "references": {
+        "--font-body": 1,
+        "--muted-foreground": 10,
+        "--brand": 9,
+        "--input": 6,
+        "--radius-control": 2,
+        "--card": 10,
+        "--font-title": 7,
+        "--border": 10,
+        "--secondary": 7,
+        "--warning-surface": 1,
+        "--foreground": 1,
+        "--warning": 1,
+        "--ring": 1
+      },
+      "literalColors": {
+        "#eee": 1
+      },
+      "fontDeclarations": [
+        "font: 700 12px var(--font-body)",
+        "font-weight: 700",
+        "font-weight: 700",
+        "font-size: 13px",
+        "font: 800 clamp(38px, 5vw, 68px)/1.1 var(--font-title)",
+        "font-size: 17px",
+        "font-size: 11px",
+        "font: 700 32px/1.2 var(--font-title)",
+        "font: 700 21px var(--font-title)",
+        "font-size: 13px",
+        "font-weight: 700",
+        "font: 700 20px var(--font-title)",
+        "font-size: 12px",
+        "font-size: 12px",
+        "font-size: 12px",
+        "font-size: 12px",
+        "font: 700 28px var(--font-title)",
+        "font-size: 14px",
+        "font: 700 19px var(--font-title)",
+        "font-size: 12px",
+        "font-size: 11px",
+        "font-size: 12px",
+        "font-size: 14px",
+        "font: 700 26px var(--font-title)",
+        "font-size: 13px",
+        "font-weight: 700",
+        "font-size: 10pt",
+        "font-size: 9pt",
+        "font: inherit",
+        "font-size: 11px"
+      ]
+    },
+    {
+      "file": "src/styles/order-notifications.css",
+      "definitions": [],
+      "references": {
+        "--border": 5,
+        "--card": 1,
+        "--primary": 5,
+        "--muted-foreground": 7,
+        "--secondary": 1
+      },
+      "literalColors": {},
+      "fontDeclarations": [
+        "font-size:14px",
+        "font-weight:600",
+        "font-size:20px",
+        "font-size:12px",
+        "font-size:13px",
+        "font-size:13px",
+        "font-size:12px",
+        "font-weight:500",
+        "font-size:12px",
+        "font-size:12px",
+        "font-size:14px",
+        "font-size:12px",
+        "font-size:15px",
+        "font-size:13px",
+        "font-size:12px",
+        "font-size:12px"
+      ]
+    },
+    {
+      "file": "src/styles/subcategories.css",
+      "definitions": [],
+      "references": {
+        "--border": 1,
+        "--muted-foreground": 3,
+        "--foreground": 1,
+        "--secondary": 2,
+        "--brand": 5,
+        "--card": 1
+      },
+      "literalColors": {},
+      "fontDeclarations": [
+        "font-size: 10px",
+        "font-size: 13px",
+        "font-weight: 700",
+        "font-size: 13px",
+        "font-size: 12px"
+      ]
+    },
+    {
+      "file": "src/styles/product-3d.css",
+      "definitions": [
+        [
+          "--product-3d-canvas-height",
+          "500px"
+        ],
+        [
+          "--product-3d-controls-height",
+          "150px"
+        ],
+        [
+          "--product-3d-canvas-height",
+          "480px"
+        ],
+        [
+          "--product-3d-controls-height",
+          "180px"
+        ],
+        [
+          "--product-3d-canvas-height",
+          "410px"
+        ],
+        [
+          "--product-3d-controls-height",
+          "220px"
+        ]
+      ],
+      "references": {
+        "--foreground": 2,
+        "--font-title": 1,
+        "--ring": 1,
+        "--brand": 1,
+        "--font-body": 1,
+        "--action-hover": 1,
+        "--product-3d-canvas-height": 1,
+        "--product-3d-controls-height": 1
+      },
+      "literalColors": {
+        "#f0f0ec": 2,
+        "#a51622": 1,
+        "#fff": 1,
+        "#102d25": 1
+      },
+      "fontDeclarations": [
+        "font-size: 15px",
+        "font-weight: 800",
+        "font-family: var(--font-title)",
+        "font-size: 24px",
+        "font-size: 14px",
+        "font-size: 13px",
+        "font: 600 14px var(--font-body)",
+        "font-size: 13px",
+        "font-size: 16px",
+        "font-size: 13px"
+      ]
+    },
+    {
+      "file": "src/styles/cinema-global.css",
+      "definitions": [
+        [
+          "--cinema-ink",
+          "#102d25"
+        ],
+        [
+          "--public-nav-height",
+          "150px"
+        ],
+        [
+          "--public-nav-height",
+          "199px"
+        ],
+        [
+          "--public-scene-fade",
+          "linear-gradient(to bottom, #000 0%, #000 40%, rgb(0 0 0 / .98) 55%, rgb(0 0 0 / .88) 68%, rgb(0 0 0 / .62) 80%, rgb(0 0 0 / .24) 90%, transparent 100%)"
+        ]
+      ],
+      "references": {
+        "--background": 1,
+        "--public-nav-height": 3,
+        "--rose": 1,
+        "--font-title": 2,
+        "--public-scene-fade": 2,
+        "--font-body": 1
+      },
+      "literalColors": {
+        "#102d25": 1,
+        "#123d30": 1,
+        "#10251e": 5,
+        "#07150ed9": 1,
+        "#07150e30": 1,
+        "#07150e80": 1,
+        "#000": 4,
+        "#07150ea6": 1
+      },
+      "fontDeclarations": [
+        "font: 800 clamp(70px, 18vw, 260px)/1 var(--font-title)",
+        "font: 800 clamp(50px, 7.5vw, 112px)/1.02 var(--font-title)",
+        "font-size: 18px",
+        "font: 700 16px var(--font-body)",
+        "font-size: clamp(42px, 11vw, 64px)",
+        "font-size: 17px"
+      ]
+    },
+    {
+      "file": "src/styles/catalog-promotions.css",
+      "definitions": [],
+      "references": {
+        "--brand": 1
+      },
+      "literalColors": {},
+      "fontDeclarations": []
+    },
+    {
+      "file": "src/styles/checkout-controls.css",
+      "definitions": [],
+      "references": {
+        "--brand": 1,
+        "--border": 1,
+        "--muted-foreground": 1,
+        "--secondary": 1
+      },
+      "literalColors": {
+        "#fff": 2,
+        "#17231d": 2,
+        "#b9c7bd": 1,
+        "#eef4ef": 1,
+        "#e8f1e9": 1,
+        "#a4bfae": 1,
+        "#145a46": 2,
+        "#526159": 1,
+        "#142436": 1,
+        "#d8e4ee": 1,
+        "#35485d": 1,
+        "#61e3dc": 1,
+        "#0b2132": 1,
+        "#ddfffc": 1,
+        "#e7c3d4": 1,
+        "#182b3d": 1,
+        "#fff0f7": 1,
+        "#102131eb": 1,
+        "#cfdae3": 1,
+        "#9ce7e4": 1,
+        "#0b1422": 1,
+        "#273b50": 1
+      },
+      "fontDeclarations": [
+        "font-size: 13px",
+        "font-size: 13px"
+      ]
+    },
+    {
+      "file": "src/styles/globals.css",
+      "definitions": [
+        [
+          "--font-heading",
+          "\"Manrope\", \"DM Sans\", sans-serif"
+        ],
+        [
+          "--font-sans",
+          "\"DM Sans\", Arial, sans-serif"
+        ],
+        [
+          "--color-sidebar-ring",
+          "var(--sidebar-ring)"
+        ],
+        [
+          "--color-sidebar-border",
+          "var(--sidebar-border)"
+        ],
+        [
+          "--color-sidebar-accent-foreground",
+          "var(--sidebar-accent-foreground)"
+        ],
+        [
+          "--color-sidebar-accent",
+          "var(--sidebar-accent)"
+        ],
+        [
+          "--color-sidebar-primary-foreground",
+          "var(--sidebar-primary-foreground)"
+        ],
+        [
+          "--color-sidebar-primary",
+          "var(--sidebar-primary)"
+        ],
+        [
+          "--color-sidebar-foreground",
+          "var(--sidebar-foreground)"
+        ],
+        [
+          "--color-sidebar",
+          "var(--sidebar)"
+        ],
+        [
+          "--color-chart-5",
+          "var(--chart-5)"
+        ],
+        [
+          "--color-chart-4",
+          "var(--chart-4)"
+        ],
+        [
+          "--color-chart-3",
+          "var(--chart-3)"
+        ],
+        [
+          "--color-chart-2",
+          "var(--chart-2)"
+        ],
+        [
+          "--color-chart-1",
+          "var(--chart-1)"
+        ],
+        [
+          "--color-ring",
+          "var(--ring)"
+        ],
+        [
+          "--color-input",
+          "var(--input)"
+        ],
+        [
+          "--color-border",
+          "var(--border)"
+        ],
+        [
+          "--color-destructive",
+          "var(--destructive)"
+        ],
+        [
+          "--color-accent-foreground",
+          "var(--accent-foreground)"
+        ],
+        [
+          "--color-accent",
+          "var(--accent)"
+        ],
+        [
+          "--color-muted-foreground",
+          "var(--muted-foreground)"
+        ],
+        [
+          "--color-muted",
+          "var(--muted)"
+        ],
+        [
+          "--color-secondary-foreground",
+          "var(--secondary-foreground)"
+        ],
+        [
+          "--color-secondary",
+          "var(--secondary)"
+        ],
+        [
+          "--color-primary-foreground",
+          "var(--primary-foreground)"
+        ],
+        [
+          "--color-primary",
+          "var(--primary)"
+        ],
+        [
+          "--color-popover-foreground",
+          "var(--popover-foreground)"
+        ],
+        [
+          "--color-popover",
+          "var(--popover)"
+        ],
+        [
+          "--color-card-foreground",
+          "var(--card-foreground)"
+        ],
+        [
+          "--color-card",
+          "var(--card)"
+        ],
+        [
+          "--color-foreground",
+          "var(--foreground)"
+        ],
+        [
+          "--color-background",
+          "var(--background)"
+        ],
+        [
+          "--radius-sm",
+          "calc(var(--radius) * 0.6)"
+        ],
+        [
+          "--radius-md",
+          "calc(var(--radius) * 0.8)"
+        ],
+        [
+          "--radius-lg",
+          "var(--radius)"
+        ],
+        [
+          "--radius-xl",
+          "calc(var(--radius) * 1.4)"
+        ],
+        [
+          "--radius-2xl",
+          "calc(var(--radius) * 1.8)"
+        ],
+        [
+          "--radius-3xl",
+          "calc(var(--radius) * 2.2)"
+        ],
+        [
+          "--radius-4xl",
+          "calc(var(--radius) * 2.6)"
+        ]
+      ],
+      "references": {
+        "--sidebar-ring": 1,
+        "--sidebar-border": 1,
+        "--sidebar-accent-foreground": 1,
+        "--sidebar-accent": 1,
+        "--sidebar-primary-foreground": 1,
+        "--sidebar-primary": 1,
+        "--sidebar-foreground": 1,
+        "--sidebar": 1,
+        "--chart-5": 1,
+        "--chart-4": 1,
+        "--chart-3": 1,
+        "--chart-2": 1,
+        "--chart-1": 1,
+        "--ring": 5,
+        "--input": 12,
+        "--border": 38,
+        "--destructive": 5,
+        "--accent-foreground": 1,
+        "--accent": 1,
+        "--muted-foreground": 78,
+        "--muted": 4,
+        "--secondary-foreground": 1,
+        "--secondary": 26,
+        "--primary-foreground": 1,
+        "--primary": 62,
+        "--popover-foreground": 1,
+        "--popover": 1,
+        "--card-foreground": 1,
+        "--card": 6,
+        "--foreground": 27,
+        "--background": 6,
+        "--radius": 7,
+        "--font-body": 7,
+        "--motion-control": 5,
+        "--motion-ease": 6,
+        "--action-hover": 1,
+        "--action-pressed": 1,
+        "--shadow-card": 2,
+        "--brand": 2,
+        "--success": 4,
+        "--success-surface": 1,
+        "--warning": 7,
+        "--warning-surface": 4,
+        "--font-title": 16,
+        "--radius-control": 4,
+        "--radius-card": 3,
+        "--shadow-raised": 4,
+        "--rose": 8,
+        "--radius-feature": 3,
+        "--motion-image": 1,
+        "--category-food": 1,
+        "--category-tools": 1,
+        "--category-tech": 1,
+        "--category-toys": 1,
+        "--category-office": 1,
+        "--category-care": 1,
+        "--rose-surface": 2,
+        "--inverse-copy": 3,
+        "--inverse-muted": 4,
+        "--motion-panel": 2,
+        "--motion-loading": 2,
+        "--error-surface": 1,
+        "--admin-sidebar": 1,
+        "--ring-inverse": 1
+      },
+      "literalColors": {
+        "#b5dcd8": 1,
+        "#d9efeb": 1,
+        "#b3d4e5": 1,
+        "#17231d12": 1,
+        "#b6cab8": 1,
+        "#17231d0a": 1,
+        "#52846f": 3,
+        "#fff": 4,
+        "#d1e2d5": 2,
+        "#ffffff16": 1,
+        "#f7f8f5": 1
+      },
+      "fontDeclarations": [
+        "font-family: var(--font-body)",
+        "font-size: 16px",
+        "font-size: 21px",
+        "font-weight: 700",
+        "font-size: 12px",
+        "font-size: 10px",
+        "font-weight: 700",
+        "font-size: 28px",
+        "font-size: 14px",
+        "font-weight: 700",
+        "font-size: clamp(30px, 4vw, 46px)",
+        "font-weight: 700",
+        "font-size: 11px",
+        "font-weight: 700",
+        "font-size: 16px",
+        "font-size: 13px",
+        "font-size: 11px",
+        "font-size: 12px",
+        "font-size: 12px",
+        "font-size: 18px",
+        "font-weight: 700",
+        "font-size: 14px",
+        "font-weight: 700",
+        "font-size: 20px",
+        "font-size: 14px",
+        "font-size: 22px",
+        "font-size: 12px",
+        "font-size: 12px",
+        "font-family: var(--font-body)",
+        "font-family: var(--font-title)",
+        "font-size: clamp(32px, 4vw, 52px)",
+        "font-weight: 800",
+        "font-size: clamp(24px, 2.4vw, 32px)",
+        "font-weight: 700",
+        "font-family: var(--font-body)",
+        "font-size: 14px",
+        "font-weight: 600",
+        "font-size: 14px",
+        "font-weight: 600",
+        "font-size: 14px",
+        "font-size: 24px",
+        "font-weight: 700",
+        "font-size: 11px",
+        "font-weight: 700",
+        "font-size: 14px",
+        "font-weight: 600",
+        "font-size: 12px",
+        "font-size: 12px",
+        "font-size: 11px",
+        "font: 700 9px var(--font-body)",
+        "font: 800 32px/1 var(--font-title)",
+        "font-size: 14px",
+        "font-size: 12px",
+        "font-size: 12px",
+        "font: 700 10px var(--font-body)",
+        "font-size: 12px",
+        "font-weight: 700",
+        "font-size: 11px",
+        "font-size: 11px",
+        "font-size: 15px",
+        "font-size: 10px",
+        "font-weight: 700",
+        "font-family: var(--font-title)",
+        "font-size: clamp(42px, 4.4vw, 64px)",
+        "font-weight: 800",
+        "font-size: 15px",
+        "font: 700 15px var(--font-title)",
+        "font-size: 11px",
+        "font: 800 17px/1.05 var(--font-title)",
+        "font-size: 25px",
+        "font: 700 12px/1.25 var(--font-title)",
+        "font-size: 10px",
+        "font-weight: 700",
+        "font-size: 10px",
+        "font-weight: 500",
+        "font-size: 14px",
+        "font-weight: 700",
+        "font-size: 11px",
+        "font: 800 25px/1.15 var(--font-title)",
+        "font-size: 11px",
+        "font-size: 10px",
+        "font-size: 11px",
+        "font-size: 8px",
+        "font-size: 12px !important",
+        "font-size: 11px",
+        "font-size: 14px",
+        "font-weight: 700",
+        "font-size: 10px",
+        "font-size: 10px",
+        "font-weight: 700",
+        "font-size: 44px",
+        "font-size: 14px",
+        "font: 800 13px/1.2 var(--font-title)",
+        "font-size: 36px",
+        "font-size: 14px",
+        "font-size: 38px",
+        "font-size: 14px",
+        "font-size: 11px",
+        "font: 700 15px var(--font-title)",
+        "font-size: 12px",
+        "font-weight: 700",
+        "font-size: 12px",
+        "font-weight: 500",
+        "font-size: 12px",
+        "font-size: 10px",
+        "font-weight: 400",
+        "font-size: 12px",
+        "font-size: 11px",
+        "font-size: 12px",
+        "font-size: 11px",
+        "font-size: 12px",
+        "font-size: 11px",
+        "font-size: 11px",
+        "font-size: 25px",
+        "font-size: 14px",
+        "font-size: 13px",
+        "font-size: 10px",
+        "font-size: 10px",
+        "font-size: 38px",
+        "font-size: 14px",
+        "font-size: 36px",
+        "font-size: 12px",
+        "font-size: 14px",
+        "font-size: 12px",
+        "font-weight: 600",
+        "font-size: 12px",
+        "font-size: 16px",
+        "font-size: 12px",
+        "font-size: 22px",
+        "font-size: 12px",
+        "font-size: 13px",
+        "font-weight: 600",
+        "font-size: 25px",
+        "font-size: 25px",
+        "font: 700 13px/1.3 var(--font-title)",
+        "font-size: 10px",
+        "font: 700 14px var(--font-title)",
+        "font-size: 12px",
+        "font: 800 26px var(--font-title)",
+        "font-size: 11px",
+        "font-size: 11px",
+        "font-size: 44px",
+        "font-size: 15px",
+        "font-size: 12px",
+        "font-size: 44px",
+        "font-size: 14px",
+        "font-size: 24px",
+        "font-size: 14px",
+        "font-size: 13px",
+        "font-size: 11px",
+        "font-size: 12px",
+        "font-weight: 700",
+        "font: 800 46px var(--font-title)",
+        "font-size: 14px",
+        "font-size: 11px",
+        "font: 700 13px/1.45 var(--font-title)",
+        "font-size: 12px",
+        "font-size: 12px",
+        "font-size: 10px",
+        "font-size: 18px",
+        "font-size: 10px",
+        "font-size: 13px",
+        "font-size: 46px",
+        "font-size: 14px",
+        "font-size: 12px",
+        "font-size: 32px",
+        "font-size: 29px",
+        "font-size: 11px",
+        "font-size: 12px !important",
+        "font-size: 10px",
+        "font-size: 40px",
+        "font-size: 14px",
+        "font-size: 12px",
+        "font-size: 10px",
+        "font-size: 11px",
+        "font-size: 25px",
+        "font-size: 12px",
+        "font-size: 32px",
+        "font-size: 28px",
+        "font-size: 9px",
+        "font-size: 40px",
+        "font-size: 13px",
+        "font-size: 13px",
+        "font-size: 23px",
+        "font-size: 10px",
+        "font-size: 24px",
+        "font-size: 11px",
+        "font-size: 9px",
+        "font-size: 10px",
+        "font-size: 13px",
+        "font-size: 10px",
+        "font-size: 22px",
+        "font-size: 10px",
+        "font-size: 9px",
+        "font-size: 10px",
+        "font-size: 9px",
+        "font-size: 11px !important",
+        "font-size: 36px",
+        "font-size: 12px",
+        "font-size: 8px",
+        "font-size: 11px",
+        "font-size: 27px",
+        "font-size: 12px",
+        "font-size: 29px",
+        "font-size: 12px",
+        "font-size: 10px",
+        "font-size: 11px",
+        "font-size: 12px",
+        "font-size: 11px",
+        "font-size: 11px",
+        "font-size: 32px",
+        "font-size: 34px",
+        "font-size: 13px",
+        "font-size: 12px",
+        "font-size: 23px",
+        "font-size: 12px",
+        "font-size: 10px",
+        "font-size: 12px",
+        "font-size: 36px",
+        "font-size: 12px",
+        "font-size: 11px",
+        "font-size: 40px",
+        "font-size: 13px",
+        "font-size: 12px",
+        "font-size: 11px",
+        "font-size: 20px",
+        "font-size: 9px",
+        "font-size: 34px",
+        "font-size: 22px",
+        "font-size: clamp(24px, 2.6vw, 32px)",
+        "font: inherit",
+        "font-size: clamp(30px, 4vw, 44px)",
+        "font-size: clamp(38px, 4vw, 58px)",
+        "font-size: 14px",
+        "font-weight: 600",
+        "font-size: clamp(32px, 3vw, 44px)",
+        "font-size: 14px",
+        "font-weight: 700",
+        "font-size: 13px",
+        "font-size: 13px",
+        "font-weight: 600",
+        "font-size: 13px",
+        "font-size: 14px",
+        "font: inherit",
+        "font-weight: 600",
+        "font-weight: 600",
+        "font-weight: 600",
+        "font-size: 14px",
+        "font-weight: 400",
+        "font-size: 15px",
+        "font-size: 13px",
+        "font-size: 14px",
+        "font-weight: 600",
+        "font-size: 24px",
+        "font-weight: 700",
+        "font-size: 16px",
+        "font-size: 14px",
+        "font-size: 18px",
+        "font-size: 13px",
+        "font-size: 14px",
+        "font-size: 24px",
+        "font-size: 12px",
+        "font-weight: 700",
+        "font-size: clamp(32px, 4vw, 48px)",
+        "font-size: 14px",
+        "font-size: 16px",
+        "font-weight: 700",
+        "font-size: 14px",
+        "font-size: 12px",
+        "font-size: 16px",
+        "font-size: 13px",
+        "font-size: 38px",
+        "font-size: 36px",
+        "font-size: 12px",
+        "font-size: 9px",
+        "font: 700 28px var(--font-title)",
+        "font: 400 11px var(--font-body)",
+        "font-size: 9px",
+        "font-size: 14px",
+        "font-weight: 600",
+        "font-size: 11px",
+        "font-weight: 600",
+        "font-size: 12px",
+        "font-size: 12px",
+        "font-weight: 600",
+        "font-size: clamp(30px, 2.7vw, 42px)",
+        "font-size: 14px",
+        "font-size: 9px",
+        "font-weight: 700",
+        "font-size: 28px",
+        "font-size: 12px",
+        "font: 600 13px var(--font-body)",
+        "font: 700 clamp(26px, 2.4vw, 36px) var(--font-title)",
+        "font-size: 11px",
+        "font-size: 22px",
+        "font-size: 12px",
+        "font-weight: 700",
+        "font-size: 12px",
+        "font-size: 12px",
+        "font-weight: 700",
+        "font-size: 11px",
+        "font-size: 13px",
+        "font-size: 11px",
+        "font-size: 12px",
+        "font-weight: 600",
+        "font-size: 15px",
+        "font-size: 11px",
+        "font-size: 22px",
+        "font-size: 13px",
+        "font-size: 11px",
+        "font-weight: 600",
+        "font: inherit",
+        "font-size: 13px",
+        "font-size: 12px",
+        "font-weight: 600",
+        "font-weight: 600",
+        "font-size: 10px",
+        "font-weight: 600",
+        "font-size: 5px",
+        "font-size: 13px",
+        "font-size: 10px",
+        "font-size: 11px",
+        "font-size: 12px",
+        "font: inherit",
+        "font-size: 14px",
+        "font-weight: 600",
+        "font-size: 13px",
+        "font-size: 13px",
+        "font-size: 24px",
+        "font-size: 13px",
+        "font-size: 16px",
+        "font-size: 12px",
+        "font-size: 16px",
+        "font-size: 12px",
+        "font-size: 11px",
+        "font-size: 13px",
+        "font-size: 11px",
+        "font-size: 24px",
+        "font-size: 32px",
+        "font-size: 12px",
+        "font-size: 26px",
+        "font-size: 10px",
+        "font-size: 20px",
+        "font-size: 12px",
+        "font-size: 10px",
+        "font-size: 12px",
+        "font-size: 10px",
+        "font-size: 12px",
+        "font-size: 10px"
+      ]
+    },
+    {
+      "file": "src/styles/product-marketplace.css",
+      "definitions": [],
+      "references": {
+        "--font-body": 3
+      },
+      "literalColors": {
+        "#e4e7e2": 1,
+        "#fff": 4,
+        "#19271f": 1,
+        "#b8c8bc": 1,
+        "#f0f1ed": 1,
+        "#5b685f": 2,
+        "#657167": 2,
+        "#167044": 2,
+        "#8a3434": 1,
+        "#edf4ef": 2,
+        "#183e30": 2
+      },
+      "fontDeclarations": [
+        "font: 400 16px/1.3 var(--font-body)",
+        "font: 400 12px/1.4 var(--font-body)",
+        "font-size: 12px",
+        "font: 500 26px/1.15 var(--font-body)",
+        "font-size: 11px",
+        "font-size: 12px",
+        "font-size: 13px",
+        "font-size: 11px",
+        "font-size: 12px",
+        "font-size: 11px",
+        "font-size: 10px"
+      ]
+    },
+    {
+      "file": "src/styles/cart-experience.css",
+      "definitions": [],
+      "references": {
+        "--font-title": 9,
+        "--muted-foreground": 11,
+        "--brand": 12,
+        "--destructive": 3,
+        "--border": 4,
+        "--error-surface": 1,
+        "--foreground": 5,
+        "--secondary": 1,
+        "--store-header-clearance": 3,
+        "--rose": 1,
+        "--action-hover": 1
+      },
+      "literalColors": {
+        "#f7f8f5": 2,
+        "#fff": 7,
+        "#718276": 1,
+        "#183d30": 2,
+        "#d1e2d5": 3,
+        "#ffffff30": 1,
+        "#e0ebe2": 1,
+        "#f8cada": 1,
+        "#f1f5ef": 1
+      },
+      "fontDeclarations": [
+        "font: 700 clamp(38px, 4.4vw, 62px)/1.05 var(--font-title)",
+        "font-size: 16px",
+        "font-size: 14px",
+        "font-weight: 600",
+        "font-size: 13px",
+        "font-size: 14px",
+        "font-weight: 700",
+        "font-size: 13px",
+        "font-size: 14px",
+        "font: 700 20px/1.3 var(--font-title)",
+        "font-size: 13px",
+        "font-size: 13px",
+        "font-size: 13px",
+        "font-size: 11px",
+        "font-size: 13px",
+        "font: 700 18px/1.35 var(--font-title)",
+        "font-size: 13px",
+        "font-weight: 600",
+        "font-size: 13px",
+        "font-size: 14px",
+        "font-weight: 650",
+        "font-size: 13px",
+        "font-size: 13px",
+        "font: 700 21px/1.3 var(--font-title)",
+        "font-size: 13px",
+        "font-size: 13px",
+        "font: 700 21px/1.35 var(--font-title)",
+        "font-size: 13px",
+        "font-size: 13px",
+        "font-size: 13px",
+        "font-weight: 600",
+        "font-weight: 400",
+        "font-size: 14px",
+        "font: 800 30px/1.15 var(--font-title)",
+        "font-size: 13px",
+        "font-size: 14px",
+        "font-weight: 700",
+        "font-size: 13px",
+        "font-size: 13px",
+        "font: 700 clamp(28px, 3vw, 40px)/1.12 var(--font-title)",
+        "font-size: 16px",
+        "font-size: 14px",
+        "font-size: 13px",
+        "font: 700 26px/1.2 var(--font-title)",
+        "font-size: 13px",
+        "font-size: 15px",
+        "font-size: 13px",
+        "font-size: 17px",
+        "font-size: 13px",
+        "font-size: 28px",
+        "font-size: 40px",
+        "font-size: 14px",
+        "font-size: 13px",
+        "font-size: 13px",
+        "font-size: 13px",
+        "font-size: 16px",
+        "font-size: 13px",
+        "font-size: 13px",
+        "font-size: 20px",
+        "font-size: 30px",
+        "font-size: 14px",
+        "font-size: 13px",
+        "font-size: 13px",
+        "font: 800 24px/1.2 var(--font-title)",
+        "font-size: 13px",
+        "font-size: 13px",
+        "font-size: 11px"
+      ]
+    },
+    {
+      "file": "src/styles/tokens.css",
+      "definitions": [
+        [
+          "--admin-sidebar",
+          "#103e32"
+        ],
+        [
+          "--ring-inverse",
+          "#f4b8c8"
+        ],
+        [
+          "--brand",
+          "#145a46"
+        ],
+        [
+          "--background",
+          "#f7f8f5"
+        ],
+        [
+          "--foreground",
+          "#17231d"
+        ],
+        [
+          "--card",
+          "#ffffff"
+        ],
+        [
+          "--card-foreground",
+          "#17231d"
+        ],
+        [
+          "--popover",
+          "#ffffff"
+        ],
+        [
+          "--popover-foreground",
+          "#17231d"
+        ],
+        [
+          "--primary",
+          "#145a46"
+        ],
+        [
+          "--primary-foreground",
+          "#ffffff"
+        ],
+        [
+          "--action-hover",
+          "#104a3a"
+        ],
+        [
+          "--action-pressed",
+          "#0c3b2e"
+        ],
+        [
+          "--secondary",
+          "#e8f1e9"
+        ],
+        [
+          "--secondary-foreground",
+          "#145a46"
+        ],
+        [
+          "--muted",
+          "#eef1eb"
+        ],
+        [
+          "--muted-foreground",
+          "#526159"
+        ],
+        [
+          "--accent",
+          "#f4b8c8"
+        ],
+        [
+          "--accent-foreground",
+          "#17231d"
+        ],
+        [
+          "--rose",
+          "#f4b8c8"
+        ],
+        [
+          "--rose-surface",
+          "#fbe7ec"
+        ],
+        [
+          "--destructive",
+          "#b42332"
+        ],
+        [
+          "--error-surface",
+          "#fff0f1"
+        ],
+        [
+          "--success",
+          "#216744"
+        ],
+        [
+          "--success-surface",
+          "#e8f3ea"
+        ],
+        [
+          "--warning",
+          "#875006"
+        ],
+        [
+          "--warning-surface",
+          "#fff4db"
+        ],
+        [
+          "--border",
+          "#dde4db"
+        ],
+        [
+          "--input",
+          "#718276"
+        ],
+        [
+          "--ring",
+          "#245ac9"
+        ],
+        [
+          "--inverse-muted",
+          "#d1e2d5"
+        ],
+        [
+          "--inverse-copy",
+          "#e0ebe2"
+        ],
+        [
+          "--category-food",
+          "#e8f1e9"
+        ],
+        [
+          "--category-tools",
+          "#f4ede0"
+        ],
+        [
+          "--category-tech",
+          "#e9edf3"
+        ],
+        [
+          "--category-toys",
+          "#f9e6ec"
+        ],
+        [
+          "--category-office",
+          "#ededf1"
+        ],
+        [
+          "--category-care",
+          "#edefe4"
+        ],
+        [
+          "--radius",
+          "0.75rem"
+        ],
+        [
+          "--font-body",
+          "\"DM Sans\", Arial, sans-serif"
+        ],
+        [
+          "--font-title",
+          "\"Manrope\", \"DM Sans\", sans-serif"
+        ],
+        [
+          "--space-1",
+          "0.25rem"
+        ],
+        [
+          "--space-2",
+          "0.5rem"
+        ],
+        [
+          "--space-3",
+          "0.75rem"
+        ],
+        [
+          "--space-4",
+          "1rem"
+        ],
+        [
+          "--space-6",
+          "1.5rem"
+        ],
+        [
+          "--space-8",
+          "2rem"
+        ],
+        [
+          "--space-12",
+          "3rem"
+        ],
+        [
+          "--space-16",
+          "4rem"
+        ],
+        [
+          "--space-20",
+          "5rem"
+        ],
+        [
+          "--radius-control",
+          "10px"
+        ],
+        [
+          "--radius-card",
+          "20px"
+        ],
+        [
+          "--radius-feature",
+          "28px"
+        ],
+        [
+          "--shadow-card",
+          "0 3px 14px #17231d06"
+        ],
+        [
+          "--shadow-raised",
+          "0 16px 40px #17231d18"
+        ],
+        [
+          "--motion-home-reveal",
+          "650ms"
+        ],
+        [
+          "--motion-home-mask",
+          "800ms"
+        ],
+        [
+          "--motion-marquee",
+          "26s"
+        ],
+        [
+          "--motion-processing",
+          "350ms"
+        ],
+        [
+          "--motion-loading",
+          "800ms"
+        ],
+        [
+          "--motion-control",
+          "150ms"
+        ],
+        [
+          "--motion-panel",
+          "240ms"
+        ],
+        [
+          "--motion-title",
+          "280ms"
+        ],
+        [
+          "--motion-image",
+          "300ms"
+        ],
+        [
+          "--motion-search",
+          "200ms"
+        ],
+        [
+          "--motion-promo",
+          "600ms"
+        ],
+        [
+          "--motion-ease",
+          "cubic-bezier(0.2, 0, 0, 1)"
+        ]
+      ],
+      "references": {},
+      "literalColors": {
+        "#103e32": 1,
+        "#f4b8c8": 3,
+        "#145a46": 3,
+        "#f7f8f5": 1,
+        "#17231d": 4,
+        "#ffffff": 3,
+        "#104a3a": 1,
+        "#0c3b2e": 1,
+        "#e8f1e9": 2,
+        "#eef1eb": 1,
+        "#526159": 1,
+        "#fbe7ec": 1,
+        "#b42332": 1,
+        "#fff0f1": 1,
+        "#216744": 1,
+        "#e8f3ea": 1,
+        "#875006": 1,
+        "#fff4db": 1,
+        "#dde4db": 1,
+        "#718276": 1,
+        "#245ac9": 1,
+        "#d1e2d5": 1,
+        "#e0ebe2": 1,
+        "#f4ede0": 1,
+        "#e9edf3": 1,
+        "#f9e6ec": 1,
+        "#ededf1": 1,
+        "#edefe4": 1,
+        "#17231d06": 1,
+        "#17231d18": 1
+      },
+      "fontDeclarations": []
+    },
+    {
+      "file": "src/styles/polish.css",
+      "definitions": [
+        [
+          "--space-section",
+          "clamp(32px, 5vw, 64px)"
+        ],
+        [
+          "--motion-payment",
+          "650ms"
+        ]
+      ],
+      "references": {
+        "--radius-card": 3,
+        "--secondary": 3,
+        "--card": 3,
+        "--brand": 1,
+        "--input": 2,
+        "--foreground": 1,
+        "--space-section": 4,
+        "--font-title": 1,
+        "--muted-foreground": 2,
+        "--border": 1,
+        "--background": 1,
+        "--success-surface": 1,
+        "--success": 1,
+        "--warning-surface": 1,
+        "--warning": 1,
+        "--error-surface": 1,
+        "--destructive": 1,
+        "--muted": 1,
+        "--inverse-muted": 1
+      },
+      "literalColors": {},
+      "fontDeclarations": [
+        "font-size: 12px",
+        "font: 800 clamp(28px, 4vw, 46px)/1.15 var(--font-title)",
+        "font-weight: 700",
+        "font-size: 13px",
+        "font-weight: 700",
+        "font-weight: 700",
+        "font-size: 12px",
+        "font-size: 14px",
+        "font-size: 14px",
+        "font-size: 18px",
+        "font-size: 12px",
+        "font-size: 12px"
+      ]
+    },
+    {
+      "file": "src/styles/halloween-navigation.css",
+      "definitions": [],
+      "references": {
+        "--brand": 3,
+        "--action-hover": 1
+      },
+      "literalColors": {
+        "#f9f8f0": 1,
+        "#dce3d4": 1,
+        "#a5bdab": 1
+      },
+      "fontDeclarations": []
+    },
+    {
+      "file": "src/styles/product-glass.css",
+      "definitions": [],
+      "references": {
+        "--radius-card": 1,
+        "--foreground": 1,
+        "--brand": 1
+      },
+      "literalColors": {
+        "#fff": 3,
+        "#168f96": 2,
+        "#35bbbe55": 1,
+        "#198f94": 1,
+        "#35bbbe22": 1
+      },
+      "fontDeclarations": []
+    },
+    {
+      "file": "src/styles/product-zoom.css",
+      "definitions": [],
+      "references": {
+        "--card": 1,
+        "--artwork-max-width": 1,
+        "--artwork-max-height": 1,
+        "--muted-foreground": 1,
+        "--ring": 1,
+        "--font-title": 1,
+        "--background": 1,
+        "--border": 1
+      },
+      "literalColors": {},
+      "fontDeclarations": [
+        "font-size: 12px",
+        "font-size: 11px",
+        "font-family: var(--font-title)",
+        "font-size: 20px",
+        "font-weight: 700",
+        "font-size: 16px",
+        "font-size: 12px",
+        "font-size: 12px"
+      ]
+    },
+    {
+      "file": "src/styles/product-detail-marketplace.css",
+      "definitions": [
+        [
+          "--product-3d-canvas-height",
+          "440px"
+        ],
+        [
+          "--product-3d-canvas-height",
+          "360px"
+        ],
+        [
+          "--product-3d-controls-height",
+          "220px"
+        ]
+      ],
+      "references": {
+        "--font-body": 3,
+        "--product-3d-canvas-height": 1
+      },
+      "literalColors": {
+        "#fff": 4,
+        "#5b685f": 2,
+        "#e4e7e2": 1,
+        "#657167": 2,
+        "#f5f6f2": 1,
+        "#e8ebe5": 1,
+        "#f4f5f1": 1,
+        "#fafbf8": 1
+      },
+      "fontDeclarations": [
+        "font-size: 12px",
+        "font-size: 12px",
+        "font: 500 clamp(24px, 2.3vw, 34px)/1.2 var(--font-body)",
+        "font-size: 12px",
+        "font-size: 11px",
+        "font-size: 14px",
+        "font: 500 34px/1.2 var(--font-body)",
+        "font-size: 14px",
+        "font-size: 12px",
+        "font-size: 11px",
+        "font-size: 12px",
+        "font-size: 18px",
+        "font: 500 22px/1.3 var(--font-body)",
+        "font-size: 12px",
+        "font-size: 14px",
+        "font-size: 15px"
+      ]
+    },
+    {
+      "file": "src/styles/home.css",
+      "definitions": [
+        [
+          "--home-ease",
+          "cubic-bezier(.16,1,.3,1)"
+        ],
+        [
+          "--cinema-gutter",
+          "max(24px, calc((100vw - 1320px) / 2))"
+        ],
+        [
+          "--home-stagger",
+          "80ms"
+        ],
+        [
+          "--home-stagger",
+          "160ms"
+        ],
+        [
+          "--cinema-gutter",
+          "20px"
+        ]
+      ],
+      "references": {
+        "--background": 1,
+        "--foreground": 9,
+        "--font-title": 9,
+        "--rose": 13,
+        "--home-ease": 4,
+        "--ring": 1,
+        "--muted-foreground": 2,
+        "--brand": 5,
+        "--secondary": 4,
+        "--cinema-gutter": 12,
+        "--home-nav-offset": 2,
+        "--home-stagger": 1,
+        "--public-nav-height": 2,
+        "--font-body": 1,
+        "--liquid-edge": 2,
+        "--liquid-outline": 1,
+        "--liquid-text-axis-x": 1,
+        "--liquid-text-axis-y": 1,
+        "--liquid-text-angle": 1,
+        "--liquid-text-x": 2,
+        "--liquid-text-y": 2
+      },
+      "literalColors": {
+        "#183d35": 1,
+        "#091f24b8": 1,
+        "#091f242e": 1,
+        "#091f2480": 1,
+        "#102e29": 3,
+        "#152e29": 1,
+        "#fff": 3,
+        "#17231d": 1,
+        "#e5eae4": 1,
+        "#173e33": 1,
+        "#e9edf2": 1,
+        "#f4b8c8": 1,
+        "#dbe0d7": 1,
+        "#10251e": 5,
+        "#ffffffa6": 1,
+        "#10251ecc": 1,
+        "#07150e99": 1,
+        "#e8f1e92e": 1,
+        "#e8f1e90c": 1,
+        "#e8f1e9": 1,
+        "#c6d4ca": 1,
+        "#f9f8f0": 1
+      },
+      "fontDeclarations": [
+        "font-family: var(--font-title)",
+        "font-weight: 800",
+        "font-weight: 700",
+        "font: 800 80px/1.05 var(--font-title)",
+        "font: 700 clamp(34px, 4vw, 56px)/1.12 var(--font-title)",
+        "font-weight: 700",
+        "font: 700 25px/1.2 var(--font-title)",
+        "font-size: 10px",
+        "font-weight: 700",
+        "font-size: clamp(76px, 9.7vw, 148px)",
+        "font-size: 18px",
+        "font-size: 16px",
+        "font-size: 16px",
+        "font-size: 14px",
+        "font: 800 clamp(44px, 5.7vw, 82px)/1.02 var(--font-title)",
+        "font-size: 20px",
+        "font-size: 16px",
+        "font-size: 16px",
+        "font: 800 clamp(40px, 4.5vw, 66px)/1.05 var(--font-title)",
+        "font-size: 18px",
+        "font-size: 14px",
+        "font: inherit",
+        "font-size: 16px",
+        "font-size: 14px",
+        "font-size: clamp(40px, 7vw, 100px)",
+        "font-size: 16px",
+        "font-size: 14px",
+        "font-size: 18px",
+        "font-size: 46px",
+        "font-size: clamp(70px, 17.4vw, 112px)",
+        "font-size: 16px",
+        "font-size: 16px",
+        "font-size: 13px",
+        "font-size: clamp(38px, 10vw, 62px)",
+        "font-size: 17px",
+        "font-size: 15px",
+        "font-size: clamp(40px, 10.5vw, 58px)",
+        "font-size: 17px",
+        "font-size: 36px",
+        "font-size: 32px",
+        "font-size: 44px",
+        "font: 800 clamp(60px, 7.3vw, 112px)/.98 var(--font-title)",
+        "font-size: 18px",
+        "font-weight: 700",
+        "font: 800 clamp(40px,6vw,88px)/1 var(--font-title)",
+        "font: 600 15px var(--font-body)",
+        "font-size: clamp(48px, 8vw, 76px)",
+        "font-size: 17px",
+        "font-size: clamp(46px, 12vw, 60px)",
+        "font-size: 48px",
+        "font-size: 12px",
+        "font: 800 clamp(60px, 7.3vw, 112px)/.98 var(--font-title)",
+        "font-size: clamp(48px, 8vw, 76px)",
+        "font-size: clamp(46px, 12vw, 60px)"
+      ]
+    },
+    {
+      "file": "src/styles/footer-compact.css",
+      "definitions": [],
+      "references": {
+        "--font-title": 1
+      },
+      "literalColors": {
+        "#132f25": 1,
+        "#fff7eb": 1,
+        "#f4b7c9": 1
+      },
+      "fontDeclarations": [
+        "font: 800 28px/1 var(--font-title)",
+        "font-size: 12px",
+        "font-size: 11px",
+        "font-size: 10px",
+        "font-size: 24px"
+      ]
+    },
+    {
+      "file": "src/styles/rosita-editorial.css",
+      "definitions": [
+        [
+          "--public-nav-height",
+          "44px"
+        ],
+        [
+          "--radius-card",
+          "4px"
+        ],
+        [
+          "--radius-control",
+          "4px"
+        ],
+        [
+          "--public-nav-height",
+          "44px"
+        ],
+        [
+          "--radius-card",
+          "4px"
+        ],
+        [
+          "--radius-control",
+          "4px"
+        ]
+      ],
+      "references": {
+        "--font-body": 2,
+        "--font-title": 2,
+        "--store-header-clearance": 3,
+        "--public-nav-height": 3,
+        "--space-4": 3
+      },
+      "literalColors": {
+        "#f1f2e9": 1,
+        "#142d25": 1,
+        "#fff4ea": 1,
+        "#f4b8c8": 3,
+        "#f9f8f0": 1,
+        "#10251e20": 1,
+        "#faf9f2": 2,
+        "#edeee3": 1,
+        "#193d30": 2,
+        "#e7eade": 1,
+        "#fafaf5": 2,
+        "#e9ecdf": 1,
+        "#183e30": 1,
+        "#f1e3de": 1,
+        "#e3e8ed": 1,
+        "#e4e9dc": 1,
+        "#fafaf4": 2,
+        "#d9decf": 1,
+        "#183d30": 7,
+        "#fff9ed": 2,
+        "#132f25": 1,
+        "#fff7eb": 1,
+        "#fff": 2,
+        "#ffffff0a": 1,
+        "#ffffff35": 1,
+        "#f2f3ec": 1,
+        "#e9ece2": 3,
+        "#283b30": 1,
+        "#d7ddcf": 1,
+        "#d8dfd1": 1,
+        "#163a2b": 1,
+        "#d0d8c9": 3,
+        "#f7f8f2": 1,
+        "#d8ddcf": 1,
+        "#fafbf6": 3,
+        "#dce1d4": 3,
+        "#23372c": 1,
+        "#536250": 1,
+        "#edf1e6": 1,
+        "#233c2d": 1,
+        "#354632": 1,
+        "#c7d1bd": 1,
+        "#e5e9db": 2,
+        "#e1e5da": 1,
+        "#52614c": 3,
+        "#283d30": 1,
+        "#465b49": 1,
+        "#f8faf3": 1
+      },
+      "fontDeclarations": [
+        "font:500 13px var(--font-body)",
+        "font:800 25px var(--font-title)",
+        "font-size:clamp(44px,6vw,86px)",
+        "font-weight:600",
+        "font-size:22px",
+        "font-size:clamp(40px,4.5vw,76px)",
+        "font-weight:600",
+        "font-size:34px",
+        "font-size:clamp(38px,4vw,60px)",
+        "font-weight:500",
+        "font-size:clamp(62px,10vw,150px)",
+        "font:12px var(--font-body)",
+        "font-size:clamp(48px,13vw,76px)",
+        "font-size:19px",
+        "font-size:14px",
+        "font-size:30px",
+        "font-weight:500",
+        "font-size:28px",
+        "font-weight:500",
+        "font-size:12px",
+        "font-size:11px",
+        "font-size:12px",
+        "font-size:12px",
+        "font-size:16px",
+        "font-size:16px",
+        "font-size:14px",
+        "font-size:clamp(36px,7vw,56px)",
+        "font-size:14px",
+        "font-size:14px",
+        "font-size:28px",
+        "font-size:13px",
+        "font-size:14px",
+        "font-weight:400",
+        "font:600 18px var(--font-title)",
+        "font-size:14px",
+        "font-size:12px",
+        "font-size:12px"
+      ]
+    },
+    {
+      "file": "src/features/ui-lab/lab.css",
+      "definitions": [],
+      "references": {
+        "--lab-color-ink": 5,
+        "--lab-color-brand": 19,
+        "--lab-color-muted": 9,
+        "--lab-color-focus": 1,
+        "--lab-color-secondary": 5,
+        "--lab-color-ground": 4,
+        "--demo-radius": 1,
+        "--lab-color-error": 4,
+        "--lab-color-success": 3,
+        "--duration": 2
+      },
+      "literalColors": {
+        "#d7ded6": 1,
+        "#eef1eb": 5,
+        "#fff": 9,
+        "#718276": 3,
+        "#f4f6f2": 1,
+        "#dfe5db": 1,
+        "#e2e7df": 1,
+        "#e5e9e1": 6,
+        "#dde4db": 5,
+        "#104a3a": 1,
+        "#0c3b2e": 1,
+        "#17231d06": 1,
+        "#fbe7ec": 2,
+        "#17231d18": 1,
+        "#17231d88": 1,
+        "#dce9de": 1,
+        "#d1e2d5": 1
+      },
+      "fontDeclarations": [
+        "font-family:'DM Sans',Arial,sans-serif",
+        "font-size:14px",
+        "font:inherit",
+        "font-weight:500",
+        "font-size:13px",
+        "font-family:Manrope,'DM Sans',sans-serif",
+        "font-size:26px",
+        "font-size:18px",
+        "font-size:16px",
+        "font-weight:650",
+        "font-size:13px",
+        "font-family:monospace",
+        "font-size:13px",
+        "font-size:18px",
+        "font-size:13px",
+        "font-size:13px",
+        "font-size:13px",
+        "font-size:13px",
+        "font-size:13px",
+        "font-size:13px",
+        "font-size:14px",
+        "font-size:13px",
+        "font-size:22px",
+        "font-size:14px",
+        "font-size:14px",
+        "font-size:13px",
+        "font-size:13px",
+        "font-size:14px",
+        "font-size:13px",
+        "font-size:13px",
+        "font-size:13px",
+        "font-size:13px",
+        "font:14px/1.5 'DM Sans',Arial,sans-serif",
+        "font-size:22px",
+        "font-size:20px",
+        "font-size:13px",
+        "font-size:13px",
+        "font-size:13px",
+        "font-size:13px",
+        "font-size:13px",
+        "font-weight:650",
+        "font-size:13px",
+        "font-size:13px",
+        "font-size:20px",
+        "font-size:16px",
+        "font-size:13px",
+        "font-size:13px",
+        "font-size:13px",
+        "font-weight:500",
+        "font-size:13px",
+        "font-size:28px",
+        "font-size:13px",
+        "font-size:13px",
+        "font-size:13px",
+        "font-size:18px",
+        "font-size:24px",
+        "font-size:24px"
+      ]
+    },
+    {
+      "file": "src/features/ui-lab/host.css",
+      "definitions": [],
+      "references": {},
+      "literalColors": {},
+      "fontDeclarations": []
+    }
+  ],
+  "special": [
+    "src/features/cinema/use-public-motion.ts",
+    "src/features/cinema/public-scene.tsx",
+    "src/features/cinema/editorial-atmosphere.tsx",
+    "src/features/cinema/use-smooth-scroll.ts",
+    "src/features/cinema/route-transition.tsx",
+    "src/features/inicio/liquid-shaders.ts",
+    "src/features/inicio/use-home-reveals.ts",
+    "src/features/inicio/category-liquid-surface.tsx",
+    "src/features/inicio/use-liquid-home.ts",
+    "src/features/inicio/home-motion.ts",
+    "src/features/inicio/ambient-video.tsx",
+    "src/features/inicio/cinematic-chapter.tsx",
+    "src/features/inicio/cinematic-story.tsx",
+    "src/features/inicio/cinematic-chapters.ts",
+    "src/features/inicio/category-carousel.tsx",
+    "src/features/inicio/magnetic-link.tsx",
+    "src/features/inicio/use-category-tilt.ts",
+    "src/features/inicio/product-carousel.tsx",
+    "src/features/inicio/hero-photo.tsx",
+    "src/features/inicio/liquid-home-engine.ts",
+    "src/features/inicio/color-bridge.tsx",
+    "src/features/inicio/presentation-cursor.tsx",
+    "src/features/inicio/brand-marquee.tsx"
+  ]
+}

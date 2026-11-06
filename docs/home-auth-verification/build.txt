@@ -1,0 +1,122 @@
+
+> minimarket-rosita@1.0.0 build
+> tsc -b && vite build
+
+vite v8.3.5 building client environment for production...
+transforming...
+✓ 3537 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                         1.07 kB │ gzip:   0.50 kB
+dist/assets/maplibre-gl-worker-Br3j0JGE.js            518.98 kB
+dist/assets/lab-entry-CI9gjsg7.css                      0.36 kB │ gzip:   0.20 kB
+dist/assets/checkout-page-DZLFt6Yk.css                  3.33 kB │ gzip:   1.08 kB
+dist/assets/product-card-BgH93pPR.css                   3.34 kB │ gzip:   0.92 kB
+dist/assets/order-notification-center-DJzgc68v.css      3.66 kB │ gzip:   0.99 kB
+dist/assets/auth-page-B-MTrrDh.css                      6.79 kB │ gzip:   1.97 kB
+dist/assets/catalog-page-BIkl77at.css                   8.28 kB │ gzip:   2.04 kB
+dist/assets/routing-DgXWUWsC.css                        8.75 kB │ gzip:   2.21 kB
+dist/assets/product-page-XJ83TTC4.css                  10.65 kB │ gzip:   2.53 kB
+dist/assets/route-map-vh-t_kPv.css                     15.09 kB │ gzip:   6.36 kB
+dist/assets/home-page-B-s1SrzC.css                     22.72 kB │ gzip:   5.18 kB
+dist/assets/night-basemap-qvkd0SPb.css                 71.33 kB │ gzip:  10.25 kB
+dist/assets/store-entry-4riM_LdM.css                  168.66 kB │ gzip:  31.54 kB
+dist/assets/order-date-CMmjGd5t.js                      0.11 kB │ gzip:   0.12 kB
+dist/assets/minus-BQDC3jGR.js                           0.14 kB │ gzip:   0.15 kB
+dist/assets/check-BUmONgBr.js                           0.15 kB │ gzip:   0.15 kB
+dist/assets/currency-BKwJlcIz.js                        0.15 kB │ gzip:   0.15 kB
+dist/assets/plus-DRocZwMf.js                            0.18 kB │ gzip:   0.16 kB
+dist/assets/arrow-left-BcQcIFCl.js                      0.19 kB │ gzip:   0.17 kB
+dist/assets/rotate-ccw-eK07bH3i.js                      0.22 kB │ gzip:   0.20 kB
+dist/assets/use-rosita-CGzaLoHj.js                      0.26 kB │ gzip:   0.20 kB
+dist/assets/bell-CM338nK8.js                            0.31 kB │ gzip:   0.25 kB
+dist/assets/use-media-query-BU84aBQP.js                 0.38 kB │ gzip:   0.25 kB
+dist/assets/use-motion-preference-O0WbqAwy.js           0.39 kB │ gzip:   0.25 kB
+dist/assets/package-BPsXfa5L.js                         0.40 kB │ gzip:   0.27 kB
+dist/assets/use-catalog-CCWV9g-7.js                     0.40 kB │ gzip:   0.25 kB
+dist/assets/catalog-state-MkvgWeU7.js                   0.59 kB │ gzip:   0.36 kB
+dist/assets/not-found-page-D_rKSNE_.js                  0.61 kB │ gzip:   0.39 kB
+dist/assets/rolldown-runtime-XKyaHtl9.js                0.72 kB │ gzip:   0.42 kB
+dist/assets/use-operation-DvYqIp5P.js                   0.74 kB │ gzip:   0.41 kB
+dist/assets/dist-CO2InujE.js                            0.75 kB │ gzip:   0.49 kB
+dist/assets/label-DGwWOHr8.js                           0.81 kB │ gzip:   0.49 kB
+dist/assets/quantity-selector-B3j9cMUH.js               0.83 kB │ gzip:   0.46 kB
+dist/assets/demo-auth-BEePhvm7.js                       0.85 kB │ gzip:   0.52 kB
+dist/assets/operation-confirmation-Cs2ohTze.js          0.90 kB │ gzip:   0.50 kB
+dist/assets/geography-EI3Ok0zI.js                       0.92 kB │ gzip:   0.53 kB
+dist/assets/admin-table-BOT_0P3G.js                     0.96 kB │ gzip:   0.47 kB
+dist/assets/admin-common-DaCP-s9P.js                    1.11 kB │ gzip:   0.59 kB
+dist/assets/use-cart-DsCOyQcj.js                        1.17 kB │ gzip:   0.67 kB
+dist/assets/customer-gate-DMGwSPxX.js                   1.18 kB │ gzip:   0.62 kB
+dist/assets/catalog-logic-DEt4A_Q8.js                   1.23 kB │ gzip:   0.65 kB
+dist/assets/table-D-qj21do.js                           1.26 kB │ gzip:   0.51 kB
+dist/assets/cart-pricing-BnyIc5Yh.js                    1.30 kB │ gzip:   0.68 kB
+dist/assets/cart-page-BpS4o1yM.js                       1.60 kB │ gzip:   0.70 kB
+dist/assets/status-history-utkHyx2s.js                  1.80 kB │ gzip:   0.85 kB
+dist/assets/customers-page-DaN0ZQ7w.js                  2.03 kB │ gzip:   0.89 kB
+dist/assets/store-location-page-D7QyUaHK.js             2.20 kB │ gzip:   1.03 kB
+dist/assets/order-summary-DJ_YA3L5.js                   2.28 kB │ gzip:   0.85 kB
+dist/assets/orders-page-Cusj5ywH.js                     2.40 kB │ gzip:   1.05 kB
+dist/assets/dialog-CzMot54d.js                          2.48 kB │ gzip:   0.92 kB
+dist/assets/use-image-source-DZ4Ac9zv.js                2.75 kB │ gzip:   1.40 kB
+dist/assets/order-notification-center-UMTIoDEV.js       2.87 kB │ gzip:   1.25 kB
+dist/assets/agents-page-Io-goLMj.js                     2.87 kB │ gzip:   1.32 kB
+dist/assets/demo-counter-D2_XzdNe.js                    2.99 kB │ gzip:   1.15 kB
+dist/assets/order-detail-page-BZDzeC4h.js               3.06 kB │ gzip:   1.35 kB
+dist/assets/dist-CFL_IvZ5.js                            3.18 kB │ gzip:   1.43 kB
+dist/assets/about-page-BB7mqwzy.js                      3.27 kB │ gzip:   1.55 kB
+dist/assets/zod-BfY8NaMR.js                             3.34 kB │ gzip:   1.26 kB
+dist/assets/product-image-Bt4Mp2sY.js                   3.54 kB │ gzip:   1.32 kB
+dist/assets/state-page-zPLSMubM.js                      3.76 kB │ gzip:   1.47 kB
+dist/assets/button-DfWJdyUd.js                          3.79 kB │ gzip:   1.45 kB
+dist/assets/account-page-DDktgR6x.js                    3.80 kB │ gzip:   1.71 kB
+dist/assets/validation-form-CsaPLk9E.js                 3.98 kB │ gzip:   1.76 kB
+dist/assets/contact-page-CXxSG8iv.js                    4.18 kB │ gzip:   1.91 kB
+dist/assets/card-simulation-BcpMD5ki.js                 4.32 kB │ gzip:   2.09 kB
+dist/assets/trash-oZlgqjFP.js                           4.38 kB │ gzip:   2.03 kB
+dist/assets/image-picker-DWypUMfg.js                    4.46 kB │ gzip:   2.12 kB
+dist/assets/check-page-DqwXga8n.js                      4.67 kB │ gzip:   1.82 kB
+dist/assets/orders-page-D141iKKp.js                     4.72 kB │ gzip:   1.80 kB
+dist/assets/help-page-jFiQOvgf.js                       5.05 kB │ gzip:   2.27 kB
+dist/assets/routing-Ckw4q9bA.js                         6.34 kB │ gzip:   2.81 kB
+dist/assets/product-card-CfSPmvB3.js                    6.58 kB │ gzip:   2.61 kB
+dist/assets/reports-page-C2Vkejen.js                    6.77 kB │ gzip:   2.43 kB
+dist/assets/dist-BI4tg7II.js                            7.53 kB │ gzip:   2.86 kB
+dist/assets/taxonomy-page-B5BXVAdh.js                   7.66 kB │ gzip:   3.02 kB
+dist/assets/analytics-CzS0AWX5.js                       8.59 kB │ gzip:   3.35 kB
+dist/assets/inventory-page-CwAeNTji.js                  9.30 kB │ gzip:   3.37 kB
+dist/assets/auth-page-CBtyGmBQ.js                      10.42 kB │ gzip:   3.89 kB
+dist/assets/dashboard-page-BU2sJbBo.js                 12.25 kB │ gzip:   3.75 kB
+dist/assets/products-page-BdhOZEmu.js                  14.07 kB │ gzip:   4.96 kB
+dist/assets/order-page-xJmKJWPU.js                     15.48 kB │ gzip:   5.20 kB
+dist/assets/product-page-Dqhclk4S.js                   16.02 kB │ gzip:   5.70 kB
+dist/assets/catalog-page-CshAfvN6.js                   19.02 kB │ gzip:   6.71 kB
+dist/assets/checkout-page-C4bi2cM2.js                  21.08 kB │ gzip:   7.19 kB
+dist/assets/cash-page-DxGOioUu.js                      23.21 kB │ gzip:   7.23 kB
+dist/assets/dist-Bcow9Ss5.js                           25.83 kB │ gzip:  10.70 kB
+dist/assets/home-page-CZW-a_f2.js                      27.97 kB │ gzip:  10.06 kB
+dist/assets/dist-DL2TG-lt.js                           28.41 kB │ gzip:   9.90 kB
+dist/assets/dist-BeRBnTEE.js                           33.57 kB │ gzip:   9.36 kB
+dist/assets/index.esm-CSbfp2jX.js                      38.05 kB │ gzip:  13.31 kB
+dist/assets/chunk-6KYCQHYJ-BXYuCE2q.js                 38.50 kB │ gzip:  13.79 kB
+dist/assets/system-page-DEgbdrkh.js                    38.94 kB │ gzip:  13.33 kB
+dist/assets/lab-entry-Bmwp3uTY.js                      55.39 kB │ gzip:  16.91 kB
+dist/assets/state-model-CYpGY07r.js                    67.96 kB │ gzip:  19.67 kB
+dist/assets/model-demo-BUIkDioD.js                     78.32 kB │ gzip:  23.73 kB
+dist/assets/validation-CizmKmh1.js                     93.20 kB │ gzip:  26.35 kB
+dist/assets/store-entry-M5f3mMyi.js                   111.93 kB │ gzip:  34.83 kB
+dist/assets/product-model-canvas-BPz1k3o3.js          115.27 kB │ gzip:  37.30 kB
+dist/assets/cinema-runtime-Dz7_rVG_.js                119.90 kB │ gzip:  47.23 kB
+dist/assets/motion-runtime-C5rmIcwc.js                139.51 kB │ gzip:  46.48 kB
+dist/assets/route-map-Cb86AvhR.js                     155.07 kB │ gzip:  46.23 kB
+dist/assets/checkout-validation-6njD8U-b.js           196.94 kB │ gzip:  52.06 kB
+dist/assets/index--7-JC5Er.js                         214.43 kB │ gzip:  67.42 kB
+dist/assets/OrbitControls-I2Jgi4hf.js                 937.83 kB │ gzip: 248.47 kB
+dist/assets/night-basemap-BFSlHAXy.js               1,062.67 kB │ gzip: 288.74 kB
+
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 1.68s

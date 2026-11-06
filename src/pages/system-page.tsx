@@ -1,3 +1,4 @@
+import { useDesignTheme } from '@/design/use-design-theme';
 import { ModulePatterns } from "@/features/sistema/module-patterns";
 import { useCatalog } from "@/hooks/use-catalog";
 import { toast } from "sonner";
@@ -27,21 +28,23 @@ import { ValidationForm } from "@/features/comprobacion/validation-form";
 import { ProductCard } from "@/features/catalogo/product-card";
 
 import { useHeadingFocus } from "@/hooks/use-heading-focus";
-const swatches = [
-  ["Marca / acción", "#145A46"],
-  ["Fondo", "#F7F8F5"],
-  ["Superficie", "#FFFFFF"],
-  ["Texto principal", "#17231D"],
-  ["Texto secundario", "#526159"],
-  ["Identidad rosa", "#F4B8C8"],
-  ["Verde suave", "#E8F1E9"],
-  ["Foco", "#245AC9"],
-  ["Error", "#B42332"],
-  ["Éxito", "#216744"],
-  ["Advertencia", "#875006"],
+const swatchTokens = [
+  ["Marca / acción", "primary"],
+  ["Fondo", "background"],
+  ["Superficie", "card"],
+  ["Texto principal", "foreground"],
+  ["Texto secundario", "muted-foreground"],
+  ["Identidad rosa", "accent"],
+  ["Verde suave", "secondary"],
+  ["Foco", "ring"],
+  ["Error", "destructive"],
+  ["Éxito", "success"],
+  ["Advertencia", "warning"],
 ];
 export function SystemPage() {
   const products = useCatalog();
+  const { values } = useDesignTheme();
+  const swatches=swatchTokens.map(([label,key])=>[label,values[key]]);
   const heading = useHeadingFocus(),
     [loading, Loading] = useState(false),
     [success, Success] = useState(false),
@@ -67,7 +70,8 @@ export function SystemPage() {
           Biblioteca interna del prototipo. Estos son los mismos tokens y
           componentes que usa la tienda, no imágenes de una propuesta.
         </p>
-        <Badge variant="secondary">Aplicación 1.0.0 · Frontend local</Badge>
+        <Badge variant="secondary">Referencia de los tokens publicados</Badge>
+        <p>La configuración se administra en <Link to="/admin/personalizacion">Personalización visual / Design System</Link>.</p>
       </div>
       <Tabs defaultValue="fundamentos">
         <TabsList className="system-navigation-tabs">
@@ -96,11 +100,10 @@ export function SystemPage() {
           <section className="system-section">
             <h2>Una voz expresiva. Una lectura cómoda.</h2>
             <h3 style={{ fontSize: 36, fontWeight: 800 }}>
-              Manrope, para lo que importa.
+              {values["font-title"].split(",")[0].replaceAll('"','')}, para lo que importa.
             </h3>
             <p>
-              DM Sans, para acompañar cada tarea. Cuerpo de 16 px, navegación y
-              formularios de 14 px. Precios y tablas usan cifras tabulares para
+              {values["font-body"].split(",")[0].replaceAll('"','')}, para acompañar cada tarea. Cuerpo de {values["ds-type-base"]} px, navegación y formularios de {values["ds-type-secondary"]} px. Precios y tablas usan cifras tabulares para
               comparar importes.
             </p>
             <p>
@@ -113,7 +116,7 @@ export function SystemPage() {
             <h2>Espacio, forma y movimiento.</h2>
             <p>
               Espaciado 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 px. Controles
-              con radio 10 px, tarjetas 20 px y promociones 28 px. Sombras
+              con radio {values["radius-control"]} px, tarjetas convencionales {values["radius-card"]} px y promociones {values["radius-feature"]} px. Sombras
               discretas; foco de 3 px y controles esenciales de 44–48 px.
             </p>
             <Table>
@@ -126,8 +129,8 @@ export function SystemPage() {
               </TableHeader>
               <TableBody>
                 {[
-                  ["Controles", "150 ms", "Fondo, borde y respuesta breve."],
-                  ["Paneles", "240 ms", "Entrada/salida de carrito y filtros."],
+                  ["Controles", `${values["motion-control"]} ms`, "Fondo, borde y respuesta breve."],
+                  ["Paneles", `${values["motion-panel"]} ms`, "Entrada/salida de carrito y filtros."],
                   [
                     "Título de inicio",
                     "650 ms + 90 ms",

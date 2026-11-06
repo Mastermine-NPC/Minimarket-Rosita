@@ -1,0 +1,30 @@
+[
+  {
+    "file": "src/styles/globals.css",
+    "replacements": 3
+  },
+  {
+    "file": "src/styles/modules.css",
+    "replacements": 0
+  },
+  {
+    "file": "src/styles/operations.css",
+    "replacements": 2
+  },
+  {
+    "file": "src/styles/polish.css",
+    "replacements": 0
+  },
+  {
+    "file": "src/styles/rosita-editorial.css",
+    "replacements": 22
+  },
+  {
+    "file": "src/styles/auth-screen.css",
+    "replacements": 5
+  },
+  {
+    "file": "src/styles/cart-experience.css",
+    "replacements": 3
+  }
+]

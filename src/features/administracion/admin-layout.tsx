@@ -40,6 +40,7 @@ const sections = [
   { path: "/admin/agentes", label: "Agentes de caja", icon: ShieldCheck },
   { path: "/admin/ubicacion", label: "Origen de tienda", icon: Tags },
   { path: "/admin/reportes", label: "Reportes", icon: FileDown },
+  { path: "/admin/personalizacion", label: "Personalización visual", icon: Tags },
 ];
 export function AdminLayout() {
   const { state, dispatch, initialNotice } = useRosita(),

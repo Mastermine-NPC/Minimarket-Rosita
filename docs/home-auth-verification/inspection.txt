@@ -1,0 +1,28 @@
+TASTESKILL · INSPECT   http://localhost:4190/login
+
+MEASURED (first viewport listed)
+  hero headline   "Qué bueno verte."  3 words · 1 line(s) · 58px (4vw) · Manrope 800 · tracking -0.06em · leading 1.04
+  @768px          1 line(s) · 42px
+  @390px          1 line(s) · 34px
+  typefaces       DM Sans 93%, Manrope 7%
+  sizes in use    10 / 11 / 12 / 13 / 14 / 15 / 16 / 17 / 18 / 28 / 30 / 58 / 76 / 259 px   body 13px / 1.65
+  colour          page #f7f8f5 · sections #f1f2e9 #f7f8f5 #103e32 #10251e #123d30 · button #ffffff
+  page            1.1 screens · 111 words · 3 images · hero media 100% canvas
+  headings        5 · longest 2 line(s) · median 3 words
+
+WARN — fix, or be able to defend
+  [palette-cream] @1440px (+768, 390)  Yellow-cream background (text #fff7eb).
+      → Use the drawn palette. If you want warmth, take a low-chroma stone or bone, not a yellow cream.
+  [app-title-size] @1440px (+768, 390)  The h1 is 58px ("Qué bueno verte.").
+      → An app screen is not a landing page: the title is 18-32px (20-24px on a phone).
+
+LOOK AT THE RENDER — open these with your image viewer / Read tool before saying anything about quality:
+  desktop 1440px  C:/Users/hisok/.codex/visualizations/2026/11/01/01a19847-a13f-73f2-ae5d-85946fe1277b/home-auth-inspection/desktop-fold.jpg
+                  C:/Users/hisok/.codex/visualizations/2026/11/01/01a19847-a13f-73f2-ae5d-85946fe1277b/home-auth-inspection/desktop-page-01.jpg
+  tablet 768px    C:/Users/hisok/.codex/visualizations/2026/11/01/01a19847-a13f-73f2-ae5d-85946fe1277b/home-auth-inspection/tablet-fold.jpg
+                  C:/Users/hisok/.codex/visualizations/2026/11/01/01a19847-a13f-73f2-ae5d-85946fe1277b/home-auth-inspection/tablet-page-01.jpg
+  mobile 390px    C:/Users/hisok/.codex/visualizations/2026/11/01/01a19847-a13f-73f2-ae5d-85946fe1277b/home-auth-inspection/mobile-fold.jpg
+                  C:/Users/hisok/.codex/visualizations/2026/11/01/01a19847-a13f-73f2-ae5d-85946fe1277b/home-auth-inspection/mobile-page-01.jpg
+
+report: C:/Users/hisok/.codex/visualizations/2026/11/01/01a19847-a13f-73f2-ae5d-85946fe1277b/home-auth-inspection/report.json
+RESULT: 0 FAIL, 2 WARN — measurements pass. Passing the meter is the floor, not the grade: score the screenshots with references/critique.md.

@@ -1,0 +1,14 @@
+{
+  "command": "npm run dev",
+  "frontend": "http://localhost:5174",
+  "backendPort": 4191,
+  "proxy": true,
+  "home": true,
+  "catalog": true,
+  "admin": true,
+  "preview": true,
+  "publish": true,
+  "independentVisitor": true,
+  "restored": true,
+  "errors": []
+}

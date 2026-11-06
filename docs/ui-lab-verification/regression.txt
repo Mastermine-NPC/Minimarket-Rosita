@@ -1,0 +1,79 @@
+
+> minimarket-rosita@1.0.0 test
+> npm run test:operations && npm run test:catalog && npm run test:order-flow && npm run test:international-phone && npm run test:ui-lab
+
+
+> minimarket-rosita@1.0.0 test:operations
+> node scripts/verify-operations.mjs --offline && node scripts/verify-operations-edges.mjs --offline
+
+Esquema 9, 79 códigos únicos y credencial ficticia de caja válidos.
+Caja efectivo: insuficiente rechazado, vuelto correcto, una venta y un descuento aun repitiendo la acción.
+Pedido digital de recojo: envío cero, stock compartido, cuatro estados y ninguna segunda venta/salida al recoger.
+Permisos, agente desactivado, cantidades inválidas y tarjeta obsoleta rechazados; tarjeta válida, turno y diferencia sin sumar tarjeta al efectivo.
+Reportes y CSV: caja/pedido/canales, tres salidas y cuatro unidades sin doble conteo; filtro de recojo.
+Migración v8→v9 conserva precios/stock/carrito/cuentas; no duplica agente. Roundtrip ventas, turnos, pedidos; corrupción/futuro/bloqueo manejados.
+Geometría vial Rosita→UTP de respaldo verificado, sin red, interpolación y fallback exclusivo; delivery con tarifa 6.50, snapshot inmutable, progreso persistido.
+Agentes: creación/reset PBKDF2, correo único, sin edición de admin/cliente; cajero no administra ni crea agentes; cuenta inactiva no inicia sesión.
+Fixture histórica real v7→9: pedidos y movimientos idénticos, nombres/imágenes, productos propios, precios/stock y assets locales preservados.
+Revalidación de precio, desactivación, agotado, fracciones/exceso y turno abierto; snapshots de venta no cambian con catálogo.
+Respuesta vial sintética sin red (no verifica el proveedor), rechazo de cobertura/punto no confirmado/ruta incompatible y cancelación explícita de petición.
+Restablecimiento exclusivo de Rosita conserva claves ajenas.
+
+> minimarket-rosita@1.0.0 test:catalog
+> node scripts/verify-model-catalog.mjs && node scripts/verify-normal-catalog.mjs && node scripts/verify-halloween.mjs
+
+[
+  '79 real catalog records, 12 additive model products',
+  'Validated schema, unique IDs/codes/barcodes',
+  'Version 9 storage migration and repeated restart are idempotent',
+  'Existing prices, stock, cart, orders, movements and checkout retained',
+  'ID collision preserves existing product and model association',
+  'Administration price edit keeps model key and is never re-seeded'
+]
+{
+  passed: [
+    'One shared 79-product catalog without query parameters',
+    'Four ordinary featured references within the first 12 cards',
+    'Normal name search; legacy code search unnecessary and no longer matches public codes',
+    'Legacy IDs kept as canonical foreign keys; inventory, cart, checkout, orders and cash drafts unchanged',
+    'Normal public numeric codes and idempotent persisted migration',
+    'Occupied commercial codes preserve the prior record'
+  ],
+  first12: [
+    { id: 'ROS-3D-SUNSILK', code: 'ROS-066', name: 'Champú Sunsilk' },
+    { id: 'ROS-3D-COLA', code: 'ROS-064', name: 'Coca-Cola en lata' },
+    { id: 'ROS-001', code: 'ROS-001', name: 'Gaseosa Coca-Cola' },
+    { id: 'ROS-016', code: 'ROS-016', name: 'Jabón Protex avena' },
+    { id: 'ROS-010', code: 'ROS-010', name: 'Monopoly clásico' },
+    { id: 'ROS-3D-NIVEA', code: 'ROS-065', name: 'Nivea Aftershave' },
+    { id: 'ROS-002', code: 'ROS-002', name: 'Papas Lay’s clásicas' },
+    { id: 'ROS-008', code: 'ROS-008', name: 'Pilas Duracell AA' },
+    { id: 'ROS-004', code: 'ROS-004', name: 'Set de destornilladores' },
+    { id: 'ROS-017', code: 'ROS-017', name: 'Shampoo Sedal' },
+    { id: 'ROS-014', code: 'ROS-014', name: 'Sobres manila Grafi' },
+    { id: 'ROS-007', code: 'ROS-007', name: 'Adaptador de enchufe' }
+  ]
+}
+PASS shared 79-product catalog, four Halloween products, additive v9 migration, repeat initialization, ID/code/barcode collision, existing custom edits/history, admin price edit, cash sale and exactly-once stock movement
+
+> minimarket-rosita@1.0.0 test:order-flow
+> node scripts/verify-order-flow.mjs
+
+received order through existing transaction
+customer/cashier/inactive administrator cannot advance
+administrator advances exactly one stage with immutable snapshot
+duplicate and stale operations rejected
+delivery requires explicit administrator transition
+notification history derives from unique persisted events and respects ownership
+validated forward status sync preserves session, payment, inventory and movements
+forged actor, altered totals, skipped and backwards history rejected
+
+> minimarket-rosita@1.0.0 test:international-phone
+> node scripts/verify-international-phone.mjs
+
+PASS international mobile/fixed validation and normalization, type mismatch, incomplete numbers, reducer/order persistence, historical records and 245 local flags
+
+> minimarket-rosita@1.0.0 test:ui-lab
+> node scripts/verify-ui-lab.mjs
+
+PASS UI Lab: validación, medias, éxito, errores, CSV seguro y clave aislada. Datos técnicos sin participantes reales.

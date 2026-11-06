@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/sheet";
 import { useRosita } from "@/hooks/use-rosita";
 import { CartContent } from "./cart-content";
+import { CartPanelFooter } from "./cart-panel-footer";
 export function CartSheet() {
   const { cartOpen, setCartOpen } = useRosita();
   const origin = useRef<HTMLElement | null>(null);
@@ -17,7 +18,7 @@ export function CartSheet() {
   return (
     <Sheet open={cartOpen} onOpenChange={setCartOpen}>
       <SheetContent
-        className="cart-sheet"
+        className="cart-sheet cart-redesign-panel"
         onOpenAutoFocus={() => {
           origin.current =
             document.activeElement instanceof HTMLElement
@@ -44,15 +45,15 @@ export function CartSheet() {
         }}
       >
         <SheetHeader>
-          <span className="eyebrow">TU SELECCIÓN</span>
           <SheetTitle>Tu carrito</SheetTitle>
           <SheetDescription>
-            Lo que necesitas, en un solo lugar. Datos de prueba.
+            Revisa productos y cantidades antes de continuar.
           </SheetDescription>
         </SheetHeader>
         <div className="cart-sheet-scroll">
           <CartContent panel />
         </div>
+        <CartPanelFooter />
       </SheetContent>
     </Sheet>
   );

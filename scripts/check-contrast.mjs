@@ -6,6 +6,9 @@ const css = fs.readFileSync(
 const colors = Object.fromEntries(
   [...css.matchAll(/--([\w-]+):\s*(#[\da-f]{6})/gi)].map((m) => [m[1], m[2]]),
 );
+for (const match of css.matchAll(/--([\w-]+):\s*var\(--([\w-]+)\)/g)) {
+  if (colors[match[2]]) colors[match[1]] = colors[match[2]];
+}
 function luminance(hex) {
   const c = hex
     .slice(1)

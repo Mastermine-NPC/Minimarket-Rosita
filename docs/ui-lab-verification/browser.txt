@@ -1,0 +1,1 @@
+PASS UI LAB browser: five components, A/B four tasks each, timer/manual entry/persistence/CSV, 3D, responsive, reduced motion, store state/style isolation and seven commercial routes. Technical fixtures only.

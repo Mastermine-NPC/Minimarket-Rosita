@@ -1,0 +1,163 @@
+
+> minimarket-rosita@1.0.0 check
+> npm run typecheck && npm run lint && npm run check:contrast && npm run build
+
+
+> minimarket-rosita@1.0.0 typecheck
+> tsc -b --pretty false
+
+
+> minimarket-rosita@1.0.0 lint
+> eslint . --max-warnings 0
+
+
+> minimarket-rosita@1.0.0 check:contrast
+> node scripts/check-contrast.mjs
+
+┌─────────┬────────────────────────────┬────────────┬────────────┬───────┬─────────┬────────┐
+│ (index) │ name                       │ foreground │ background │ ratio │ minimum │ passed │
+├─────────┼────────────────────────────┼────────────┼────────────┼───────┼─────────┼────────┤
+│ 0       │ 'Inicio blanco/verde'      │ '#ffffff'  │ '#145a46'  │ 8.14  │ 4.5     │ true   │
+│ 1       │ 'Inicio rosa/verde y foco' │ '#f4b8c8'  │ '#145a46'  │ 4.86  │ 4.5     │ true   │
+│ 2       │ 'Inicio verde/rosa'        │ '#145a46'  │ '#f4b8c8'  │ 4.86  │ 4.5     │ true   │
+│ 3       │ 'Inicio verde suave/verde' │ '#e8f1e9'  │ '#145a46'  │ 7.05  │ 4.5     │ true   │
+│ 4       │ 'Sidebar texto'            │ '#d1e2d5'  │ '#103e32'  │ 8.85  │ 4.5     │ true   │
+│ 5       │ 'Sidebar foco'             │ '#f4b8c8'  │ '#103e32'  │ 7.13  │ 3       │ true   │
+│ 6       │ 'Texto/superficie'         │ '#17231d'  │ '#ffffff'  │ 16.22 │ 4.5     │ true   │
+│ 7       │ 'Texto/fondo'              │ '#17231d'  │ '#f7f8f5'  │ 15.22 │ 4.5     │ true   │
+│ 8       │ 'Botón principal'          │ '#ffffff'  │ '#145a46'  │ 8.14  │ 4.5     │ true   │
+│ 9       │ 'Botón hover'              │ '#ffffff'  │ '#104a3a'  │ 10.18 │ 4.5     │ true   │
+│ 10      │ 'Botón presionado'         │ '#ffffff'  │ '#0c3b2e'  │ 12.5  │ 4.5     │ true   │
+│ 11      │ 'Secundario'               │ '#145a46'  │ '#e8f1e9'  │ 7.05  │ 4.5     │ true   │
+│ 12      │ 'Acento'                   │ '#17231d'  │ '#f4b8c8'  │ 9.68  │ 4.5     │ true   │
+│ 13      │ 'Error'                    │ '#b42332'  │ '#ffffff'  │ 6.51  │ 4.5     │ true   │
+│ 14      │ 'Inventario agotado'       │ '#b42332'  │ '#fff0f1'  │ 5.88  │ 4.5     │ true   │
+│ 15      │ 'Inventario desactivado'   │ '#526159'  │ '#eef1eb'  │ 5.73  │ 4.5     │ true   │
+│ 16      │ 'Éxito'                    │ '#216744'  │ '#e8f3ea'  │ 5.97  │ 4.5     │ true   │
+│ 17      │ 'Aviso'                    │ '#875006'  │ '#fff4db'  │ 6.04  │ 4.5     │ true   │
+│ 18      │ 'Texto secundario'         │ '#526159'  │ '#ffffff'  │ 6.54  │ 4.5     │ true   │
+│ 19      │ 'Texto secundario/fondo'   │ '#526159'  │ '#f7f8f5'  │ 6.13  │ 4.5     │ true   │
+│ 20      │ 'Foco/superficie'          │ '#245ac9'  │ '#ffffff'  │ 6.21  │ 3       │ true   │
+│ 21      │ 'Foco/fondo'               │ '#245ac9'  │ '#f7f8f5'  │ 5.83  │ 3       │ true   │
+│ 22      │ 'Borde de control'         │ '#718276'  │ '#ffffff'  │ 4.07  │ 3       │ true   │
+│ 23      │ 'Texto sobre rosa'         │ '#17231d'  │ '#f4b8c8'  │ 9.68  │ 4.5     │ true   │
+│ 24      │ 'Footer secundario'        │ '#d1e2d5'  │ '#145a46'  │ 6.03  │ 4.5     │ true   │
+│ 25      │ 'Footer cuerpo'            │ '#e0ebe2'  │ '#145a46'  │ 6.65  │ 4.5     │ true   │
+└─────────┴────────────────────────────┴────────────┴────────────┴───────┴─────────┴────────┘
+La marca verde admite texto blanco. Sobre rosa usar texto oscuro; foco, error, éxito y advertencia tienen tokens separados.
+
+> minimarket-rosita@1.0.0 build
+> tsc -b && vite build
+
+vite v8.3.5 building client environment for production...
+transforming...
+✓ 3541 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                         1.07 kB │ gzip:   0.51 kB
+dist/assets/maplibre-gl-worker-Br3j0JGE.js            518.98 kB
+dist/assets/lab-entry-CI9gjsg7.css                      0.36 kB │ gzip:   0.20 kB
+dist/assets/checkout-page-DZLFt6Yk.css                  3.33 kB │ gzip:   1.08 kB
+dist/assets/product-card-BgH93pPR.css                   3.34 kB │ gzip:   0.92 kB
+dist/assets/order-notification-center-DJzgc68v.css      3.66 kB │ gzip:   0.99 kB
+dist/assets/auth-page-B-MTrrDh.css                      6.79 kB │ gzip:   1.97 kB
+dist/assets/catalog-page-BIkl77at.css                   8.28 kB │ gzip:   2.04 kB
+dist/assets/routing-DgXWUWsC.css                        8.75 kB │ gzip:   2.21 kB
+dist/assets/product-page-XJ83TTC4.css                  10.65 kB │ gzip:   2.53 kB
+dist/assets/route-map-vh-t_kPv.css                     15.09 kB │ gzip:   6.36 kB
+dist/assets/home-page-B-s1SrzC.css                     22.72 kB │ gzip:   5.18 kB
+dist/assets/night-basemap-qvkd0SPb.css                 71.33 kB │ gzip:  10.25 kB
+dist/assets/store-entry-WEj7XINM.css                  185.91 kB │ gzip:  34.35 kB
+dist/assets/order-date-CMmjGd5t.js                      0.11 kB │ gzip:   0.12 kB
+dist/assets/minus-BJi3dwvP.js                           0.14 kB │ gzip:   0.15 kB
+dist/assets/plus-C3zWKjpS.js                            0.18 kB │ gzip:   0.16 kB
+dist/assets/arrow-left-CulGZC5y.js                      0.19 kB │ gzip:   0.17 kB
+dist/assets/rotate-ccw-B9KhahZS.js                      0.22 kB │ gzip:   0.20 kB
+dist/assets/use-rosita-arVr4RYE.js                      0.26 kB │ gzip:   0.20 kB
+dist/assets/bell-DWGJ_k28.js                            0.31 kB │ gzip:   0.25 kB
+dist/assets/use-media-query-BSXOQaRw.js                 0.38 kB │ gzip:   0.25 kB
+dist/assets/use-motion-preference-DdZJgkRP.js           0.39 kB │ gzip:   0.25 kB
+dist/assets/package-B0dp_7Q3.js                         0.40 kB │ gzip:   0.27 kB
+dist/assets/use-catalog-EhiSjLnH.js                     0.40 kB │ gzip:   0.25 kB
+dist/assets/catalog-state-MkvgWeU7.js                   0.59 kB │ gzip:   0.36 kB
+dist/assets/not-found-page-raVp1cwO.js                  0.61 kB │ gzip:   0.40 kB
+dist/assets/rolldown-runtime-XKyaHtl9.js                0.72 kB │ gzip:   0.42 kB
+dist/assets/use-operation-CVQtbjkk.js                   0.74 kB │ gzip:   0.41 kB
+dist/assets/dist-CzF2LAMI.js                            0.75 kB │ gzip:   0.49 kB
+dist/assets/label-Bn_a2EMz.js                           0.81 kB │ gzip:   0.49 kB
+dist/assets/demo-auth-BEePhvm7.js                       0.85 kB │ gzip:   0.52 kB
+dist/assets/operation-confirmation-BVAjIWga.js          0.90 kB │ gzip:   0.50 kB
+dist/assets/geography-EI3Ok0zI.js                       0.92 kB │ gzip:   0.53 kB
+dist/assets/admin-table-BjhpErvV.js                     0.96 kB │ gzip:   0.47 kB
+dist/assets/admin-common-CGr7oGzd.js                    1.11 kB │ gzip:   0.59 kB
+dist/assets/customer-gate-Ce6DOri1.js                   1.18 kB │ gzip:   0.62 kB
+dist/assets/catalog-logic-DEt4A_Q8.js                   1.23 kB │ gzip:   0.65 kB
+dist/assets/table-e3UtdknR.js                           1.26 kB │ gzip:   0.51 kB
+dist/assets/cart-pricing-BnyIc5Yh.js                    1.30 kB │ gzip:   0.68 kB
+dist/assets/cart-page-Ba8AgvyH.js                       1.54 kB │ gzip:   0.67 kB
+dist/assets/status-history-B0XnIrm8.js                  1.81 kB │ gzip:   0.85 kB
+dist/assets/customers-page-DdQcf43r.js                  2.03 kB │ gzip:   0.89 kB
+dist/assets/store-location-page-DGePKihl.js             2.20 kB │ gzip:   1.03 kB
+dist/assets/order-summary-DnIfpNpt.js                   2.29 kB │ gzip:   0.85 kB
+dist/assets/orders-page-BcjPTcnP.js                     2.36 kB │ gzip:   1.04 kB
+dist/assets/use-image-source-BktFLO2d.js                2.75 kB │ gzip:   1.39 kB
+dist/assets/order-notification-center-NdOOChMC.js       2.87 kB │ gzip:   1.26 kB
+dist/assets/agents-page-DUgWKiaf.js                     2.87 kB │ gzip:   1.33 kB
+dist/assets/demo-counter-CpoKNYeQ.js                    2.99 kB │ gzip:   1.15 kB
+dist/assets/order-detail-page-Dd-7gSbO.js               3.06 kB │ gzip:   1.35 kB
+dist/assets/dist-ivthVZPN.js                            3.18 kB │ gzip:   1.43 kB
+dist/assets/about-page-CSqGkdq1.js                      3.27 kB │ gzip:   1.55 kB
+dist/assets/zod-D_DCEJok.js                             3.34 kB │ gzip:   1.26 kB
+dist/assets/state-page-CxuHBZVm.js                      3.69 kB │ gzip:   1.44 kB
+dist/assets/button-D0kvZEB9.js                          3.79 kB │ gzip:   1.45 kB
+dist/assets/account-page-S1QCcH8g.js                    3.80 kB │ gzip:   1.71 kB
+dist/assets/validation-form-tpHuXxho.js                 3.98 kB │ gzip:   1.76 kB
+dist/assets/contact-page-36OxFIao.js                    4.18 kB │ gzip:   1.90 kB
+dist/assets/card-simulation-ClB9j-qd.js                 4.29 kB │ gzip:   2.07 kB
+dist/assets/image-picker-Ba_RsKC_.js                    4.46 kB │ gzip:   2.12 kB
+dist/assets/trash-DNeg-c88.js                           4.48 kB │ gzip:   2.07 kB
+dist/assets/check-page-D9NwfOKJ.js                      4.64 kB │ gzip:   1.81 kB
+dist/assets/orders-page-CRzBxaze.js                     4.69 kB │ gzip:   1.79 kB
+dist/assets/help-page-BI5ySGbc.js                       5.05 kB │ gzip:   2.28 kB
+dist/assets/routing-B290poj6.js                         6.34 kB │ gzip:   2.82 kB
+dist/assets/product-card-MRClERiJ.js                    6.42 kB │ gzip:   2.54 kB
+dist/assets/reports-page-BEZQIEkt.js                    6.77 kB │ gzip:   2.44 kB
+dist/assets/dist-Bax3TIht.js                            7.53 kB │ gzip:   2.86 kB
+dist/assets/taxonomy-page-BYEVpbPo.js                   7.62 kB │ gzip:   3.00 kB
+dist/assets/analytics-CzS0AWX5.js                       8.59 kB │ gzip:   3.35 kB
+dist/assets/inventory-page-y5KQItrF.js                  9.23 kB │ gzip:   3.32 kB
+dist/assets/auth-page-CNxfB5rm.js                      10.43 kB │ gzip:   3.89 kB
+dist/assets/dashboard-page-Dr4hAo9B.js                 12.22 kB │ gzip:   3.73 kB
+dist/assets/products-page-Ct5st3kN.js                  13.96 kB │ gzip:   4.93 kB
+dist/assets/order-page-BLy363ol.js                     15.48 kB │ gzip:   5.19 kB
+dist/assets/product-page-CUwcpdGC.js                   15.65 kB │ gzip:   5.62 kB
+dist/assets/catalog-page-N3tvrN_e.js                   18.97 kB │ gzip:   6.69 kB
+dist/assets/checkout-page-BLmbGEup.js                  20.93 kB │ gzip:   7.12 kB
+dist/assets/cash-page-YhFUVtoy.js                      23.14 kB │ gzip:   7.20 kB
+dist/assets/dist-Bcow9Ss5.js                           25.83 kB │ gzip:  10.70 kB
+dist/assets/home-page-UNVyIAyl.js                      27.97 kB │ gzip:  10.06 kB
+dist/assets/dist-B5Xih1T2.js                           28.41 kB │ gzip:   9.90 kB
+dist/assets/dist-CEAQVVel.js                           33.57 kB │ gzip:   9.36 kB
+dist/assets/index.esm-CU0h8sLa.js                      38.05 kB │ gzip:  13.31 kB
+dist/assets/chunk-6KYCQHYJ-DvhEqM0Y.js                 38.50 kB │ gzip:  13.79 kB
+dist/assets/system-page-C99EE3J_.js                    38.95 kB │ gzip:  13.33 kB
+dist/assets/lab-entry-CZxIc8Il.js                      55.36 kB │ gzip:  16.90 kB
+dist/assets/state-model-CYpGY07r.js                    67.96 kB │ gzip:  19.67 kB
+dist/assets/model-demo-9qLV3HHr.js                     78.32 kB │ gzip:  23.73 kB
+dist/assets/validation-CizmKmh1.js                     93.20 kB │ gzip:  26.35 kB
+dist/assets/product-model-canvas-TpY3Kg5A.js          115.27 kB │ gzip:  37.30 kB
+dist/assets/cinema-runtime-Dz7_rVG_.js                119.90 kB │ gzip:  47.23 kB
+dist/assets/store-entry-CXyyXTNe.js                   126.30 kB │ gzip:  38.78 kB
+dist/assets/motion-runtime-DXe9sCxg.js                144.33 kB │ gzip:  48.34 kB
+dist/assets/route-map-Ckid8iWz.js                     155.08 kB │ gzip:  46.24 kB
+dist/assets/checkout-validation-6njD8U-b.js           196.94 kB │ gzip:  52.06 kB
+dist/assets/index-Bi8ZdT_A.js                         214.25 kB │ gzip:  67.33 kB
+dist/assets/OrbitControls-BqcU7nsA.js                 937.82 kB │ gzip: 248.47 kB
+dist/assets/night-basemap-Cva-t9Iz.js               1,062.67 kB │ gzip: 288.74 kB
+
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 1.51s

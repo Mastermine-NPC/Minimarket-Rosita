@@ -54,3 +54,6 @@ Desktop.ini
 # Videos originales pesados (conservar localmente)
 /public/images/video/Arequipa-backgraound-02.mp4
 /public/images/video/tornillos-video-cinematografic.mp4
+
+# Private persisted visual configuration and publication audit
+.runtime/

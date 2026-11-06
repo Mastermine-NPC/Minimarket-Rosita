@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "node scripts/dev.mjs",
     "build": "tsc -b && vite build",
     "lint": "eslint . --max-warnings 0",
     "preview": "vite preview",
@@ -15,10 +15,14 @@
     "test:routing:live": "node scripts/verify-operations.mjs && node scripts/verify-operations-edges.mjs",
     "seo:sitemap": "node scripts/generate-sitemap.mjs",
     "test:catalog": "node scripts/verify-model-catalog.mjs && node scripts/verify-normal-catalog.mjs && node scripts/verify-halloween.mjs",
-    "test": "npm run test:operations && npm run test:catalog && npm run test:order-flow && npm run test:international-phone",
+    "test": "npm run test:operations && npm run test:catalog && npm run test:order-flow && npm run test:international-phone && npm run test:ui-lab",
     "test:order-flow": "node scripts/verify-order-flow.mjs",
     "test:international-phone": "node scripts/verify-international-phone.mjs",
-    "test:halloween": "node scripts/verify-halloween.mjs"
+    "test:halloween": "node scripts/verify-halloween.mjs",
+    "test:ui-lab": "node scripts/verify-ui-lab.mjs",
+    "start": "node server/design-server.mjs",
+    "tokens:generate": "node scripts/generate-design-tokens.mjs",
+    "test:design": "node scripts/verify-design-system.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^6.0.2",

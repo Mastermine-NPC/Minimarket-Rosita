@@ -1,0 +1,1 @@
+PASS Home/Auth: Coca-Cola opening, 8 original scene videos, removed intro sections, full-screen at five viewports, uninterrupted auth video, actual local register/login/logout/roles/validation, preserved commerce, reduced motion and other routes.

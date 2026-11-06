@@ -1,0 +1,14 @@
+TASTESKILL · LINT   10 file(s)
+
+WARN
+  [shadow] Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may.  (5×)
+      src/features/ui-lab/components.tsx:11  shadow
+      src/features/ui-lab/components.tsx:12  shadow
+      src/features/ui-lab/data.ts:37  shadow
+      src/features/ui-lab/data.ts:38  shadow
+      src/features/ui-lab/lab-entry.tsx:13  shadow
+  [em-dash] Em-dash habit. Use a full stop or a comma; keep at most one or two on a page.  (1×)
+      (all files):0  6 em dashes
+
+RESULT: 0 FAIL, 6 WARN
+Interface fragments marked data-ui keep their own borders and shadows. Any other line that must keep a flagged pattern for a real reason can carry the comment taste-skill-ignore.

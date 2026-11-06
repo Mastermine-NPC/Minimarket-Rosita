@@ -260,20 +260,6 @@
   .cinema-scene[aria-hidden="true"] { display: flex; }
 }
 
-/* Shared liquid surface changes only the first two films, never their content. */
-.liquid-videos { position: relative; isolation: isolate; }
-.liquid-video-surface { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; visibility: hidden; }
-.liquid-videos > section { position: relative; z-index: 1; }
-.liquid-videos .cinema-intro { margin-top: -28px; padding-top: 148px; clip-path: var(--liquid-edge, polygon(0 14px,25% 6px,50% 17px,75% 9px,100% 14px,100% 100%,0 100%)); }
-.liquid-videos[data-liquid="webgl"] .liquid-video-surface { visibility: visible; }
-.home-experience .liquid-videos[data-liquid="webgl"] > section { background: transparent; }
-.liquid-videos[data-liquid="webgl"] .ambient-video { opacity: 0; }
-.liquid-videos[data-liquid="webgl"] .cinema-intro { clip-path: none; }
-@media (max-width: 1100px) { .liquid-videos .cinema-intro { padding-top: 108px; } }
-@media (max-width: 700px) { .liquid-videos .cinema-intro { padding-top: 92px; } }
-
-.liquid-videos[data-liquid="webgl"] .cinema-hero-scrim, .liquid-videos[data-liquid="webgl"] .cinema-intro::after { visibility: hidden; }
-
 /* All Home films share a compositor; content and commerce controls remain HTML. */
 .home-experience .liquid-media-plane { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; visibility: hidden; }
 .home-experience [data-liquid-surface="ready"] > :is(video, img) { opacity: 0 !important; }
@@ -330,3 +316,15 @@
 .home-experience .category-carousel-controls button:hover { background: #f9f8f0; }
 .home-experience .category-carousel-controls button:focus-visible, .home-experience .home-category-caption:focus-visible { outline: 2px solid var(--rose); outline-offset: 4px; }
 @media (hover:hover) and (prefers-reduced-motion:no-preference) { .home-experience .category-carousel-controls button { transition: background-color 150ms; } }
+
+/* Coca-Cola opens the existing story directly, without an introductory stage. */
+.home-opening.is-pinned { height: 100svh; min-height: 540px; }
+.home-opening .cinema-scene-content :is(h1, h2) { font: 800 clamp(60px, 7.3vw, 112px)/.98 var(--font-title); letter-spacing: -.055em; margin: 0 0 30px; max-width: 12ch; color: #fff; }
+.home-opening .cinema-scene:first-child { min-height: 100svh; }
+.home-opening.is-pinned .cinema-scene:first-child { min-height: 0; }
+.home-opening .cinema-scene:first-child::before { content: none; }
+.home-experience .home-opening .cinema-scene:first-child .cinema-scene-camera { clip-path: none; }
+@media (max-width: 899px) { .home-opening .cinema-scene-content :is(h1,h2) { font-size: clamp(48px, 8vw, 76px); } }
+@media (max-width: 500px) { .home-opening .cinema-scene-content :is(h1,h2) { font-size: clamp(46px, 12vw, 60px); } }
+.store-shell.home-store-shell { padding-top: 0; }
+.home-experience .home-opening .cinema-scene:first-child.liquid-section::before { content: none; }

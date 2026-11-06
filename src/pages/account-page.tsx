@@ -34,6 +34,7 @@ export function AccountPage() {
               <Link to="/admin">Abrir panel administrativo</Link>
             </Button>
           )}
+          {user.role === "admin" && <Button asChild variant="outline"><Link to="/admin/personalizacion">Personalización visual / Design System</Link></Button>}
           <p className="hint">
             La sesión permanece al recargar hasta que la cierres o restablezcas
             Rosita. La separación local no proporciona seguridad de servidor.

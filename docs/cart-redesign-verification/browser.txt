@@ -1,0 +1,1 @@
+PASS redesigned cart: real products, arithmetic, limits, quantity feedback, remove/clear confirmations, persistence, page/panel at five widths, empty states, checkout/login return, changed stock and inactive products; no inventory/order mutation.

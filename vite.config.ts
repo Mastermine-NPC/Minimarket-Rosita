@@ -4,6 +4,8 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  server: { proxy: { "/api/design": "http://127.0.0.1:4191" } },
+  preview: { proxy: { "/api/design": "http://127.0.0.1:4191" } },
   build: {
     rolldownOptions: {
       output: {

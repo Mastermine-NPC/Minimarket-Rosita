@@ -31,8 +31,10 @@ export function PublicScene({ pathname }: { pathname: string }) {
   if (!scene) return null;
   const prefix = scene.film === "video-intro" ? "/images/video/web/" : "/images/video/cinematic/";
   return <section ref={root} className="public-scene" aria-label={scene.title}>
-    <div className="public-scene-camera"><AmbientVideo src={`${prefix}${scene.film}.mp4`} poster={`${prefix}${scene.film}${scene.film === "video-intro" ? "-poster" : ""}.jpg`} label={scene.title} loop priority /></div>
-    <div className="cinema-scene-shade" />
+    <div className="public-scene-visual" aria-hidden="true">
+      <div className="public-scene-camera"><AmbientVideo src={`${prefix}${scene.film}.mp4`} poster={`${prefix}${scene.film}${scene.film === "video-intro" ? "-poster" : ""}.jpg`} label={scene.title} loop priority /></div>
+      <div className="cinema-scene-shade" />
+    </div>
     <div className="public-scene-copy"><p className="public-scene-title"><span className="sr-only">{scene.title}</span>{scene.title.split(" ").map((word, index) => <span className="cinema-word-mask" key={index} aria-hidden="true"><span>{word}</span></span>)}</p><p>{scene.copy}</p>
       <button onClick={() => document.querySelector(".public-page-body")?.scrollIntoView({ behavior: reduced ? "instant" : "smooth" })}>Seguir explorando <ArrowDown aria-hidden="true" /></button>
     </div>

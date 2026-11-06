@@ -23,12 +23,11 @@ export function CinematicStory() {
       const panels = gsap.utils.toArray<HTMLElement>(".cinema-scene", stage);
       if (!panels.length) return;
       stage.classList.add("is-pinned");
-      const headerHeight = () => document.querySelector(".navigation-discover")?.getBoundingClientRect().height || 140;
       gsap.set(panels, { zIndex: index => index + 1 });
       panels.forEach((panel, index) => { panel.dataset.liquidProgress = index === 0 ? "1" : "0"; });
       gsap.set(panels.slice(1), { clipPath: liquidReveal(0, 0) });
       const timeline = gsap.timeline({ scrollTrigger: {
-        trigger: stage, start: () => `top top+=${headerHeight()}`,
+        trigger: stage, start: "top top",
         end: () => `+=${innerHeight * Math.max(1, panels.length - 1) * 0.85}`,
         pin: true, scrub: 0.65, invalidateOnRefresh: true,
         onUpdate: self => {
@@ -65,8 +64,8 @@ export function CinematicStory() {
     if (sequence) window.scrollTo({ top: sequence.start + (sequence.end - sequence.start) * index / Math.max(1, chapters.length - 1), behavior: "smooth" });
     else document.getElementById(chapters[index].id)?.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth" });
   }
-  return <div className="cinema-story" ref={root} data-cinematic-story>
-    {chapters.map((chapter, index) => <CinematicChapter key={chapter.id} chapter={chapter} to={categoryPath(activeCategories.find(category => category.id === chapter.category)!)} active={!pinned || current === index} />)}
+  return <div className="cinema-story home-opening" ref={root} data-cinematic-story>
+    {chapters.map((chapter, index) => <CinematicChapter key={chapter.id} chapter={chapter} to={categoryPath(activeCategories.find(category => category.id === chapter.category)!)} active={!pinned || current === index} opening={index === 0} />)}
     <nav className="cinema-scene-navigation" aria-label="Escenas de Rosita">
       {chapters.map((chapter, index) => <button key={chapter.id} onClick={() => go(index)} aria-current={current === index ? "step" : undefined}>{chapter.films[0].name}</button>)}
     </nav>

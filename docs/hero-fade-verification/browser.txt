@@ -1,0 +1,1 @@
+PASS vertical alpha fade: shared heroes, 3 viewports, real pixel alpha ramp, seamless catalog boundary, unmasked copy/controls, button/cart, live video, stationary mask during parallax, untouched Home/auth.

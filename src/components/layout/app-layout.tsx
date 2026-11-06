@@ -18,6 +18,7 @@ import "@/styles/product-screen-background.css";
 export function AppLayout() {
   const { initialNotice } = useRosita();
   const location = useLocation();
+  const authScreen = /^\/(login|registro|personal)\/?$/.test(location.pathname);
   const productBackground = location.pathname === "/" || /^\/(catalogo|categoria|producto|carrito|checkout)(\/|$)/.test(location.pathname);
   useStoreScroll();
   useSmoothScroll(location.pathname);
@@ -27,13 +28,13 @@ export function AppLayout() {
       className={
         location.pathname === "/"
           ? "store-shell home-store-shell product-background-shell"
-          : "store-shell" + (productBackground ? " product-background-shell" : "")
+          : "store-shell" + (authScreen ? " auth-store-shell" : "") + (productBackground ? " product-background-shell" : "")
       }
     >
       <a className="skip-link" href="#contenido">
         Saltar al contenido
       </a>
-      <EditorialAtmosphere background={location.pathname !== "/" && !productBackground} />
+      <EditorialAtmosphere background={!authScreen && location.pathname !== "/" && !productBackground} />
       <StoreHeader />
       <main id="contenido" tabIndex={-1}>
         {initialNotice && (
@@ -44,7 +45,7 @@ export function AppLayout() {
             </Alert>
           </div>
         )}
-        <div className="public-route-content" data-route-path={location.pathname} key={/^\/(catalogo|categoria)(\/|$)/.test(location.pathname) ? "catalog" : location.pathname}>
+        <div className="public-route-content" data-route-path={location.pathname} key={/^\/(catalogo|categoria)(\/|$)/.test(location.pathname) ? "catalog" : authScreen ? "auth" : location.pathname}>
           <PublicScene pathname={location.pathname} />
           <div className="public-page-body"><Outlet /></div>
         </div>

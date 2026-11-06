@@ -1,10 +1,11 @@
 import { RouteTransition } from "@/features/cinema/route-transition";
 import { AdminLayout } from "@/features/administracion/admin-layout";
 import { lazy, Suspense, type ReactNode } from "react";
-import { Route, Routes } from "react-router";
+import { Navigate, Route, Routes } from "react-router";
 import { AppLayout } from "@/components/layout/app-layout";
 import { PageMetadata } from "@/components/layout/page-metadata";
 import { Skeleton } from "@/components/ui/skeleton";
+const DesignSystemPage = lazy(()=>import("@/pages/admin/design-system-page").then(m=>({default:m.DesignSystemPage})));
 const TaxonomyPage = lazy(() =>
   import("@/pages/admin/taxonomy-page").then((m) => ({
     default: m.TaxonomyPage,
@@ -129,7 +130,10 @@ export function AppRouter() {
           </Page>
         }
       />
+      <Route path="laboratorio-ui" element={<Navigate to="/admin/personalizacion/laboratorio" replace />} />
       <Route path="admin" element={<AdminLayout />}>
+        <Route path="personalizacion" element={<Page><DesignSystemPage /></Page>} />
+        <Route path="personalizacion/:section" element={<Page><DesignSystemPage /></Page>} />
         <Route path="clientes" element={<Page><CustomersPage /></Page>} />
         <Route
           path="agentes"

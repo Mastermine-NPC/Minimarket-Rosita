@@ -9,7 +9,7 @@ export function usePublicMotion(pathname: string) {
   const reduced = useMotionPreference();
   const location = useLocation();
   useLayoutEffect(() => {
-    if (reduced || pathname === "/" || location.state?.preserveCatalogScroll) return;
+    if (reduced || pathname === "/" || /^\/(login|registro|personal)\/?$/.test(pathname) || location.state?.preserveCatalogScroll) return;
     const scope = document.querySelector(".public-route-content");
     if (!scope) return;
     let context: gsap.Context | undefined;

@@ -1,0 +1,50 @@
+/* Semantic controls. Special cinema/media surfaces retain their own composition. */
+body { font-size:var(--ds-type-base);line-height:var(--ds-line-height);letter-spacing:var(--ds-letter-spacing);font-weight:var(--ds-weight-regular) }
+html :is(.store-shell,.admin-shell,.design-preview) [data-slot="button"] {
+  border-radius:var(--radius-control);min-height:var(--ds-button-height);min-width:var(--ds-button-min-width);
+  padding:var(--ds-button-padding-y) var(--ds-button-padding-x);font-size:var(--ds-type-secondary);font-weight:var(--ds-weight-semibold);
+  border-width:var(--ds-button-border-width);box-shadow:var(--ds-shadow-button);
+  transition-duration:var(--motion-control);transition-timing-function:var(--motion-ease);
+}
+html :is(.store-shell,.admin-shell,.design-preview) [data-slot="button"][data-size*="icon"]{min-width:44px;width:44px;padding:0}
+html :is(.store-shell,.admin-shell,.design-preview) [data-slot="button"][data-variant="default"]{background:var(--ds-button-bg);color:var(--ds-button-ink)}
+html .admin-shell [data-slot="button"][data-variant="default"]{background:var(--ds-action-admin)}
+html :is(.store-shell,.admin-shell,.design-preview) [data-slot="button"][data-variant="default"]:hover{background:var(--action-hover)}
+html :is(.store-shell,.admin-shell,.design-preview) [data-slot="button"][data-variant="default"]:active{background:var(--action-pressed)}
+html :is(.store-shell,.admin-shell,.design-preview) [data-slot="button"][data-variant="secondary"]{background:var(--ds-button-secondary);color:var(--ds-button-secondary-ink)}
+html :is(.store-shell,.admin-shell,.design-preview) [data-slot="button"][data-variant="outline"]{border-color:var(--ds-button-border)}
+html :is(.store-shell,.admin-shell,.design-preview) [data-slot="button"][data-variant="destructive"]{color:var(--ds-button-danger)}
+html :is(.store-shell,.admin-shell,.design-preview) [data-slot="button"]:focus-visible{outline:3px solid var(--ds-button-focus);outline-offset:3px}
+html :is(.store-shell,.admin-shell,.design-preview) [data-slot="button"]:disabled{opacity:var(--ds-disabled-opacity)}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){
+ html :is(.store-shell,.admin-shell,.design-preview) [data-slot="button"]:not(:disabled):hover{translate:0 calc(-1 * var(--ds-hover-lift) * var(--ds-effect-intensity));scale:var(--ds-hover-scale)}
+}
+html :is(.store-shell,.admin-shell,.design-preview) [data-slot="button"]:not(:disabled):active{translate:0 var(--ds-active-offset)}
+html :is(.store-shell,.admin-shell,.design-preview) :is([data-slot="input"],textarea,select){background:var(--ds-input-bg);color:var(--ds-input-ink);border-color:var(--ds-input-border);border-radius:var(--ds-input-radius)}
+html :is(.store-shell,.admin-shell,.design-preview) :is([data-slot="input"],textarea)::placeholder{color:var(--ds-input-placeholder)}
+html :is(.store-shell,.admin-shell,.design-preview) :is([data-slot="input"],textarea,select):focus-visible{border-color:var(--ds-input-focus)}
+html :is(.store-shell,.admin-shell,.design-preview) :is([data-slot="input"],textarea,select):disabled{background:var(--ds-input-disabled)}
+html [data-slot="dialog-content"]{background:var(--popover);color:var(--popover-foreground);border-radius:var(--ds-modal-radius);box-shadow:var(--shadow-raised)}
+html [data-slot="select-content"],html [data-slot="dropdown-menu-content"]{background:var(--popover);color:var(--popover-foreground)}
+html [data-slot="card"]{background:var(--card);color:var(--card-foreground);border-width:var(--ds-border-width);border-radius:var(--radius-card);box-shadow:var(--shadow-card)}
+html [data-slot="card-content"]{padding-inline:var(--ds-card-padding)}
+/* Inherited variant variables allow draft and published previews to coexist. */
+[data-button-variant="solid"]{--ds-default-bg:initial;--ds-default-ink:initial;--ds-default-border:transparent;--ds-default-blur:none}
+[data-button-variant="outline"]{--ds-default-bg:transparent;--ds-default-ink:var(--ds-button-bg);--ds-default-border:var(--ds-button-bg);--ds-default-blur:none}
+[data-button-variant="ghost"]{--ds-default-bg:transparent;--ds-default-ink:var(--ds-button-bg);--ds-default-border:transparent;--ds-default-blur:none}
+[data-button-variant="soft"]{--ds-default-bg:var(--ds-button-secondary);--ds-default-ink:var(--ds-button-secondary-ink);--ds-default-border:transparent;--ds-default-blur:none}
+[data-button-variant="glass"]{--ds-default-bg:color-mix(in srgb,var(--ds-button-bg) 12%,var(--card) 70%);--ds-default-ink:var(--ds-button-bg);--ds-default-border:var(--ds-button-bg);--ds-default-blur:blur(8px)}
+[data-button-variant="gradient"]{--ds-default-bg:linear-gradient(115deg,var(--ds-button-bg),var(--action-pressed));--ds-default-ink:var(--ds-button-ink);--ds-default-border:transparent;--ds-default-blur:none}
+html :is(.store-shell,.admin-shell,.design-preview) [data-slot="button"][data-variant="default"]{background:var(--ds-default-bg,var(--ds-button-bg));color:var(--ds-default-ink,var(--ds-button-ink));border-color:var(--ds-default-border,transparent);backdrop-filter:var(--ds-default-blur,none)}
+html .admin-shell [data-slot="button"][data-variant="default"]{background:var(--ds-default-bg,var(--ds-action-admin))}
+html :is(.store-shell,.admin-shell,.design-preview) [data-slot="button"][data-variant="default"]:hover{background:var(--ds-default-bg,var(--action-hover))}
+html :is(.store-shell,.admin-shell,.design-preview) [data-slot="button"][data-variant="default"]:active{background:var(--ds-default-bg,var(--action-pressed))}
+html .admin-shell [data-slot="button"]{border-radius:max(0px,calc(var(--radius-control) - 1px))}
+html .design-preview [data-slot="button"]{border-radius:var(--radius-control)}
+.design-preview [data-slot="card"]{box-shadow:0 3px calc(var(--ds-effect-intensity) * 14px) rgb(23 35 29 / .024)}
+.design-editor .design-token-control>small{color:var(--ds-text-faint)}
+@media(prefers-reduced-motion:reduce){html [data-slot="button"]{transition:none!important;translate:none!important;scale:none!important}}
+
+html :is(.store-shell,.admin-shell,.design-preview) [data-slot="button"]:disabled{background:var(--muted);color:var(--muted-foreground);opacity:var(--ds-disabled-opacity)}
+
+html [data-sonner-toast][data-type="info"],.design-editor .design-notice{color:var(--ds-info)}

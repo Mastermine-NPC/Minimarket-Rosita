@@ -38,7 +38,8 @@ export function RouteTransition({ children }: { children: (location: Location) =
         else timeout = setTimeout(reveal, 2200);
       });
     };
-    if (reduced || !publicRoute || !layer || location.state?.preserveCatalogScroll) {
+    const authSwitch = /^\/(login|registro)\/?$/.test(displayedPath.current) && /^\/(login|registro)\/?$/.test(location.pathname);
+    if (authSwitch || reduced || !publicRoute || !layer || location.state?.preserveCatalogScroll) {
       frame = requestAnimationFrame(() => { displayedPath.current = location.pathname; setDisplayed(location); });
     } else {
       layer.style.pointerEvents = "auto";

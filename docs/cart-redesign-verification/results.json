@@ -1,0 +1,75 @@
+{
+  "actualProducts": [
+    "Coca-Cola en lata",
+    "Jabón Protex avena"
+  ],
+  "reports": [
+    {
+      "width": 1440,
+      "height": 1000,
+      "overflow": false,
+      "totals": {
+        "cents": 1150,
+        "units": 3
+      }
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "overflow": false,
+      "totals": {
+        "cents": 1150,
+        "units": 3
+      }
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "overflow": false,
+      "totals": {
+        "cents": 1150,
+        "units": 3
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "totals": {
+        "cents": 1150,
+        "units": 3
+      }
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "overflow": false,
+      "totals": {
+        "cents": 1150,
+        "units": 3
+      }
+    }
+  ],
+  "tests": [
+    "add",
+    "increase",
+    "decrease",
+    "minimum",
+    "maximum-stock",
+    "per-line-and-cart-totals",
+    "persistence",
+    "clear-cancel",
+    "clear-confirm",
+    "panel-nested-confirmation",
+    "remove",
+    "product-link",
+    "checkout-auth-return",
+    "inventory-and-orders-preserved",
+    "empty",
+    "responsive",
+    "changed-stock-repair",
+    "inactive-product",
+    "reduced-motion"
+  ],
+  "errors": []
+}

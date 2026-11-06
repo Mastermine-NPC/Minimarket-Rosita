@@ -1,0 +1,220 @@
+[
+  {
+    "file": "src/pages/catalog-page.tsx",
+    "sha256": "ced636babfe9ec15fc2eb64512923180336f9edda5db3faf62bb28dfb0aa25cc",
+    "technologies": [
+      "lenis"
+    ]
+  },
+  {
+    "file": "src/styles/order-tracking.css",
+    "sha256": "ceceede5b60ffd90818ceaf06b0aed60c8caa147058678dab68d66205a6cb8f5",
+    "technologies": [
+      "leaflet"
+    ]
+  },
+  {
+    "file": "src/styles/checkout-controls.css",
+    "sha256": "8b3e567088398c060c875829d5450ab1ef183e6593138f49c6090ed3c3c9d196",
+    "technologies": [
+      "leaflet"
+    ]
+  },
+  {
+    "file": "src/styles/home.css",
+    "sha256": "a231053f0862f5f1e3de2739c2ad8a6f6f497e4f4669f6e6eb957406bf64bb7d",
+    "technologies": [
+      "WebGL"
+    ]
+  },
+  {
+    "file": "src/features/cinema/use-public-motion.ts",
+    "sha256": "7c404efd8b50616a806772df37248394c6955a2a3b835f73b7b88b72f934521a",
+    "technologies": [
+      "gsap"
+    ]
+  },
+  {
+    "file": "src/features/cinema/public-scene.tsx",
+    "sha256": "f6036ea836913cb329f7cb0c65bf4bfff07e4f349c3057dcaf3ca0ad2a1ca911",
+    "technologies": [
+      "gsap"
+    ]
+  },
+  {
+    "file": "src/features/cinema/editorial-atmosphere.tsx",
+    "sha256": "12b91e5d75fd3c74641e200ab609e7a6ba4298829f86ce012d91a2de5e795ff5",
+    "technologies": [
+      "Three",
+      "WEBGL",
+      "WebGL",
+      "webgl"
+    ]
+  },
+  {
+    "file": "src/features/cinema/use-smooth-scroll.ts",
+    "sha256": "81fdc4d212c01009fbf1fd8351ab3d4f58b446e270e93eb1db8437bf7911d013",
+    "technologies": [
+      "Lenis",
+      "gsap",
+      "leaflet",
+      "lenis"
+    ]
+  },
+  {
+    "file": "src/features/cinema/route-transition.tsx",
+    "sha256": "988e25b56304ea8684c6010ccf687472c7765339b512e6fd371c5a26c626ea18",
+    "technologies": [
+      "gsap"
+    ]
+  },
+  {
+    "file": "src/features/caja/camera-scanner.tsx",
+    "sha256": "b4167f81631bea229efc3e5c0da2616b9acc4a00bc6625cc232c2ff846ab2765",
+    "technologies": [
+      "<video"
+    ]
+  },
+  {
+    "file": "src/features/pedidos/order-notification-center.tsx",
+    "sha256": "e87635d0e8daa28c885ff881220e4f84fae61ef18d76ad042d2110603c51bf1b",
+    "technologies": [
+      "lenis"
+    ]
+  },
+  {
+    "file": "src/features/pedidos/international-phone.tsx",
+    "sha256": "b129ef369acabb68aaab7a39847ee50151575c17c6ba9ca16eaf4017b6b18b6c",
+    "technologies": [
+      "lenis"
+    ]
+  },
+  {
+    "file": "src/features/entrega/night-basemap.ts",
+    "sha256": "f94ea298763517c3a5f02675c488f9749916777a2ab064e026120ff305d2b26a",
+    "technologies": [
+      "Leaflet",
+      "Maplibre",
+      "WEBGL",
+      "WebGL",
+      "leaflet",
+      "maplibre",
+      "webgl"
+    ]
+  },
+  {
+    "file": "src/features/entrega/route-map.tsx",
+    "sha256": "73ffc66856bb5a706548ef53f95801d6a4306b0c634ae1f83741e7c7a45878b5",
+    "technologies": [
+      "Leaflet",
+      "leaflet"
+    ]
+  },
+  {
+    "file": "src/features/entrega/use-route-simulation.ts",
+    "sha256": "a087333234040fa785434cb8a877692e6ce5c67e5e375134686d786fe5dd5618",
+    "technologies": [
+      "Leaflet"
+    ]
+  },
+  {
+    "file": "src/features/carrito/cart-content.tsx",
+    "sha256": "8284c2a76f38dc34ed7ddd472b3f02eca7ea6104fbafb9d89b27cdeaa3f49c5b",
+    "technologies": [
+      "lenis"
+    ]
+  },
+  {
+    "file": "src/features/product-3d/shader-backdrop.tsx",
+    "sha256": "3058ec0047d53f6e8d8c7ae096dda774d4f708c9dcae53650a7b8fee80fe210b",
+    "technologies": [
+      "three"
+    ]
+  },
+  {
+    "file": "src/features/product-3d/model-resources.ts",
+    "sha256": "bb98f5d737cd5618fd7ca7778e03d37053e1d1782bbcd0764d404970f4faff6e",
+    "technologies": [
+      "three"
+    ]
+  },
+  {
+    "file": "src/features/product-3d/product-model-canvas.tsx",
+    "sha256": "827d09f1543f755f25e43dc36dbc7aa62bb0d3941332a89729beb78b7a74a47a",
+    "technologies": [
+      "Three",
+      "WebGL",
+      "gsap",
+      "three",
+      "webgl"
+    ]
+  },
+  {
+    "file": "src/features/product-3d/product-presentation.tsx",
+    "sha256": "89e6af9b3bca0ff0d279429ea584cfd4507414a28a59546926f5ba93c8f83956",
+    "technologies": [
+      "lenis"
+    ]
+  },
+  {
+    "file": "src/features/ui-lab/data.ts",
+    "sha256": "495b33727df693043f8e64cbf0119329298a5b876b07f7ce853f1654ce408ed8",
+    "technologies": [
+      "three"
+    ]
+  },
+  {
+    "file": "src/features/ui-lab/model-demo.tsx",
+    "sha256": "46b2c931be5670c21162de8a3549e3048d1c6e05074be681439fee1fc921e2be",
+    "technologies": [
+      "WebGL",
+      "three"
+    ]
+  },
+  {
+    "file": "src/features/ui-lab/lab-entry.tsx",
+    "sha256": "1ab971ec50185ad89648b4df86a06b0547447b76c5b98af049180356bac8aeb8",
+    "technologies": [
+      "WebGL",
+      "three"
+    ]
+  },
+  {
+    "file": "src/features/inicio/liquid-shaders.ts",
+    "sha256": "e078e8e24c50543c91f45fc44bad811de744cdaf22fdfb1082672270a0a77c9d",
+    "technologies": [
+      "GSAP"
+    ]
+  },
+  {
+    "file": "src/features/inicio/ambient-video.tsx",
+    "sha256": "e3a75632d197430b62dd630d6b660d7530ef2a5781b3000c1869f0e84b29d926",
+    "technologies": [
+      "<video"
+    ]
+  },
+  {
+    "file": "src/features/inicio/cinematic-story.tsx",
+    "sha256": "b1f997ce9f98f04884d8ea0ddba4e92758f0bbc4e1bbe58581401dfa458cf91f",
+    "technologies": [
+      "gsap"
+    ]
+  },
+  {
+    "file": "src/features/inicio/use-category-tilt.ts",
+    "sha256": "ea626fec685148c6400f3922f54de79121bf04d9b719b45129197b4c02ed3358",
+    "technologies": [
+      "GSAP",
+      "gsap"
+    ]
+  },
+  {
+    "file": "src/features/inicio/liquid-home-engine.ts",
+    "sha256": "1ffb769df02271d21ae72cb0e8ca4d7fd9c2b58ebee2e0a214617496e5e9ad7e",
+    "technologies": [
+      "WEBGL",
+      "WebGL",
+      "webgl"
+    ]
+  }
+]

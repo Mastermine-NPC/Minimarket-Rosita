@@ -1,0 +1,15 @@
+{
+  "technicalTestsOnly": true,
+  "participantDataSeededInApplication": false,
+  "tasksCompletedPerVariant": 4,
+  "componentFamilies": 5,
+  "viewports": [
+    1440,
+    768,
+    390,
+    320
+  ],
+  "errors": [],
+  "isolatedStorage": true,
+  "storeRoutesVerified": 7
+}

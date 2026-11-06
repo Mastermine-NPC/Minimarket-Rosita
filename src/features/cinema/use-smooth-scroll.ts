@@ -6,6 +6,8 @@ import "lenis/dist/lenis.css";
 
 export function useSmoothScroll(pathname: string) {
   useLayoutEffect(() => {
+    // Native form scrolling keeps keyboard focus and the mobile viewport in sync.
+    if (/^\/(login|registro|personal)\/?$/.test(pathname)) return;
     const media = gsap.matchMedia();
     media.add("(min-width: 900px) and (prefers-reduced-motion: no-preference)", () => {
       const scroll: Lenis = new Lenis({
